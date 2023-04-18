@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerClass : MonoBehaviour{
+    public Transform attackPoint;
+    public MeleeWeapon meleeWeapon;
     PlayerMovement playerMovement;
     public EntityStats playerStats;
 
     void Awake(){
+        meleeWeapon = gameObject.AddComponent<MetalScrapBat>() as MeleeWeapon;
+        meleeWeapon.attackPoint = attackPoint;
         playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
         playerStats = new EntityStats();
         playerMovement.SetEntityStats(playerStats);

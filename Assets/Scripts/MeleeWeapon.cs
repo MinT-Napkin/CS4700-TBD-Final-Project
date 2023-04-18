@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeWeapon : MonoBehaviour
-{
+public class MeleeWeapon : MonoBehaviour{
     public Transform attackPoint;
     public float attackDamage = 10;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public float attackCooldown = 1;
     bool attackOnCooldown = false;
+
+    public virtual void Awake(){
+        enemyLayers = LayerMask.GetMask("Enemy");
+    }
 
     void Update()
     {

@@ -321,7 +321,6 @@ GameObject:
   - component: {fileID: 916498032}
   - component: {fileID: 916498031}
   - component: {fileID: 916498037}
-  - component: {fileID: 916498038}
   - component: {fileID: 916498039}
   - component: {fileID: 916498040}
   m_Layer: 0
@@ -447,25 +446,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &916498038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916498028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481ec95e36c55aa4da2d1829c1e3b5fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPoint: {fileID: 655592873}
-  attackDamage: 10
-  attackRange: 0.86
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  attackCooldown: 0.7
 --- !u!114 &916498039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,13 +473,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3959cf897d1f40447b8839f8cdfd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPoint: {fileID: 655592873}
+  meleeWeapon: {fileID: 0}
   playerStats:
     attackSpeed: 0
     currentHealth: 0
     dashDistance: 0
+    defense: 10
+    luck: 5
     maxHealth: 0
     normalizedHealth: 0
     runSpeed: 0
+    specialAttack: 10
+    specialDefense: 10
+    strength: 10
     walkSpeed: 0
 --- !u!1 &1071973576
 GameObject:
