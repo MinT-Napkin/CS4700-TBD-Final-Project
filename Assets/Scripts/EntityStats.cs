@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct EntityStats{
-    public EntityStats(string thisIsTheDefaultConstructor){
+public class EntityStats{
+    public EntityStats(){
         attackSpeed = 1.0f;
         currentHealth = 100.0f;
         dashDistance = 20.0f;

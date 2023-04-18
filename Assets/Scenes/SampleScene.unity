@@ -321,9 +321,9 @@ GameObject:
   - component: {fileID: 916498032}
   - component: {fileID: 916498031}
   - component: {fileID: 916498037}
-  - component: {fileID: 916498035}
   - component: {fileID: 916498038}
   - component: {fileID: 916498039}
+  - component: {fileID: 916498040}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -421,21 +421,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &916498035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916498028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e0e121ed05c1f04faa498890b74b9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 10
-  runSpeed: 20
-  dashDistance: 20
 --- !u!61 &916498037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -496,6 +481,26 @@ MonoBehaviour:
   attackPoint: {fileID: 1071973577}
   bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}
   attackCooldown: 0.7
+--- !u!114 &916498040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916498028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3959cf897d1f40447b8839f8cdfd7aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats:
+    attackSpeed: 0
+    currentHealth: 0
+    dashDistance: 0
+    maxHealth: 0
+    normalizedHealth: 0
+    runSpeed: 0
+    walkSpeed: 0
 --- !u!1 &1071973576
 GameObject:
   m_ObjectHideFlags: 0
