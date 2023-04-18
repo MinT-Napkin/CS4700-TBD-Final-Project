@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour{
 
     public void SetEntityStats(EntityStats playerStats){
         this.playerStats = playerStats;
-        Debug.Log("Copy made");
     }
 
     void WalkHandler(){
