@@ -9,9 +9,14 @@ public class EntityStats{
         attackSpeed = 1.0f;
         currentHealth = 100.0f;
         dashDistance = 20.0f;
+        defense = 10.0f;
+        luck = 5.0f;
         maxHealth = 100.0f;
         normalizedHealth = 1.0f;
         runSpeed = 20.0f;
+        specialAttack = 10.0f;
+        specialDefense = 10.0f;
+        strength = 10.0f;
         walkSpeed = 10.0f;
     }
 
@@ -28,8 +33,13 @@ public class EntityStats{
     public float attackSpeed;
     public float currentHealth;
     public float dashDistance;
+    public float defense;
+    public float luck;
     public float maxHealth;
     public float normalizedHealth;
     public float runSpeed;
+    public float specialAttack;
+    public float specialDefense;
+    public float strength;
     public float walkSpeed;
 }
