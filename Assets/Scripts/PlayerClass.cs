@@ -9,10 +9,11 @@ public class PlayerClass : MonoBehaviour{
     public EntityStats playerStats;
 
     void Awake(){
-        meleeWeapon = gameObject.AddComponent<MetalScrapBat>() as MeleeWeapon;
+        meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = attackPoint;
         playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
         playerStats = new EntityStats();
+        meleeWeapon.SetEntityStats(playerStats);
         playerMovement.SetEntityStats(playerStats);
     }
     // Start is called before the first frame update
