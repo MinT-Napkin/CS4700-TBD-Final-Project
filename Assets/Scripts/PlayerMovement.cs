@@ -12,9 +12,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 dash;
     bool run;
-    public State state;
+    State state;
 
-    public enum State
+    private enum State
     {
         Normal,
         Dashing
