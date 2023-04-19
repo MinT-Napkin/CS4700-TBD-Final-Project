@@ -503,4 +503,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  rb2d: {fileID: 0}
+  runSpeed: 10
+  rb2d: {fileID: 2010726588}
