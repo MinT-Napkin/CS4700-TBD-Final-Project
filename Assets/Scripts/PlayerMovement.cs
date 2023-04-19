@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float activeMoveSpeed;
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
-    public float dashSpeed = 30f; //Adjusting this in inspector adjusts how far the dash goes
+    public float dashSpeed = 50f; //Adjusting this in inspector adjusts how far the dash goes
     public Rigidbody2D rb2d;
     Vector2 movement;
     Vector2 dash;
