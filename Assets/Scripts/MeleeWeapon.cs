@@ -8,13 +8,11 @@ public class MeleeWeapon : MonoBehaviour{
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public EntityStats playerStats;
-    public float attackCooldown = 3;
+    public float attackCooldown = 1;
     bool attackOnCooldown = false;
 
     public virtual void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
-        playerStats = attackPoint.parent.gameObject.GetComponent<PlayerClass>().playerStats;
-        attackCooldown = attackCooldown - playerStats.attackCooldown;
     }
 
     void Update()
