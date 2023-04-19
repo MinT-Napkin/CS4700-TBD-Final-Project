@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float activeMoveSpeed;
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
     public Rigidbody2D rb2d;
     Vector2 movement;
     bool run;
+    bool dash;
+    bool dashOnCooldown = false;
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        activeMoveSpeed = walkSpeed;
     }
 
     void Update()
@@ -20,18 +24,21 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         run = Input.GetKey("left shift");
+        dash = Input.GetKeyDown("space");
     }
 
     void FixedUpdate()
     {
         //Move
-        float baseWalkSpeed = walkSpeed;
         if (run)
         {
-            walkSpeed = runSpeed;
+            activeMoveSpeed = runSpeed;
         }
-        rb2d.MovePosition(rb2d.position + movement * walkSpeed * Time.fixedDeltaTime);
-        walkSpeed = baseWalkSpeed;
+        else
+        {
+            activeMoveSpeed = walkSpeed;
+        }
+        rb2d.MovePosition(rb2d.position + movement * activeMoveSpeed * Time.fixedDeltaTime);
         //Rotate
         bool right = Input.GetKey("right");
         bool left = Input.GetKey("left");
