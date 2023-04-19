@@ -6,8 +6,10 @@ public class PlayerClass : MonoBehaviour{
     public Transform attackPoint;
     public MeleeWeapon meleeWeapon;
     public EntityStats playerStats;
+    public PlayerMovement playerMovement;
 
     void Awake(){
+        playerMovement = GetComponent<PlayerMovement>();
         meleeWeapon = gameObject.AddComponent<MetalScrapBat>() as MeleeWeapon;
         meleeWeapon.attackPoint = attackPoint;
         playerStats = new EntityStats();

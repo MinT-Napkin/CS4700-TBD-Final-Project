@@ -10,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb2d;
     Vector2 movement;
     bool run;
-    bool dash;
-    bool dashOnCooldown = false;
 
     void Awake()
     {
@@ -24,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         run = Input.GetKey("left shift");
-        dash = Input.GetKeyDown("space");
     }
 
     void FixedUpdate()
