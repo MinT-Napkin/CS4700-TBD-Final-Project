@@ -14,10 +14,10 @@ public class EntityStats{
         specialAttack = 10.0f;
         specialDefense = 10.0f;
         strength = 10.0f;
-        attackSpeed = 1f;
+        attackCooldown = 1f;
     }
 
-    public EntityStats(float currentHealth, float maxHealth, float normalizedHealth, float strength, float defense, float specialAttack, float specialDefense, float luck, float attackSpeed) {
+    public EntityStats(float currentHealth, float maxHealth, float normalizedHealth, float strength, float defense, float specialAttack, float specialDefense, float luck, float attackCooldown) {
         this.currentHealth = currentHealth;
         this.maxHealth = maxHealth;
         this.normalizedHealth = normalizedHealth;
@@ -26,7 +26,7 @@ public class EntityStats{
         this.specialAttack = specialAttack;
         this.specialDefense = specialDefense;
         this.luck = luck;
-        this.attackSpeed = attackSpeed;
+        this.attackCooldown = attackCooldown;
     }
 
     public float currentHealth;
@@ -37,5 +37,5 @@ public class EntityStats{
     public float specialAttack;
     public float specialDefense;
     public float strength;
-    public float attackSpeed;
+    public float attackCooldown;
 }
