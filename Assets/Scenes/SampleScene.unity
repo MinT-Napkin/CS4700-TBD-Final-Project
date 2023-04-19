@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 2010726591}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +401,7 @@ MonoBehaviour:
     strength: 10
     attackCooldown: 1
   playerMovement: {fileID: 0}
+  activeStatusEffects: []
 --- !u!50 &2010726588
 Rigidbody2D:
   serializedVersion: 4
@@ -508,4 +509,3 @@ MonoBehaviour:
   runSpeed: 10
   dashSpeed: 50
   rb2d: {fileID: 2010726588}
-  state: 0
