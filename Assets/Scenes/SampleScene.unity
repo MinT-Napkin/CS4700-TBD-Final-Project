@@ -400,6 +400,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     attackCooldown: 1
+  playerMovement: {fileID: 0}
 --- !u!50 &2010726588
 Rigidbody2D:
   serializedVersion: 4
@@ -502,6 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7359fe7c9bc8614999147aabdb9356c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeMoveSpeed: 0
   walkSpeed: 5
   runSpeed: 10
+  dashSpeed: 50
   rb2d: {fileID: 2010726588}
+  state: 0
