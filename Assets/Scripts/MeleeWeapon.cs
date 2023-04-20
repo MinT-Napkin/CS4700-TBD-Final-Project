@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour{
     public Transform attackPoint;
-    public float attackDamage = 10;
+    public float attackDamage = 10.0f;
     public float attackRange = 0.5f;
-    public float attackCooldown = 1;
+    public float attackCooldown = 1.0f;
     bool attackOnCooldown = false;
     public string description;
     public LayerMask enemyLayers;
@@ -17,6 +17,16 @@ public class MeleeWeapon : MonoBehaviour{
     public virtual void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
         //playerStats = attackPoint.parent.gameObject.GetComponent<PlayerClass>().playerStats;
+    }
+
+    public virtual void Equip(){
+        playerStats.attackSpeed *= attackCooldown;
+        playerStats.strength += attackDamage;
+    }
+
+    public virtual void Unequip(){
+        playerStats.attackSpeed /= attackCooldown;
+        playerStats.strength -= attackDamage;
     }
 
     void Update(){

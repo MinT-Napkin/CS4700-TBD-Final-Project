@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BladeOfTheOutsider : MeleeWeapon{
-    public override void Awake(){
+public class ModifiedBladeOfTheOutsider : MeleeWeapon {
+    public override void Awake() {
         base.Awake();
         attackDamage = 10.0f;
         attackRange = 1.0f;
-        description = "This is the favored blade of one who does not belong to this world";
-        name = "Outsider's Blade";
+        description = "A weapon imroved to match the battle-hardened spirit that wields it";
+        name = "Modified Outsider's Blade";
     }
 
-    public override void Equip(){
+    public override void Equip() {
         base.Equip();
+        playerStats.criticalDamage *= 2.0f;
     }
-    public override void Unequip(){
+    public override void Unequip() {
         base.Unequip();
+        playerStats.criticalDamage /= 2.0f;
     }
     // Start is called before the first frame update
     /*void Start()
