@@ -7,6 +7,7 @@ using UnityEngine;
 public class EntityStats{
     public EntityStats(){
         attackSpeed = 1.0f;
+        criticalDamage = 2.0f;
         currentHealth = 100.0f;
         dashDistance = 20.0f;
         defense = 10.0f;
@@ -31,6 +32,7 @@ public class EntityStats{
     }
 
     public float attackSpeed;
+    public float criticalDamage;
     public float currentHealth;
     public float dashDistance;
     public float defense;
