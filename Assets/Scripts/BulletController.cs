@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    //public RangedWeapon rangedWeaponReference;
+    //public RangedWeaponData equippedRangedWeapon;
     Rigidbody2D rb2d;
-    public float bulletDamage = 10;
-    public float bulletSpeed = 20;
-    public float bulletRange = 10;
+    public float bulletStrength;
+    public float bulletSpeed;
+    public float bulletRange;
     float distanceTraveled;
 
     void Awake()

@@ -6,22 +6,46 @@ public class RangedWeapon : MonoBehaviour
 {
     public Transform attackPoint;
     public GameObject bulletPrefab;
-    public float attackCooldown = 1;
+    public BulletController bulletController;
+    public float attackCooldown;
+    //public RangedWeaponData equippedRangedWeapon;
+    //public List<RangedWeaponData> rangedWeaponInventory;
     bool attackOnCooldown = false;
+
+    void Awake()
+    {
+        bulletController = bulletPrefab.GetComponent<BulletController>();
+    }
 
     void Update()
     {
+        /*
+        bulletController.bulletStrength = equippedRangedWeapon.strength;
+        bulletController.bulletSpeed = equippedRangedWeapon.bulletSpeed;
+        bulletController.bulletRange = equippedRangedWeapon.attackRange;
+        */
         if (Input.GetKeyDown("c"))
         {
             if (!attackOnCooldown)
                 Attack();
         }
+        /*
+        if (Input.GetKeyDown("l"))
+        {
+            equippedRangedWeapon = rangedWeaponInventory.ToArray()[1];
+        }
+        */
     }
 
-    void Attack()
+    public void Attack()
     {
         Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         StartCoroutine(AttackCooldown());
+    }
+
+    public void SpecialAbility()
+    {
+
     }
 
     IEnumerator AttackCooldown()

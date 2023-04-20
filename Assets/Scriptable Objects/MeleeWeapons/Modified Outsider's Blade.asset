@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8dad37711552074095c379963310cb7, type: 3}
-  m_Name: SwordData
+  m_Name: Modified Outsider's Blade
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  name: Modified Outsider's Blade
+  strength: 20
   attackRange: 5
-  attackCooldown: 2
+  attackCooldown: 5

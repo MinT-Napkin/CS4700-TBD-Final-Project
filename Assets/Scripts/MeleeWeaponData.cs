@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable Object/Melee Weapon")]
 public class MeleeWeaponData : ScriptableObject
 {
-   public float attackDamage;
-   public float attackRange;
-   public float attackCooldown;
+    new public string name;
+    public float strength;
+    public float attackRange;
+    public float attackCooldown;
 }

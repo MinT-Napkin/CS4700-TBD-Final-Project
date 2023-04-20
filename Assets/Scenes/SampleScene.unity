@@ -352,11 +352,11 @@ GameObject:
   - component: {fileID: 2010726589}
   - component: {fileID: 2010726588}
   - component: {fileID: 2010726587}
-  - component: {fileID: 2010726585}
   - component: {fileID: 2010726591}
   - component: {fileID: 2010726592}
   - component: {fileID: 2010726593}
   - component: {fileID: 2010726594}
+  - component: {fileID: 2010726585}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -378,7 +378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1071973577}
   bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}
-  attackCooldown: 0.7
+  bulletController: {fileID: 0}
+  attackCooldown: 0
 --- !u!114 &2010726587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3959cf897d1f40447b8839f8cdfd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 655592873}
   meleeWeapon: {fileID: 0}
+  rangedWeapon: {fileID: 0}
   playerStats:
     currentHealth: 100
     defense: 10
@@ -601,7 +602,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     attackCooldown: 1
-  equippedMeleeWeapon: {fileID: 11400000, guid: d407201e750508b43863cb2b2f7075ad, type: 2}
+  equippedMeleeWeapon: {fileID: 11400000, guid: efe73a4217688774fb3ab52d923afad5, type: 2}
   meleeWeaponInventory:
-  - {fileID: 11400000, guid: d407201e750508b43863cb2b2f7075ad, type: 2}
-  - {fileID: 11400000, guid: 24ad47e13f1dbb0408563590fd598da3, type: 2}
+  - {fileID: 11400000, guid: efe73a4217688774fb3ab52d923afad5, type: 2}
+  - {fileID: 11400000, guid: 2bfe991e0b504174f879ea0a68840c4f, type: 2}

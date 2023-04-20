@@ -10,7 +10,7 @@ public class MeleeWeapon : MonoBehaviour{
     public List<MeleeWeaponData> meleeWeaponInventory;
     bool attackOnCooldown = false;
 
-    public virtual void Awake(){
+    void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
     }
 
@@ -30,9 +30,10 @@ public class MeleeWeapon : MonoBehaviour{
     public void Attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, equippedMeleeWeapon.attackRange, enemyLayers);
+        StartCoroutine(AttackCooldown());
         foreach (Collider2D enemy in hitEnemies)
         {
-            StartCoroutine(AttackCooldown());
+            SpecialAbility(enemy);
             StartCoroutine(DebugEnemyHitColor(enemy)); //Debug - to check if enemy is hit
         }
     }
@@ -40,6 +41,16 @@ public class MeleeWeapon : MonoBehaviour{
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, equippedMeleeWeapon.attackRange);
+    }
+
+    void SpecialAbility(Collider2D enemy)
+    {
+        switch (equippedMeleeWeapon.name)
+        {
+            case "Modified Outsider's Blade":
+                Debug.Log("3x damage from criticals on " + enemy.gameObject.name); //debug
+                break;
+        }
     }
 
     IEnumerator AttackCooldown()

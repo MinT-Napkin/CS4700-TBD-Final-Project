@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerClass : MonoBehaviour{
-    public Transform attackPoint;
     public MeleeWeapon meleeWeapon;
+    public RangedWeapon rangedWeapon;
     public EntityStats playerStats;
     public PlayerMovement playerMovement;
     public StatusEffectManager statusEffectManager;
