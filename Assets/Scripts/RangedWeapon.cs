@@ -7,7 +7,6 @@ public class RangedWeapon : MonoBehaviour
     public Transform attackPoint;
     public GameObject bulletPrefab;
     public BulletData bulletData;
-    public float attackCooldown;
     public RangedWeaponData equippedRangedWeapon;
     public List<RangedWeaponData> rangedWeaponInventory;
     bool attackOnCooldown = false;
@@ -34,15 +33,20 @@ public class RangedWeapon : MonoBehaviour
         StartCoroutine(AttackCooldown());
     }
 
-    public void SpecialAbility()
+    public void SpecialAbility(GameObject enemy)
     {
-
+        switch (equippedRangedWeapon.name)
+        {
+            case "Sniper Rifle":
+                Debug.Log(enemy.name + " hit by " + equippedRangedWeapon.name);
+                break;
+        }
     }
 
     IEnumerator AttackCooldown()
     {
         attackOnCooldown = true;
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(equippedRangedWeapon.attackCooldown);
         attackOnCooldown = false;
     }
 }

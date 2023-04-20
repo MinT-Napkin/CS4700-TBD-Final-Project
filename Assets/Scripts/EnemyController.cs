@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public GameObject player;
+
+    void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "bullet")
         {
+            player.GetComponent<RangedWeapon>().SpecialAbility(gameObject);
             StartCoroutine(DebugEnemyHitColor());
             Destroy(other.gameObject);
         }
