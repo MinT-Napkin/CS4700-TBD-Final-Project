@@ -8,7 +8,7 @@ public class MeleeWeapon : MonoBehaviour{
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public EntityStats playerStats;
-    public float attackCooldown = 1;
+    public float attackCooldown = 1f;
     bool attackOnCooldown = false;
 
     public virtual void Awake(){

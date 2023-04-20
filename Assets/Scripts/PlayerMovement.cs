@@ -30,9 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (state == State.Dashing)
-        {
             StartCoroutine(DashTimer());
-        }
     }
 
     void FixedUpdate()
