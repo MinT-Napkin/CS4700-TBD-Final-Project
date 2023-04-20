@@ -7,14 +7,14 @@ public class PlayerMovement : MonoBehaviour
     public float activeMoveSpeed;
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
-    public float dashSpeed = 50f; //Adjusting this in inspector adjusts how far the dash goes
+    public float dashSpeed = 50f;
     public Rigidbody2D rb2d;
-    Vector2 movement;
-    Vector2 dash;
-    bool run;
-    State state;
+    public Vector2 movement;
+    public Vector2 dash;
+    public bool run;
+    public State state;
 
-    private enum State
+    public enum State
     {
         Normal,
         Dashing
@@ -29,21 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        switch (state)
+        if (state == State.Dashing)
         {
-            case State.Normal:
-                movement.x = Input.GetAxisRaw("Horizontal");
-                movement.y = Input.GetAxisRaw("Vertical");
-                run = Input.GetKey("left shift");
-                if (Input.GetKeyDown("space"))
-                {
-                    dash = movement;
-                    state = State.Dashing;
-                }
-                break;
-            case State.Dashing:
             StartCoroutine(DashTimer());
-            break;
         }
     }
 
@@ -51,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (state)
         {
-            //Move
             case State.Normal:
                 if (run)
                 {
@@ -63,16 +50,15 @@ public class PlayerMovement : MonoBehaviour
                 }
                 rb2d.velocity = movement * activeMoveSpeed;
                 break;
-            //Dash
             case State.Dashing:
                 rb2d.velocity = dash * dashSpeed;
                 break;
         }
-        //Rotate
-        bool right = (movement.x == 1);
-        bool left = (movement.x == -1);
-        bool up = (movement.y == 1);
-        bool down = (movement.y == -1);
+        
+        bool right = (movement.x > 0);
+        bool left = (movement.x < 0);
+        bool up = (movement.y > 0);
+        bool down = (movement.y < 0);
         if ((!right) && (!left) && (up) && (!down))
             transform.eulerAngles = Vector3.zero;
         if ((right) && (!left) && (up) && (!down))

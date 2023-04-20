@@ -354,6 +354,8 @@ GameObject:
   - component: {fileID: 2010726587}
   - component: {fileID: 2010726585}
   - component: {fileID: 2010726591}
+  - component: {fileID: 2010726592}
+  - component: {fileID: 2010726593}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -510,3 +512,55 @@ MonoBehaviour:
   runSpeed: 10
   dashSpeed: 50
   rb2d: {fileID: 2010726588}
+  movement: {x: 0, y: 0}
+  run: 0
+--- !u!114 &2010726592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010726584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa13aa8345cb6fe45814a67737a6a666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2010726593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010726584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2d7fb66281a83524bafe83cf79839ac9, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 35f655aa-33d6-4ea8-9e89-cc8569d2f969
+    m_ActionName: Game/Walk[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 34baa686-6aad-4937-89dc-471ca657c8ca
+    m_ActionName: Game/Run[/Keyboard/leftShift]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Game
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
