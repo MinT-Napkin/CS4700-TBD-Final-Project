@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 2010726591}
   - component: {fileID: 2010726592}
   - component: {fileID: 2010726593}
+  - component: {fileID: 2010726594}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -513,7 +514,9 @@ MonoBehaviour:
   dashSpeed: 50
   rb2d: {fileID: 2010726588}
   movement: {x: 0, y: 0}
+  dash: {x: 0, y: 0}
   run: 0
+  state: 0
 --- !u!114 &2010726592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +562,46 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 34baa686-6aad-4937-89dc-471ca657c8ca
     m_ActionName: Game/Run[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87ddf16d-3b65-46b5-a60e-9201bf4ac50d
+    m_ActionName: Game/Dash[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b39422f5-037e-4404-a868-6ff9679e3e5d
+    m_ActionName: Game/MeleeAttack[/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2010726594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010726584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481ec95e36c55aa4da2d1829c1e3b5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 655592873}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  playerStats:
+    currentHealth: 100
+    defense: 10
+    luck: 5
+    maxHealth: 100
+    normalizedHealth: 1
+    specialAttack: 10
+    specialDefense: 10
+    strength: 10
+    attackCooldown: 1
+  equippedMeleeWeapon: {fileID: 11400000, guid: d407201e750508b43863cb2b2f7075ad, type: 2}
+  meleeWeaponInventory:
+  - {fileID: 11400000, guid: d407201e750508b43863cb2b2f7075ad, type: 2}
+  - {fileID: 11400000, guid: 24ad47e13f1dbb0408563590fd598da3, type: 2}
