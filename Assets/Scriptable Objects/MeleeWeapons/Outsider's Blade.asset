@@ -16,3 +16,4 @@ MonoBehaviour:
   strength: 10
   attackRange: 3
   attackCooldown: 1
+  inInventory: 1

@@ -10,4 +10,5 @@ public class RangedWeaponData : ScriptableObject
     public float attackRange;
     public float attackCooldown;
     public float bulletSpeed;
+    public bool inInventory;
 }

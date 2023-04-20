@@ -7,7 +7,7 @@ public class MeleeWeapon : MonoBehaviour{
     public LayerMask enemyLayers;
     public EntityStats playerStats;
     public MeleeWeaponData equippedMeleeWeapon;
-    public List<MeleeWeaponData> meleeWeaponInventory;
+    public List<MeleeWeaponData> meleeWeaponList;
     bool attackOnCooldown = false;
 
     void Awake(){
@@ -23,7 +23,9 @@ public class MeleeWeapon : MonoBehaviour{
         }
         if (Input.GetKeyDown("k"))
         {
-            equippedMeleeWeapon = meleeWeaponInventory.ToArray()[1];
+            MeleeWeaponData toEquip = meleeWeaponList.ToArray()[1];
+            if (toEquip.inInventory)
+                equippedMeleeWeapon = toEquip;
         }
     }
 

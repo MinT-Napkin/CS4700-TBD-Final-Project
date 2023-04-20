@@ -8,7 +8,7 @@ public class RangedWeapon : MonoBehaviour
     public GameObject bulletPrefab;
     public BulletData bulletData;
     public RangedWeaponData equippedRangedWeapon;
-    public List<RangedWeaponData> rangedWeaponInventory;
+    public List<RangedWeaponData> rangedWeaponList;
     bool attackOnCooldown = false;
 
     void Update()
@@ -23,7 +23,9 @@ public class RangedWeapon : MonoBehaviour
         }
         if (Input.GetKeyDown("l"))
         {
-            equippedRangedWeapon = rangedWeaponInventory.ToArray()[1];
+            RangedWeaponData toEquip = rangedWeaponList.ToArray()[1];
+            if (toEquip.inInventory)
+                equippedRangedWeapon = toEquip;
         }
     }
 

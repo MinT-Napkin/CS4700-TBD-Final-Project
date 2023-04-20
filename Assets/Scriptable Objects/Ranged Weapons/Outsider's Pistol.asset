@@ -17,3 +17,4 @@ MonoBehaviour:
   attackRange: 10
   attackCooldown: 1
   bulletSpeed: 10
+  inInventory: 1

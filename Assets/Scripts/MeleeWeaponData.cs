@@ -9,4 +9,5 @@ public class MeleeWeaponData : ScriptableObject
     public float strength;
     public float attackRange;
     public float attackCooldown;
+    public bool inInventory;
 }

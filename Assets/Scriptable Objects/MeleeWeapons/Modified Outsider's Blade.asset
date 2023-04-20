@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Modified Outsider's Blade
   m_EditorClassIdentifier: 
   name: Modified Outsider's Blade
-  strength: 20
+  strength: 10
   attackRange: 5
-  attackCooldown: 5
+  attackCooldown: 2
+  inInventory: 0

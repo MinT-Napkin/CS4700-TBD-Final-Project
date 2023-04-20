@@ -377,9 +377,8 @@ MonoBehaviour:
   attackPoint: {fileID: 1071973577}
   bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}
   bulletData: {fileID: 11400000, guid: 85ff56522eadba04483d80cabe58da59, type: 2}
-  attackCooldown: 0
   equippedRangedWeapon: {fileID: 11400000, guid: 0b913555d951b6148992d4706bddcc7f, type: 2}
-  rangedWeaponInventory:
+  rangedWeaponList:
   - {fileID: 11400000, guid: 0b913555d951b6148992d4706bddcc7f, type: 2}
   - {fileID: 11400000, guid: 737d9333c899840409bb5445d8ca31c4, type: 2}
 --- !u!114 &2010726587
@@ -547,6 +546,6 @@ MonoBehaviour:
     strength: 10
     attackCooldown: 1
   equippedMeleeWeapon: {fileID: 11400000, guid: efe73a4217688774fb3ab52d923afad5, type: 2}
-  meleeWeaponInventory:
+  meleeWeaponList:
   - {fileID: 11400000, guid: efe73a4217688774fb3ab52d923afad5, type: 2}
-  - {fileID: 11400000, guid: 2bfe991e0b504174f879ea0a68840c4f, type: 2}
+  - {fileID: 11400000, guid: 511340159f5402b44a227d18ef36d526, type: 2}
