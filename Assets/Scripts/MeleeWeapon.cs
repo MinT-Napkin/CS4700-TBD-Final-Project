@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour{
     public Transform attackPoint;
-    public float attackDamage = 10;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public EntityStats playerStats;
-    public float attackCooldown = 1f;
+    public MeleeWeaponData equippedMeleeWeapon;
+    public MeleeWeaponData[] meleeWeaponInventory;
     bool attackOnCooldown = false;
 
     public virtual void Awake(){
@@ -26,7 +25,7 @@ public class MeleeWeapon : MonoBehaviour{
 
     public void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, equippedMeleeWeapon.attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
             StartCoroutine(AttackCooldown());
@@ -36,13 +35,13 @@ public class MeleeWeapon : MonoBehaviour{
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, equippedMeleeWeapon.attackRange);
     }
 
     IEnumerator AttackCooldown()
     {
         attackOnCooldown = true;
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(equippedMeleeWeapon.attackCooldown);
         attackOnCooldown = false;
     }
 

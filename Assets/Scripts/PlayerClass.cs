@@ -13,8 +13,8 @@ public class PlayerClass : MonoBehaviour{
 
     void Awake(){
         playerMovement = GetComponent<PlayerMovement>();
-        meleeWeapon = gameObject.AddComponent<MetalScrapBat>() as MeleeWeapon;
-        meleeWeapon.attackPoint = attackPoint;
+        //meleeWeapon = gameObject.AddComponent<MetalScrapBat>() as MeleeWeapon;
+        //meleeWeapon.attackPoint = attackPoint;
         playerStats = new EntityStats();
         statusEffectManager = gameObject.AddComponent<StatusEffectManager>();
         activeStatusEffects = new List<StatusEffect>();

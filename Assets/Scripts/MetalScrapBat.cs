@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class MetalScrapBat : MeleeWeapon{
     public override void Awake(){
         base.Awake();
@@ -9,3 +10,4 @@ public class MetalScrapBat : MeleeWeapon{
         attackRange = 1.0f;     
     }
 }
+*/
