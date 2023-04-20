@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModifiedBladeOfTheOutsider : MeleeWeapon {
-    public override void Awake() {
+public class ModifiedBladeOfTheOutsider : MeleeWeapon{
+    public override void Awake(){
         base.Awake();
         attackDamage = 10.0f;
         attackRange = 1.0f;
@@ -11,11 +11,11 @@ public class ModifiedBladeOfTheOutsider : MeleeWeapon {
         name = "Modified Outsider's Blade";
     }
 
-    public override void Equip() {
+    public override void Equip(){
         base.Equip();
         playerStats.criticalDamage *= 2.0f;
     }
-    public override void Unequip() {
+    public override void Unequip(){
         base.Unequip();
         playerStats.criticalDamage /= 2.0f;
     }
