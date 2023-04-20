@@ -401,7 +401,6 @@ MonoBehaviour:
     strength: 10
     attackCooldown: 1
   playerMovement: {fileID: 0}
-  activeStatusEffects: []
 --- !u!50 &2010726588
 Rigidbody2D:
   serializedVersion: 4

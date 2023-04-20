@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
             case State.Dashing:
-                StartCoroutine(DashTimer());
-                break;
+            StartCoroutine(DashTimer());
+            break;
         }
     }
 
