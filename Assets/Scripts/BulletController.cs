@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    //public RangedWeapon rangedWeaponReference;
-    //public RangedWeaponData equippedRangedWeapon;
+    public BulletData bulletData;
     Rigidbody2D rb2d;
     public float bulletStrength;
     public float bulletSpeed;
@@ -16,6 +15,9 @@ public class BulletController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         distanceTraveled = 0;
+        bulletStrength = bulletData.bulletStrength;
+        bulletRange = bulletData.bulletRange;
+        bulletSpeed = bulletData.bulletSpeed;
     }
 
     void Start()

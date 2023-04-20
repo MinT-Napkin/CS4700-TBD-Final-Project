@@ -29,8 +29,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (state == State.Dashing)
-            StartCoroutine(DashTimer());
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey("left shift"))
+            run = true;
+        else
+            run = false;
+        if (Input.GetKeyDown("space"))
+        {
+            state = State.Dashing;
+        }
     }
 
     void FixedUpdate()
@@ -49,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.velocity = movement * activeMoveSpeed;
                 break;
             case State.Dashing:
-                rb2d.velocity = dash * dashSpeed;
+                rb2d.velocity = movement * dashSpeed;
+                StartCoroutine(DashTimer());
                 break;
         }
         
