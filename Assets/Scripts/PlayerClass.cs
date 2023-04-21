@@ -9,6 +9,9 @@ public class PlayerClass : MonoBehaviour{
     public EntityStats playerStats;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
+    
+    //Testing
+    public SpecialAttack specialAttack;
 
     public GameObject bulletPrefab;
 
@@ -26,6 +29,12 @@ public class PlayerClass : MonoBehaviour{
         rangedWeapon.attackPoint = rangedAttackPoint;
         rangedWeapon.SetEntityStats(playerStats);
         rangedWeapon.SetPrefab(bulletPrefab);
+
+        //Testing
+        specialAttack = gameObject.AddComponent<Flamethrower>() as SpecialAttack;
+        specialAttack.gameObject.GetComponent<Flamethrower>().flamethrowerCollider = rangedAttackPoint.gameObject.GetComponent<PolygonCollider2D>();
+        specialAttack.attackPoint = rangedAttackPoint;
+        specialAttack.SetEntityStats(playerStats);
     }
     // Start is called before the first frame update
     void Start(){
