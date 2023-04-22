@@ -11,7 +11,8 @@ public class PlayerClass : MonoBehaviour{
     public RangedWeapon rangedWeapon;
     
     //Testing
-    public SpecialAttack specialAttack;
+    public SpecialAttack[] specialAttacks;
+    public Flamethrower flamethrower;
 
     public GameObject bulletPrefab;
 
@@ -31,18 +32,39 @@ public class PlayerClass : MonoBehaviour{
         rangedWeapon.SetPrefab(bulletPrefab);
 
         //Testing
-        specialAttack = gameObject.AddComponent<Flamethrower>() as SpecialAttack;
-        specialAttack.gameObject.GetComponent<Flamethrower>().flamethrowerCollider = rangedAttackPoint.gameObject.GetComponent<PolygonCollider2D>();
-        specialAttack.attackPoint = rangedAttackPoint;
-        specialAttack.SetEntityStats(playerStats);
+        specialAttacks = new SpecialAttack[5];
+        specialAttacks[0] = flamethrower;
+
+        flamethrower = gameObject.AddComponent<Flamethrower>();
+        flamethrower.gameObject.GetComponent<Flamethrower>().flamethrowerCollider = rangedAttackPoint.gameObject.GetComponent<PolygonCollider2D>();
+        flamethrower.attackPoint = rangedAttackPoint;
+        flamethrower.SetEntityStats(playerStats);
+        flamethrower = flamethrower.gameObject.GetComponent<Flamethrower>();
     }
+
+    //Testing level 2 upgrade
+    void UpgradeFlamethrower()
+    {
+        flamethrower.upgradeLevel += 1;
+        if (flamethrower.upgradeLevel == 2)
+        {
+            flamethrower.flamethrowerDuration += 3f;
+            flamethrower.attackCooldown += 3f;
+            Vector2 upgrade2Point1 = new Vector2(flamethrower.flamethrowerCollider.points[0].x -= 1, flamethrower.flamethrowerCollider.points[0].y += 1);
+            Vector2 upgrade2Point2 = new Vector2(flamethrower.flamethrowerCollider.points[1].x += 1, flamethrower.flamethrowerCollider.points[1].y += 1);
+            Vector2[] upgradeLevel2Points = {upgrade2Point1, upgrade2Point2, flamethrower.flamethrowerCollider.points[2]};
+            flamethrower.flamethrowerCollider.SetPath(0, upgradeLevel2Points);
+        }
+        Debug.Log("Flamethrower upgrade: " + flamethrower.upgradeLevel);
+    }
+
     // Start is called before the first frame update
     void Start(){
-        
     }
 
     // Update is called once per frame
     void Update(){
-        
+        if (Input.GetKeyDown("u")) //To see the upgrade in action and test differences
+            UpgradeFlamethrower();
     }
 }

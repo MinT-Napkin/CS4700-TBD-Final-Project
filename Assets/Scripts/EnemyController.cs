@@ -13,6 +13,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //Testign for flamethrower upgrade 3
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 3f);
+    }
+
     IEnumerator DebugEnemyHitColor()
     {
         gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;

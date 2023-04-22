@@ -14,6 +14,7 @@ public class SpecialAttack : MonoBehaviour
     new public string name;
     public string inputKey;
     public EntityStats playerStats;
+    public int upgradeLevel;
 
     public virtual void Awake()
     {
