@@ -20,7 +20,7 @@ public class SpecialAttack : MonoBehaviour
         enemyLayers = LayerMask.GetMask("Enemy");
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (Input.GetKeyDown(inputKey))
         {
