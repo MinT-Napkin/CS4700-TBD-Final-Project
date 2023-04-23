@@ -10,9 +10,10 @@ public class PlayerClass : MonoBehaviour{
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
     
-    //Testing
+    //Testing special attacks
     public SpecialAttack[] specialAttacks;
     public Flamethrower flamethrower;
+    public Shield shield;
 
     public GameObject bulletPrefab;
 
@@ -31,18 +32,24 @@ public class PlayerClass : MonoBehaviour{
         rangedWeapon.SetEntityStats(playerStats);
         rangedWeapon.SetPrefab(bulletPrefab);
 
-        //Testing
+        //Testing special attacks
         specialAttacks = new SpecialAttack[5];
         specialAttacks[0] = flamethrower;
+        specialAttacks[1] = shield;
 
+        //Testing flamethrower
         flamethrower = gameObject.AddComponent<Flamethrower>();
         flamethrower.gameObject.GetComponent<Flamethrower>().flamethrowerCollider = rangedAttackPoint.gameObject.GetComponent<PolygonCollider2D>();
         flamethrower.attackPoint = rangedAttackPoint;
         flamethrower.SetEntityStats(playerStats);
         flamethrower = flamethrower.gameObject.GetComponent<Flamethrower>();
+
+        //Testing shield
+        shield = gameObject.AddComponent<Shield>();
+        shield.SetEntityStats(playerStats);
     }
 
-    //Testing level 2 upgrade
+    //Testing flamethrower upgrade
     void UpgradeFlamethrower()
     {
         flamethrower.upgradeLevel += 1;
@@ -56,6 +63,12 @@ public class PlayerClass : MonoBehaviour{
             flamethrower.flamethrowerCollider.SetPath(0, upgradeLevel2Points);
         }
         Debug.Log("Flamethrower upgrade: " + flamethrower.upgradeLevel);
+    }
+
+    //Testing shield upgrade
+    void UpgradeShield()
+    {
+        shield.upgradeLevel += 1;
     }
 
     // Start is called before the first frame update

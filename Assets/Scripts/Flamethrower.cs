@@ -12,12 +12,11 @@ public class Flamethrower : SpecialAttack
     public override void Awake()
     {
         base.Awake();
-        attackDamage = 10f;
-        attackRange = 10f;
-        attackCooldown = 5f;
-        inputKey = "f";
+        inputKey = "1";
         name = "Flamethrower";
         description = "Primitive flamethrower built by one who dominated the slums";
+        attackDamage = 10f;
+        attackCooldown = 5f;
         flamethrowerDuration = 3f;
         contactFilter = new ContactFilter2D();
         contactFilter.SetLayerMask(enemyLayers);
@@ -34,6 +33,8 @@ public class Flamethrower : SpecialAttack
 
     IEnumerator Activate()
     {
+        Debug.Log("Flamethrower activated");
+
         HashSet<GameObject> toExplode = new HashSet<GameObject>();
 
         for (int i = 0; i < flamethrowerDuration * 2; i++)

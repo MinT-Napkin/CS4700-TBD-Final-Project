@@ -6,9 +6,8 @@ public class SpecialAttack : MonoBehaviour
 {
     public Transform attackPoint;
     public float attackDamage;
-    public float attackRange;
     public float attackCooldown;
-    bool attackOnCooldown = false;
+    public bool attackOnCooldown = false;
     public string description;
     public LayerMask enemyLayers;
     new public string name;
