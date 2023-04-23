@@ -38,6 +38,12 @@ public class Shield : SpecialAttack
         }
     }
 
+    public override void Upgrade()
+    {
+        upgradeLevel += 1;
+        Debug.Log("Shield upgrade: " + upgradeLevel);
+    }
+
     public override void Attack()
     {
         StartCoroutine(Activate());

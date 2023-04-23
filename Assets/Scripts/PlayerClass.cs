@@ -14,6 +14,7 @@ public class PlayerClass : MonoBehaviour{
     public SpecialAttack[] specialAttacks;
     public Flamethrower flamethrower;
     public Shield shield;
+    public LightningBolt lightningBolt;
 
     public GameObject bulletPrefab;
 
@@ -36,38 +37,16 @@ public class PlayerClass : MonoBehaviour{
         specialAttacks = new SpecialAttack[5];
         specialAttacks[0] = flamethrower;
         specialAttacks[1] = shield;
+        specialAttacks[2] = lightningBolt;
 
         //Testing flamethrower
         flamethrower = gameObject.AddComponent<Flamethrower>();
-        flamethrower.gameObject.GetComponent<Flamethrower>().flamethrowerCollider = rangedAttackPoint.gameObject.GetComponent<PolygonCollider2D>();
-        flamethrower.attackPoint = rangedAttackPoint;
-        flamethrower.SetEntityStats(playerStats);
-        flamethrower = flamethrower.gameObject.GetComponent<Flamethrower>();
 
         //Testing shield
         shield = gameObject.AddComponent<Shield>();
-        shield.SetEntityStats(playerStats);
-    }
 
-    //Testing flamethrower upgrade
-    void UpgradeFlamethrower()
-    {
-        flamethrower.upgradeLevel += 1;
-        if (flamethrower.upgradeLevel == 2)
-        {
-            Vector2 upgrade2Point1 = new Vector2(flamethrower.flamethrowerCollider.points[0].x -= 1, flamethrower.flamethrowerCollider.points[0].y += 1);
-            Vector2 upgrade2Point2 = new Vector2(flamethrower.flamethrowerCollider.points[1].x += 1, flamethrower.flamethrowerCollider.points[1].y += 1);
-            Vector2[] upgradeLevel2Points = {upgrade2Point1, upgrade2Point2, flamethrower.flamethrowerCollider.points[2]};
-            flamethrower.flamethrowerCollider.SetPath(0, upgradeLevel2Points);
-        }
-        Debug.Log("Flamethrower upgrade: " + flamethrower.upgradeLevel);
-    }
-
-    //Testing shield upgrade
-    void UpgradeShield()
-    {
-        shield.upgradeLevel += 1;
-        Debug.Log("Shield upgrade: " + shield.upgradeLevel);
+        //Testing lightning bolt
+        lightningBolt = gameObject.AddComponent<LightningBolt>();
     }
 
     // Start is called before the first frame update
@@ -78,8 +57,9 @@ public class PlayerClass : MonoBehaviour{
     void Update(){
         if (Input.GetKeyDown("u")) //To see the upgradse in action and test differences
         { 
-            UpgradeFlamethrower();
-            UpgradeShield();
+            flamethrower.Upgrade();
+            shield.Upgrade();
+            lightningBolt.Upgrade();
         }
     }
 }

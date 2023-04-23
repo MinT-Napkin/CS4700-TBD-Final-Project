@@ -18,6 +18,8 @@ public class SpecialAttack : MonoBehaviour
     public virtual void Awake()
     {
         enemyLayers = LayerMask.GetMask("Enemy");
+        attackPoint = gameObject.GetComponent<PlayerClass>().rangedAttackPoint;
+        playerStats = gameObject.GetComponent<PlayerClass>().playerStats;
     }
 
     public virtual void Update()
@@ -29,13 +31,11 @@ public class SpecialAttack : MonoBehaviour
         }
     }
 
+    public virtual void Upgrade(){}
+
     public virtual void Attack()
     {
         StartCoroutine(AttackCooldown());
-    }
-
-    public void SetEntityStats(EntityStats playerStats){
-        this.playerStats = playerStats;
     }
 
     IEnumerator AttackCooldown()
