@@ -13,11 +13,13 @@ public class Shield : SpecialAttack
         inputKey = "2";
         name = "Shield";
         description = "Shield activated by a device, often used as means of self-preservation by security robots.";
-        attackCooldown = 7f;
-        shieldDuration = 2f;
+        shieldDuration = 4f;
+        attackCooldown = 7f + shieldDuration;
         shieldActive = false;
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
+
+        //Adjust duration and cooldown based on upgrade level here
     }
 
     public override void Update()
@@ -30,7 +32,8 @@ public class Shield : SpecialAttack
             if (Input.GetKeyDown("n"))
             {
                 Debug.Log("Damage nullified by shield");
-                Deactivate();
+                if (upgradeLevel < 3)
+                    Deactivate();
             }
         }
     }
@@ -38,6 +41,7 @@ public class Shield : SpecialAttack
     public override void Attack()
     {
         StartCoroutine(Activate());
+        base.Attack();
     }
 
     public void Deactivate()
@@ -47,9 +51,10 @@ public class Shield : SpecialAttack
         gameObject.GetComponent<SpriteRenderer>().color = new Color(86f/255f, 241f/255f, 31f/255f);
 
         if (upgradeLevel > 1)
+        {
             playerStats.currentHealth += playerStats.maxHealth * 0.25f;
-
-        base.Attack();
+            Debug.Log("Healed the player by 25% of their max health");
+        }
     }
 
     IEnumerator Activate()

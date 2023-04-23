@@ -55,8 +55,6 @@ public class PlayerClass : MonoBehaviour{
         flamethrower.upgradeLevel += 1;
         if (flamethrower.upgradeLevel == 2)
         {
-            flamethrower.flamethrowerDuration += 3f;
-            flamethrower.attackCooldown += 3f;
             Vector2 upgrade2Point1 = new Vector2(flamethrower.flamethrowerCollider.points[0].x -= 1, flamethrower.flamethrowerCollider.points[0].y += 1);
             Vector2 upgrade2Point2 = new Vector2(flamethrower.flamethrowerCollider.points[1].x += 1, flamethrower.flamethrowerCollider.points[1].y += 1);
             Vector2[] upgradeLevel2Points = {upgrade2Point1, upgrade2Point2, flamethrower.flamethrowerCollider.points[2]};
@@ -69,6 +67,7 @@ public class PlayerClass : MonoBehaviour{
     void UpgradeShield()
     {
         shield.upgradeLevel += 1;
+        Debug.Log("Shield upgrade: " + shield.upgradeLevel);
     }
 
     // Start is called before the first frame update
@@ -77,7 +76,10 @@ public class PlayerClass : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKeyDown("u")) //To see the upgrade in action and test differences
+        if (Input.GetKeyDown("u")) //To see the upgradse in action and test differences
+        { 
             UpgradeFlamethrower();
+            UpgradeShield();
+        }
     }
 }

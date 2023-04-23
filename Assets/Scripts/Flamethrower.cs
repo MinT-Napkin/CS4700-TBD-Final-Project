@@ -16,13 +16,15 @@ public class Flamethrower : SpecialAttack
         name = "Flamethrower";
         description = "Primitive flamethrower built by one who dominated the slums";
         attackDamage = 10f;
-        attackCooldown = 5f;
         flamethrowerDuration = 3f;
+        attackCooldown = 5f + flamethrowerDuration;
         contactFilter = new ContactFilter2D();
         contactFilter.SetLayerMask(enemyLayers);
         hitEnemies = new List<Collider2D>();
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
+        
+        //Adjust attack damage, duration, and cooldown based on upgrade level here
     }
 
     public override void Attack()
@@ -34,7 +36,6 @@ public class Flamethrower : SpecialAttack
     IEnumerator Activate()
     {
         Debug.Log("Flamethrower activated");
-
         HashSet<GameObject> toExplode = new HashSet<GameObject>();
 
         for (int i = 0; i < flamethrowerDuration * 2; i++)
@@ -50,10 +51,11 @@ public class Flamethrower : SpecialAttack
             }
             yield return new WaitForSeconds(0.5f);
         }
-        
+
         //Testing final upgrade
         if (upgradeLevel == 3)
         {
+            yield return new WaitForSeconds(1f); //wait for explosion
             foreach (GameObject enemy in toExplode)
             {
                 Debug.Log("Explosion created on " + enemy.name);
@@ -69,6 +71,7 @@ public class Flamethrower : SpecialAttack
             }
         }
         hitEnemies.Clear();
+
     }
 
     IEnumerator DebugColorCoroutine(GameObject enemy, Color color)
