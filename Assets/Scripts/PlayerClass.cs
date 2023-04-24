@@ -57,8 +57,7 @@ public class PlayerClass : Entity{
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKeyDown("u")) //To see the upgradse in action and test differences
-        { 
+        if (Input.GetKeyDown("u")){ 
             flamethrower.Upgrade();
             shield.Upgrade();
             lightningBolt.Upgrade();
@@ -67,8 +66,7 @@ public class PlayerClass : Entity{
     }
 
     //Debug doomblades gizmo
-    void OnDrawGizmos()
-    {
+    void OnDrawGizmos(){
         Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
     }
 }

@@ -7,7 +7,7 @@ public class BladeOfTheOutsider : MeleeWeapon{
         base.Awake();
         attackDamage = 10.0f;
         attackRange = 1.0f;
-        damageType = gameObject.AddComponent<DamageTypePhysical>();
+        damageType = new DamageTypePhysical();
         description = "This is the favored blade of one who does not belong to this world";
         name = "Outsider's Blade";
     }

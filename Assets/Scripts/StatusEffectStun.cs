@@ -32,8 +32,7 @@ public class StatusEffectStun : StatusEffectParent{
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
     }
 }

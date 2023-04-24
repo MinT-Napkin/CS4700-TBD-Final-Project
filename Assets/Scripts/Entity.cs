@@ -9,8 +9,7 @@ public class Entity : MonoBehaviour{
         entityStats = new EntityStats();
     }
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         
     }
 
@@ -18,21 +17,32 @@ public class Entity : MonoBehaviour{
     void Update(){
     }
 
-    public void TakeDamage(DamageEvent damageEvent){
+    void DamageHealth(float finalDamage){
+        entityStats.currentHealth -= finalDamage;
+
+        if (entityStats.currentHealth == 0){
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+
+            OnEntityDeath();
+        }
+        else if (entityStats.currentHealth < 0){
+            entityStats.currentHealth = 0;
+
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+
+            OnEntityDeath();
+        }
+    }
+
+    protected virtual void OnEntityDeath(){
+        //death animation or whatever happens onbeng defeated
+    }
+
+    public void TakeDamage(DamageEvent damageEvent) {
         float finalDamage;
 
         finalDamage = damageEvent.ApplyDamage();
 
         DamageHealth(finalDamage);
-    }
-
-    void DamageHealth(float finalDamage){
-        entityStats.currentHealth -= finalDamage;
-
-        if (entityStats.currentHealth < 0){
-            entityStats.currentHealth = 0;
-        }
-
-        entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
     }
 }
