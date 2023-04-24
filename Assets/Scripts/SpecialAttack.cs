@@ -19,7 +19,7 @@ public class SpecialAttack : MonoBehaviour
     {
         enemyLayers = LayerMask.GetMask("Enemy");
         attackPoint = gameObject.GetComponent<PlayerClass>().rangedAttackPoint;
-        playerStats = gameObject.GetComponent<PlayerClass>().playerStats;
+        playerStats = gameObject.GetComponent<PlayerClass>().entityStats;
     }
 
     public virtual void Update()
