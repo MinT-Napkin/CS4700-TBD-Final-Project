@@ -45,9 +45,7 @@ public class MeleeWeapon : MonoBehaviour{
     void Attack(){
         DamageEvent damageEvent = gameObject.AddComponent<DamageEvent>();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
         foreach (Collider2D enemy in hitEnemies){
-            StartCoroutine(AttackCooldown());
             StartCoroutine(DebugEnemyHitColor(enemy)); //Debug - to check if enemy is hit
 
             damageEvent = gameObject.AddComponent<DamageEvent>();
@@ -56,6 +54,7 @@ public class MeleeWeapon : MonoBehaviour{
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
             Destroy(damageEvent);
         }
+        StartCoroutine(AttackCooldown());
     }
 
     void OnDrawGizmosSelected(){
