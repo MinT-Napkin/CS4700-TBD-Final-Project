@@ -15,6 +15,7 @@ public class PlayerClass : MonoBehaviour{
     public Flamethrower flamethrower;
     public Shield shield;
     public LightningBolt lightningBolt;
+    public Doomblades doomblades;
 
     public GameObject bulletPrefab;
 
@@ -38,6 +39,7 @@ public class PlayerClass : MonoBehaviour{
         specialAttacks[0] = flamethrower;
         specialAttacks[1] = shield;
         specialAttacks[2] = lightningBolt;
+        specialAttacks[3] = doomblades;
 
         //Testing flamethrower
         flamethrower = gameObject.AddComponent<Flamethrower>();
@@ -47,6 +49,9 @@ public class PlayerClass : MonoBehaviour{
 
         //Testing lightning bolt
         lightningBolt = gameObject.AddComponent<LightningBolt>();
+
+        //Testing doomblades
+        doomblades = gameObject.AddComponent<Doomblades>();
     }
 
     // Start is called before the first frame update
@@ -60,6 +65,13 @@ public class PlayerClass : MonoBehaviour{
             flamethrower.Upgrade();
             shield.Upgrade();
             lightningBolt.Upgrade();
+            doomblades.Upgrade();
         }
+    }
+
+    //Debug doomblades gizmo
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
     }
 }

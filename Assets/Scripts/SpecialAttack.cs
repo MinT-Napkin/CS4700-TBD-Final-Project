@@ -41,9 +41,7 @@ public class SpecialAttack : MonoBehaviour
     IEnumerator AttackCooldown()
     {
         attackOnCooldown = true;
-        Debug.Log("Attack is on cooldown.");
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;
-        Debug.Log("Attack is not on cooldown.");
     }
 }
