@@ -43,7 +43,7 @@ public class MeleeWeapon : MonoBehaviour{
     }
 
     void Attack(){
-        DamageEvent damageEvent = new DamageEvent();
+        DamageEvent damageEvent = gameObject.AddComponent<DamageEvent>();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies){
