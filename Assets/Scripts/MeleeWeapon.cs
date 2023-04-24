@@ -9,6 +9,7 @@ public class MeleeWeapon : MonoBehaviour{
     public float attackRange = 0.5f;
     public float attackCooldown = 1.0f;
     bool attackOnCooldown = false;
+    protected DamageTypeParent damageType;
     public string description;
     public LayerMask enemyLayers;
     new public string name;
@@ -42,11 +43,18 @@ public class MeleeWeapon : MonoBehaviour{
     }
 
     void Attack(){
+        DamageEvent damageEvent = new DamageEvent();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies){
             StartCoroutine(AttackCooldown());
             StartCoroutine(DebugEnemyHitColor(enemy)); //Debug - to check if enemy is hit
+
+            damageEvent = gameObject.AddComponent<DamageEvent>();
+            damageEvent.Initialize(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
+
+            enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+            Destroy(damageEvent);
         }
     }
 

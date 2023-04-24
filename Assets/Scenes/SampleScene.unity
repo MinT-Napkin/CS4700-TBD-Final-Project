@@ -309,6 +309,37 @@ Transform:
   m_Father: {fileID: 916498033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &668830146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1197218524049011796, guid: fddb0b032d53a50458dcbe20eaa647cf, type: 3}
+  m_PrefabInstance: {fileID: 399932334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &668830147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668830146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929939870466c0e409440ee036fcb5d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityStats:
+    attackSpeed: 1
+    criticalDamage: 2
+    currentHealth: 100
+    dashDistance: 20
+    defense: 10
+    luck: 5
+    maxHealth: 100
+    normalizedHealth: 1
+    runSpeed: 20
+    specialAttack: 10
+    specialDefense: 10
+    strength: 10
+    walkSpeed: 10
 --- !u!1 &916498028
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,10 +488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3959cf897d1f40447b8839f8cdfd7aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeAttackPoint: {fileID: 655592873}
-  meleeWeapon: {fileID: 0}
-  playerStats:
+  entityStats:
     attackSpeed: 1
+    criticalDamage: 2
     currentHealth: 100
     dashDistance: 20
     defense: 10
@@ -472,6 +502,8 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 10
+  meleeAttackPoint: {fileID: 655592873}
+  meleeWeapon: {fileID: 0}
   rangedAttackPoint: {fileID: 1071973577}
   rangedWeapon: {fileID: 0}
   bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}

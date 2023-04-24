@@ -11,7 +11,7 @@ public class EntityStats{
         currentHealth = 100.0f;
         dashDistance = 20.0f;
         defense = 10.0f;
-        luck = 5.0f;
+        criticalHitRate = 5.0f;
         maxHealth = 100.0f;
         normalizedHealth = 1.0f;
         runSpeed = 20.0f;
@@ -36,7 +36,7 @@ public class EntityStats{
     public float currentHealth;
     public float dashDistance;
     public float defense;
-    public float luck;
+    public float criticalHitRate;
     public float maxHealth;
     public float normalizedHealth;
     public float runSpeed;

@@ -2,29 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClass : MonoBehaviour{
+public class PlayerClass : Entity{
     public Transform meleeAttackPoint;
     public MeleeWeapon meleeWeapon;
     PlayerMovement playerMovement;
-    public EntityStats playerStats;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
 
     public GameObject bulletPrefab;
 
     void Awake(){
-        playerStats = new EntityStats();
-
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
-        meleeWeapon.SetEntityStats(playerStats);
+        meleeWeapon.SetEntityStats(entityStats);
 
         playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
-        playerMovement.SetEntityStats(playerStats);
+        playerMovement.SetEntityStats(entityStats);
 
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;
-        rangedWeapon.SetEntityStats(playerStats);
+        rangedWeapon.SetEntityStats(entityStats);
         rangedWeapon.SetPrefab(bulletPrefab);
     }
     // Start is called before the first frame update
