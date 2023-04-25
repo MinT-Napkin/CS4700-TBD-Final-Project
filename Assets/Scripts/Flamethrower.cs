@@ -14,7 +14,7 @@ public class Flamethrower : SpecialAttack{
         name = "Flamethrower";
         damageType = new DamageTypePhysical();
         description = "Primitive flamethrower built by one who dominated the slums";
-        attackDamage = 10.0f;
+        attackDamage = 1.0f;
         flamethrowerDuration = 3.0f;
         attackCooldown = 5.0f + flamethrowerDuration;
         flamethrowerCollider = attackPoint.GetComponent<PolygonCollider2D>();
@@ -36,20 +36,15 @@ public class Flamethrower : SpecialAttack{
             Vector2[] upgradeLevel2Points = {upgrade2Point1, upgrade2Point2, flamethrowerCollider.points[2]};
             flamethrowerCollider.SetPath(0, upgradeLevel2Points);
         }
-        Debug.Log("Flamethrower upgrade: " + upgradeLevel);
     }
 
     public override void Attack(){
         StartCoroutine(Activate());
-
         base.Attack();
-
-        Debug.Log(playerStats.currentHealth);
     }
 
     IEnumerator Activate(){
         DamageEvent damageEvent;
-        Debug.Log("Flamethrower activated");
         HashSet<GameObject> toExplode = new HashSet<GameObject>();
 
         //Slow player movement for duration
@@ -60,12 +55,13 @@ public class Flamethrower : SpecialAttack{
             flamethrowerCollider.OverlapCollider(contactFilter, hitEnemies);
 
             foreach (Collider2D enemy in hitEnemies){
-                Debug.Log(enemy.gameObject.name + " hit by flamethrower.");
                 //Implement damage and status effect here
                 damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
 
+                //Apply burn status effect
+
                 enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
-                //Testing final upgrade
+                //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }
             yield return new WaitForSeconds(0.5f);
@@ -78,14 +74,9 @@ public class Flamethrower : SpecialAttack{
             yield return new WaitForSeconds(1f); //wait for explosion
 
             foreach (GameObject enemy in toExplode){
-                Debug.Log("Explosion created on " + enemy.name);
-
                 foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 3f, enemyLayers)){
-                    // Might get rid of this check and damage the enemy that expldoes as well, I put this here for debugging to make it clear which one explodes and which are damaged by the explosion
-                    if (enemy.gameObject != element.gameObject){
-                        StartCoroutine(DebugColorCoroutine(element.gameObject, Color.yellow)); //Yellow enemies are hit by explosion
-                        Debug.Log(element.gameObject.name + " hit by explosion!");
-                    }
+                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Enemy>());
+                    element.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
                 }
             }
         }
