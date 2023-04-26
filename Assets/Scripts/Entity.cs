@@ -32,6 +32,14 @@ public class Entity : MonoBehaviour{
 
             OnEntityDeath();
         }
+        else if (entityStats.currentHealth > entityStats.maxHealth) {
+            entityStats.currentHealth = entityStats.maxHealth;
+
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+        }
+        else {
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+        }
     }
 
     protected virtual void OnEntityDeath(){

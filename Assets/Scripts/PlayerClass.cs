@@ -60,15 +60,14 @@ public class PlayerClass : Entity{
 
     }
 
-    protected override void DamageHealth(float finalDamage)
-    {
+    protected override void DamageHealth(float finalDamage){
         base.DamageHealth(finalDamage);
+
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
         // Start is called before the first frame update
         void Start(){
-            healthBar.setMaxHealth(entityStats.maxHealth);
             healthBar.setCurrentHealth(entityStats.currentHealth);
         }
 
@@ -81,20 +80,24 @@ public class PlayerClass : Entity{
             doomblades.Upgrade();
         }
 
-        if (Input.GetKeyDown("l"))
-        {
-            DamageTypeParent damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, this);
-            Debug.Log("hello"+entityStats.currentHealth);
+        if (Input.GetKeyDown("k")){
+            DamageTypeParent damageType = new DamageTypeParent();
+
+            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
+
             TakeDamage(damageEvent);
+
+            Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown("k"))
-        {
-            DamageTypeParent damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(-1f, damageType, this, this);
-            Debug.Log("hello" + entityStats.currentHealth);
+        if (Input.GetKeyDown("l")){
+            DamageTypeParent damageType = new DamageTypeParent();
+
+            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
+
             TakeDamage(damageEvent);
+
+            Debug.Log(entityStats.currentHealth);
         }
 
     }

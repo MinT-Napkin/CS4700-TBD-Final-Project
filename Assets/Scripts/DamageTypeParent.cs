@@ -10,6 +10,7 @@ public class DamageTypeParent{
 
     public virtual float ApplyUnmitigableDamage(float finalDamage){
         this.finalDamage = finalDamage;
+
         return finalDamage;
     }
 }
