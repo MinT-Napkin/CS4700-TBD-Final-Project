@@ -101,14 +101,12 @@ MonoBehaviour:
   attackPoint: {fileID: 2414672768825884910}
   target: {fileID: 0}
   hasMeleeAttack: 1
-  hasRangedAttack: 1
+  hasRangedAttack: 0
   meleeAttackRange: 1.55
   meleeDetectionRange: 2.3
   chaseRange: 8
-  rangedAttackAndDetectionRange: 12
+  rangedAttackAndDetectionRange: 0
   meleeAttackSpeed: 2
-  rangedAttackSpeed: 3
+  rangedAttackSpeed: 0
   meleeAttackOnCooldown: 0
   rangedAttackOnCooldown: 0
-  rotationSpeed: 20
-  rotationModifier: 90

@@ -7,13 +7,7 @@ public class MobGangster : Enemy
     public override void MeleeAttack()
     {
         base.MeleeAttack();
-        Debug.Log("Mob gangster attacks!");
-    }
-
-    public override void RangedAttack()
-    {
-        base.RangedAttack();
-        Debug.Log("Mob gangster shoots!");
+        StartCoroutine(TestMelee());
     }
 
     public override void OnDrawGizmosSelected()
@@ -21,5 +15,17 @@ public class MobGangster : Enemy
         base.OnDrawGizmosSelected();
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+    }
+
+    IEnumerator TestMelee()
+    {
+        float saveWalkSpeed = entityStats.walkSpeed;
+        entityStats.walkSpeed = 0f;
+        freezeRotation = true;
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Mob gangster attacks with a club!");
+        yield return new WaitForSeconds(1f);
+        entityStats.walkSpeed = saveWalkSpeed;
+        freezeRotation = false;
     }
 }

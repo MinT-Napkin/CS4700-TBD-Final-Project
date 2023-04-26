@@ -21,6 +21,8 @@ public class Enemy : Entity{
     public bool meleeAttackOnCooldown = false;
     public bool rangedAttackOnCooldown = false;
 
+    protected bool freezeRotation = false;
+
     void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
@@ -34,7 +36,7 @@ public class Enemy : Entity{
         {
             if (distance <= chaseRange)
             {
-                FacePlayer();
+                RotateEnemy();
                 if (distance > meleeDetectionRange)
                 {
                     transform.position = Vector2.MoveTowards(transform.position, target.position, entityStats.walkSpeed * Time.deltaTime);
@@ -51,7 +53,7 @@ public class Enemy : Entity{
         {
             if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
             {
-                FacePlayer();
+                RotateEnemy();
                 if (!rangedAttackOnCooldown)
                     RangedAttack();
             }
@@ -69,14 +71,22 @@ public class Enemy : Entity{
     protected override void OnEntityDeath(){
     }
 
-    void FacePlayer()
+    void RotateEnemy()
     {
-        float rotationSpeed = 10;
-        float rotationModifier = 90;
-        Vector3 vectorToTarget = target.transform.position - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - rotationModifier;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotationSpeed);
+        Vector2 direction = target.position - transform.position;
+        direction.Normalize();
+        
+        if (!freezeRotation)
+        {
+            if (direction.y < -0.5f)
+                transform.eulerAngles = new Vector3(0f, 0f, 180f);
+            else if (direction.y > 0.5f)
+                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            else if (direction.x < 0)
+                transform.eulerAngles = new Vector3(0f, 0f, 90f);
+            else if (direction.x > 0)
+                transform.eulerAngles = new Vector3(0f, 0f, -90f);
+        }
     }
 
     public virtual void OnDrawGizmosSelected()
