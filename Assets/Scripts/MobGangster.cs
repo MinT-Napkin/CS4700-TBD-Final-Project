@@ -15,4 +15,11 @@ public class MobGangster : Enemy
         base.RangedAttack();
         Debug.Log("Mob gangster shoots!");
     }
+
+    public override void OnDrawGizmosSelected()
+    {
+        base.OnDrawGizmosSelected();
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+    }
 }

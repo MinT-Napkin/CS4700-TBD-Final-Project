@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : Entity{
-    public Transform meleeAttackPoint;
-    public Transform rangedAttackPoint;
+    public Transform attackPoint;
     public Transform target;
     
     public bool hasMeleeAttack;
     public bool hasRangedAttack;
 
     public float meleeAttackRange;
+    public float meleeDetectionRange;
     public float chaseRange;
-    public float rangedAttackRange;
+    public float rangedAttackAndDetectionRange;
 
     public float meleeAttackSpeed;
     public float rangedAttackSpeed;
@@ -34,11 +34,12 @@ public class Enemy : Entity{
         {
             if (distance <= chaseRange)
             {
-                if (distance > meleeAttackRange)
+                FacePlayer();
+                if (distance > meleeDetectionRange)
                 {
                     transform.position = Vector2.MoveTowards(transform.position, target.position, entityStats.walkSpeed * Time.deltaTime);
                 }
-                else if (distance <= meleeAttackRange)
+                else if (distance <= meleeDetectionRange)
                 {
                     if (!meleeAttackOnCooldown)
                         MeleeAttack();
@@ -48,15 +49,15 @@ public class Enemy : Entity{
 
         if (hasRangedAttack)
         {
-            if ((distance <= rangedAttackRange) && (distance >= chaseRange))
+            if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
             {
+                FacePlayer();
                 if (!rangedAttackOnCooldown)
                     RangedAttack();
             }
         }
     }
 
-    //Attack methods are overridden in specific enemy scripts, attached to prefab variants for those specific enemies
     public virtual void MeleeAttack(){
        StartCoroutine(MeleeAttackCooldown());
     }
@@ -68,14 +69,24 @@ public class Enemy : Entity{
     protected override void OnEntityDeath(){
     }
 
-    void OnDrawGizmosSelected()
+    void FacePlayer()
     {
-        Gizmos.color = Color.red;
+        float rotationSpeed = 10;
+        float rotationModifier = 90;
+        Vector3 vectorToTarget = target.transform.position - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - rotationModifier;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotationSpeed);
+    }
+
+    public virtual void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, meleeAttackRange);
+        Gizmos.DrawWireSphere(transform.position, meleeDetectionRange);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
+        Gizmos.DrawWireSphere(transform.position, rangedAttackAndDetectionRange);
     }
 
     IEnumerator MeleeAttackCooldown()

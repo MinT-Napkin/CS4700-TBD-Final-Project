@@ -7,17 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.91
+      objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4730496
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.630525
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -63,11 +67,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_PrefabInstance: {fileID: 2574456574421449451}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2538431576893441632 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 36060187379989643, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
-  m_PrefabInstance: {fileID: 2574456574421449451}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6265437003230694985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
@@ -99,13 +98,17 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 1
-  meleeAttackPoint: {fileID: 2414672768825884910}
-  rangedAttackPoint: {fileID: 2538431576893441632}
+  attackPoint: {fileID: 2414672768825884910}
   target: {fileID: 0}
   hasMeleeAttack: 1
   hasRangedAttack: 1
-  meleeAttackRange: 2
+  meleeAttackRange: 1.55
+  meleeDetectionRange: 2.3
   chaseRange: 8
-  rangedAttackRange: 12
+  rangedAttackAndDetectionRange: 12
   meleeAttackSpeed: 2
   rangedAttackSpeed: 3
+  meleeAttackOnCooldown: 0
+  rangedAttackOnCooldown: 0
+  rotationSpeed: 20
+  rotationModifier: 90
