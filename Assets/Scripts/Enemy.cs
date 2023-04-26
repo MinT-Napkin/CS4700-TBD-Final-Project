@@ -54,7 +54,23 @@ public class Enemy : Entity{
 
         if (hasRangedAttack)
         {
-            if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
+            if (!hasMeleeAttack) //For enemies who ONLY have a ranged attack, therefore those behaving differently
+            {
+                if (distance <= chaseRange)
+                {
+                    RotateEnemy();
+                    if (distance > rangedAttackAndDetectionRange)
+                    {
+                        transform.position = Vector2.MoveTowards(transform.position, target.position, entityStats.walkSpeed * Time.deltaTime);
+                    }
+                    else if (distance <= rangedAttackAndDetectionRange)
+                    {
+                        if (!rangedAttackOnCooldown)
+                            RangedAttack();
+                    }
+                }
+            }
+            else if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
             {
                 RotateEnemy();
                 if (!rangedAttackOnCooldown)

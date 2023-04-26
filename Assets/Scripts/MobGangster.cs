@@ -7,7 +7,7 @@ public class MobGangster : Enemy
     public override void MeleeAttack()
     {
         base.MeleeAttack();
-        StartCoroutine(TestMelee());
+        StartCoroutine(ExecuteMeleeAttack());
     }
 
     public override void OnDrawGizmosSelected()
@@ -17,16 +17,16 @@ public class MobGangster : Enemy
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
     }
 
-    IEnumerator TestMelee()
+    IEnumerator ExecuteMeleeAttack()
     {
         float saveWalkSpeed = entityStats.walkSpeed;
         entityStats.walkSpeed = 0f;
         freezeRotation = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
             Debug.Log(targetHit.gameObject.name + " hit with a club!");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
         entityStats.walkSpeed = saveWalkSpeed;
         freezeRotation = false;
     }
