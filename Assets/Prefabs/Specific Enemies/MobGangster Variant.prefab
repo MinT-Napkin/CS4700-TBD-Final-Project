@@ -97,7 +97,7 @@ MonoBehaviour:
     specialAttack: 10
     specialDefense: 10
     strength: 10
-    walkSpeed: 1
+    walkSpeed: 6
   attackPoint: {fileID: 2414672768825884910}
   target: {fileID: 0}
   hasMeleeAttack: 1

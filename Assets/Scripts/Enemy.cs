@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : Entity{
+
     public Transform attackPoint;
     public Transform target;
     
@@ -21,11 +22,13 @@ public class Enemy : Entity{
     public bool meleeAttackOnCooldown = false;
     public bool rangedAttackOnCooldown = false;
 
+    protected LayerMask targetLayer;
     protected bool freezeRotation = false;
 
     void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
+        targetLayer = LayerMask.GetMask("Player");
     }
 
     void Update()
