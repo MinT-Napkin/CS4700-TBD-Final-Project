@@ -17,7 +17,7 @@ public class Entity : MonoBehaviour{
     void Update(){
     }
 
-    void DamageHealth(float finalDamage){
+    protected virtual void DamageHealth(float finalDamage){
         entityStats.currentHealth -= finalDamage;
 
         if (entityStats.currentHealth == 0){

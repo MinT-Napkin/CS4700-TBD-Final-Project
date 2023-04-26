@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerClass : Entity{
+    //For HP
+    public HealthBarUI healthBar;
+    public Canvas canvas;
+
     public Transform meleeAttackPoint;
     public MeleeWeapon meleeWeapon;
     PlayerMovement playerMovement;
@@ -17,6 +21,8 @@ public class PlayerClass : Entity{
     public Doomblades doomblades;
 
     public GameObject bulletPrefab;
+
+
 
     void Awake(){
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
@@ -49,11 +55,22 @@ public class PlayerClass : Entity{
 
         //Testing doomblades
         doomblades = gameObject.AddComponent<Doomblades>();
+
+        //MaxHPBar
+
     }
 
-    // Start is called before the first frame update
-    void Start(){
+    protected override void DamageHealth(float finalDamage)
+    {
+        base.DamageHealth(finalDamage);
+        healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
+
+        // Start is called before the first frame update
+        void Start(){
+            healthBar.setMaxHealth(entityStats.maxHealth);
+            healthBar.setCurrentHealth(entityStats.currentHealth);
+        }
 
     // Update is called once per frame
     void Update(){
@@ -63,6 +80,23 @@ public class PlayerClass : Entity{
             lightningBolt.Upgrade();
             doomblades.Upgrade();
         }
+
+        if (Input.GetKeyDown("l"))
+        {
+            DamageTypeParent damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, this);
+            Debug.Log("hello"+entityStats.currentHealth);
+            TakeDamage(damageEvent);
+        }
+
+        if (Input.GetKeyDown("k"))
+        {
+            DamageTypeParent damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(-1f, damageType, this, this);
+            Debug.Log("hello" + entityStats.currentHealth);
+            TakeDamage(damageEvent);
+        }
+
     }
 
     //Debug doomblades gizmo
