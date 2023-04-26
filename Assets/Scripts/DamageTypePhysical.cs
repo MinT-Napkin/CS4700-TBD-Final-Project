@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageTypePhysical : DamageTypeParent{
-    public override float ApplyDamage(float baseDamage, Entity damageCauser, Entity damagedEntity){
-        finalDamage = damageCauser.entityStats.strength * baseDamage;
+    public override float ApplyDamage(float damageRatio, Entity damageCauser, Entity damagedEntity){
+        finalDamage = damageCauser.entityStats.strength * damageRatio;
         finalDamage -= (damagedEntity.entityStats.defense / 2.0f);
         finalDamage *= Random.Range(0.8f, 1.2f);
 
@@ -19,14 +19,5 @@ public class DamageTypePhysical : DamageTypeParent{
         finalDamage = Mathf.Round(finalDamage);
 
         return finalDamage;
-    }
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
-    // Update is called once per frame
-    void Update(){
-        
     }
 }
