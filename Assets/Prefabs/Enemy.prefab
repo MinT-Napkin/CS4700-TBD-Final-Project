@@ -74,8 +74,7 @@ GameObject:
   - component: {fileID: 6809868827954471304}
   - component: {fileID: 2856902760494846897}
   - component: {fileID: 6194053623320055456}
-  - component: {fileID: 7995001873931185715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,37 +187,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7995001873931185715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8451289884243031202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929939870466c0e409440ee036fcb5d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entityStats:
-    attackSpeed: 0
-    criticalDamage: 0
-    currentHealth: 0
-    dashDistance: 0
-    defense: 0
-    criticalHitRate: 0
-    maxHealth: 0
-    normalizedHealth: 0
-    runSpeed: 0
-    specialAttack: 0
-    specialDefense: 0
-    strength: 0
-    walkSpeed: 0
-  meleeAttackPoint: {fileID: 160135672489982469}
-  rangedAttackPoint: {fileID: 36060187379989643}
-  target: {fileID: 0}
-  hasMeleeAttack: 0
-  hasRangedAttack: 0
-  meleeAttackRange: 0
-  chaseRange: 0
-  rangedAttackRange: 0
