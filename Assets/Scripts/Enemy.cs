@@ -7,6 +7,7 @@ public class Enemy : Entity{
 
     public Transform attackPoint;
     public Transform target;
+    public LayerMask targetLayer;
     
     public bool hasMeleeAttack;
     public bool hasRangedAttack;
@@ -22,7 +23,6 @@ public class Enemy : Entity{
     public bool meleeAttackOnCooldown = false;
     public bool rangedAttackOnCooldown = false;
 
-    protected LayerMask targetLayer;
     protected bool freezeRotation = false;
 
     void Awake()
