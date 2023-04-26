@@ -5,18 +5,6 @@ using UnityEngine;
 public class Entity : MonoBehaviour{
     public EntityStats entityStats;
 
-    void Awake(){
-        entityStats = new EntityStats();
-    }
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
-    // Update is called once per frame
-    void Update(){
-    }
-
     void DamageHealth(float finalDamage){
         entityStats.currentHealth -= finalDamage;
 

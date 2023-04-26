@@ -18,7 +18,7 @@ public class PlayerClass : Entity{
 
     public GameObject bulletPrefab;
 
-    void Awake(){
+    public void Awake(){
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
