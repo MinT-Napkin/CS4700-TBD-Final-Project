@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour{
     public EntityStats entityStats;
+    public Inventory inventory;
 
     void Awake(){
         entityStats = new EntityStats();
+
+        inventory = gameObject.AddComponent<Inventory>();
     }
     // Start is called before the first frame update
     void Start(){
