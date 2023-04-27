@@ -25,10 +25,18 @@ public class Enemy : Entity{
 
     protected bool freezeRotation = false;
 
+    protected Pathfinding.AIDestinationSetter aiDestinationSetter;
+    protected Pathfinding.AIPath aiPath;
+
     void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
         targetLayer = LayerMask.GetMask("Player");
+        aiDestinationSetter = gameObject.GetComponent<Pathfinding.AIDestinationSetter>();
+        aiDestinationSetter.target = target;
+        aiPath = gameObject.GetComponent<Pathfinding.AIPath>();
+        aiPath.maxSpeed = entityStats.walkSpeed;
+        aiPath.canMove = false;
     }
 
     void Update()
@@ -39,32 +47,31 @@ public class Enemy : Entity{
         {
             if (distance <= chaseRange)
             {
+                aiPath.canMove = true;
                 RotateEnemy();
-                if (distance > meleeDetectionRange)
-                {
-                    transform.position = Vector2.MoveTowards(transform.position, target.position, entityStats.walkSpeed * Time.deltaTime);
-                }
-                else if (distance <= meleeDetectionRange)
+                if (distance <= meleeDetectionRange)
                 {
                     if (!meleeAttackOnCooldown)
                         MeleeAttack();
                 }
             }
+            else
+            {
+                aiPath.canMove = false;
+            }
         }
 
         if (hasRangedAttack)
         {
-            if (!hasMeleeAttack) //For enemies who ONLY have a ranged attack, therefore those behaving differently
+            if (!hasMeleeAttack)
             {
                 if (distance <= chaseRange)
                 {
                     RotateEnemy();
-                    if (distance > rangedAttackAndDetectionRange)
+                    aiPath.canMove = true;
+                    if (distance <= rangedAttackAndDetectionRange)
                     {
-                        transform.position = Vector2.MoveTowards(transform.position, target.position, entityStats.walkSpeed * Time.deltaTime);
-                    }
-                    else if (distance <= rangedAttackAndDetectionRange)
-                    {
+                        aiPath.canMove = false;
                         if (!rangedAttackOnCooldown)
                             RangedAttack();
                     }
@@ -94,7 +101,6 @@ public class Enemy : Entity{
     {
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
-        
         if (!freezeRotation)
         {
             if (direction.y < -0.5f)

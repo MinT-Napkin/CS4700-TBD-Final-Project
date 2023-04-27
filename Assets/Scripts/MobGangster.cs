@@ -19,15 +19,14 @@ public class MobGangster : Enemy
 
     IEnumerator ExecuteMeleeAttack()
     {
-        float saveWalkSpeed = entityStats.walkSpeed;
-        entityStats.walkSpeed = 0f;
+        aiPath.maxSpeed = 0f;
         freezeRotation = true;
         yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
             Debug.Log(targetHit.gameObject.name + " hit with a club!");
         yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
-        entityStats.walkSpeed = saveWalkSpeed;
+        aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
     }
 }
