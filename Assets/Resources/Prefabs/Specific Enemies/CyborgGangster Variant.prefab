@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Color.r
@@ -100,9 +100,12 @@ MonoBehaviour:
     specialDefense: 0
     strength: 0
     walkSpeed: 2
+  healthbar: {fileID: 4859802001478211397}
   name: CyborgGangster
   enemyRespawner: {fileID: 0}
   respawnTime: 0
+  respawnPosition: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
   attackPoint: {fileID: 5282566310624392329}
   target: {fileID: 0}
   targetLayer:
@@ -118,6 +121,17 @@ MonoBehaviour:
   rangedAttackSpeed: 1.5
   meleeAttackOnCooldown: 0
   rangedAttackOnCooldown: 0
+--- !u!114 &4859802001478211397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 578401070439668169, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+  m_PrefabInstance: {fileID: 5437982860345888396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ba8e412795ae42b050e169728ded6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5282566310624392329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}

@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Enemy : Entity{
+
+    public EnemyHealthbar healthbar;
 
     new public string name;
     public EnemyRespawner enemyRespawner;
@@ -36,6 +39,8 @@ public class Enemy : Entity{
 
     void Awake()
     {
+        healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
+        healthbar.offset = Vector3.up;
         enemyRespawner = GameObject.FindWithTag("Enemy Respawner").GetComponent<EnemyRespawner>();
         target = GameObject.FindWithTag("Player").transform;
         targetLayer = LayerMask.GetMask("Player");
@@ -45,15 +50,17 @@ public class Enemy : Entity{
         aiPath.maxSpeed = entityStats.walkSpeed;
         aiPath.canMove = false;
         if (hasMeleeAttack)
-            aiPath.endReachedDistance = meleeAttackRange;
+            aiPath.endReachedDistance = meleeAttackRange + 0.5f;
         respawnPosition = gameObject.transform.position;
         respawnRotation = gameObject.transform.rotation;
     }
 
     void Update()
     {
+        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
+
         float distance = Vector2.Distance(target.position, transform.position);
-        
+
         if (hasMeleeAttack)
         {
             if (distance <= chaseRange)
@@ -106,6 +113,7 @@ public class Enemy : Entity{
     }
 
     protected override void OnEntityDeath(){
+        entityStats.walkSpeed = 0f;
         StartCoroutine(DeathTimer(respawnTime));
     }
 
