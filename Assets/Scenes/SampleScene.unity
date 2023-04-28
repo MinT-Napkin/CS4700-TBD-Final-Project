@@ -521,6 +521,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 10
+  inventory: {fileID: 0}
 --- !u!1 &916498028
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +684,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 10
+  inventory: {fileID: 0}
   healthBar: {fileID: 293619903}
   canvas: {fileID: 1850465017}
   meleeAttackPoint: {fileID: 655592873}
@@ -786,6 +788,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 10
+  inventory: {fileID: 0}
 --- !u!1 &1131996711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1197218524049011796, guid: fddb0b032d53a50458dcbe20eaa647cf, type: 3}
@@ -817,6 +820,7 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 10
+  inventory: {fileID: 0}
 --- !u!1 &1137041406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1041,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458645141}
   m_CullTransparentMesh: 1
+--- !u!1001 &1469836416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 891906949134747345, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_Name
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.525622
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.216778
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891906949134747348, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+--- !u!1 &1469836417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 891906949134747345, guid: ff6c53e56958b9346b4d3d7bd2db07c5, type: 3}
+  m_PrefabInstance: {fileID: 1469836416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1469836418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469836417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d096e1afa0aeb498dc9705a64fee23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  name: 
+  category: 0
+  quantity: 0
+  player: {fileID: 0}
+  circleCollider: {fileID: 0}
 --- !u!1001 &1486331870
 PrefabInstance:
   m_ObjectHideFlags: 0

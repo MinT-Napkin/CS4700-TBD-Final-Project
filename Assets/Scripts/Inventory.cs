@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour{
 
     private SortedDictionary<ItemParent, int> inventory = new SortedDictionary<ItemParent, int>();
+
     // Start is called before the first frame update
     void Start()
     {

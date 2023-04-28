@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClass : Entity, InteractInterface{
+public class PlayerClass : Entity{
     //For HP
     public HealthBarUI healthBar;
     public Canvas canvas;
@@ -22,9 +22,14 @@ public class PlayerClass : Entity, InteractInterface{
 
     public GameObject bulletPrefab;
 
+    //For interacting
+    LayerMask interactableLayer;
+    float interactionRange = 2f;
 
+    public override void Awake(){
+        base.Awake();
+        interactableLayer = LayerMask.GetMask("Interactable");
 
-    void Awake(){
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
@@ -60,8 +65,11 @@ public class PlayerClass : Entity, InteractInterface{
 
     }
 
-    void CheckTargets(){
-
+    void Interaction(){
+        foreach(Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer))
+        {
+            interactable.GetComponent<Interactable>().Interact();
+        }
     }
 
     protected override void DamageHealth(float finalDamage){
@@ -77,7 +85,10 @@ public class PlayerClass : Entity, InteractInterface{
 
     // Update is called once per frame
     void Update(){
-        CheckTargets();
+        
+        //Interaction input
+        if (Input.GetKeyDown("e"))
+            Interaction();
 
         if (Input.GetKeyDown("u")){ 
             flamethrower.Upgrade();
@@ -111,5 +122,7 @@ public class PlayerClass : Entity, InteractInterface{
     //Debug doomblades gizmo
     void OnDrawGizmos(){
         Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, interactionRange);
     }
 }
