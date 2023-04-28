@@ -33,6 +33,9 @@ public class ItemParent : MonoBehaviour, InteractInterface{
 
     public virtual void InteractWithTarget(Entity entity){
         this.entity = entity;
+        entity.inventory.AddToInventory(this, 1);
+        Debug.Log(name + " added to inventory.");
+        Destroy(gameObject);
     }
 
     public virtual void Use(){

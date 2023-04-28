@@ -100,6 +100,7 @@ public class PlayerClass : Entity, InteractInterface{
 
         if (Input.GetKeyDown("9")){
             //inventory.GetFromInventory(0).Use();
+            Debug.Log(interactableLayer.value);
         }
 
         //Interaction input
