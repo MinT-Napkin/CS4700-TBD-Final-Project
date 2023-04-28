@@ -16,7 +16,6 @@ public class ItemParent : MonoBehaviour, Interactable{
         player = GameObject.FindWithTag("Player").GetComponent<PlayerClass>();
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.isTrigger = true;
-        circleCollider.radius = 2f;
     }
 
     public void Interact()

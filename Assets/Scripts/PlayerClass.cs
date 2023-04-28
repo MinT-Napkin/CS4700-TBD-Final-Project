@@ -72,6 +72,14 @@ public class PlayerClass : Entity{
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        {
+            Debug.Log("Press E to interact.");
+        }
+    }
+
     protected override void DamageHealth(float finalDamage){
         base.DamageHealth(finalDamage);
 

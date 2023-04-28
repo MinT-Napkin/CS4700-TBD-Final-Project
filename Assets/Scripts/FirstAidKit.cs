@@ -10,5 +10,7 @@ public class FirstAidKit : ItemParent
         name = "First Aid Kit";
     }
 
-    public override void Use(){}
+    public override void Use(){
+        Debug.Log("Used first aid kit");
+    }
 }
