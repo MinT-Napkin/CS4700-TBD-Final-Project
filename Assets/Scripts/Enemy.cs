@@ -8,6 +8,8 @@ public class Enemy : Entity{
     new public string name;
     public EnemyRespawner enemyRespawner;
     public float respawnTime;
+    public Vector3 respawnPosition;
+    public Quaternion respawnRotation;
 
     public Transform attackPoint;
     public Transform target;
@@ -42,6 +44,10 @@ public class Enemy : Entity{
         aiPath = gameObject.GetComponent<Pathfinding.AIPath>();
         aiPath.maxSpeed = entityStats.walkSpeed;
         aiPath.canMove = false;
+        if (hasMeleeAttack)
+            aiPath.endReachedDistance = meleeAttackRange;
+        respawnPosition = gameObject.transform.position;
+        respawnRotation = gameObject.transform.rotation;
     }
 
     void Update()
@@ -103,13 +109,6 @@ public class Enemy : Entity{
         StartCoroutine(DeathTimer(respawnTime));
     }
 
-    IEnumerator DeathTimer(float respawnTime)
-    {
-        yield return new WaitForSeconds(1.5f); //wait for death animation to finish
-        enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), transform, respawnTime);
-        Destroy(gameObject);
-    }
-
     void RotateEnemy()
     {
         Vector2 direction = target.position - transform.position;
@@ -137,6 +136,15 @@ public class Enemy : Entity{
         Gizmos.DrawWireSphere(transform.position, rangedAttackAndDetectionRange);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            Debug.Log(gameObject.name + " hit with player bullet!");
+            Destroy(other.gameObject);
+        }
+    }
+
     IEnumerator MeleeAttackCooldown()
     {
         meleeAttackOnCooldown = true;
@@ -149,5 +157,12 @@ public class Enemy : Entity{
         rangedAttackOnCooldown = true;
         yield return new WaitForSeconds(rangedAttackSpeed);
         rangedAttackOnCooldown = false;
+    }
+
+    IEnumerator DeathTimer(float respawnTime)
+    {
+        yield return new WaitForSeconds(1.5f); //wait for death animation to finish
+        enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
+        Destroy(gameObject);
     }
 }
