@@ -22,9 +22,14 @@ public class PlayerClass : Entity, InteractInterface{
 
     public GameObject bulletPrefab;
 
+    LayerMask interactableLayer;
+    float interactionRange = 2.0f;
+
 
 
     void Awake(){
+        interactableLayer = LayerMask.GetMask("Interactable");
+
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
@@ -59,6 +64,19 @@ public class PlayerClass : Entity, InteractInterface{
         //MaxHPBar
 
     }
+
+    public virtual void InteractWithTarget(Entity entity){
+        foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)){
+            interactable.GetComponent<InteractInterface>().InteractWithTarget(this);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
+            Debug.Log("Press E to interact.");
+        }
+    }
+
 
     void CheckTargets(){
 
@@ -111,5 +129,7 @@ public class PlayerClass : Entity, InteractInterface{
     //Debug doomblades gizmo
     void OnDrawGizmos(){
         Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, interactionRange);
     }
 }
