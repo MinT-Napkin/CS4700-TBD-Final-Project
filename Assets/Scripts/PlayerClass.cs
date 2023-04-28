@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClass : Entity{
+public class PlayerClass : Entity, InteractInterface{
     //For HP
     public HealthBarUI healthBar;
     public Canvas canvas;
@@ -60,6 +60,10 @@ public class PlayerClass : Entity{
 
     }
 
+    void CheckTargets(){
+
+    }
+
     protected override void DamageHealth(float finalDamage){
         base.DamageHealth(finalDamage);
 
@@ -73,6 +77,8 @@ public class PlayerClass : Entity{
 
     // Update is called once per frame
     void Update(){
+        CheckTargets();
+
         if (Input.GetKeyDown("u")){ 
             flamethrower.Upgrade();
             shield.Upgrade();
