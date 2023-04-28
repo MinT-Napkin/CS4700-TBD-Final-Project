@@ -28,6 +28,7 @@ public class PlayerClass : Entity, InteractInterface{
 
 
     public override void Awake(){
+        base.Awake();
         interactableLayer = LayerMask.GetMask("Interactable");
 
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
@@ -73,6 +74,7 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
             Debug.Log("Press E to interact.");
         }

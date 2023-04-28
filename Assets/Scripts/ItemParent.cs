@@ -8,10 +8,11 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     public ItemCategories category;
     public CircleCollider2D circleCollider;
     public Entity entity;
+    public PlayerClass player;
 
     public virtual void Awake(){
         gameObject.layer = LayerMask.NameToLayer("Interactable");
-        //player = GameObject.FindWithTag("Player").GetComponent<PlayerClass>();
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerClass>();
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.isTrigger = true;
     }

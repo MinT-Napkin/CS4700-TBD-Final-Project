@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemFirstAidKit : ItemParent{
     public override void Awake(){
+        base.Awake();
         category = ItemCategories.Consumable;
         description = "A healing kit";
         name = "First Aid Kit";
