@@ -12,5 +12,7 @@ public class FirstAidKit : ItemParent
 
     public override void Use(){
         Debug.Log("Used first aid kit");
+        player.entityStats.currentHealth += 10;
+        Debug.Log("Healed player");
     }
 }

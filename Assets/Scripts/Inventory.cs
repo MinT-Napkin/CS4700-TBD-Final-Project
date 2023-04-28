@@ -18,6 +18,13 @@ public class Inventory : MonoBehaviour{
         
     }
 
+    public ItemParent GetFromInventory(int index)
+    {
+        ItemParent[] array = new ItemParent[100];
+        inventory.Keys.CopyTo(array, 0);
+        return array[index];
+    }
+
     public void AddToInventory(ItemParent itemAdded, int quantity){
         if (inventory.ContainsKey(itemAdded)){
             inventory[itemAdded] += quantity;

@@ -94,6 +94,10 @@ public class PlayerClass : Entity{
     // Update is called once per frame
     void Update(){
         
+        //Testing usage
+        if (Input.GetKeyDown("9"))
+            inventory.GetFromInventory(0).Use();
+
         //Interaction input
         if (Input.GetKeyDown("e"))
             Interaction();
