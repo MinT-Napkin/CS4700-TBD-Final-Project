@@ -57,9 +57,8 @@ public class Flamethrower : SpecialAttack{
             foreach (Collider2D enemy in hitEnemies){
                 //Implement damage and status effect here
                 damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
-
+                
                 //Apply burn status effect
-                Debug.Log(enemy.gameObject.GetComponent<Enemy>().entityStats.currentHealth);
                 enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);

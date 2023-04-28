@@ -102,6 +102,9 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 6
+  name: MobGangster
+  enemyRespawner: {fileID: 0}
+  respawnTime: 0
   attackPoint: {fileID: 2414672768825884910}
   target: {fileID: 0}
   targetLayer:

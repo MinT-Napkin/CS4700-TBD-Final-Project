@@ -100,8 +100,14 @@ MonoBehaviour:
     specialDefense: 0
     strength: 0
     walkSpeed: 2
+  name: CyborgGangster
+  enemyRespawner: {fileID: 0}
+  respawnTime: 0
   attackPoint: {fileID: 5282566310624392329}
   target: {fileID: 0}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
   hasMeleeAttack: 0
   hasRangedAttack: 1
   meleeAttackRange: 0
@@ -112,7 +118,6 @@ MonoBehaviour:
   rangedAttackSpeed: 1.5
   meleeAttackOnCooldown: 0
   rangedAttackOnCooldown: 0
-  bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}
 --- !u!4 &5282566310624392329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}

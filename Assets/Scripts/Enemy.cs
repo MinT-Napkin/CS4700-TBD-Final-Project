@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 public class Enemy : Entity{
 
+    new public string name;
+    public EnemyRespawner enemyRespawner;
+    public float respawnTime;
+
     public Transform attackPoint;
     public Transform target;
     public LayerMask targetLayer;
@@ -30,6 +34,7 @@ public class Enemy : Entity{
 
     void Awake()
     {
+        enemyRespawner = GameObject.FindWithTag("Enemy Respawner").GetComponent<EnemyRespawner>();
         target = GameObject.FindWithTag("Player").transform;
         targetLayer = LayerMask.GetMask("Player");
         aiDestinationSetter = gameObject.GetComponent<Pathfinding.AIDestinationSetter>();
@@ -95,6 +100,14 @@ public class Enemy : Entity{
     }
 
     protected override void OnEntityDeath(){
+        StartCoroutine(DeathTimer(respawnTime));
+    }
+
+    IEnumerator DeathTimer(float respawnTime)
+    {
+        yield return new WaitForSeconds(1.5f); //wait for death animation to finish
+        enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), transform, respawnTime);
+        Destroy(gameObject);
     }
 
     void RotateEnemy()
