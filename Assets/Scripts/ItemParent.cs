@@ -34,4 +34,7 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     public virtual void InteractWithTarget(Entity entity){
         this.entity = entity;
     }
+
+    public virtual void Use(){
+    }
 }

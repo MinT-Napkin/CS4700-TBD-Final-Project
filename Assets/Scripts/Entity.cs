@@ -6,7 +6,7 @@ public class Entity : MonoBehaviour{
     public EntityStats entityStats;
     public Inventory inventory;
 
-    void Awake(){
+    public virtual void Awake(){
         entityStats = new EntityStats();
 
         inventory = gameObject.AddComponent<Inventory>();

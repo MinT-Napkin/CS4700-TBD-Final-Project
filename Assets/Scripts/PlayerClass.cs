@@ -27,7 +27,7 @@ public class PlayerClass : Entity, InteractInterface{
 
 
 
-    void Awake(){
+    public override void Awake(){
         interactableLayer = LayerMask.GetMask("Interactable");
 
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
@@ -67,7 +67,8 @@ public class PlayerClass : Entity, InteractInterface{
 
     public virtual void InteractWithTarget(Entity entity){
         foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)){
-            interactable.GetComponent<InteractInterface>().InteractWithTarget(this);
+            Debug.Log("Interacting with " + interactable.name);
+            interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
         }
     }
 
@@ -96,6 +97,15 @@ public class PlayerClass : Entity, InteractInterface{
     // Update is called once per frame
     void Update(){
         CheckTargets();
+
+        if (Input.GetKeyDown("9")){
+            //inventory.GetFromInventory(0).Use();
+        }
+
+        //Interaction input
+        if (Input.GetKeyDown("e")){
+            InteractWithTarget(this);
+        }
 
         if (Input.GetKeyDown("u")){ 
             flamethrower.Upgrade();
