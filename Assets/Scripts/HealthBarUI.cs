@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class HealthBarUI : MonoBehaviour
-{
+
+public class HealthBarUI : MonoBehaviour{
     public Slider slider;
 
-    private void Awake()
-    {
+    private void Awake(){
+        slider.maxValue = 1.0f;
+        slider.minValue = 0.0f;
+    }
 
-    }
-    public void setMaxHealth(float health)
-    {
-        slider.maxValue = health;
-    }
-    public void setCurrentHealth(float health)
-    {
-        slider.value = health;
+    public void setCurrentHealth(float currentHealth){
+        slider.value = currentHealth;
     }
 
 }

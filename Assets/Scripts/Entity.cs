@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour{
     public EntityStats entityStats;
+    public Inventory inventory;
 
-    void Awake(){
+    public virtual void Awake(){
         entityStats = new EntityStats();
+
+        inventory = gameObject.AddComponent<Inventory>();
     }
     // Start is called before the first frame update
     void Start(){
@@ -31,6 +34,14 @@ public class Entity : MonoBehaviour{
             entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
 
             OnEntityDeath();
+        }
+        else if (entityStats.currentHealth > entityStats.maxHealth) {
+            entityStats.currentHealth = entityStats.maxHealth;
+
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+        }
+        else {
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
         }
     }
 
