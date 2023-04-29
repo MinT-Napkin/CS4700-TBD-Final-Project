@@ -6,7 +6,7 @@ public class ItemFirstAidKit : ItemParent{
     public override void Awake(){
         base.Awake();
         category = ItemCategories.Consumable;
-        description = "A healing kit";
+        description = "Why do robots need this?";
         name = "First Aid Kit";
     }
     // Start is called before the first frame update
@@ -28,7 +28,6 @@ public class ItemFirstAidKit : ItemParent{
 
         entity.TakeDamage(damageEvent);
 
-        Debug.Log("Used first aid kit");
-        Debug.Log("Healed " + 10.0f);
+        entity.inventory.RemoveFromInventory(this, 1);
     }
 }

@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour{
         }
     }
 
-    public void RemoverfromInventory(ItemParent itemRemoved, int quantity){
+    public void RemoveFromInventory(ItemParent itemRemoved, int quantity){
         if (inventory.ContainsKey(itemRemoved)){
             if (inventory[itemRemoved] >= quantity){
                 inventory[itemRemoved] -= quantity;
