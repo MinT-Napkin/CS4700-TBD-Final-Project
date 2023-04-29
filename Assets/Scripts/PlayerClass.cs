@@ -101,8 +101,7 @@ public class PlayerClass : Entity, InteractInterface{
         CheckTargets();
 
         if (Input.GetKeyDown("9")){
-            //inventory.GetFromInventory(0).Use();
-            Debug.Log(interactableLayer.value);
+            inventory.GetTest().Use(this);
         }
 
         //Interaction input

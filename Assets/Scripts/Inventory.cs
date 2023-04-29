@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour{
@@ -17,6 +18,10 @@ public class Inventory : MonoBehaviour{
         
     }
 
+    public ItemParent GetTest(){
+        return inventory.Keys.First<ItemParent>();
+    }
+
     public void AddToInventory(ItemParent itemAdded, int quantity){
         if (inventory.ContainsKey(itemAdded)){
             inventory[itemAdded] += quantity;
@@ -26,7 +31,7 @@ public class Inventory : MonoBehaviour{
         }
     }
 
-    public void RemoverfromInventory(ItemParent itemRemoved, int quantity){
+    public void RemoveFromInventory(ItemParent itemRemoved, int quantity){
         if (inventory.ContainsKey(itemRemoved)){
             if (inventory[itemRemoved] >= quantity){
                 inventory[itemRemoved] -= quantity;
