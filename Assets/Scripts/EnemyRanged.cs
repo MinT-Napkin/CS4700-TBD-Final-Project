@@ -8,23 +8,42 @@ public class EnemyRanged : Enemy
    public float rangedAttackSpeed;
    public bool rangedAttackOnCooldown;
 
+    Rigidbody2D rb2d;
+   float savedWalkSpeed;
+
+    public override void Awake()
+    {
+        base.Awake();
+        savedWalkSpeed = entityStats.walkSpeed;
+        rb2d = gameObject.AddComponent<Rigidbody2D>();
+        rb2d.gravityScale = 0f;
+    }
+
     public override void Update()
     {
         base.Update();
-        if (distance <= chaseRange)
+        if ((distance <= chaseRange) && (distance >= rangedAttackAndDetectionRange))
         {
             RotateEnemy();
             aiPath.canMove = true;
-            if (distance <= rangedAttackAndDetectionRange)
-            {
-                aiPath.canMove = false;
-                if (!rangedAttackOnCooldown)
-                    RangedAttack();
-            }
         }
         else
         {
             aiPath.canMove = false;
+        }
+
+        if (distance <= rangedAttackAndDetectionRange)
+        {
+            RotateEnemy();
+            entityStats.walkSpeed = 0f;
+            if (distance <= rangedAttackAndDetectionRange - 1)
+                rb2d.velocity = -(direction) * 1.7f;
+            if (!rangedAttackOnCooldown)
+                RangedAttack();
+        }
+        else
+        {
+            entityStats.walkSpeed = savedWalkSpeed;
         }
     }
 

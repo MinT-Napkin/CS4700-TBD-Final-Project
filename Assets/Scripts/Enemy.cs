@@ -26,6 +26,8 @@ public class Enemy : Entity{
     protected Pathfinding.AIDestinationSetter aiDestinationSetter;
     protected Pathfinding.AIPath aiPath;
 
+    public Vector2 direction;
+
     public virtual void Awake()
     {
         healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
@@ -44,6 +46,8 @@ public class Enemy : Entity{
 
     public virtual void Update()
     {
+        direction = target.position - transform.position;
+        direction.Normalize();
         healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
         distance = Vector2.Distance(target.position, transform.position);
     }
@@ -56,8 +60,6 @@ public class Enemy : Entity{
 
     public void RotateEnemy()
     {
-        Vector2 direction = target.position - transform.position;
-        direction.Normalize();
         if (!freezeRotation)
         {
             if (direction.y < -0.5f)
