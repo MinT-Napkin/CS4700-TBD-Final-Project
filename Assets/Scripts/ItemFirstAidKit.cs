@@ -20,12 +20,13 @@ public class ItemFirstAidKit : ItemParent{
         
     }
 
-    public override void Use(){
+    public override void Use(Entity entity){
         DamageEvent damageEvent;
         DamageTypeHealing damageType = new DamageTypeHealing();
 
-        damageEvent = new DamageEvent(10.0f, damageType, entity, entity, false);
-        damageEvent.ApplyDamage();
+        damageEvent = new DamageEvent(-10.0f, damageType, entity, entity, false);
+
+        entity.TakeDamage(damageEvent);
 
         Debug.Log("Used first aid kit");
         Debug.Log("Healed " + 10.0f);

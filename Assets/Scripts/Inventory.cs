@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour{
@@ -15,6 +16,10 @@ public class Inventory : MonoBehaviour{
     void Update()
     {
         
+    }
+
+    public ItemParent GetTest(){
+        return inventory.Keys.First<ItemParent>();
     }
 
     public void AddToInventory(ItemParent itemAdded, int quantity){

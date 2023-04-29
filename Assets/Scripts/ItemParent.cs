@@ -39,6 +39,7 @@ public class ItemParent : MonoBehaviour, InteractInterface{
         Destroy(gameObject);
     }
 
-    public virtual void Use(){
+    public virtual void Use(Entity entity)
+    {
     }
 }
