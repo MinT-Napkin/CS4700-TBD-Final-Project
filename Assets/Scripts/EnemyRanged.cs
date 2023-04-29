@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyRanged : Enemy
 {
-   public float rangedAttackAndDetectionRange;
+   public float rangedAttackRange;
    public float rangedAttackSpeed;
+   public float fleeRange;
+   public float fleeSpeedMultiplier;
    public bool rangedAttackOnCooldown;
 
     Rigidbody2D rb2d;
@@ -22,7 +24,7 @@ public class EnemyRanged : Enemy
     public override void Update()
     {
         base.Update();
-        if ((distance <= chaseRange) && (distance >= rangedAttackAndDetectionRange))
+        if ((distance <= chaseRange) && (distance >= rangedAttackRange))
         {
             RotateEnemy();
             aiPath.canMove = true;
@@ -32,12 +34,12 @@ public class EnemyRanged : Enemy
             aiPath.canMove = false;
         }
 
-        if (distance <= rangedAttackAndDetectionRange)
+        if (distance <= rangedAttackRange)
         {
             RotateEnemy();
             entityStats.walkSpeed = 0f;
-            if (distance <= rangedAttackAndDetectionRange - 1)
-                rb2d.velocity = -(direction) * 1.7f;
+            if (distance <= fleeRange)
+                rb2d.velocity = -(direction) * fleeSpeedMultiplier;
             if (!rangedAttackOnCooldown)
                 RangedAttack();
         }
@@ -64,6 +66,8 @@ public class EnemyRanged : Enemy
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackAndDetectionRange);
+        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, fleeRange);
     }
 }

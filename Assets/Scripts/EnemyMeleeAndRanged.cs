@@ -8,7 +8,7 @@ public class EnemyMeleeAndRanged : Enemy
     public float meleeDetectionRange;
     public float meleeAttackSpeed;
     public float rangedAttackSpeed;
-    public float rangedAttackAndDetectionRange;
+    public float rangedAttackRange;
     public bool meleeAttackOnCooldown = false;
     public bool rangedAttackOnCooldown = false;
 
@@ -36,7 +36,7 @@ public class EnemyMeleeAndRanged : Enemy
             aiPath.canMove = false;
         }
 
-        if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
+        if ((distance <= rangedAttackRange) && (distance >= chaseRange))
         {
             RotateEnemy();
             if (!rangedAttackOnCooldown)
@@ -75,7 +75,7 @@ public class EnemyMeleeAndRanged : Enemy
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, meleeDetectionRange);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackAndDetectionRange);
+        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
     }

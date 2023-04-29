@@ -119,10 +119,13 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
-  chaseRange: 7.55
+  chaseRange: 11.7
   distance: 0
-  rangedAttackAndDetectionRange: 5.25
+  direction: {x: 0, y: 0}
+  rangedAttackRange: 8.75
   rangedAttackSpeed: 2
+  fleeRange: 5.67
+  fleeSpeedMultiplier: 1.7
   rangedAttackOnCooldown: 0
 --- !u!4 &5282566310624392329 stripped
 Transform:
