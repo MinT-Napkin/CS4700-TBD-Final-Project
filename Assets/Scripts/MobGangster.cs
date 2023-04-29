@@ -2,19 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobGangster : Enemy
+public class MobGangster : EnemyMelee
 {
     public override void MeleeAttack()
     {
         base.MeleeAttack();
         StartCoroutine(ExecuteMeleeAttack());
-    }
-
-    public override void OnDrawGizmosSelected()
-    {
-        base.OnDrawGizmosSelected();
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
     }
 
     IEnumerator ExecuteMeleeAttack()

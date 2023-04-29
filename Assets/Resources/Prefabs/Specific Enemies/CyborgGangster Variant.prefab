@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -74,7 +82,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_PrefabInstance: {fileID: 5437982860345888396}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2600525379310778198
+--- !u!114 &1735783030039193254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,21 +97,21 @@ MonoBehaviour:
   entityStats:
     attackSpeed: 0
     criticalDamage: 0
-    currentHealth: 0
+    currentHealth: 20
     dashDistance: 0
     defense: 0
     criticalHitRate: 0
-    maxHealth: 0
+    maxHealth: 20
     normalizedHealth: 0
     runSpeed: 0
     specialAttack: 0
     specialDefense: 0
     strength: 0
     walkSpeed: 2
-  healthbar: {fileID: 4859802001478211397}
+  healthbar: {fileID: 0}
   name: CyborgGangster
   enemyRespawner: {fileID: 0}
-  respawnTime: 0
+  respawnTime: 2
   respawnPosition: {x: 0, y: 0, z: 0}
   respawnRotation: {x: 0, y: 0, z: 0, w: 0}
   attackPoint: {fileID: 5282566310624392329}
@@ -111,27 +119,11 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
-  hasMeleeAttack: 0
-  hasRangedAttack: 1
-  meleeAttackRange: 0
-  meleeDetectionRange: 0
-  chaseRange: 14
-  rangedAttackAndDetectionRange: 9.5
-  meleeAttackSpeed: 0
-  rangedAttackSpeed: 1.5
-  meleeAttackOnCooldown: 0
+  chaseRange: 7.55
+  distance: 0
+  rangedAttackAndDetectionRange: 5.25
+  rangedAttackSpeed: 2
   rangedAttackOnCooldown: 0
---- !u!114 &4859802001478211397 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 578401070439668169, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
-  m_PrefabInstance: {fileID: 5437982860345888396}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 101ba8e412795ae42b050e169728ded6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5282566310624392329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}

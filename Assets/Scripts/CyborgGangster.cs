@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyborgGangster : Enemy
+
+public class CyborgGangster : EnemyRanged
 {
     public override void RangedAttack()
     {
@@ -10,3 +11,4 @@ public class CyborgGangster : Enemy
         Debug.Log("Cyborg gangster shoots!");
     }
 }
+

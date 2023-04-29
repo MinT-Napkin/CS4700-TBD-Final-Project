@@ -17,27 +17,16 @@ public class Enemy : Entity{
     public Transform attackPoint;
     public Transform target;
     public LayerMask targetLayer;
-    
-    public bool hasMeleeAttack;
-    public bool hasRangedAttack;
 
-    public float meleeAttackRange;
-    public float meleeDetectionRange;
     public float chaseRange;
-    public float rangedAttackAndDetectionRange;
-
-    public float meleeAttackSpeed;
-    public float rangedAttackSpeed;
-
-    public bool meleeAttackOnCooldown = false;
-    public bool rangedAttackOnCooldown = false;
+    public float distance;
 
     protected bool freezeRotation = false;
 
     protected Pathfinding.AIDestinationSetter aiDestinationSetter;
     protected Pathfinding.AIPath aiPath;
 
-    void Awake()
+    public virtual void Awake()
     {
         healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
         healthbar.offset = Vector3.up;
@@ -49,75 +38,23 @@ public class Enemy : Entity{
         aiPath = gameObject.GetComponent<Pathfinding.AIPath>();
         aiPath.maxSpeed = entityStats.walkSpeed;
         aiPath.canMove = false;
-        if (hasMeleeAttack)
-            aiPath.endReachedDistance = meleeAttackRange + 0.5f;
         respawnPosition = gameObject.transform.position;
         respawnRotation = gameObject.transform.rotation;
     }
 
-    void Update()
+    public virtual void Update()
     {
         healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
-
-        float distance = Vector2.Distance(target.position, transform.position);
-
-        if (hasMeleeAttack)
-        {
-            if (distance <= chaseRange)
-            {
-                aiPath.canMove = true;
-                RotateEnemy();
-                if (distance <= meleeDetectionRange)
-                {
-                    if (!meleeAttackOnCooldown)
-                        MeleeAttack();
-                }
-            }
-            else
-            {
-                aiPath.canMove = false;
-            }
-        }
-
-        if (hasRangedAttack)
-        {
-            if (!hasMeleeAttack)
-            {
-                if (distance <= chaseRange)
-                {
-                    RotateEnemy();
-                    aiPath.canMove = true;
-                    if (distance <= rangedAttackAndDetectionRange)
-                    {
-                        aiPath.canMove = false;
-                        if (!rangedAttackOnCooldown)
-                            RangedAttack();
-                    }
-                }
-            }
-            else if ((distance <= rangedAttackAndDetectionRange) && (distance >= chaseRange))
-            {
-                RotateEnemy();
-                if (!rangedAttackOnCooldown)
-                    RangedAttack();
-            }
-        }
-    }
-
-    public virtual void MeleeAttack(){
-       StartCoroutine(MeleeAttackCooldown());
-    }
-
-    public virtual void RangedAttack(){
-        StartCoroutine(RangedAttackCooldown());
+        distance = Vector2.Distance(target.position, transform.position);
     }
 
     protected override void OnEntityDeath(){
         entityStats.walkSpeed = 0f;
-        StartCoroutine(DeathTimer(respawnTime));
+        enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
+        Destroy(gameObject);
     }
 
-    void RotateEnemy()
+    public void RotateEnemy()
     {
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
@@ -134,43 +71,12 @@ public class Enemy : Entity{
         }
     }
 
-    public virtual void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, meleeDetectionRange);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackAndDetectionRange);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "bullet")
         {
             Debug.Log(gameObject.name + " hit with player bullet!");
             Destroy(other.gameObject);
         }
-    }
-
-    IEnumerator MeleeAttackCooldown()
-    {
-        meleeAttackOnCooldown = true;
-        yield return new WaitForSeconds(meleeAttackSpeed);
-        meleeAttackOnCooldown = false;
-    }
-
-    IEnumerator RangedAttackCooldown()
-    {
-        rangedAttackOnCooldown = true;
-        yield return new WaitForSeconds(rangedAttackSpeed);
-        rangedAttackOnCooldown = false;
-    }
-
-    IEnumerator DeathTimer(float respawnTime)
-    {
-        yield return new WaitForSeconds(1.5f); //wait for death animation to finish
-        enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
-        Destroy(gameObject);
     }
 }
