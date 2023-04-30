@@ -6,19 +6,18 @@ public class SlumEnforcer : EnemyMelee
 {
     public override void MeleeAttack()
     {
+        /*
+        For animations:
+        aiPath.maxSpeed = 0f; and freezeRotation = true/false; are used to stop enemy movement while executing an attack animation
+        The cyborg gangster doesn't move that fast but attacks quickly - the opposite of the mob gangster
+        Balacning: Adjust entityStats later
+        */
         base.MeleeAttack();
-        StartCoroutine(ExecuteMeleeAttack());
-    }
-
-    IEnumerator ExecuteMeleeAttack()
-    {
         aiPath.maxSpeed = 0f;
         freezeRotation = true;
-        yield return new WaitForSeconds(meleeAttackSpeed);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
             Debug.Log(targetHit.gameObject.name + " hit by SlumEnforcer!");
-        yield return new WaitForSeconds(0.5f);
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
     }

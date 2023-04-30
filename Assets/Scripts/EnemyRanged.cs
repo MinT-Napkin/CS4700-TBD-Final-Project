@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyRanged : Enemy
 {
     public float rangedAttackRange;
-    public float rangedAttackSpeed;
+    public float rangedAttackCooldown;
     public float fleeRange;
     public float fleeSpeedMultiplier;
     public bool rangedAttackOnCooldown;
@@ -58,7 +58,7 @@ public class EnemyRanged : Enemy
     IEnumerator RangedAttackCooldown()
     {
         rangedAttackOnCooldown = true;
-        yield return new WaitForSeconds(rangedAttackSpeed);
+        yield return new WaitForSeconds(rangedAttackCooldown);
         rangedAttackOnCooldown = false;
     }
 

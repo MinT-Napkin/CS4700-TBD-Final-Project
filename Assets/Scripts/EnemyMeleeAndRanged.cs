@@ -6,8 +6,8 @@ public class EnemyMeleeAndRanged : Enemy
 {
     public float meleeAttackRange;
     public float meleeDetectionRange;
-    public float meleeAttackSpeed;
-    public float rangedAttackSpeed;
+    public float meleeAttackCooldown;
+    public float rangedAttackCooldown;
     public float rangedAttackRange;
     public bool meleeAttackOnCooldown = false;
     public bool rangedAttackOnCooldown = false;
@@ -57,18 +57,18 @@ public class EnemyMeleeAndRanged : Enemy
     IEnumerator MeleeAttackCooldown()
     {
         meleeAttackOnCooldown = true;
-        yield return new WaitForSeconds(meleeAttackSpeed);
+        yield return new WaitForSeconds(meleeAttackCooldown);
         meleeAttackOnCooldown = false;
     }
 
     IEnumerator RangedAttackCooldown()
     {
         rangedAttackOnCooldown = true;
-        yield return new WaitForSeconds(rangedAttackSpeed);
+        yield return new WaitForSeconds(rangedAttackCooldown);
         rangedAttackOnCooldown = false;
     }
 
-    public void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chaseRange);

@@ -6,7 +6,7 @@ public class EnemyMelee : Enemy
 {
     public float meleeAttackRange;
     public float meleeDetectionRange;
-    public float meleeAttackSpeed;
+    public float meleeAttackCooldown;
     public bool meleeAttackOnCooldown = false;
 
     public override void Awake()
@@ -42,7 +42,7 @@ public class EnemyMelee : Enemy
     IEnumerator MeleeAttackCooldown()
     {
         meleeAttackOnCooldown = true;
-        yield return new WaitForSeconds(meleeAttackSpeed);
+        yield return new WaitForSeconds(meleeAttackCooldown);
         meleeAttackOnCooldown = false;
     }
 

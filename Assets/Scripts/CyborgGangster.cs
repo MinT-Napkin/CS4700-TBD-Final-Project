@@ -11,6 +11,7 @@ public class CyborgGangster : EnemyRanged
 
     public override void RangedAttack()
     {
+        //Balancing: adjust entityStats and bullet data later
         base.RangedAttack();
         Debug.Log("Cyborg gangster shoots!");
         EnemyBullet bullet = bulletPrefab.GetComponent<EnemyBullet>();

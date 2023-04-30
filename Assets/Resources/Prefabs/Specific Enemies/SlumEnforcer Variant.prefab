@@ -115,7 +115,7 @@ MonoBehaviour:
   chaseRange: 11.26
   distance: 0
   direction: {x: 0, y: 0}
-  meleeAttackRange: 2.34
-  meleeDetectionRange: 3.24
+  meleeAttackRange: 2.04
+  meleeDetectionRange: 3.95
   meleeAttackSpeed: 1
   meleeAttackOnCooldown: 0
