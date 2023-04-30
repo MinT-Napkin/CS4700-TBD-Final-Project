@@ -69,4 +69,13 @@ public class PlayerClass : Entity{
     void OnDrawGizmos(){
         Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            Debug.Log("Player hit by enemy bullet!");
+            Destroy(other.gameObject);
+        }
+    }
 }

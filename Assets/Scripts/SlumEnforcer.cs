@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobGangster : EnemyMelee
+public class SlumEnforcer : EnemyMelee
 {
     public override void MeleeAttack()
     {
@@ -14,11 +14,11 @@ public class MobGangster : EnemyMelee
     {
         aiPath.maxSpeed = 0f;
         freezeRotation = true;
-        yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
+        yield return new WaitForSeconds(meleeAttackSpeed);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
-            Debug.Log(targetHit.gameObject.name + " hit by MobGangster!");
-        yield return new WaitForSeconds(meleeAttackSpeed * 0.5f);
+            Debug.Log(targetHit.gameObject.name + " hit by SlumEnforcer!");
+        yield return new WaitForSeconds(0.5f);
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
     }

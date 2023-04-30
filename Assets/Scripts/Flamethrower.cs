@@ -49,6 +49,7 @@ public class Flamethrower : SpecialAttack{
 
         //Slow player movement for duration
         // Also disable dashing once we optimize inputs
+        flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
         for (int i = 0; i < flamethrowerDuration * 2; i++){
@@ -65,6 +66,7 @@ public class Flamethrower : SpecialAttack{
             }
             yield return new WaitForSeconds(0.5f);
         }
+        flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
 

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class EnemyRanged : Enemy
 {
-   public float rangedAttackRange;
-   public float rangedAttackSpeed;
-   public float fleeRange;
-   public float fleeSpeedMultiplier;
-   public bool rangedAttackOnCooldown;
-
+    public float rangedAttackRange;
+    public float rangedAttackSpeed;
+    public float fleeRange;
+    public float fleeSpeedMultiplier;
+    public bool rangedAttackOnCooldown;
     Rigidbody2D rb2d;
-   float savedWalkSpeed;
+    float savedWalkSpeed;
 
     public override void Awake()
     {
@@ -40,6 +39,8 @@ public class EnemyRanged : Enemy
             entityStats.walkSpeed = 0f;
             if (distance <= fleeRange)
                 rb2d.velocity = -(direction) * fleeSpeedMultiplier;
+            else
+                rb2d.velocity = Vector2.zero;
             if (!rangedAttackOnCooldown)
                 RangedAttack();
         }

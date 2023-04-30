@@ -109,7 +109,7 @@ MonoBehaviour:
     specialAttack: 10
     specialDefense: 10
     strength: 10
-    walkSpeed: 6
+    walkSpeed: 8
   healthbar: {fileID: 0}
   name: MobGangster
   enemyRespawner: {fileID: 0}
@@ -123,6 +123,7 @@ MonoBehaviour:
     m_Bits: 0
   chaseRange: 8
   distance: 0
+  direction: {x: 0, y: 0}
   meleeAttackRange: 1.55
   meleeDetectionRange: 2.3
   meleeAttackSpeed: 2
