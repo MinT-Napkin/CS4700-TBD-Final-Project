@@ -23,10 +23,11 @@ public class CyborgScientist : EnemyMeleeAndRanged
         aiPath.maxSpeed = 0f;
         freezeRotation = true;
         yield return new WaitForSeconds(1.5f);
-        GameObject affectedArea = new GameObject();
+        GameObject affectedArea = new GameObject(); //I made the affected area as a new GameObject that way we can control its behavior/animations separately while the attack is executed, if it helps
         affectedArea.transform.position = target.position;
+        // Adding a simple green sprite to visualize the affected area
         affectedArea.AddComponent<SpriteRenderer>().sprite = (Sprite)Resources.Load("DebugSprites/Circle");
-        affectedArea.transform.localScale = new Vector3(5f, 5f, 0f);
+        affectedArea.transform.localScale = new Vector3(5f, 5f, 0f); //Normally, this will need to be the same size as meleeAttackRange
         affectedArea.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 0f, 155f/255f);
         Collider2D targetHit = Physics2D.OverlapCircle(target.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
