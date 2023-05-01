@@ -12,7 +12,7 @@ public class EnemyMelee : Enemy
     public override void Awake()
     {
         base.Awake();
-        aiPath.endReachedDistance = meleeAttackRange + 0.5f;
+        aiPath.endReachedDistance = meleeAttackRange;
     }
 
     public override void Update()

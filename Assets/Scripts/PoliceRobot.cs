@@ -14,8 +14,7 @@ public class PoliceRobot : EnemyMeleeAndRanged
         For animations:
         aiPath.maxSpeed = 0f; and freezeRotation = true/false; are used to stop enemy movement while executing an attack animation
         The police robot moves relatively slow, shoots fast series of bullets (Hope we can pull this off without looking TOO funky with the animation we have, but i wanted to make this one a bit different)
-        Its melee attacks are relatively slow (wind up and wind down time), but not as slow as the mob gangster's
-        Balancing: adjust entityStats and bullet data later
+        Its melee attacks are relatively slow (wind up and wind down time), but not as slow as the mob gangster's. Has high chase range.
         */
         base.MeleeAttack();
         aiPath.maxSpeed = 0f;

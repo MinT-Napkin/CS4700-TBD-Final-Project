@@ -9,7 +9,7 @@ public class MobGangster : EnemyMelee
         /*
         For animations:
         aiPath.maxSpeed = 0f; and freezeRotation = true/false; are used to stop enemy movement while executing an attack animation
-        The mob gangster runs up to the player fast but its attack has a long wind up and recovery time
+        The mob gangster runs up to the player fast but its attack has a long wind up and recovery time. Has a relatively low chase range.
         Balancing: adjust entityStats later
         */
         base.MeleeAttack();

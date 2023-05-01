@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlumEnforcer : EnemyMelee
+public class SecurityRobot : EnemyMelee
 {
     public override void MeleeAttack()
     {
         /*
         For animations:
         aiPath.maxSpeed = 0f; and freezeRotation = true/false; are used to stop enemy movement while executing an attack animation
-        The slum enforcer doesn't move that fast but attacks quickly - the opposite of the mob gangster. Has higher chase range than the mob gangster.
+        Security robot is an upgraded version of the slum enforcer. Moves slightly faster and has a slightly higher chase range. Its attacks apply stun.
         Balacning: Adjust entityStats later
         */
         base.MeleeAttack();
@@ -17,7 +17,8 @@ public class SlumEnforcer : EnemyMelee
         freezeRotation = true;
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
-            Debug.Log(targetHit.gameObject.name + " hit by SlumEnforcer!");
+            Debug.Log(targetHit.gameObject.name + " hit by SecurityRobot!");
+            //Apply Stun
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
     }
