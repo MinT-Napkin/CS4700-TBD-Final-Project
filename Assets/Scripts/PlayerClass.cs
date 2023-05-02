@@ -149,4 +149,13 @@ public class PlayerClass : Entity, InteractInterface{
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            Debug.Log("Player hit by enemy bullet!");
+            Destroy(other.gameObject);
+        }
+    }
 }

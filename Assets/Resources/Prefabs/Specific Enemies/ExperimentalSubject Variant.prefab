@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4793452524449998101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.4730496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.630525
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Name
+      value: ExperimentalSubject Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+--- !u!1 &4020800721063694775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+  m_PrefabInstance: {fileID: 4793452524449998101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6594657724657800704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020800721063694775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9636dbbd4b64db942abe1be7526b5e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityStats:
+    attackSpeed: 0
+    criticalDamage: 0
+    currentHealth: 10
+    dashDistance: 0
+    defense: 0
+    criticalHitRate: 0
+    maxHealth: 10
+    normalizedHealth: 0
+    runSpeed: 0
+    specialAttack: 0
+    specialDefense: 0
+    strength: 0
+    walkSpeed: 3
+  healthbar: {fileID: 0}
+  name: ExperimentalSubject
+  enemyRespawner: {fileID: 0}
+  respawnTime: 0
+  respawnPosition: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  attackPoint: {fileID: 4664930037129584400}
+  target: {fileID: 0}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  chaseRange: 7.94
+  distance: 0
+  direction: {x: 0, y: 0}
+  meleeAttackRange: 2.05
+  meleeDetectionRange: 3.01
+  meleeAttackCooldown: 3
+  rangedAttackCooldown: 3
+  rangedAttackRange: 10.2
+  meleeAttackOnCooldown: 0
+  rangedAttackOnCooldown: 0
+  comboSpeed: 0.5
+--- !u!4 &4664930037129584400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+  m_PrefabInstance: {fileID: 4793452524449998101}
+  m_PrefabAsset: {fileID: 0}
