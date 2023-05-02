@@ -64,12 +64,10 @@ public class Enemy : Entity{
     {
         foreach (EnemyDroppedItem itemToDrop in droppedItems)
         {
-            for (int i = 0; i < itemToDrop.maxDropCount; i++)
+            if (Random.Range(0f, 100f) <= itemToDrop.dropRate)
             {
-                if (Random.Range(0f, 100f) <= itemToDrop.dropRate)
-                {
-                    //Instantiate(itemToDrop.item, transform.position, transform.rotation);
-                }
+                //itemToDrop.item.GetComponent<ItemParent>().quantity = (int)Random.Range(1f, itemToDrop.maxDropCount);
+                //Instantiate(itemToDrop.item, transform.position, transform.rotation);
             }
         }
     }
