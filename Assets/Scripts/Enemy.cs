@@ -66,7 +66,6 @@ public class Enemy : Entity{
         {
             if (Random.Range(0f, 100f) <= itemToDrop.dropRate)
             {
-                //itemToDrop.item.GetComponent<ItemParent>().quantity = (int)Random.Range(1f, itemToDrop.maxDropCount);
                 //Instantiate(itemToDrop.item, transform.position, transform.rotation);
             }
         }
