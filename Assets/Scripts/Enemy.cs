@@ -30,7 +30,7 @@ public class Enemy : Entity{
 
     public Vector2 direction;
 
-    public virtual void Awake()
+    public override void Awake()
     {
         healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
         healthbar.offset = Vector3.up;

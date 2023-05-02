@@ -31,11 +31,11 @@ public class PlayerClass : Entity, InteractInterface{
         base.Awake();
         interactableLayer = LayerMask.GetMask("Interactable");
 
+        entityStats = new EntityStats(10f, 20f, 0.1f, 0, 10f, 50f, 10f, 1, 10, 10f, 1f, 20f, 10f, 10f, 10f, 10f);
+
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
-
-        playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
 
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;
@@ -82,6 +82,12 @@ public class PlayerClass : Entity, InteractInterface{
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
             Debug.Log("Press E to interact.");
+        }
+
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            Debug.Log("Player hit by enemy bullet!");
+            Destroy(other.gameObject);
         }
     }
 
@@ -148,14 +154,5 @@ public class PlayerClass : Entity, InteractInterface{
         Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "EnemyBullet")
-        {
-            Debug.Log("Player hit by enemy bullet!");
-            Destroy(other.gameObject);
-        }
     }
 }

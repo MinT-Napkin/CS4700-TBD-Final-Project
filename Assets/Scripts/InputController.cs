@@ -13,8 +13,8 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        playerClass.playerMovement.movement.x = Input.GetAxisRaw("Horizontal");
-        playerClass.playerMovement.movement.y = Input.GetAxisRaw("Vertical");
-        playerClass.playerMovement.run = Input.GetKey("left shift");
+        playerClass.GetComponent<PlayerMovement>().movement.x = Input.GetAxisRaw("Horizontal");
+        playerClass.GetComponent<PlayerMovement>().movement.y = Input.GetAxisRaw("Vertical");
+        playerClass.GetComponent<PlayerMovement>().run = Input.GetKey("left shift");
     }
 }
