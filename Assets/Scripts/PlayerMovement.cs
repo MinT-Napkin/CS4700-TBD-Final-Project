@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
     {
         playerClass = GetComponent<PlayerClass>();
         rb2d = GetComponent<Rigidbody2D>();
-        activeMoveSpeed = playerClass.entityStats.walkSpeed;
         state = State.Normal;
     }
 
     void Update()
     {
+        activeMoveSpeed = playerClass.entityStats.walkSpeed;
         switch (state)
         {
             case State.Normal:
