@@ -6,10 +6,11 @@ using UnityEngine;
 [System.Serializable]
 public class EntityStats{
     public EntityStats(){
+        
         attackSpeed = 1.0f;
         criticalDamage = 2.0f;
         currentHealth = 100.0f;
-        dashDistance = 20.0f;
+        dashDistance = 50.0f;
         defense = 10.0f;
         criticalHitRate = 5.0f;
         maxHealth = 100.0f;
@@ -19,6 +20,7 @@ public class EntityStats{
         specialDefense = 10.0f;
         strength = 10.0f;
         walkSpeed = 10.0f;
+
     }
 
     public EntityStats(float attackSpeed, float currentHealth, float dashDistance, float maxHealth, float normalizedHealth, float runSpeed, float walkSpeed) {

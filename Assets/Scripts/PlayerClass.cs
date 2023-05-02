@@ -9,7 +9,7 @@ public class PlayerClass : Entity, InteractInterface{
 
     public Transform meleeAttackPoint;
     public MeleeWeapon meleeWeapon;
-    PlayerMovement playerMovement;
+    public PlayerMovement playerMovement;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
     
@@ -36,7 +36,6 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon.SetEntityStats(entityStats);
 
         playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
-        playerMovement.SetEntityStats(entityStats);
 
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;

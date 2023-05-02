@@ -8,7 +8,6 @@ public class Entity : MonoBehaviour{
 
     public virtual void Awake(){
         entityStats = new EntityStats();
-
         inventory = gameObject.AddComponent<Inventory>();
     }
     // Start is called before the first frame update
