@@ -60,12 +60,19 @@ public class Enemy : Entity{
         Destroy(gameObject);
     }
 
-    void DropItems()
-    {
-        foreach (EnemyDroppedItem itemToDrop in droppedItems)
-        {
-            if (Random.Range(0f, 100f) <= itemToDrop.dropRate)
-            {
+    void DropItems(){
+        int dropCount;
+
+        foreach (EnemyDroppedItem itemToDrop in droppedItems){
+            dropCount = 0;
+
+            for (int i = 0; i < itemToDrop.maxDropCount; i++){
+                if (Random.Range(0f, 100f) <= itemToDrop.dropRate){
+                    dropCount++;
+                }
+            }
+
+            if (dropCount > 0){
                 //Instantiate(itemToDrop.item, transform.position, transform.rotation);
             }
         }
