@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5437982860345888396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.4730496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.630525
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Name
+      value: CyborgGangster Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+--- !u!1 &4485193557803285038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+  m_PrefabInstance: {fileID: 5437982860345888396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1735783030039193254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4485193557803285038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ff1efe02194f94eae81dda98f675e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityStats:
+    attackSpeed: 0
+    criticalDamage: 0
+    currentHealth: 20
+    dashDistance: 0
+    defense: 0
+    criticalHitRate: 0
+    maxHealth: 20
+    normalizedHealth: 0
+    runSpeed: 0
+    specialAttack: 0
+    specialDefense: 0
+    strength: 0
+    walkSpeed: 2
+  healthbar: {fileID: 0}
+  name: CyborgGangster
+  enemyRespawner: {fileID: 0}
+  respawnTime: 2
+  respawnPosition: {x: 0, y: 0, z: 0}
+  respawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  attackPoint: {fileID: 5282566310624392329}
+  target: {fileID: 0}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  chaseRange: 11.7
+  distance: 0
+  direction: {x: 0, y: 0}
+  rangedAttackRange: 8.75
+  rangedAttackCooldown: 0
+  fleeRange: 6.88
+  fleeSpeedMultiplier: 7
+  rangedAttackOnCooldown: 0
+  bulletRange: 15
+  bulletSpeed: 10
+  bulletPrefab: {fileID: 5555040721743299267, guid: 14ee352b8bb0cef4282b89ebc43c2fb0, type: 3}
+--- !u!4 &5282566310624392329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+  m_PrefabInstance: {fileID: 5437982860345888396}
+  m_PrefabAsset: {fileID: 0}

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - enemy
   - bullet
+  - Enemy Respawner
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

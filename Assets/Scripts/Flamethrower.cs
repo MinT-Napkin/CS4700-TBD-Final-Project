@@ -49,6 +49,7 @@ public class Flamethrower : SpecialAttack{
 
         //Slow player movement for duration
         // Also disable dashing once we optimize inputs
+        flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
         for (int i = 0; i < flamethrowerDuration * 2; i++){
@@ -57,15 +58,15 @@ public class Flamethrower : SpecialAttack{
             foreach (Collider2D enemy in hitEnemies){
                 //Implement damage and status effect here
                 damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
-
+                
                 //Apply burn status effect
-
                 enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }
             yield return new WaitForSeconds(0.5f);
         }
+        flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
 
