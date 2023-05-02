@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Enemy : Entity{
 
+    public List<EnemyDroppedItem> droppedItems = new List<EnemyDroppedItem>();
+
     public EnemyHealthbar healthbar;
 
     new public string name;
@@ -53,9 +55,23 @@ public class Enemy : Entity{
     }
 
     protected override void OnEntityDeath(){
-        entityStats.walkSpeed = 0f;
         enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
+        DropItems();
         Destroy(gameObject);
+    }
+
+    void DropItems()
+    {
+        foreach (EnemyDroppedItem itemToDrop in droppedItems)
+        {
+            for (int i = 0; i < itemToDrop.maxDropCount; i++)
+            {
+                if (Random.Range(0f, 100f) <= itemToDrop.dropRate)
+                {
+                    //Instantiate(itemToDrop.item, transform.position, transform.rotation);
+                }
+            }
+        }
     }
 
     public void RotateEnemy()
