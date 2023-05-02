@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Awake(){
-
         playerClass = GetComponent<PlayerClass>();
         rb2d = GetComponent<Rigidbody2D>();
         state = State.Normal;

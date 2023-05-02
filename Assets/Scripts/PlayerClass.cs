@@ -65,6 +65,12 @@ public class PlayerClass : Entity, InteractInterface{
 
     }
 
+    public void start(){
+        entityStats.dashDistance = 20.0f;
+        entityStats.runSpeed = 15.0f;
+        entityStats.walkSpeed = 10.0f;
+    }
+
     public virtual void InteractWithTarget(Entity entity){
         foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)){
             Debug.Log("Interacting with " + interactable.name);
