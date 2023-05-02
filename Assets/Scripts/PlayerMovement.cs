@@ -13,22 +13,21 @@ public class PlayerMovement : MonoBehaviour
     public bool run;
     State state;
 
-    private enum State
-    {
+    private enum State{
         Normal,
         Dashing
     }
 
-    void Awake()
-    {
+    void Awake(){
+
         playerClass = GetComponent<PlayerClass>();
         rb2d = GetComponent<Rigidbody2D>();
         state = State.Normal;
     }
 
-    void Update()
-    {
+    void Update(){
         activeMoveSpeed = playerClass.entityStats.walkSpeed;
+
         switch (state)
         {
             case State.Normal:

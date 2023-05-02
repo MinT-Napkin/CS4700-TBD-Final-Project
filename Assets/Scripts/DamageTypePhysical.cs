@@ -9,7 +9,7 @@ public class DamageTypePhysical : DamageTypeParent{
         finalDamage *= Random.Range(0.8f, 1.2f);
 
         if (finalDamage < 1) {
-            finalDamage = 1;
+            finalDamage = 1.0f;
         }
 
         if ((Random.value * 100) <= damageCauser.entityStats.criticalHitRate){
