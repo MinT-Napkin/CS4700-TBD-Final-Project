@@ -12,12 +12,26 @@ public class DamageEvent{
         this.damageCauser = damageCauser;
         this.damagedEntity = damagedEntity;
 
+        mitigable = true;
+    }
+
+    public DamageEvent(float baseDamage, DamageTypeParent damageType, Entity damageCauser, Entity damagedEntity, bool mitigable) {
+        this.baseDamage = baseDamage;
+        this.damageType = damageType;
+        this.damageCauser = damageCauser;
+        this.damagedEntity = damagedEntity;
+        this.mitigable = mitigable;
     }
 
     public float ApplyDamage(){
         float finalDamage;
 
-        finalDamage = damageType.ApplyDamage(baseDamage, damageCauser, damagedEntity);
+        if (mitigable){
+            finalDamage = damageType.ApplyDamage(baseDamage, damageCauser, damagedEntity);
+        }
+        else{
+            finalDamage = damageType.ApplyUnmitigableDamage(baseDamage);
+        }
 
         return finalDamage;
     }
@@ -26,4 +40,5 @@ public class DamageEvent{
     private DamageTypeParent damageType;
     private Entity damageCauser;
     private Entity damagedEntity;
+    private bool mitigable;
 }

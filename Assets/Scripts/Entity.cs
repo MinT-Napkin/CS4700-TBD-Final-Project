@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour{
     public EntityStats entityStats;
+    public Inventory inventory;
 
-    void DamageHealth(float finalDamage){
+    public virtual void Awake(){
+        entityStats = new EntityStats();
+        inventory = gameObject.AddComponent<Inventory>();
+    }
+    // Start is called before the first frame update
+    void Start(){
+        
+    }
+
+    // Update is called once per frame
+    void Update(){
+    }
+
+    protected virtual void DamageHealth(float finalDamage){
         entityStats.currentHealth -= finalDamage;
 
         if (entityStats.currentHealth == 0){
@@ -19,6 +33,14 @@ public class Entity : MonoBehaviour{
             entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
 
             OnEntityDeath();
+        }
+        else if (entityStats.currentHealth > entityStats.maxHealth) {
+            entityStats.currentHealth = entityStats.maxHealth;
+
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
+        }
+        else {
+            entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
         }
     }
 
