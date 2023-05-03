@@ -9,16 +9,6 @@ public class ItemFirstAidKit : ItemParent{
         description = "Why do robots need this?";
         name = "First Aid Kit";
     }
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public override void Use(Entity entity){
         DamageEvent damageEvent;
