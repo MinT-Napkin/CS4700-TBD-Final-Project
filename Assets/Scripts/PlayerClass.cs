@@ -152,6 +152,10 @@ public class PlayerClass : Entity, InteractInterface{
             csv.ReadEntityStats(this);
         }
 
+        if (Input.GetKeyDown("g")){
+            entityStats.level++;
+        }
+
     }
 
     //Debug doomblades gizmo

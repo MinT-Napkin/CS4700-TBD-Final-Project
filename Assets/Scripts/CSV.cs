@@ -19,12 +19,20 @@ public class CSV{
             Debug.Log(int.Parse(data[13 * (i + 1)]));
 
             if (int.Parse(data[13 * (i + 1)]) == entity.entityStats.level){
-                //Debug.Log("Entity is level " + i + "\n " + float.Parse(data[13 * ((i + 1) + 1)]) + " " + float.Parse(data[13 * (i + 1) + 1]));
+                Debug.Log("Entity is level " + i + "\n ");
 
-                entity.entityStats.attackSpeed = float.Parse(data[13 * ((i + 1) + 1)]);
-                entity.entityStats.criticalDamage = float.Parse(data[13 * ((i + 1) + 2)]);
-                entity.entityStats.criticalHitRate = float.Parse(data[13 * ((i + 1) + 3)]);
-                entity.entityStats.dashDistance = float.Parse(data[13 * ((i + 1) + 4)]);
+                entity.entityStats.attackSpeed = float.Parse(data[14 * (i + 1)]);
+                entity.entityStats.criticalDamage = float.Parse(data[15 * (i + 1)]);
+                entity.entityStats.criticalHitRate = float.Parse(data[16 * (i + 1)]);
+                entity.entityStats.dashDistance = float.Parse(data[17 * (i + 1)]);
+                entity.entityStats.defense = float.Parse(data[18 * (i + 1)]);
+                entity.entityStats.maxExperiencePoints = int.Parse(data[19 * (i + 1)]);
+                entity.entityStats.maxHealth = float.Parse(data[20 * (i + 1)]);
+                entity.entityStats.runSpeed = float.Parse(data[21 * (i + 1)]);
+                entity.entityStats.specialAttack = float.Parse(data[22 * (i + 1)]);
+                entity.entityStats.specialDefense = float.Parse(data[23 * (i + 1)]);
+                entity.entityStats.strength = float.Parse(data[24 * (i + 1)]);
+                entity.entityStats.walkSpeed = float.Parse(data[25 * (i + 1)]);
 
                 break;
             }
