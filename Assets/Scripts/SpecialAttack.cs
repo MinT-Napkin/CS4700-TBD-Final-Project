@@ -12,6 +12,7 @@ public class SpecialAttack : MonoBehaviour{
     public LayerMask enemyLayers;
     new public string name;
     public string inputKey;
+    public bool input;
     public EntityStats playerStats;
     public int upgradeLevel;
 
@@ -22,7 +23,7 @@ public class SpecialAttack : MonoBehaviour{
     }
 
     public virtual void Update(){
-        if (Input.GetKeyDown(inputKey)){
+        if (input){
             if (!attackOnCooldown){
                 Attack();
             }

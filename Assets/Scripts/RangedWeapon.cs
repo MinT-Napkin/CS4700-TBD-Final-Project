@@ -11,13 +11,14 @@ public class RangedWeapon : MonoBehaviour{
     new public string name;
     public EntityStats playerStats;
     public string inputKey;
+    public bool input;
 
     public virtual void Awake(){
         inputKey = "c";
     }
 
     void Update(){
-        if (Input.GetKeyDown(inputKey))
+        if (input)
         {
             if (!attackOnCooldown)
                 Attack();
