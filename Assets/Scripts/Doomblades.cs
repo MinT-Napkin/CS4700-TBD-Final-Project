@@ -38,7 +38,7 @@ public class Doomblades : SpecialAttack{
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, doombladesRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies){
-            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
+            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
 
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
             StartCoroutine(DebugColorCoroutine(enemy.gameObject));
