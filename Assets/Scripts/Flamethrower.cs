@@ -10,7 +10,6 @@ public class Flamethrower : SpecialAttack{
 
     public override void Awake(){
         base.Awake();
-        inputKey = "1";
         name = "Flamethrower";
         damageType = new DamageTypePhysical();
         description = "Primitive flamethrower built by one who dominated the slums";

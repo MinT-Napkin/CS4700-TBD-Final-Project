@@ -11,7 +11,6 @@ public class MeleeAttackAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.meleeWeapon.inputKey;
         cooldown = playerClass.meleeWeapon.attackCooldown;
     }
 

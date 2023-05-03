@@ -7,7 +7,6 @@ public class Doomblades : SpecialAttack{
 
     public override void Awake(){
         base.Awake();
-        inputKey = "4";
         name = "Doomblades";
         damageType = new DamageTypePhysical();
         description = "A set of four giant blades designed with brutal slaughter in mind. Removed from the arm of an old military AI prototype robot.";

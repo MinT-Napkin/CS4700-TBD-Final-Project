@@ -11,7 +11,6 @@ public class LightningBoltAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.lightningBolt.inputKey;
         cooldown = playerClass.lightningBolt.attackCooldown;
     }
 

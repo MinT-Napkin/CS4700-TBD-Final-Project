@@ -11,7 +11,6 @@ public class DoombladesAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.doomblades.inputKey;
         cooldown = playerClass.doomblades.attackCooldown;
     }
 

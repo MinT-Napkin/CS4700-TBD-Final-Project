@@ -11,7 +11,6 @@ public class ShieldAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.shield.inputKey;
         cooldown = playerClass.shield.attackCooldown;
     }
 

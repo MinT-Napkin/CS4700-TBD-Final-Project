@@ -226,6 +226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImage: {fileID: 392073666732072878}
-  keyInput: 
+  keyInput: c
   cooldown: 0
   playerClass: {fileID: 0}

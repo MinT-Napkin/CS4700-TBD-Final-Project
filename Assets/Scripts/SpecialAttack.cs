@@ -11,7 +11,6 @@ public class SpecialAttack : MonoBehaviour{
     public string description;
     public LayerMask enemyLayers;
     new public string name;
-    public string inputKey;
     public bool input;
     public EntityStats playerStats;
     public int upgradeLevel;

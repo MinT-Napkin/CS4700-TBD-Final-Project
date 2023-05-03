@@ -11,7 +11,6 @@ public class RangedAttackAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.rangedWeapon.inputKey;
         cooldown = playerClass.rangedWeapon.attackCooldown;
     }
 

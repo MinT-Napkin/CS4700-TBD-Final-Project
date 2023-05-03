@@ -11,7 +11,6 @@ public class FlamethrowerAbilityUI : AbilityUI
     }
     void Start()
     {
-        keyInput = playerClass.flamethrower.inputKey;
         cooldown = playerClass.flamethrower.attackCooldown;
     }
 
