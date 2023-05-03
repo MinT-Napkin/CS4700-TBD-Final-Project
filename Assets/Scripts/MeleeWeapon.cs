@@ -14,10 +14,12 @@ public class MeleeWeapon : MonoBehaviour{
     public LayerMask enemyLayers;
     new public string name;
     public EntityStats playerStats;
+    public string inputKey;
 
     public virtual void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
         //playerStats = attackPoint.parent.gameObject.GetComponent<PlayerClass>().playerStats;
+        inputKey = "x";
     }
 
     public virtual void Equip(){
@@ -31,7 +33,7 @@ public class MeleeWeapon : MonoBehaviour{
     }
 
     void Update(){
-        if (Input.GetKeyDown("x")){
+        if (Input.GetKeyDown(inputKey)){
             if (!attackOnCooldown){
                 Attack();
             }

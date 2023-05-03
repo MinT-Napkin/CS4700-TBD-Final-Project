@@ -10,25 +10,27 @@ public class AbilityUI : MonoBehaviour
     public string keyInput;
     bool cooldownOn = true;
     public float cooldown;
+    public PlayerClass playerClass;
 
-    private void Awake()
+    public virtual void Awake()
     {
         abilityImage.fillAmount = 1;
+        playerClass = GameObject.FindWithTag("Player").GetComponent<PlayerClass>();
     }
 
-    private void Update()
+    public virtual void Update()
     {
         ability();
     }
 
-    private void setCooldown(float c)
+    public void setCooldown(float c)
     {
         cooldown = c;
     }
 
-    void ability()
+    public void ability()
     {
-        if (Input.GetKey(keyInput) && cooldownOn == true)
+        if (Input.GetKeyDown(keyInput) && cooldownOn == true)
         {
             cooldownOn = false;
             abilityImage.fillAmount = 0;
