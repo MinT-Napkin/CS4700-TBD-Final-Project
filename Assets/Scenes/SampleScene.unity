@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 266142585}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &180022935
 TilemapRenderer:
@@ -357,9 +357,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 672434392}
-  - {fileID: 606864184}
   - {fileID: 1218406530}
   - {fileID: 180022934}
+  - {fileID: 606864184}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 606864187}
   - component: {fileID: 606864186}
   - component: {fileID: 606864185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 266142585}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &606864185
 TilemapCollider2D:
@@ -21883,7 +21883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7592957973527439806, guid: 4a464b9c45baffb42a57609e00e57cfe, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7592957973527439806, guid: 4a464b9c45baffb42a57609e00e57cfe, type: 3}
       propertyPath: m_LocalScale.y
@@ -22302,7 +22302,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 266142585}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1218406531
 TilemapRenderer:
@@ -22912,7 +22912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5452911852723271324, guid: 4041067c0f3affa43af6c4671b6cc2ac, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5452911852723271324, guid: 4041067c0f3affa43af6c4671b6cc2ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23163,7 +23163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1942557085
 MonoBehaviour:
@@ -23179,7 +23179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+tnNbUMcwIAADEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMlyozAQ/RWXzuMUdrzA3GaI48whiSvOVC5cFNQYlYVEaYntpPzv0xJgiIcL4vX2XneLL8KlqSG3Sq81Z4+KAfk5Iv5Mfox64wMc6U7JLf+EzueNM1t6Jxp8XqjlCvGJDzOqAqt5/kvuhHeOEHSSF0pXK7aDVBlrEC6oMIAmrayPlgh9jcgRX+PEh5zwNF360yeekmh0xmMO0oLuXec3iX/i+bKNiG5mAYlmizYyvklmUTxZrMZRHHI4mQta1cC8oD7VLG5T3E6Cm0SprYeXlSshuGl5EnuqQx9SWhuHKtGBcYq6AznvXwLfldZrGAY/F4UB2zZF09Md19i+Jiv5rZqeVtTsG14fVLhAYNpQb5I+/mcfN5QLraqHru4k8jVsyfP9Cz3l1NhB04fw3XfiTh6o2NN3AW8lyCe11spJhkarnQ91BqZ3/edFWlpCvu/xhuoV6Oq+392Muwl7Deeg/pgKXr03w2yArVCh32ExQONk/iDhsDamTYGoZ/HXwCvdDferNdxzbSyaWpXS03tXTntXsgo982qcTZWWEOCWdA2SCnvaYBp7PcIr26DsleWe+pvUFm9t3QW5Cglw7x9FV6aNOlyGZUp1eARTPjsruISetDc8YZ9SJWWzYcOedGFbpwuaD8J2jrPvq0WiIinm8ziiQItisUzGQGO6LNjtIl4WECczEnaPS9RJxaYh2rYHpyb75BL3rPvBjNaa1mHbmaaHNf+s1JAgl4Xa5hpAPjcpLsxBYxW8lmzFOHZoC9ZyGQZOvjIiVL4Hll1qZkHq6mg1zfosGan5h7IeyUgafikZ8fBlmTcaPjgcfPEu2Zmc/wFQSwMEFAAACAgAAICf68GyG1ltAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJBmmWaqamFQWJqYlqambmlbmqiRaJ5WoqxmYV5WqqFpYlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf62c1tQxzAgAAMQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf68GyG1ltAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+    dataString: UEsDBBQAAAgIAACAn+sHBgPuewIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsP+AvTW0scp4cknjidXLgosBiNhcRIIraT8X/vSghDXF8s9u2+ffu08EWY0DVkRqqNYvmjzIH8HBF7Jj9GPfgAJ7qXYsc+oct5Y7kpbRJ1OS/UMInx0JZpWYFRLPsl9twmBxhsBCukqtb5HhKpjcZwQbkGhJQ0tlpg6GtETvg3jm3JGU/TyJ4+8RQHowseMxAGVJ8aTeYx/lY+fxzOJvY5jkJfN55OFsFsFs/DaD0Olo6kERmnVQ25najnWsSeZdn2Ejirz7BsmeScaS+UmHPtjEhorRscExNyRnFwpy6YWEUlsH1p7BjD8uei0GC8L4qe75hCB1te8lu2tlZUH1plH5Q3TsJ05VS1pI//4ePQwYWS1UPXNwxsD1Oy7PBCzxnVZuD7MHzXSw+dQUfKD/Sdw1sJ4klulGxEjqBRjS1tNEzv+sfraEkJ2aGPt1Jvgk3dO95dc3fJdoaLm/6UcFa9OyfnbWDHpXPc7QYovJs/KNhtjvYUGLUq/mp4pfvhinngniltEPJTCivvXTbKppK188xO05hEKgEu7EXXICg35y3SmNsrvMEGbW+Qe2pfJt/cY907clPiwn1+ENxAW3m8XpYu5fERdPncGM4E9KIt8IQ+JVKIdsP0d9BW7RpV0GxQtW9Y/n2zSFDExWKxCijQolhG8RjoikZFPluuogJW8Zy41WMCx6R82+r07uCliZ5c4Jp1n5jRRtHaLXuu6HHDPis50MdEIXeZAhDPLUPnkAaFTfC1zNc5Q392YAwT7rrJV0q4zA6Qp1ei1E26PhlF054lJTX7kMZGUpK4b0pKbPi6ylsFHwyOtnlHdiGXf1BLAwQUAAAICAAAgJ/rwbIbWW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kkGaZZqpqYVBYmpiWpqZuaVuaqJFonlairGZhXlaqoWliVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAgJ/rBwYD7nsCAAAyBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAgJ/rwbIbWW0AAAB4AAAACQAkAAAAAAAAAAAAAADIAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAIADAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
