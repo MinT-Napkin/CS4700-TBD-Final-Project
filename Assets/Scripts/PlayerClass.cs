@@ -12,6 +12,7 @@ public class PlayerClass : Entity, InteractInterface{
     public PlayerMovement playerMovement;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
+    public TextAsset textAsset;
     
     //Testing special attacks
     public SpecialAttack[] specialAttacks;
@@ -30,8 +31,6 @@ public class PlayerClass : Entity, InteractInterface{
     public override void Awake(){
         base.Awake();
         interactableLayer = LayerMask.GetMask("Interactable");
-
-        entityStats = new EntityStats(10f, 20f, 0.1f, 0, 10f, 50f, 10f, 1, 10, 10f, 1f, 20f, 10f, 10f, 10f, 10f);
 
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
@@ -145,6 +144,12 @@ public class PlayerClass : Entity, InteractInterface{
             TakeDamage(damageEvent);
 
             Debug.Log(entityStats.currentHealth);
+        }
+
+        if (Input.GetKeyDown("f")){
+            CSV csv = new CSV(textAsset);
+
+            csv.ReadEntityStats(this);
         }
 
     }

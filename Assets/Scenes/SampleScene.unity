@@ -699,6 +699,7 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   rangedAttackPoint: {fileID: 1071973577}
   rangedWeapon: {fileID: 0}
+  textAsset: {fileID: 4900000, guid: ebaf0f868f7e8364091309a8e722d584, type: 3}
   specialAttacks: []
   flamethrower: {fileID: 0}
   shield: {fileID: 0}
