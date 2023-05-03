@@ -73,7 +73,7 @@ public class Enemy : Entity{
             }
 
             if (dropCount > 0){
-                //Instantiate(itemToDrop.item, transform.position, transform.rotation);
+                Instantiate(itemToDrop.item, transform.position, transform.rotation);
             }
         }
     }
