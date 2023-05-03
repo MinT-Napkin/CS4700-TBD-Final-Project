@@ -59,15 +59,6 @@ public class PlayerClass : Entity, InteractInterface{
 
         //Testing doomblades
         doomblades = gameObject.AddComponent<Doomblades>();
-
-        //MaxHPBar
-
-    }
-
-    public void start(){
-        entityStats.dashDistance = 20.0f;
-        entityStats.runSpeed = 15.0f;
-        entityStats.walkSpeed = 10.0f;
     }
 
     public virtual void InteractWithTarget(Entity entity){
@@ -101,10 +92,14 @@ public class PlayerClass : Entity, InteractInterface{
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
-        // Start is called before the first frame update
-        void Start(){
-            healthBar.setCurrentHealth(entityStats.currentHealth);
-        }
+    // Start is called before the first frame update
+    void Start(){
+        CSV csv = new CSV(textAsset);
+
+        csv.ReadEntityStats(this);
+        
+        healthBar.setCurrentHealth(entityStats.currentHealth);
+    }
 
     // Update is called once per frame
     void Update(){
