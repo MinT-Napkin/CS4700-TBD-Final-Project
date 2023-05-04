@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemFirstAidKit : ItemParent{
+    public TextSystemUI textSystem;
     public override void Awake(){
         base.Awake();
         category = ItemCategories.Consumable;
@@ -19,5 +20,29 @@ public class ItemFirstAidKit : ItemParent{
         entity.TakeDamage(damageEvent);
 
         entity.inventory.RemoveFromInventory(this, 1);
+    }
+
+    public override void InteractWithTarget(Entity entity)
+    {
+        base.InteractWithTarget(entity);
+        textSystem.enableText();
+
+        textSystem.setTextIn(name + " added to inventory.");
+
+        StartCoroutine("WaitForSec");
+
+       
+
+
+    }
+
+    IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(5);
+        textSystem.disableText();
+        Destroy(gameObject);
+
+
+
     }
 }

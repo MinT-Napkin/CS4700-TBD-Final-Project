@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ItemParent : MonoBehaviour, InteractInterface{
     public string description;
@@ -36,7 +37,7 @@ public class ItemParent : MonoBehaviour, InteractInterface{
         this.entity = entity;
         entity.inventory.AddToInventory(this, 1);
         Debug.Log(name + " added to inventory.");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     public virtual void Use(Entity entity)
