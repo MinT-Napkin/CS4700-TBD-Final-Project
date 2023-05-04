@@ -11,6 +11,11 @@ public class GangBoss : Boss
         entityStats.walkSpeed = 2f;
     }
 
+    public override void Update()
+    {
+        base.Update();
+    }
+
     protected override void OnEntityDeath()
     {
         //Unlock flamethrower
@@ -31,5 +36,10 @@ public class GangBoss : Boss
     public override void SetAttackPointUpEvent()
     {
         attackPoint.localPosition = new Vector2(0.013f, 0.079f);
+    }
+
+    public override void MeleeAttackEvent()
+    {
+        Debug.Log("GangBoss attacks!");
     }
 }

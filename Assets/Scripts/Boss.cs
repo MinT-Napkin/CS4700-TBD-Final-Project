@@ -12,6 +12,7 @@ public class Boss : Entity
     public float initiateRange;
     public float meleeAttackRange;
     public Transform attackPoint;
+    public Animator animator;
 
     public override void Awake()
     {
@@ -19,9 +20,10 @@ public class Boss : Entity
         targetLayer = LayerMask.GetMask("Player");
         target = GameObject.FindWithTag("Player").transform;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
-    void Update()
+    public virtual void Update()
     {
         direction = target.position - transform.position;
         direction.Normalize();
@@ -62,6 +64,11 @@ public class Boss : Entity
     }
 
     public virtual void SetAttackPointUpEvent()
+    {
+
+    }
+
+    public virtual void MeleeAttackEvent()
     {
 
     }

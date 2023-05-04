@@ -14,6 +14,9 @@ public class FollowPlayer : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (Vector2.Distance(boss.attackPoint.position, boss.target.position) <= boss.meleeAttackRange)
+            animator.SetTrigger("MeleeAttack");
+
         Vector2 newPosition = Vector2.MoveTowards(boss.rb2d.position, boss.target.position, boss.entityStats.walkSpeed * Time.fixedDeltaTime);
         boss.rb2d.MovePosition(newPosition);
         if (boss.direction.y < -0.6f)
@@ -40,5 +43,6 @@ public class FollowPlayer : StateMachineBehaviour
        animator.ResetTrigger("MoveDown");
        animator.ResetTrigger("MoveUp");
        animator.ResetTrigger("MoveLeftRight");
+       animator.ResetTrigger("MeleeAttack");
     }
 }
