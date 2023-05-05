@@ -11,6 +11,7 @@ public class TextSystemUI : MonoBehaviour
     void Start()
     {
         textUI = GameObject.Find("TextSystem").GetComponent<TextMeshProUGUI>();
+        textUI.GetComponent<TextMeshProUGUI>().enabled = false;
         textUI.text = text1;
 
     }
@@ -18,7 +19,16 @@ public class TextSystemUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(textUI.GetComponent<TextMeshProUGUI>().enabled)
+        {
+            StartCoroutine("WaitForSeconds");
+        }
+    }
+
+    IEnumerator WaitForSeconds()
+    {
+        yield return new WaitForSeconds(5);
+        disableText();
     }
 
     public void setTextIn(string t)

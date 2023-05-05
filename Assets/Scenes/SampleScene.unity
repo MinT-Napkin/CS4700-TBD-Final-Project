@@ -22619,8 +22619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79449e51e6ea7a74cb5c8a2eb2336f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiObject: {fileID: 1875976768}
-  text: {fileID: 1875976769}
 --- !u!1 &1071973576
 GameObject:
   m_ObjectHideFlags: 0
@@ -23954,8 +23952,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24021,8 +24019,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 198.3776, y: 42.940063}
-  m_SizeDelta: {x: 378.7551, y: 50}
+  m_AnchoredPosition: {x: 198.3776, y: 33.098938}
+  m_SizeDelta: {x: 378.7551, y: 30.3178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875976772
 MonoBehaviour:

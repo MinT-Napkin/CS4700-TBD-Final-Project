@@ -25,12 +25,15 @@ public class ItemFirstAidKit : ItemParent{
     public override void InteractWithTarget(Entity entity)
     {
         base.InteractWithTarget(entity);
-        textSystem.enableText();
+        if(Input.GetKey("e"))
+        {
+            textSystem.enableText();
 
-        textSystem.setTextIn(name + " added to inventory.");
+            textSystem.setTextIn(name + " added to inventory.");
 
-        StartCoroutine("WaitForSec");
-
+            Destroy(gameObject);
+        }
+        
        
 
 
