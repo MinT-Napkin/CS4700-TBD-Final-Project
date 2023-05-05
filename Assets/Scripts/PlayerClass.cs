@@ -13,6 +13,8 @@ public class PlayerClass : Entity, InteractInterface{
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
     public TextAsset textAsset;
+
+    public Color color;
     
     //Testing special attacks
     public SpecialAttack[] specialAttacks;
@@ -150,7 +152,6 @@ public class PlayerClass : Entity, InteractInterface{
         if (Input.GetKeyDown("g")){
             entityStats.level++;
         }
-
     }
 
     //Debug doomblades gizmo
