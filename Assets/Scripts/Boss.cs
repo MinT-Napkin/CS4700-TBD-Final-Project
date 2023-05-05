@@ -97,4 +97,13 @@ public class Boss : Entity
     {
         animator.ResetTrigger("PhaseTransition");
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            entityStats.normalizedHealth -= 0.1f;
+            Destroy(other.gameObject);
+        }
+    }
 }
