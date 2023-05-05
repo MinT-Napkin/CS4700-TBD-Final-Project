@@ -16,19 +16,19 @@ public class MeleeAttack : StateMachineBehaviour
     {
        if (!(Vector2.Distance(boss.attackPoint.position, boss.target.position) <= boss.meleeAttackRange))
        {
-            if (boss.direction.y < -0.6f)
+            if (boss.direction.y < -0.5f)
             {
                 animator.SetTrigger("MoveDown");
             }
-            else if (boss.direction.y > 0.6f)
+            else if (boss.direction.y > 0.5f)
             {
                 animator.SetTrigger("MoveUp");
             }
-            else if (boss.direction.x < -0.6)
+            else if (boss.direction.x < -0.5)
             {
                 animator.SetTrigger("MoveLeftRight"); 
             }
-            else if (boss.direction.x > 0.6)
+            else if (boss.direction.x > 0.5)
             {
                 animator.SetTrigger("MoveLeftRight"); 
             }      

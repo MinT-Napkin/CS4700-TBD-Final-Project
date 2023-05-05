@@ -11,8 +11,14 @@ public class Boss : Entity
     public Rigidbody2D rb2d;
     public float initiateRange;
     public float meleeAttackRange;
+    public float rangedAttackRange;
+    public float rangedAttackCooldown;
+    public bool rangedAttackOnCooldown = false;
     public Transform attackPoint;
+    public Transform rangedAttackPoint;
     public Animator animator;
+
+    public int phase;
 
     public override void Awake()
     {
@@ -21,6 +27,7 @@ public class Boss : Entity
         target = GameObject.FindWithTag("Player").transform;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
+        phase = 1;
     }
 
     public virtual void Update()
@@ -28,11 +35,17 @@ public class Boss : Entity
         direction = target.position - transform.position;
         direction.Normalize();
         distance = Vector2.Distance(target.position, transform.position);
+
+        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
+        {
+            animator.SetTrigger("PhaseTransition");
+            phase = 2;
+            //Boost entityStats
+        }
     }
 
     protected override void OnEntityDeath()
     {
-        //Add more here
         Destroy(gameObject);
     }
 
@@ -48,13 +61,15 @@ public class Boss : Entity
         Gizmos.DrawWireSphere(transform.position, initiateRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
     }
 
     public virtual void RotateEvent()
     {
-        if (direction.x < -0.6)
+        if (direction.x < -0.5)
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        else if (direction.x > 0.6)
+        else if (direction.x >= 0.5)
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
     }
 
@@ -71,5 +86,15 @@ public class Boss : Entity
     public virtual void MeleeAttackEvent()
     {
 
+    }
+
+    public virtual void RangedAttackEvent()
+    {
+
+    }
+
+    public void ResetPhaseTransitionTriggerEvent()
+    {
+        animator.ResetTrigger("PhaseTransition");
     }
 }
