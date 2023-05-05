@@ -256,6 +256,7 @@ MonoBehaviour:
   attackPoint: {fileID: 2918484912657221580}
   rangedAttackPoint: {fileID: 8221046337659758111}
   animator: {fileID: 0}
+  phase: 0
   bulletPrefab: {fileID: 5351952394935277389, guid: 156ad9c961173114399376b0dc26410a, type: 3}
   bulletData: {fileID: 0}
   bulletSpeed: 20
