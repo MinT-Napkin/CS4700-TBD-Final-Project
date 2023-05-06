@@ -11,14 +11,11 @@ public class Boss : Entity
     public Rigidbody2D rb2d;
     public float initiateRange;
     public float meleeAttackRange;
-    public float rangedAttackRange;
-    public float rangedAttackCooldown;
-    public bool rangedAttackOnCooldown = false;
     public Transform attackPoint;
     public Transform rangedAttackPoint;
     public Animator animator;
 
-    public int phase;
+    public BossHealthbar healthbar;
 
     public override void Awake()
     {
@@ -27,7 +24,7 @@ public class Boss : Entity
         target = GameObject.FindWithTag("Player").transform;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
-        phase = 1;
+        healthbar.offset = Vector3.up;
     }
 
     public virtual void Update()
@@ -35,16 +32,15 @@ public class Boss : Entity
         direction = target.position - transform.position;
         direction.Normalize();
         distance = Vector2.Distance(target.position, transform.position);
-
-        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
-        {
-            animator.SetTrigger("PhaseTransition");
-            phase = 2;
-            //Boost entityStats
-        }
+        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
     }
 
     protected override void OnEntityDeath()
+    {
+        animator.SetTrigger("Death");
+    }
+
+    public void AfterDeathAnimation()
     {
         Destroy(gameObject);
     }
@@ -55,14 +51,12 @@ public class Boss : Entity
     void EndBossfight()
     {}
 
-    void OnDrawGizmos()
+    public virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, initiateRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
     }
 
     public virtual void RotateEvent()
@@ -98,11 +92,19 @@ public class Boss : Entity
         animator.ResetTrigger("PhaseTransition");
     }
 
+    public void SetInvincible(){
+        GetComponent<Collider2D>().enabled = false;
+    }
+
+    public void ResetInvincible(){
+        GetComponent<Collider2D>().enabled = true;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "bullet")
         {
-            entityStats.normalizedHealth -= 0.1f;
+            DamageHealth(10f);
             Destroy(other.gameObject);
         }
     }

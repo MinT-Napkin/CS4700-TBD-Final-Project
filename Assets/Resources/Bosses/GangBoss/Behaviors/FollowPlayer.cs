@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FollowPlayer : StateMachineBehaviour
 {
-    public Boss boss;
+    public GangBoss boss;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        boss = animator.GetComponent<Boss>();
+        boss = animator.GetComponent<GangBoss>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -18,7 +18,7 @@ public class FollowPlayer : StateMachineBehaviour
             animator.SetTrigger("MeleeAttack");
 
         if ((boss.distance <= boss.rangedAttackRange) && (boss.distance > boss.initiateRange) && (!boss.rangedAttackOnCooldown))
-            animator.SetTrigger("ShootOnce");
+            animator.SetTrigger("Shoot");
 
         Vector2 newPosition = Vector2.MoveTowards(boss.rb2d.position, boss.target.position, boss.entityStats.walkSpeed * Time.fixedDeltaTime);
         boss.rb2d.MovePosition(newPosition);
@@ -47,6 +47,6 @@ public class FollowPlayer : StateMachineBehaviour
        animator.ResetTrigger("MoveUp");
        animator.ResetTrigger("MoveLeftRight");
        animator.ResetTrigger("MeleeAttack");
-       animator.ResetTrigger("ShootOnce");
+       animator.ResetTrigger("Shoot");
     }
 }

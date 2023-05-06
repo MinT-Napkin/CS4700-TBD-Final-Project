@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class Initiate : StateMachineBehaviour
 {    
-    public Boss boss;
+    public GangBoss boss;
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       boss = animator.gameObject.GetComponent<Boss>();
+       boss = animator.gameObject.GetComponent<GangBoss>();
     }
 
     //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (boss.distance <= 10f)
+        if (boss.distance <= boss.initiateRange)
+        {
             animator.SetTrigger("MoveDown");
+            boss.healthbar.gameObject.SetActive(true);
+        }
     }
 
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state

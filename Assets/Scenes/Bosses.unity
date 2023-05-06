@@ -22594,6 +22594,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &969148383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 13849829458489818, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
+  m_PrefabInstance: {fileID: 1105943103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &969148387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969148383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f61bcf1fe9fdcb4da92f11fdf9166a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  originalRotationLeft: {x: 0, y: 0, z: 0, w: 0}
+  originalRotationRight: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1071973576
 GameObject:
   m_ObjectHideFlags: 0
@@ -22709,6 +22730,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3624985363673812176, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2124902335, guid: a962c03e467ce5444b78096dc9203a43, type: 3}
+    - target: {fileID: 8911786126324040267, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
+      propertyPath: m_Name
+      value: FlamethrowerAttackPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220289717905722122, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1093129704, guid: da23e0bea8cabc040af9e79d81ac2d73, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
 --- !u!1 &1137041406
