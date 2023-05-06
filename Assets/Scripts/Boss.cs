@@ -67,6 +67,11 @@ public class Boss : Entity
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
     }
 
+    public virtual void FixRotationUpDownEvent()
+    {
+        transform.eulerAngles = Vector3.zero;
+    }
+
     public virtual void SetAttackPointDownEvent()
     {
 

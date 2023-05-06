@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7722090946432230582}
   - component: {fileID: 9220289717905722122}
   - component: {fileID: 8131064451614716560}
+  - component: {fileID: 8547386568264672374}
   m_Layer: 3
   m_Name: FlamethrowerHorizontalSpritePoint
   m_TagString: Untagged
@@ -106,6 +107,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8547386568264672374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13849829458489818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b138e46faf9fd946a6728c505c39f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+  originalRotationLeft: {x: 0, y: 0, z: 0, w: 0}
+  originalRotationRight: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &164835055671287456
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +261,127 @@ Transform:
   m_Father: {fileID: 3624985363673812015}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &890134545645275675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305966664498949853}
+  - component: {fileID: 8086300788956893652}
+  - component: {fileID: 9113362850844850711}
+  - component: {fileID: 7101531354039091600}
+  m_Layer: 3
+  m_Name: FlamethrowerDownSpritePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1305966664498949853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890134545645275675}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.081, y: -0.274, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3624985363673812015}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!212 &8086300788956893652
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890134545645275675}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -822348483, guid: da23e0bea8cabc040af9e79d81ac2d73, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.96, y: 0.72}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &9113362850844850711
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890134545645275675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f119f9ebd5256d74ea9c4da5cd2fec3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7101531354039091600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890134545645275675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3a2790192bdd0439e330d1307e6976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2964548015133315167
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,14 +481,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3152859745952165844}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015119906, y: 0.21549387, z: -0.000038097172}
+  m_LocalRotation: {x: -0, y: -0, z: -0.31279722, w: 0.94982}
+  m_LocalPosition: {x: -0.030000033, y: 0.046999987, z: -0.000038097172}
   m_LocalScale: {x: 0.05863476, y: 0.05863476, z: 0.05863476}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3624985363673812015}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.456}
 --- !u!1 &3259039908555408423
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +566,8 @@ Transform:
   - {fileID: 8347271328907037256}
   - {fileID: 2188214082720706861}
   - {fileID: 7684454195103308440}
+  - {fileID: 5742404565562439826}
+  - {fileID: 1305966664498949853}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -472,7 +612,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -161353637, guid: 567095f264a3209438045f573496aa98, type: 3}
+  m_Sprite: {fileID: -1232670646, guid: 567095f264a3209438045f573496aa98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -588,16 +728,21 @@ MonoBehaviour:
   bulletData: {fileID: 0}
   bulletSpeed: 20
   phase: 0
-  rangedAttackCooldown: 4
+  rangedAttackCooldown: 3
   rangedAttackOnCooldown: 0
   rangedAttackRange: 16.81
   flamethrowerEnabled: 0
-  flamethrowerSpritePoint: {fileID: 7722090946432230582}
-  flamethrowerAttackPoint: {fileID: 2826246865570293986}
+  flamethrowerHorizontalSpritePoint: {fileID: 7722090946432230582}
+  flamethrowerHorizontalAttackPoint: {fileID: 2826246865570293986}
+  flamethrowerUpSpritePoint: {fileID: 2188214082720706861}
+  flamethrowerUpAttackPoint: {fileID: 7684454195103308440}
+  flamethrowerDownSpritePoint: {fileID: 1305966664498949853}
+  flamethrowerDownAttackPoint: {fileID: 5742404565562439826}
   flamethrowerRange: 6.56
-  flamethrowerEventController: {fileID: 0}
-  flamethrowerCooldown: 2.34
+  flamethrowerHorizontalEventController: {fileID: 0}
+  flamethrowerCooldown: 6
   flamethrowerOnCooldown: 0
+  activeFlamethrowerSpritePoint: {fileID: 0}
 --- !u!1 &5985354543615501461
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: 156}
+  m_AnchoredPosition: {x: 22, y: -188}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9190210779072739548
@@ -827,14 +972,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8911786126324040267}
-  m_LocalRotation: {x: -0, y: -0, z: -0.19993246, w: 0.97980976}
+  m_LocalRotation: {x: 0, y: 0, z: -0.20071025, w: 0.9796507}
   m_LocalPosition: {x: 0.07899982, y: 0.040000003, z: 0.0041739987}
   m_LocalScale: {x: 0.05863476, y: 0.05863476, z: 0.05863476}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3624985363673812015}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.157}
 --- !u!1 &9099673871456004051
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,13 +991,14 @@ GameObject:
   - component: {fileID: 2188214082720706861}
   - component: {fileID: 7789519044566273692}
   - component: {fileID: 2084518166468111311}
+  - component: {fileID: 7959649516716422410}
   m_Layer: 0
   m_Name: FlamethrowerUpSpritePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2188214082720706861
 Transform:
   m_ObjectHideFlags: 0
@@ -861,7 +1007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9099673871456004051}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: 0.364, z: -0.00092055043}
+  m_LocalPosition: {x: -0.042, y: 0.373, z: -0.00092055043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -941,3 +1087,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7959649516716422410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099673871456004051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad48661c43c13542865e7b01e824dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &9210421943627350982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5742404565562439826}
+  m_Layer: 3
+  m_Name: FlamethrowerDownAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5742404565562439826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210421943627350982}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2671935, w: 0.9636429}
+  m_LocalPosition: {x: 0.067000166, y: 0.048999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3624985363673812015}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.995}

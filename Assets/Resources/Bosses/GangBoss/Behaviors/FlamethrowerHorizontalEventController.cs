@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlamethrowerEventController : MonoBehaviour
+public class FlamethrowerHorizontalEventController : MonoBehaviour
 {
     public GangBoss boss;
     public Quaternion originalRotation;
@@ -12,9 +12,16 @@ public class FlamethrowerEventController : MonoBehaviour
     void Awake()
     {
         boss = transform.parent.gameObject.GetComponent<GangBoss>();
-        originalRotation = boss.flamethrowerAttackPoint.rotation;
-        originalRotationLeft = originalRotation;
-        originalRotationRight = new Quaternion(boss.flamethrowerAttackPoint.rotation.x, boss.flamethrowerAttackPoint.rotation.y, boss.flamethrowerAttackPoint.rotation.z - 3.5f, boss.flamethrowerAttackPoint.rotation.w);
+        originalRotationLeft = new Quaternion(0.00000f, 0.00000f, -0.20071f, 0.97965f);
+        originalRotationRight = new Quaternion(0.00000f, 0.00000f, -0.97269f, 0.23211f);
+    }
+
+    public void SetRotation()
+    {
+        if (boss.transform.rotation.y == -1)
+            boss.flamethrowerHorizontalAttackPoint.rotation = originalRotationRight;
+        else
+            boss.flamethrowerHorizontalAttackPoint.rotation = originalRotationLeft;
     }
 
     public void FlamethrowerEvent()
@@ -33,6 +40,6 @@ public class FlamethrowerEventController : MonoBehaviour
 
     public void ResetFlamethrower()
     {
-        boss.flamethrowerAttackPoint.rotation = originalRotation;
+        boss.flamethrowerHorizontalAttackPoint.rotation = originalRotation;
     }
 }

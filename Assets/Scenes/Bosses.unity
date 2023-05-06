@@ -22611,10 +22611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f61bcf1fe9fdcb4da92f11fdf9166a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
-  originalRotation: {x: 0, y: 0, z: 0, w: 0}
-  originalRotationLeft: {x: 0, y: 0, z: 0, w: 0}
-  originalRotationRight: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1071973576
 GameObject:
   m_ObjectHideFlags: 0
@@ -22777,6 +22773,10 @@ PrefabInstance:
     - target: {fileID: 8911786126324040267, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
       propertyPath: m_Name
       value: FlamethrowerAttackPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099673871456004051, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9220289717905722122, guid: 36c7dae4e57b0114b8a957ea4351210c, type: 3}
       propertyPath: m_Sprite

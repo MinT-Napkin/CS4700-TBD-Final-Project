@@ -13,12 +13,18 @@ public class GangBoss : Boss
     public float rangedAttackRange;
 
     public bool flamethrowerEnabled = false;
-    public Transform flamethrowerSpritePoint;
-    public Transform flamethrowerAttackPoint;
+    public Transform flamethrowerHorizontalSpritePoint;
+    public Transform flamethrowerHorizontalAttackPoint;
+    public Transform flamethrowerUpSpritePoint;
+    public Transform flamethrowerUpAttackPoint;
+    public Transform flamethrowerDownSpritePoint;
+    public Transform flamethrowerDownAttackPoint;
     public float flamethrowerRange;
-    public FlamethrowerEventController flamethrowerEventController;
+    public FlamethrowerHorizontalEventController flamethrowerHorizontalEventController;
     public float flamethrowerCooldown;
     public bool flamethrowerOnCooldown = false;
+
+    public Transform activeFlamethrowerSpritePoint;
 
     public override void Awake()
     {
@@ -35,7 +41,7 @@ public class GangBoss : Boss
         bulletData.bulletSpeed = this.bulletSpeed;
         phase = 1;
 
-        flamethrowerEventController = flamethrowerSpritePoint.gameObject.GetComponent<FlamethrowerEventController>();
+        flamethrowerHorizontalEventController = flamethrowerHorizontalSpritePoint.gameObject.GetComponent<FlamethrowerHorizontalEventController>();
     }
 
     public override void Update()
@@ -50,15 +56,11 @@ public class GangBoss : Boss
 
         if (flamethrowerEnabled)
         {
-            if (Mathf.Abs(direction.x) > 0.80f)
-            {
-                if ((distance <= flamethrowerRange * 1.66f) && (!flamethrowerOnCooldown))
-                {
-                    flamethrowerSpritePoint.gameObject.GetComponent<Animator>().SetTrigger("Flamethrower");
-                    StartCoroutine(FlamethrowerCooldown());
-                }
-            }
+            if ((distance <= flamethrowerRange * 1.66f) && (!flamethrowerOnCooldown))
+                StartCoroutine(FlamethrowerCooldown());
         }
+
+        Debug.Log(flamethrowerHorizontalAttackPoint.rotation);
     }
 
     protected override void OnEntityDeath()
@@ -102,33 +104,78 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventLeft()
     {
-        if (Physics2D.Raycast(flamethrowerAttackPoint.position, -flamethrowerAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
+        if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
+            Debug.Log("Burned!");
         }
-        flamethrowerAttackPoint.Rotate(new Vector3(0, 0, 5));
+        flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
     }
 
     public void FlamethrowerEventRight()
     {
-        if (Physics2D.Raycast(flamethrowerAttackPoint.position, -flamethrowerAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
+        if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
+            Debug.Log("Burned!");
         }
-        flamethrowerAttackPoint.Rotate(new Vector3(0, 0, -5));
+        flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, -2.9545f));
+    }
+
+    public void FlamethrowerEventUp()
+    {
+        if (Physics2D.Raycast(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
+        {
+            //Apply damage and burn
+            Debug.Log("Burned!");
+        }
+        flamethrowerUpAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
+    }
+
+    public void FlamethrowerEventDown()
+    {
+        if (Physics2D.Raycast(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
+        {
+            //Apply damage and burn
+            Debug.Log("Burned!");
+        }
+        flamethrowerDownAttackPoint.Rotate(new Vector3(0, 0, 2.8260f));
     }
 
     public void EnableFlamethrowerEvent()
     {
-        flamethrowerSpritePoint.gameObject.SetActive(true);
+        flamethrowerHorizontalSpritePoint.gameObject.SetActive(true);
+        flamethrowerUpSpritePoint.gameObject.SetActive(false);
+        flamethrowerDownSpritePoint.gameObject.SetActive(false);
+        activeFlamethrowerSpritePoint = flamethrowerHorizontalSpritePoint;
         flamethrowerEnabled = true;
+    }
+
+    public void SetActiveFlamethrowerSpritePointUpEvent()
+    {
+        flamethrowerHorizontalSpritePoint.gameObject.SetActive(false);
+        flamethrowerDownSpritePoint.gameObject.SetActive(false);
+        flamethrowerUpSpritePoint.gameObject.SetActive(true);
+        activeFlamethrowerSpritePoint = flamethrowerUpSpritePoint;
+    }
+
+    public void SetActiveFlamethrowerSpritePointDownEvent()
+    {
+        flamethrowerHorizontalSpritePoint.gameObject.SetActive(false);
+        flamethrowerUpSpritePoint.gameObject.SetActive(false);
+        flamethrowerDownSpritePoint.gameObject.SetActive(true);
+        activeFlamethrowerSpritePoint = flamethrowerDownSpritePoint;
     }
 
     public void DisableFlamethrowerEvent()
     {
-        flamethrowerAttackPoint.gameObject.SetActive(true);
-        flamethrowerSpritePoint.gameObject.SetActive(false);
-        flamethrowerEnabled = true;
+        flamethrowerHorizontalAttackPoint.gameObject.SetActive(false);
+        flamethrowerHorizontalSpritePoint.gameObject.SetActive(false);
+        flamethrowerUpAttackPoint.gameObject.SetActive(false);
+        flamethrowerUpSpritePoint.gameObject.SetActive(false);
+        flamethrowerDownSpritePoint.gameObject.SetActive(false);
+        flamethrowerDownAttackPoint.gameObject.SetActive(false);
+        flamethrowerEnabled = false;
     }
 
     IEnumerator RangedAttackCooldown()
@@ -141,21 +188,22 @@ public class GangBoss : Boss
     IEnumerator FlamethrowerCooldown()
     {
         flamethrowerOnCooldown = true;
+        activeFlamethrowerSpritePoint.gameObject.GetComponent<Animator>().SetTrigger("Flamethrower");
+        yield return new WaitForSeconds(1f);
+        activeFlamethrowerSpritePoint.gameObject.GetComponent<Animator>().ResetTrigger("Flamethrower");
         yield return new WaitForSeconds(flamethrowerCooldown);
-        flamethrowerSpritePoint.gameObject.GetComponent<Animator>().ResetTrigger("Flamethrower");
         flamethrowerOnCooldown = false;
     }
 
     public override void OnDrawGizmos()
     {
-        base.OnDrawGizmos();
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(flamethrowerSpritePoint.position, flamethrowerRange);
-        /*
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up * flamethrowerRange * 2f);
+
         Gizmos.color = Color.blue;
-        Gizmos.DrawRay(flamethrowerAttackPoint.position, -flamethrowerAttackPoint.right * flamethrowerRange * 2f);
-        */
+        Gizmos.DrawRay(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right * flamethrowerRange * 2f);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up * flamethrowerRange * 2f);
     }
 }
