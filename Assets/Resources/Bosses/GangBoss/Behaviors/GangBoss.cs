@@ -195,8 +195,17 @@ public class GangBoss : Boss
         flamethrowerOnCooldown = false;
     }
 
-    public override void OnDrawGizmos()
+    void OnDrawGizmos()
     {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, initiateRange);
+
+        Gizmos.color = new Color(141/255f, 13/255f, 225/255f);
+        Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(rangedAttackPoint.position, rangedAttackRange);
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up * flamethrowerRange * 2f);
 

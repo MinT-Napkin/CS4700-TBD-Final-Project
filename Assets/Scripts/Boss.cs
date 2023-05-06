@@ -51,14 +51,6 @@ public class Boss : Entity
     void EndBossfight()
     {}
 
-    public virtual void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, initiateRange);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
-    }
-
     public virtual void RotateEvent()
     {
         if (direction.x < -0.5)
