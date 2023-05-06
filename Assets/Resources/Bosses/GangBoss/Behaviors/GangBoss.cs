@@ -204,7 +204,7 @@ public class GangBoss : Boss
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(rangedAttackPoint.position, rangedAttackRange);
+        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up * flamethrowerRange * 2f);
