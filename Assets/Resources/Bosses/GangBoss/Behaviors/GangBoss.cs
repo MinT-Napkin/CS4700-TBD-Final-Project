@@ -67,7 +67,7 @@ public class GangBoss : Boss
     {
         base.OnEntityDeath();
     }
-
+    
     public override void RotateEvent()
     {
         base.RotateEvent();
