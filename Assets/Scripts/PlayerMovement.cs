@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public PlayerClass playerClass;
     public Vector2 movement;
     public bool run;
+    public bool dash;
+
     State state;
 
     private enum State{
@@ -30,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case State.Normal:
-                if (Input.GetKeyDown("space"))
+                if (dash)
                 {
                     state = State.Dashing;
                 }

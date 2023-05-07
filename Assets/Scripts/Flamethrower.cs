@@ -8,9 +8,11 @@ public class Flamethrower : SpecialAttack{
     ContactFilter2D contactFilter;
     List<Collider2D> hitEnemies;
 
+    InputController inputController;
+
+
     public override void Awake(){
         base.Awake();
-        inputKey = "1";
         name = "Flamethrower";
         damageType = new DamageTypePhysical();
         description = "Primitive flamethrower built by one who dominated the slums";
@@ -23,7 +25,9 @@ public class Flamethrower : SpecialAttack{
         hitEnemies = new List<Collider2D>();
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
-        
+
+        inputController = gameObject.GetComponent<InputController>();
+
         //Adjust attack damage, duration, and cooldown based on upgrade level here
     }
 

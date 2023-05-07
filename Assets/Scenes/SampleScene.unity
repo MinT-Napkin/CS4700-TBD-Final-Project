@@ -602,21 +602,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 616363565111848714, guid: e08b014eb29a1aa4782c3da2b6f291bb, type: 3}
   m_PrefabInstance: {fileID: 1304008353}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &306208012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301124475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityImage: {fileID: 306208013}
-  keyInput: c
-  cooldown: 1
 --- !u!114 &306208013 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 616363565111848715, guid: e08b014eb29a1aa4782c3da2b6f291bb, type: 3}
@@ -628,6 +613,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &306208015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301124475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31d5e73dbb5d4f488a997d018c9fe81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityImage: {fileID: 306208013}
+  keyInput: c
+  cooldown: 0
+  playerClass: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,21 +4924,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9150345280469610775, guid: 30c6a46e8b858bb4a9b3266bbc092f04, type: 3}
   m_PrefabInstance: {fileID: 1145525549}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &607872765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176465004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityImage: {fileID: 607872766}
-  keyInput: x
-  cooldown: 1
 --- !u!114 &607872766 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9150345280469610768, guid: 30c6a46e8b858bb4a9b3266bbc092f04, type: 3}
@@ -4949,26 +4935,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &636853368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6559559914760085741, guid: ac23d2a1d218f1f47b1deae1ea2d4cd7, type: 3}
-  m_PrefabInstance: {fileID: 48020062}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &636853369
+--- !u!114 &607872768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636853368}
+  m_GameObject: {fileID: 176465004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
+  m_Script: {fileID: 11500000, guid: df0e2cefbac5c864a8366007872bf076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityImage: {fileID: 636853370}
-  keyInput: 1
-  cooldown: 8
+  abilityImage: {fileID: 607872766}
+  keyInput: x
+  cooldown: 0
+  playerClass: {fileID: 0}
+--- !u!1 &636853368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6559559914760085741, guid: ac23d2a1d218f1f47b1deae1ea2d4cd7, type: 3}
+  m_PrefabInstance: {fileID: 48020062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &636853370 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6559559914760085743, guid: ac23d2a1d218f1f47b1deae1ea2d4cd7, type: 3}
@@ -4980,6 +4967,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &636853372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636853368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7323a11d3bdf0ac459ff447f40f85faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityImage: {fileID: 636853370}
+  keyInput: 1
+  cooldown: 0
+  playerClass: {fileID: 0}
 --- !u!1 &655592872
 GameObject:
   m_ObjectHideFlags: 0
@@ -22452,6 +22455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerClass: {fileID: 0}
+  inputEnabled: 1
+  dashEnabled: 1
 --- !u!114 &916498042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22469,6 +22474,7 @@ MonoBehaviour:
   playerClass: {fileID: 0}
   movement: {x: 0, y: 0}
   run: 0
+  dash: 0
 --- !u!1 &956283435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6574206181520022049, guid: c14e9d2e622d8bc4ca56b673f0d8e5ea, type: 3}
@@ -22479,21 +22485,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1280090366151050075, guid: 7fdf841639c86594abc1c7cb25bf7ffc, type: 3}
   m_PrefabInstance: {fileID: 857704114}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &957054189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737925339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityImage: {fileID: 957054190}
-  keyInput: 4
-  cooldown: 5
 --- !u!114 &957054190 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1280090366151050072, guid: 7fdf841639c86594abc1c7cb25bf7ffc, type: 3}
@@ -22505,6 +22496,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &957054192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737925339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad7684d36997b142a199a13aac225d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityImage: {fileID: 957054190}
+  keyInput: 4
+  cooldown: 0
+  playerClass: {fileID: 0}
 --- !u!1 &1071973576
 GameObject:
   m_ObjectHideFlags: 0
@@ -23471,21 +23478,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6574206181520022048, guid: c14e9d2e622d8bc4ca56b673f0d8e5ea, type: 3}
   m_PrefabInstance: {fileID: 1965006102}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1421699190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956283435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityImage: {fileID: 1421699191}
-  keyInput: 3
-  cooldown: 5
 --- !u!114 &1421699191 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6574206181520022079, guid: c14e9d2e622d8bc4ca56b673f0d8e5ea, type: 3}
@@ -23497,26 +23489,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1623266262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4016896958620303786, guid: fd709ddc779b08749899699466805c69, type: 3}
-  m_PrefabInstance: {fileID: 46978426}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1623266263
+--- !u!114 &1421699193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623266262}
+  m_GameObject: {fileID: 956283435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfec7591f4a1234894888c9afc1cf90, type: 3}
+  m_Script: {fileID: 11500000, guid: d28b295dd77d7014c95921621fc5e611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityImage: {fileID: 1623266264}
-  keyInput: 2
-  cooldown: 11
+  abilityImage: {fileID: 1421699191}
+  keyInput: 3
+  cooldown: 0
+  playerClass: {fileID: 0}
+--- !u!1 &1623266262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4016896958620303786, guid: fd709ddc779b08749899699466805c69, type: 3}
+  m_PrefabInstance: {fileID: 46978426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1623266264 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4016896958620303780, guid: fd709ddc779b08749899699466805c69, type: 3}
@@ -23528,6 +23521,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1623266266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623266262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c985fb8731f2aa44e83afcde4f02ef71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityImage: {fileID: 1623266264}
+  keyInput: 2
+  cooldown: 0
+  playerClass: {fileID: 0}
 --- !u!1 &1850465014
 GameObject:
   m_ObjectHideFlags: 0

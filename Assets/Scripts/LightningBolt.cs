@@ -6,10 +6,10 @@ public class LightningBolt : SpecialAttack
 {
     public float lightningBoltRange;
 
+
     public override void Awake()
     {
         base.Awake();
-        inputKey = "3";
         name = "Lightning Bolt";
         description = "Lightning bolt created by a traditional, military-grade weapon. This technology is used in many kinds of weaponry.";
         attackDamage = 10f;
