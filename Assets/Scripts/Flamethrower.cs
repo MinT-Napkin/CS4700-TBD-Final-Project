@@ -8,6 +8,8 @@ public class Flamethrower : SpecialAttack{
     ContactFilter2D contactFilter;
     List<Collider2D> hitEnemies;
 
+    InputController inputController;
+
     public override void Awake(){
         base.Awake();
         name = "Flamethrower";
@@ -23,6 +25,8 @@ public class Flamethrower : SpecialAttack{
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
         
+        inputController = gameObject.GetComponent<InputController>();
+
         //Adjust attack damage, duration, and cooldown based on upgrade level here
     }
 
@@ -51,6 +55,7 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
+        inputController.EnableDash(false);
         for (int i = 0; i < flamethrowerDuration * 2; i++){
             flamethrowerCollider.OverlapCollider(contactFilter, hitEnemies);
 
@@ -68,6 +73,7 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
+        inputController.EnableDash(true);
 
         //Testing final upgrade
         if (upgradeLevel >= 3){
