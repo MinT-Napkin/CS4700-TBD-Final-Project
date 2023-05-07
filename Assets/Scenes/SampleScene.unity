@@ -822,6 +822,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8606097397840402814, guid: 02de1bd85ae62244b8edaef0c53bebca, type: 3}
+      propertyPath: text1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606097397840402814, guid: 02de1bd85ae62244b8edaef0c53bebca, type: 3}
       propertyPath: textUI
       value: 
       objectReference: {fileID: 1103810767}
