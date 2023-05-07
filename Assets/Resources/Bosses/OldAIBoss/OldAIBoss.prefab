@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7933844617498032334}
   - component: {fileID: 7773881304141863154}
-  - component: {fileID: 6798552422539290877}
+  - component: {fileID: 3761416013713857401}
   m_Layer: 3
   m_Name: OldAIBoss
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 9071340217311512788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 76.58225, y: 0.34666, z: -0.11245}
-  m_LocalScale: {x: 13.108251, y: 13.108251, z: 13.108251}
+  m_LocalScale: {x: 13.925188, y: 13.925188, z: 13.925188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6798552422539290877
+--- !u!95 &3761416013713857401
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 9071340217311512788}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2fd6436d581564a429a2e5e9aac4a79e, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
