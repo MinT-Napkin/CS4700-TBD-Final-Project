@@ -43,7 +43,7 @@ public class Boss : Entity
     public void AfterDeathAnimation()
     {
         Destroy(gameObject);
-        MusicPlayer.PlayClip(1);
+        MusicPlayer.PlayClip(0);
     }
 
     void StartBossfight()

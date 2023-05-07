@@ -81,7 +81,6 @@ public class PlayerClass : Entity, InteractInterface{
         }
     }
 
-
     void CheckTargets(){
 
     }
