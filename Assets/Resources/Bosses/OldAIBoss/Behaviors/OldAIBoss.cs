@@ -15,6 +15,16 @@ public class OldAIBoss : Boss
         attackPoint.localPosition = new Vector2(-0.0900000036f,-0.0430000015f);
     }
 
+    public override void SetAttackPointDownEvent()
+    {
+        attackPoint.localPosition = new Vector2(0.00100000005f,-0.129999995f);
+    }
+
+    public override void SetAttackPointUpEvent()
+    {
+        attackPoint.localPosition = new Vector2(0f,0.116999999f);
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.white;

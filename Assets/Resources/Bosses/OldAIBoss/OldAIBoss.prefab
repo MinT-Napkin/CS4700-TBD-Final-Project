@@ -474,7 +474,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1837090580, guid: 23bab8b0aaf6861488144c46ade80446, type: 3}
+  m_Sprite: {fileID: 709819797, guid: 23bab8b0aaf6861488144c46ade80446, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
   initiateRange: 10.96
-  meleeAttackRange: 2.22
+  meleeAttackRange: 3.02
   attackPoint: {fileID: 108989427907447293}
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
@@ -610,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9221506095073765695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -0.043, z: 0}
+  m_LocalPosition: {x: -0, y: 0.117, z: 0}
   m_LocalScale: {x: 0.07181231, y: 0.07181231, z: 0.07181231}
   m_ConstrainProportionsScale: 0
   m_Children: []
