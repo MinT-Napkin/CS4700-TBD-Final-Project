@@ -50,9 +50,20 @@ public class Entity : MonoBehaviour{
 
     public void TakeDamage(DamageEvent damageEvent) {
         float finalDamage;
+        Color color;
 
         finalDamage = damageEvent.ApplyDamage();
+        color = damageEvent.GetColor();
+
+        StartCoroutine(DamageColorChange(color));
 
         DamageHealth(finalDamage);
+    }
+
+    IEnumerator DamageColorChange(Color color)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = color;
+        yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

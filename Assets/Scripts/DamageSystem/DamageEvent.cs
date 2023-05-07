@@ -37,6 +37,11 @@ public class DamageEvent{
         return finalDamage;
     }
 
+    public Color GetColor()
+    {
+        return DamageColor.GetColor(damageType);
+    }
+
     private float baseDamage;
     private DamageTypeParent damageType;
     private DamageCategory damageCategory;
