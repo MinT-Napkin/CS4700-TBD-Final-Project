@@ -40,7 +40,6 @@ public class Doomblades : SpecialAttack{
             damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
 
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
-            StartCoroutine(DebugColorCoroutine(enemy.gameObject));
             //Check if an enemy was killed here
             enemyKilled = true; //for debugging
         }
@@ -52,12 +51,5 @@ public class Doomblades : SpecialAttack{
                 StartCoroutine(Activate());
             }
         }
-    }
-
-    IEnumerator DebugColorCoroutine(GameObject enemy)
-    {
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = new Color(3f/255f, 252f/255f, 248f/255f);
-        yield return new WaitForSeconds(0.5f);
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }
