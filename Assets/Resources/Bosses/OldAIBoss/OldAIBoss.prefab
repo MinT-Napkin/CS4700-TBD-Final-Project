@@ -425,7 +425,7 @@ Transform:
   m_GameObject: {fileID: 9071340217311512788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 76.58225, y: 0.34666, z: 0}
-  m_LocalScale: {x: 13.925188, y: 13.925188, z: 13.925188}
+  m_LocalScale: {x: 22.664635, y: 22.664635, z: 22.664635}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904652880042541562}
@@ -581,11 +581,14 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
   initiateRange: 10.96
-  meleeAttackRange: 3.02
+  meleeAttackRange: 4.46
   attackPoint: {fileID: 108989427907447293}
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
   healthbar: {fileID: 3800517603864512710}
+  phase: 0
+  attackCooldown: 1
+  attackOnCooldown: 0
 --- !u!1 &9221506095073765695
 GameObject:
   m_ObjectHideFlags: 0

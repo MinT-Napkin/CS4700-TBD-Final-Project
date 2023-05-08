@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class OldAIBoss : Boss
 {
-    public int phase;
+    public int phase = 1;
+    public float attackCooldown;
+    public bool attackOnCooldown = false;
     public override void Awake()
     {
         base.Awake();
@@ -43,5 +45,17 @@ public class OldAIBoss : Boss
 
         Gizmos.color = new Color(141/255f, 13/255f, 225/255f);
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+    }
+
+    public void AttackCooldown()
+    {
+        StartCoroutine(AttackCooldownCoroutine());
+    }
+
+    IEnumerator AttackCooldownCoroutine()
+    {
+        attackOnCooldown = true;
+        yield return new WaitForSeconds(attackCooldown);
+        attackOnCooldown = false;
     }
 }
