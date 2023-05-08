@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public PlayerClass playerClass;
     public Vector2 movement;
     public bool run;
+    public bool dash;
     public bool isShooting;
     public bool isMelee;
+    public bool isDashing;
     public bool animLock = false;
     public SaveInputs saveInputs = SaveInputs.Down;
 
@@ -50,12 +52,13 @@ public class PlayerMovement : MonoBehaviour
         state = State.Normal;
     }
 
-    void Update()
-    {
+    void Update(){
+        activeMoveSpeed = playerClass.entityStats.walkSpeed;
+
         switch (state)
         {
             case State.Normal:
-                if (Input.GetKeyDown("space"))
+                if (dash)
                 {
                     state = State.Dashing;
                 }
@@ -86,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             //Dash
             case State.Dashing:
-                rb2d.velocity = movement * playerClass.entityStats.dashDistance;
+                rb2d.velocity = movement * playerClass.entityStats.dashDistance * 2f;
                 break;
         }
 
@@ -128,7 +131,6 @@ public class PlayerMovement : MonoBehaviour
             upMovement = false;
             downMovement = false;
         }
-
     }
 
     IEnumerator Shoot()
@@ -155,6 +157,15 @@ public class PlayerMovement : MonoBehaviour
         animLock = false;
     }
 
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        animLock = true;
+        yield return new WaitForSeconds(0.5f);
+        isDashing = false;
+        animLock = false;
+    }
+
     void UpdateAnimation()
     {
         if (Input.GetKeyDown("c"))
@@ -167,8 +178,12 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Melee());
         }
 
+        if (Input.GetKeyDown("space"))
+        {
+            StartCoroutine(Dash());
+        }
 
-        if (!sideMovement && !upMovement && !downMovement && !isShooting && !isMelee)
+        if (!sideMovement && !upMovement && !downMovement && !isShooting && !isMelee && !isDashing)
         {
             switch (saveInputs)
             {
@@ -196,7 +211,6 @@ public class PlayerMovement : MonoBehaviour
             idleUp = false;
             idleDown = false;
         }
-
         animator.SetBool("isIdleSide", idleSide);
         animator.SetBool("isIdleUp", idleUp);
         animator.SetBool("isIdleDown", idleDown);
@@ -205,6 +219,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isMovingSide", sideMovement);
         animator.SetBool("isShoot", isShooting);
         animator.SetBool("isMelee", isMelee);
+        animator.SetBool("isDash", isDashing);
     }
 
 

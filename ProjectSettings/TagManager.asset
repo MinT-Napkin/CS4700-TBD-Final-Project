@@ -6,6 +6,8 @@ TagManager:
   tags:
   - enemy
   - bullet
+  - Enemy Respawner
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
-  - 
+  - Obstacle
+  - Player
   - 
   - 
   - 

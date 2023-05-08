@@ -10,7 +10,6 @@ public class Shield : SpecialAttack
     public override void Awake()
     {
         base.Awake();
-        inputKey = "2";
         name = "Shield";
         description = "Shield activated by a device, often used as means of self-preservation by security robots.";
         shieldDuration = 4f;

@@ -8,9 +8,11 @@ public class Flamethrower : SpecialAttack{
     ContactFilter2D contactFilter;
     List<Collider2D> hitEnemies;
 
+    InputController inputController;
+
+
     public override void Awake(){
         base.Awake();
-        inputKey = "1";
         name = "Flamethrower";
         damageType = new DamageTypePhysical();
         description = "Primitive flamethrower built by one who dominated the slums";
@@ -23,7 +25,9 @@ public class Flamethrower : SpecialAttack{
         hitEnemies = new List<Collider2D>();
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
-        
+
+        inputController = gameObject.GetComponent<InputController>();
+
         //Adjust attack damage, duration, and cooldown based on upgrade level here
     }
 
@@ -49,6 +53,7 @@ public class Flamethrower : SpecialAttack{
 
         //Slow player movement for duration
         // Also disable dashing once we optimize inputs
+        flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
         for (int i = 0; i < flamethrowerDuration * 2; i++){
@@ -56,16 +61,16 @@ public class Flamethrower : SpecialAttack{
 
             foreach (Collider2D enemy in hitEnemies){
                 //Implement damage and status effect here
-                damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
-
+                damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
+                
                 //Apply burn status effect
-
                 enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }
             yield return new WaitForSeconds(0.5f);
         }
+        flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
 
@@ -75,7 +80,7 @@ public class Flamethrower : SpecialAttack{
 
             foreach (GameObject enemy in toExplode){
                 foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 3f, enemyLayers)){
-                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Enemy>());
+                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
                     element.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
                 }
             }

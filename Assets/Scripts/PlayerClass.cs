@@ -12,6 +12,9 @@ public class PlayerClass : Entity, InteractInterface{
     public PlayerMovement playerMovement;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
+    public TextAsset textAsset;
+
+    public Color color;
     
     //Testing special attacks
     public SpecialAttack[] specialAttacks;
@@ -34,9 +37,9 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
+
         this.entityStats.walkSpeed = 10.0f;
         playerMovement = GetComponent<PlayerMovement>();
-        
 
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;
@@ -61,9 +64,6 @@ public class PlayerClass : Entity, InteractInterface{
 
         //Testing doomblades
         doomblades = gameObject.AddComponent<Doomblades>();
-
-        //MaxHPBar
-
     }
 
     public virtual void InteractWithTarget(Entity entity){
@@ -78,6 +78,12 @@ public class PlayerClass : Entity, InteractInterface{
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
             Debug.Log("Press E to interact.");
         }
+
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            Debug.Log("Player hit by enemy bullet!");
+            Destroy(other.gameObject);
+        }
     }
 
 
@@ -91,10 +97,14 @@ public class PlayerClass : Entity, InteractInterface{
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
-        // Start is called before the first frame update
-        void Start(){
-            healthBar.setCurrentHealth(entityStats.currentHealth);
-        }
+    // Start is called before the first frame update
+    void Start(){
+        CSV csv = new CSV(textAsset);
+
+        csv.ReadEntityStats(this);
+        
+        healthBar.setCurrentHealth(entityStats.currentHealth);
+    }
 
     // Update is called once per frame
     void Update(){
@@ -136,6 +146,15 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
+        if (Input.GetKeyDown("f")){
+            CSV csv = new CSV(textAsset);
+
+            csv.ReadEntityStats(this);
+        }
+
+        if (Input.GetKeyDown("g")){
+            entityStats.level++;
+        }
     }
 
 

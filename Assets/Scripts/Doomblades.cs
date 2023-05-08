@@ -7,7 +7,6 @@ public class Doomblades : SpecialAttack{
 
     public override void Awake(){
         base.Awake();
-        inputKey = "4";
         name = "Doomblades";
         damageType = new DamageTypePhysical();
         description = "A set of four giant blades designed with brutal slaughter in mind. Removed from the arm of an old military AI prototype robot.";
@@ -38,10 +37,9 @@ public class Doomblades : SpecialAttack{
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, doombladesRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies){
-            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
+            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
 
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
-            StartCoroutine(DebugColorCoroutine(enemy.gameObject));
             //Check if an enemy was killed here
             enemyKilled = true; //for debugging
         }
@@ -53,12 +51,5 @@ public class Doomblades : SpecialAttack{
                 StartCoroutine(Activate());
             }
         }
-    }
-
-    IEnumerator DebugColorCoroutine(GameObject enemy)
-    {
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = new Color(3f/255f, 252f/255f, 248f/255f);
-        yield return new WaitForSeconds(0.5f);
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }
