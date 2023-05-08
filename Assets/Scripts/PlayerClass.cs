@@ -34,8 +34,9 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon = gameObject.AddComponent<BladeOfTheOutsider>() as MeleeWeapon;
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
-
-        playerMovement = gameObject.AddComponent<PlayerMovement>() as PlayerMovement;
+        this.entityStats.walkSpeed = 10.0f;
+        playerMovement = GetComponent<PlayerMovement>();
+        
 
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;
@@ -136,6 +137,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
     }
+
 
     //Debug doomblades gizmo
     void OnDrawGizmos(){
