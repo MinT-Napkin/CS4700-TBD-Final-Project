@@ -42,6 +42,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator WaitForPlayAnimation(Animator anim)
     {
+        yield return new WaitForSeconds(0.5f);
 
         // Wait for the animation to finish playing
         while (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
