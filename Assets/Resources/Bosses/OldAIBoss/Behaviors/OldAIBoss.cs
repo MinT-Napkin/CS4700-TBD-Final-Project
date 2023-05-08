@@ -10,8 +10,24 @@ public class OldAIBoss : Boss
     public override void Awake()
     {
         base.Awake();
+        //Test entity stats
         entityStats.walkSpeed = 2f;
+        entityStats.currentHealth = 50f;
+        entityStats.maxHealth = 50f;
+        entityStats.normalizedHealth = 1f;
     }
+
+    public override void Update()
+    {
+        base.Update();
+        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
+        {
+            animator.SetTrigger("PhaseTransition");
+            phase = 2;
+            //Boost entityStats
+        }
+    }
+
     public override void RotateEvent()
     {
         base.RotateEvent();

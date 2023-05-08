@@ -102,6 +102,7 @@ public class Boss : Entity
     {
         if (other.gameObject.tag == "bullet")
         {
+            //fix this
             DamageHealth(10f);
             Destroy(other.gameObject);
         }

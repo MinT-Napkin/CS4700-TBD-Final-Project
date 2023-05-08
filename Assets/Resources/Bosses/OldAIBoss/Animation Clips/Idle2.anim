@@ -20,15 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 2019466980, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - time: 0.15
-      value: {fileID: 354288389, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - time: 0.3
-      value: {fileID: 1655127600, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - time: 0.45
-      value: {fileID: -1842322093, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - time: 0.6
-      value: {fileID: -1842322093, guid: 567095f264a3209438045f573496aa98, type: 3}
+      value: {fileID: -1173764285, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - time: 0.25
+      value: {fileID: 632072506, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - time: 0.48333332
+      value: {fileID: 940617543, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - time: 0.73333335
+      value: {fileID: 1797801691, guid: bedece8ce9ec23041991364592172b20, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,17 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 2019466980, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - {fileID: 354288389, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - {fileID: 1655127600, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - {fileID: -1842322093, guid: 567095f264a3209438045f573496aa98, type: 3}
-    - {fileID: -1842322093, guid: 567095f264a3209438045f573496aa98, type: 3}
+    - {fileID: -1173764285, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - {fileID: 632072506, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - {fileID: 940617543, guid: bedece8ce9ec23041991364592172b20, type: 3}
+    - {fileID: 1797801691, guid: bedece8ce9ec23041991364592172b20, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6166667
+    m_StopTime: 0.75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,13 +75,6 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: EnableFlamethrowerEvent
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0
     functionName: ResetInvincible
     data: 
