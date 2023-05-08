@@ -10,15 +10,31 @@ public class BulletController : MonoBehaviour
     public float bulletRange = 10;
     float distanceTraveled;
 
+    public Animator playerAnimator;
+    Vector2 direction;
+
     void Awake()
     {
+        playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         distanceTraveled = 0;
+
+        if ((playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Side_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Side_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Side")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Side")))
+        {
+            if (playerAnimator.gameObject.GetComponent<SpriteRenderer>().flipX)
+                direction = transform.right;
+            else
+                direction = -transform.right;
+        }
+        else if ((playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Up_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Up_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Up")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Up")))
+            direction = transform.up;
+        else
+            direction = -transform.up;
     }
 
     void Start()
     {
-        rb2d.velocity = transform.up * bulletSpeed;
+        rb2d.velocity = direction * bulletSpeed;
     }
 
     void Update()

@@ -38,8 +38,7 @@ public class RangedWeapon : MonoBehaviour
         this.playerStats = playerStats;
     }
 
-    void Attack()
-    {
+    void Attack(){
         Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         StartCoroutine(AttackCooldown());
     }

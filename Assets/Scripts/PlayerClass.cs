@@ -38,6 +38,9 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon.attackPoint = meleeAttackPoint;
         meleeWeapon.SetEntityStats(entityStats);
 
+        this.entityStats.walkSpeed = 10.0f;
+        playerMovement = GetComponent<PlayerMovement>();
+
         rangedWeapon = gameObject.AddComponent<RangedWeapon>() as RangedWeapon;
         rangedWeapon.attackPoint = rangedAttackPoint;
         rangedWeapon.SetEntityStats(entityStats);
@@ -153,6 +156,7 @@ public class PlayerClass : Entity, InteractInterface{
             entityStats.level++;
         }
     }
+
 
     //Debug doomblades gizmo
     void OnDrawGizmos(){
