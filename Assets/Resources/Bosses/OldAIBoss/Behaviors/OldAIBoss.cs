@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OldAIBoss : Boss
 {
+    public int phase;
     public override void Awake()
     {
         base.Awake();
@@ -23,6 +24,16 @@ public class OldAIBoss : Boss
     public override void SetAttackPointUpEvent()
     {
         attackPoint.localPosition = new Vector2(0f,0.116999999f);
+    }
+
+    public override void MeleeAttackEvent()
+    {
+        Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
+        if (targetHit != null)
+        {
+            //Apply damage
+            Debug.Log(targetHit.gameObject.name + " phase 1 hit!");
+        }
     }
 
     void OnDrawGizmos()

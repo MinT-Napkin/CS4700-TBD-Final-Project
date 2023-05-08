@@ -90,9 +90,9 @@ public class GangBoss : Boss
         if (targetHit != null)
         {
             if (phase == 1)
-                Debug.Log("Phase 1 hit");
+                Debug.Log("Phase 1 hit"); //Damage
             else    
-                Debug.Log("Phase 2 hit");
+                Debug.Log("Phase 2 hit"); //Damage + burn status
         }
     }
 
