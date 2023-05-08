@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OldAIBoss : Boss
+public class OldAIBoss2 : Boss
 {
-    public int phase = 1;
     public float attackCooldown;
     public bool attackOnCooldown = false;
     public override void Awake()
@@ -16,18 +15,6 @@ public class OldAIBoss : Boss
         entityStats.maxHealth = 50f;
         entityStats.normalizedHealth = 1f;
     }
-
-    public override void Update()
-    {
-        base.Update();
-        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
-        {
-            animator.SetTrigger("PhaseTransition");
-            phase = 2;
-            //Boost entityStats
-        }
-    }
-
     public override void RotateEvent()
     {
         base.RotateEvent();

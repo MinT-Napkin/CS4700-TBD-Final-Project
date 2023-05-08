@@ -425,7 +425,7 @@ Transform:
   m_GameObject: {fileID: 9071340217311512788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 76.58225, y: 0.34666, z: 0}
-  m_LocalScale: {x: 22.664635, y: 22.664635, z: 22.664635}
+  m_LocalScale: {x: 22.664635, y: 22.664635, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904652880042541562}
@@ -586,7 +586,7 @@ MonoBehaviour:
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
   healthbar: {fileID: 3800517603864512710}
-  phase: 0
+  phase2Prefab: {fileID: 4703510953228802886, guid: bedaa95bb3c3eb14b99b1598c30b51cb, type: 3}
   attackCooldown: 3
   attackOnCooldown: 0
 --- !u!1 &9221506095073765695

@@ -40,7 +40,7 @@ public class Boss : Entity
         animator.SetTrigger("Death");
     }
 
-    public void AfterDeathAnimation()
+    public virtual void AfterDeathAnimation()
     {
         Destroy(gameObject);
         MusicPlayer.PlayClip(0);
