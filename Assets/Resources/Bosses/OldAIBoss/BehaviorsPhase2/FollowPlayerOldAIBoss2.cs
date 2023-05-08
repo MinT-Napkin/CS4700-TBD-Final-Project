@@ -14,7 +14,7 @@ public class FollowPlayerOldAIBoss2 : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // if (Vector2.Distance(boss.attackPoint.position, boss.target.position) <= boss.meleeAttackRange)
+        // if (Vector2.Distance(boss.attackPoint.position, boss.target.position) <= boss.meleeAttackRange * 1.1f)
         // {
         //     if (!boss.attackOnCooldown)
         //     {

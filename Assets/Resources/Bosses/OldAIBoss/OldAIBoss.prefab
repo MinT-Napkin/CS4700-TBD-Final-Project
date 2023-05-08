@@ -587,7 +587,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   healthbar: {fileID: 3800517603864512710}
   phase2Prefab: {fileID: 4703510953228802886, guid: bedaa95bb3c3eb14b99b1598c30b51cb, type: 3}
-  attackCooldown: 3
+  attackCooldown: 1
   attackOnCooldown: 0
 --- !u!1 &9221506095073765695
 GameObject:
