@@ -587,7 +587,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   healthbar: {fileID: 3800517603864512710}
   phase: 0
-  attackCooldown: 1
+  attackCooldown: 3
   attackOnCooldown: 0
 --- !u!1 &9221506095073765695
 GameObject:
