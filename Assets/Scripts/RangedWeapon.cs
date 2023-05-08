@@ -39,6 +39,7 @@ public class RangedWeapon : MonoBehaviour
     }
 
     void Attack(){
+        SoundManager.instance.PlaySound(SoundManager.instance.rangeSound);
         Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         StartCoroutine(AttackCooldown());
     }

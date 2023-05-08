@@ -29,6 +29,7 @@ public class LightningBolt : SpecialAttack
 
     public override void Attack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.lightningBoltSound);
         StartCoroutine(Activate());
         StartCoroutine(DebugRay());
         base.Attack();

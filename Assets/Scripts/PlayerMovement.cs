@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             //Dash
             case State.Dashing:
+                SoundManager.instance.PlaySound(SoundManager.instance.dashSound);
                 rb2d.velocity = movement * playerClass.entityStats.dashDistance * 2f;
                 break;
         }

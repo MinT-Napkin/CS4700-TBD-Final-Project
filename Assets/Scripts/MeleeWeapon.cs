@@ -55,6 +55,7 @@ public class MeleeWeapon : MonoBehaviour
 
     void Attack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)

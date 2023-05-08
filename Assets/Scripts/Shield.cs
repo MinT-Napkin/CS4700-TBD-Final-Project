@@ -45,6 +45,7 @@ public class Shield : SpecialAttack
 
     public override void Attack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.shieldSound);
         StartCoroutine(Activate());
         base.Attack();
     }
