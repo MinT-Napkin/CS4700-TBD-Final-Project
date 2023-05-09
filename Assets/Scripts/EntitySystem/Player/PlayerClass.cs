@@ -84,11 +84,9 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     // Start is called before the first frame update
-    void Start(){
-        CSV csv = new CSV(textAsset);
+    protected override void Start(){
+        base.Start();
 
-        csv.ReadEntityStats(this);
-        
         healthBar.setCurrentHealth(entityStats.currentHealth);
     }
 

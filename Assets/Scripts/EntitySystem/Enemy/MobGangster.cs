@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobGangster : EnemyMelee
-{
+public class MobGangster : EnemyMelee{
+    protected override void Start(){
+        base.Start();
+    }
     public override void MeleeAttack(){
         bool isAttacking = true;
         /*

@@ -148,7 +148,7 @@ MonoBehaviour:
     walkSpeed: 8
   inventory: {fileID: 0}
   isPlayerControlled: 0
-  textAsset: {fileID: 0}
+  textAsset: {fileID: 4900000, guid: 0e117147a285c874289ae3a95d5e0327, type: 3}
   droppedItems:
   - item: {fileID: 0}
     dropRate: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   chaseRange: 8
   distance: 0
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
   meleeAttackRange: 1.55
   meleeDetectionRange: 2.3
   meleeAttackCooldown: 0

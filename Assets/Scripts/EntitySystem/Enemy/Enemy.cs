@@ -48,10 +48,15 @@ public class Enemy : Entity{
         animator = gameObject.GetComponent<Animator>();
     }
 
+    protected override void Start(){
+        base.Start();
+
+        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
+    }
+
     public virtual void Update(){
         direction = target.position - transform.position;
         direction.Normalize();
-        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
         distance = Vector2.Distance(target.position, transform.position);
     }
 
@@ -88,28 +93,28 @@ public class Enemy : Entity{
         if (!freezeRotation){
             if (direction.y < -0.5f){
                 //transform.eulerAngles = new Vector3(0f, 0f, 180f);
-                Debug.Log("down");
+                //Debug.Log("down");
                 isFacingUp = true;
                 isFacingDown = false;
                 animator.SetBool("isFacingUp", isFacingUp);
             }
             else if (direction.y > 0.5f){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
-                Debug.Log("up");
+                //Debug.Log("up");
                 isFacingDown = true;
                 isFacingUp = false;
                 animator.SetBool("isFacingDown", isFacingDown);
             }
             else if (direction.x < 0) {
                 //transform.eulerAngles = new Vector3(0f, 0f, 90f);
-                Debug.Log("left");
+                //Debug.Log("left");
                 isFacingLeft = true;
                 isFacingRight = false;
                 animator.SetBool("isFacingLeft", isFacingLeft);
             }
             else if (direction.x > 0){
                 //transform.eulerAngles = new Vector3(0f, 0f, -90f);
-                Debug.Log("right");
+                //Debug.Log("right");
                 isFacingRight = true;
                 isFacingLeft = false;
                 animator.SetBool("isFacingRight", isFacingRight);
