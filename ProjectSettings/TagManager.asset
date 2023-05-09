@@ -9,6 +9,7 @@ TagManager:
   - Enemy Respawner
   - EnemyBullet
   - MusicPlayer
+  - Boss
   layers:
   - Default
   - TransparentFX

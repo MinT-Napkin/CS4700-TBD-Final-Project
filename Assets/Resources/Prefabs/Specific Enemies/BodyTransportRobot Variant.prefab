@@ -85,10 +85,13 @@ MonoBehaviour:
   entityStats:
     attackSpeed: 0
     criticalDamage: 0
+    criticalHitRate: 0
+    currentExperiencePoints: 0
     currentHealth: 10
     dashDistance: 0
     defense: 0
-    criticalHitRate: 0
+    level: 0
+    maxExperiencePoints: 0
     maxHealth: 10
     normalizedHealth: 0
     runSpeed: 0
@@ -96,6 +99,8 @@ MonoBehaviour:
     specialDefense: 0
     strength: 0
     walkSpeed: 2
+  inventory: {fileID: 0}
+  droppedItems: []
   healthbar: {fileID: 0}
   name: BodyTransportRobot
   enemyRespawner: {fileID: 0}
