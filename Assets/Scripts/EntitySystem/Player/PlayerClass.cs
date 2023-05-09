@@ -133,10 +133,6 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown(";")){
-            Debug.Log("input disabled");
-            GetComponent<InputController>().EnableInput(false);
-        }
         if (Input.GetKeyDown("=")){
         }
 
