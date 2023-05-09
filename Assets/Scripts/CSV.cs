@@ -16,11 +16,8 @@ public class CSV{
         int tableSize = data.Length / 13;
 
         for (int i = 0; i < (tableSize - 1); i++){
-            Debug.Log(int.Parse(data[13 * (i + 1)]));
 
             if (int.Parse(data[13 * (i + 1)]) == entity.entityStats.level){
-                Debug.Log("Entity is level " + i + "\n ");
-
                 entity.entityStats.attackSpeed = float.Parse(data[(13 * (i + 1)) + 1]);
                 entity.entityStats.criticalDamage = float.Parse(data[(13 * (i + 1)) + 2]);
                 entity.entityStats.criticalHitRate = float.Parse(data[(13 * (i + 1)) + 3]);
