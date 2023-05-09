@@ -14,8 +14,13 @@ public class Entity : MonoBehaviour{
         inventory = gameObject.AddComponent<Inventory>();
     }
     // Start is called before the first frame update
-    void Start(){
-        
+    protected virtual void Start(){
+        CSV csv = new CSV(textAsset);
+
+        csv.ReadEntityStats(this);
+
+        DamageTypeHealing damageType = new DamageTypeHealing();
+        DamageEvent damageEvent = new DamageEvent(-100.0f, damageType, this, this, false);
     }
 
     // Update is called once per frame

@@ -11,10 +11,15 @@ public class EnemyMelee : Enemy{
     public override void Awake(){
         base.Awake();
         aiPath.endReachedDistance = meleeAttackRange;
+        DamageTypeHealing damageType = new DamageTypeHealing();
+        DamageEvent damageEvent = new DamageEvent(-100.0f, damageType, this, this, false);
     }
 
-    public override void Update()
-    {
+    protected override void Start(){
+        base.Start();
+    }
+
+    public override void Update(){
         base.Update();
         if (distance <= chaseRange)
         {
@@ -32,20 +37,17 @@ public class EnemyMelee : Enemy{
         }
     }
 
-    public virtual void MeleeAttack()
-    {
+    public virtual void MeleeAttack(){
         StartCoroutine(MeleeAttackCooldown());
     }
 
-    IEnumerator MeleeAttackCooldown()
-    {
+    IEnumerator MeleeAttackCooldown(){
         meleeAttackOnCooldown = true;
         yield return new WaitForSeconds(meleeAttackCooldown);
         meleeAttackOnCooldown = false;
     }
 
-    public void OnDrawGizmosSelected()
-    {
+    public void OnDrawGizmosSelected(){
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.yellow;
