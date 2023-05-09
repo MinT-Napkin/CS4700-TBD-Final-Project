@@ -148,7 +148,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("f")){
-            StatusEffectBurning burn = gameObject.AddComponent<StatusEffectBurning>();
+            StatusEffectPoison burn = gameObject.AddComponent<StatusEffectPoison>();
             burn.Constructor(this, 5.0f, true, 0.5f);
         }
 

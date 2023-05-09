@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 
-public class StatusEffectBurning : StatusEffectParent{
+public class StatusEffectBurn : StatusEffectParent{
     public override void ApplyEffect(){
         entity.entityStats.strength *= 0.8f;
         entity.entityStats.specialAttack *= 0.8f;
