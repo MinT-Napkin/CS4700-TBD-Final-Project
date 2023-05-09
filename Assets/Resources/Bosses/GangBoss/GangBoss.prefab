@@ -555,8 +555,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3624985363673812011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.01, y: 3.82, z: 0}
-  m_LocalScale: {x: 17.05473, y: 17.05473, z: 17.05473}
+  m_LocalPosition: {x: 121.5998, y: 3.62, z: 0}
+  m_LocalScale: {x: 10.57274, y: 10.57274, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2918484912657221580}
@@ -726,6 +726,7 @@ MonoBehaviour:
   rangedAttackPoint: {fileID: 8221046337659758111}
   animator: {fileID: 0}
   healthbar: {fileID: 6587387862608116108}
+  bossObstacle: {fileID: 4827675984630893579, guid: 1dba3e992ac435c4ab61a88449b5f0fb, type: 3}
   bulletPrefab: {fileID: 5351952394935277389, guid: 156ad9c961173114399376b0dc26410a, type: 3}
   bulletData: {fileID: 0}
   bulletSpeed: 20
@@ -740,7 +741,7 @@ MonoBehaviour:
   flamethrowerUpAttackPoint: {fileID: 7684454195103308440}
   flamethrowerDownSpritePoint: {fileID: 1305966664498949853}
   flamethrowerDownAttackPoint: {fileID: 5742404565562439826}
-  flamethrowerRange: 6.56
+  flamethrowerRange: 3.49
   flamethrowerHorizontalEventController: {fileID: 0}
   flamethrowerCooldown: 4
   flamethrowerOnCooldown: 0
