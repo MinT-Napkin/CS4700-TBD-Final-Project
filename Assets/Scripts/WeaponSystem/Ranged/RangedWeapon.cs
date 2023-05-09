@@ -14,28 +14,35 @@ public class RangedWeapon : MonoBehaviour
     public string inputKey;
     public bool input;
 
-    public virtual void Awake()
-    {
+    public virtual void Awake(){
         inputKey = "c";
     }
 
-    void Update()
-    {
-        if (input)
-        {
-            if (!attackOnCooldown)
+    void Update(){
+        if (input){
+            if (!attackOnCooldown){
                 Attack();
+            }
         }
     }
 
-    public void SetPrefab(GameObject bulletPrefab)
-    {
+    public void SetPrefab(GameObject bulletPrefab){
         this.bulletPrefab = bulletPrefab;
     }
 
-    public void SetEntityStats(EntityStats playerStats)
-    {
+    public void SetEntityStats(EntityStats playerStats){
         this.playerStats = playerStats;
+    }
+
+    public virtual void Equip() {
+        playerStats.attackSpeed *= attackCooldown;
+        //bulletPrefab.GetComponent<BulletController>().bulletDamage;
+        //playerStats.strength += attackDamage;
+    }
+
+    public virtual void Unequip() {
+        playerStats.attackSpeed /= attackCooldown;
+        //playerStats.strength -= attackDamage;
     }
 
     void Attack(){
@@ -44,8 +51,7 @@ public class RangedWeapon : MonoBehaviour
         StartCoroutine(AttackCooldown());
     }
 
-    IEnumerator AttackCooldown()
-    {
+    IEnumerator AttackCooldown(){
         attackOnCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;
