@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - Enemy Respawner
   - EnemyBullet
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX
