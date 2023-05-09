@@ -40,11 +40,9 @@ public class MeleeWeapon : MonoBehaviour{
         SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies){ 
-
-            damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Entity>());
-
-            enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+        foreach (Collider2D enemy in hitEnemies){
+            damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Normal);
+            enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
         }
         StartCoroutine(AttackCooldown());
     }
