@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 524cde82413f47343a8eb40ef997af2f
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Slums_Level.unity
+    guid: 947bbff3b41726148a23d88da2467275
+  - enabled: 1
+    path: Assets/Scenes/City_Level.unity
+    guid: 3c244071b53b5a840811b8a84cc6bb09
+  - enabled: 0
+    path: Assets/Scenes/Bosses.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
