@@ -6,7 +6,7 @@ public class RangedWeapon : MonoBehaviour
 {
     public Transform attackPoint;
     public float attackCooldown = 1;
-    bool attackOnCooldown = false;
+    public bool attackOnCooldown = false;
     public GameObject bulletPrefab;
     public string description;
     new public string name;
@@ -45,7 +45,7 @@ public class RangedWeapon : MonoBehaviour
         //playerStats.strength -= attackDamage;
     }
 
-    void Attack(){
+    public void Attack(){
         SoundManager.instance.PlaySound(SoundManager.instance.rangeSound);
         Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         StartCoroutine(AttackCooldown());

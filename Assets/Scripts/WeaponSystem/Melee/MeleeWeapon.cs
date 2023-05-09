@@ -48,12 +48,10 @@ public class MeleeWeapon : MonoBehaviour{
 
  
         }
-
-        Debug.Log("hit");
         StartCoroutine(AttackCooldown());
     }
 
-    void OnDrawGizmosSelected(){
+    void OnDrawGizmos(){
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 

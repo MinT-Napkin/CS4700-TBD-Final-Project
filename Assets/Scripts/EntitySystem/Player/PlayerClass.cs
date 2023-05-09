@@ -175,22 +175,35 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon.Attack();
     }
 
+    public void RangedAttackEvent()
+    {
+        rangedWeapon.Attack();
+    }
+
     public void SetMeleeAttackPointUpEvent()
     {
         meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
+        rangedWeapon.attackPoint.localPosition = new Vector2(0.109f, 0.357f);
     }
 
     public void SetMeleeAttackPointDownEvent()
     {
         meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
+        rangedWeapon.attackPoint.localPosition = new Vector2(-0.139f, -0.579f);
     }
 
     public void SetMeleeAttackPointSideEvent()
     {
         if (GetComponent<SpriteRenderer>().flipX)
+        {
             meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
+            rangedWeapon.attackPoint.localPosition = new Vector2(0.557f, -0.194f);
+        }
         else
+        {
             meleeWeapon.attackPoint.localPosition = new Vector2(-1.05f, 0);
+            rangedWeapon.attackPoint.localPosition = new Vector2(-0.557f, -0.194f);
+        }
     }
 
 

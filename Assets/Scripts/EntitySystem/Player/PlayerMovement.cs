@@ -174,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rangedInput)
         {
-            StartCoroutine(Shoot());
+            if(!playerClass.rangedWeapon.attackOnCooldown)
+                StartCoroutine(Shoot());
         }
 
         if (meleeInput)
