@@ -30,8 +30,9 @@ public class Enemy : Entity{
 
     public Vector2 direction;
 
-    public override void Awake()
-    {
+    public Animator animator;
+
+    public override void Awake(){
         healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
         healthbar.offset = Vector3.up;
         enemyRespawner = GameObject.FindWithTag("Enemy Respawner").GetComponent<EnemyRespawner>();
@@ -44,10 +45,10 @@ public class Enemy : Entity{
         aiPath.canMove = false;
         respawnPosition = gameObject.transform.position;
         respawnRotation = gameObject.transform.rotation;
+        animator = gameObject.GetComponent<Animator>();
     }
 
-    public virtual void Update()
-    {
+    public virtual void Update(){
         direction = target.position - transform.position;
         direction.Normalize();
         healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
@@ -78,18 +79,41 @@ public class Enemy : Entity{
         }
     }
 
-    public void RotateEnemy()
-    {
-        if (!freezeRotation)
-        {
-            if (direction.y < -0.5f)
-                transform.eulerAngles = new Vector3(0f, 0f, 180f);
-            else if (direction.y > 0.5f)
+    public void RotateEnemy(){
+        bool isFacingRight;
+        bool isFacingLeft;
+        bool isFacingUp;
+        bool isFacingDown;
+
+        if (!freezeRotation){
+            if (direction.y < -0.5f){
+                //transform.eulerAngles = new Vector3(0f, 0f, 180f);
+                Debug.Log("down");
+                isFacingUp = true;
+                isFacingDown = false;
+                animator.SetBool("isFacingUp", isFacingUp);
+            }
+            else if (direction.y > 0.5f){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            else if (direction.x < 0)
-                transform.eulerAngles = new Vector3(0f, 0f, 90f);
-            else if (direction.x > 0)
-                transform.eulerAngles = new Vector3(0f, 0f, -90f);
+                Debug.Log("up");
+                isFacingDown = true;
+                isFacingUp = false;
+                animator.SetBool("isFacingDown", isFacingDown);
+            }
+            else if (direction.x < 0) {
+                //transform.eulerAngles = new Vector3(0f, 0f, 90f);
+                Debug.Log("left");
+                isFacingLeft = true;
+                isFacingRight = false;
+                animator.SetBool("isFacingLeft", isFacingLeft);
+            }
+            else if (direction.x > 0){
+                //transform.eulerAngles = new Vector3(0f, 0f, -90f);
+                Debug.Log("right");
+                isFacingRight = true;
+                isFacingLeft = false;
+                animator.SetBool("isFacingRight", isFacingRight);
+            }
         }
     }
 
