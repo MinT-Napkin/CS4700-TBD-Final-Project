@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2042033782926762582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 991122943380574124}
+  m_Layer: 0
+  m_Name: AOEAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &991122943380574124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042033782926762582}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.022, y: -0.015, z: -0.033733625}
+  m_LocalScale: {x: 0.044121612, y: 0.044121612, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4703510953228802882}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4698763726878503286
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4698763726878503286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12727141, y: -0.058532365, z: 0.022618074}
+  m_LocalPosition: {x: -0.1, y: -0.008, z: 0.022618074}
   m_LocalScale: {x: 0.07181233, y: 0.07181233, z: 0.07181}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,9 +76,9 @@ GameObject:
   - component: {fileID: 4703510953228802885}
   - component: {fileID: 2627944808903292260}
   - component: {fileID: 2647131955542562564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OldAIBoss2
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,12 +91,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4703510953228802886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.426994, y: 0.69869506, z: -0.022618074}
+  m_LocalPosition: {x: 77.426994, y: 0.69869506, z: 0}
   m_LocalScale: {x: 22.66463, y: 22.66463, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1337803931513936260}
   - {fileID: 1975731736313407932}
+  - {fileID: 991122943380574124}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -216,14 +248,23 @@ MonoBehaviour:
   distance: 0
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
-  initiateRange: 14.43
+  initiateRange: 18.29
   meleeAttackRange: 4.52
   attackPoint: {fileID: 1975731736313407932}
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
   healthbar: {fileID: 2971519140139009894}
-  attackCooldown: 0
+  attackCooldown: 0.5
   attackOnCooldown: 0
+  AOEAttackPoint: {fileID: 991122943380574124}
+  AOEAttackRange: 5.76
+  initiateDashRange1: 35.8
+  initiateDashRange2: 20.57
+  dashSpeed: 40
+  maxDashDistance: 40
+  dashCooldown: 7
+  dashCollisionEnabled: 0
+  dashOnCooldown: 0
 --- !u!1 &5227190282855900893
 GameObject:
   m_ObjectHideFlags: 0

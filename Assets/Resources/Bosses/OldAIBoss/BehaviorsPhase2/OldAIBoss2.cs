@@ -6,6 +6,17 @@ public class OldAIBoss2 : Boss
 {
     public float attackCooldown;
     public bool attackOnCooldown = false;
+    public Transform AOEAttackPoint;
+    public float AOEAttackRange;
+
+    //Initiate dash when player between dash distance 1 and 2, and when dash not on cooldown
+    public float initiateDashRange1;
+    public float initiateDashRange2;
+    public float dashSpeed;
+    public float maxDashDistance;
+    public float dashCooldown;
+    public bool dashCollisionEnabled = false;
+    public bool dashOnCooldown = false;
     public override void Awake()
     {
         base.Awake();
@@ -14,7 +25,19 @@ public class OldAIBoss2 : Boss
         entityStats.currentHealth = 50f;
         entityStats.maxHealth = 50f;
         entityStats.normalizedHealth = 1f;
+        healthbar.gameObject.SetActive(true);
     }
+
+    public override void Update()
+    {
+        base.Update();
+        if ((!dashOnCooldown) && (distance <= initiateDashRange1) && (distance >= initiateDashRange2))
+        {
+            animator.SetTrigger("Dash");
+            StartCoroutine(DashCooldownCoroutine());
+        }
+    }
+
     public override void RotateEvent()
     {
         base.RotateEvent();
@@ -41,6 +64,19 @@ public class OldAIBoss2 : Boss
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (dashCollisionEnabled)
+        {
+            if (other.collider.gameObject.tag == "Player")
+            {
+                //damage player
+                Debug.Log("Player hit with dash!");
+            }
+            animator.SetTrigger("EndDash");
+        }
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -48,6 +84,15 @@ public class OldAIBoss2 : Boss
 
         Gizmos.color = new Color(141/255f, 13/255f, 225/255f);
         Gizmos.DrawWireSphere(attackPoint.position, meleeAttackRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AOEAttackPoint.position, AOEAttackRange);
+
+        Gizmos.color = new Color(242/255f, 7/255f, 160/255f);
+        Gizmos.DrawWireSphere(transform.position, initiateDashRange1);
+
+        Gizmos.color = new Color(237/255f, 147/255f, 206/255f);
+        Gizmos.DrawWireSphere(transform.position, initiateDashRange2);
     }
 
     public void AttackCooldown()
@@ -60,5 +105,12 @@ public class OldAIBoss2 : Boss
         attackOnCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;
+    }
+
+    IEnumerator DashCooldownCoroutine()
+    {
+        dashOnCooldown = true;
+        yield return new WaitForSeconds(dashCooldown);
+        dashOnCooldown = false;
     }
 }

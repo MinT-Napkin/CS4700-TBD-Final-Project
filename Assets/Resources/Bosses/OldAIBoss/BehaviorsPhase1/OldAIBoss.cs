@@ -43,6 +43,12 @@ public class OldAIBoss : Boss
         }
     }
 
+    protected override void OnEntityDeath()
+    {
+        base.OnEntityDeath();
+        MusicPlayer.PlayClip(3);
+    }
+
     public override void AfterDeathAnimation()
     {
         Instantiate(phase2Prefab, transform.position, transform.rotation);

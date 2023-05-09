@@ -46,12 +46,6 @@ public class Boss : Entity
         MusicPlayer.PlayClip(0);
     }
 
-    void StartBossfight()
-    {}
-
-    void EndBossfight()
-    {}
-
     public virtual void RotateEvent()
     {
         if (direction.x < -0.5)
