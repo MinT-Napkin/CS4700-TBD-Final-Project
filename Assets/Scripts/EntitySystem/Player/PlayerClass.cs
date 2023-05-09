@@ -148,17 +148,14 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("f")){
-            StatusEffectBurning burn = new StatusEffectBurning(this, 5.0f);
-
-            Debug.Log(burn.duration + " " + burn.tickSpeed);
+            StatusEffectBurning burn = gameObject.AddComponent<StatusEffectBurning>();
+            burn.Constructor(this, 5.0f, true, 0.5f);
         }
 
         if (Input.GetKeyDown(";")){
             GetComponent<InputController>().inputEnabled = false;
         }
-        if (Input.GetKeyDown("="))
-        {
-            Debug.Log(debuffList.Count);
+        if (Input.GetKeyDown("=")){
         }
 
         if (Input.GetKeyDown("g")){

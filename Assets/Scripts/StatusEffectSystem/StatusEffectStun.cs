@@ -2,22 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusEffectStun : StatusEffectParent
-{
-    //private InputController inputController;
-    public StatusEffectStun(float duration) : base(duration){
-        ticking = false;
-    }
-
-    public StatusEffectStun(Entity entity, float duration) : base(entity, duration){
-        ticking = false;
-    }
-
+public class StatusEffectStun : StatusEffectParent{
     public override void ApplyEffect(){
-        base.ApplyEffect();
-
-        if (entity.isPlayerControlled)
-        {
+        if (entity.isPlayerControlled){
             //inputController = entity.GetComponent<InputController>();
             //inputController.enable
             entity.GetComponent<InputController>().inputEnabled = false;
