@@ -62,10 +62,10 @@ public class Flamethrower : SpecialAttack{
 
             foreach (Collider2D enemy in hitEnemies){
                 //Implement damage and status effect here
-                damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
+                damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Entity>(), DamageCategory.Special);
                 
                 //Apply burn status effect
-                enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+                enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }
@@ -81,8 +81,8 @@ public class Flamethrower : SpecialAttack{
 
             foreach (GameObject enemy in toExplode){
                 foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 3f, enemyLayers)){
-                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
-                    element.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                    element.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
                 }
             }
         }
