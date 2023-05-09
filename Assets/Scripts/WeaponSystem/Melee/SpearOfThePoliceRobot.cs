@@ -12,7 +12,7 @@ public class SpearOfThePoliceRobot : MeleeWeapon{
         name = "Police Robot's Spear";
     }
 
-    protected override void Attack(){
+    public override void Attack(){
         SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);

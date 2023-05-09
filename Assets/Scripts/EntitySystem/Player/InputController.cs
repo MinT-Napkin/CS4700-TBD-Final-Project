@@ -24,8 +24,8 @@ public class InputController : MonoBehaviour{
                 playerClass.GetComponent<PlayerMovement>().dashInput = Input.GetKeyDown("space");
             }
 
-            playerClass.meleeWeapon.input = Input.GetKeyDown(playerClass.meleeWeapon.inputKey);
-            playerClass.rangedWeapon.input = Input.GetKeyDown(playerClass.rangedWeapon.inputKey);
+            playerClass.GetComponent<PlayerMovement>().meleeInput = Input.GetKeyDown(playerClass.meleeWeapon.inputKey);
+            playerClass.GetComponent<PlayerMovement>().rangedInput = Input.GetKeyDown(playerClass.rangedWeapon.inputKey);
 
             playerClass.flamethrower.input = Input.GetKeyDown("1");
             playerClass.lightningBolt.input = Input.GetKeyDown("3");

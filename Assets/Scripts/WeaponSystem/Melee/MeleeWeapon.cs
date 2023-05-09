@@ -8,14 +8,13 @@ public class MeleeWeapon : MonoBehaviour{
     public float attackDamage = 10.0f;
     public float attackRange = 0.5f;
     public float attackCooldown = 1.0f;
-    bool attackOnCooldown = false;
+    public bool attackOnCooldown = false;
     protected DamageTypeParent damageType;
     public string description;
     public LayerMask enemyLayers;
     new public string name;
     public EntityStats playerStats;
     public string inputKey;
-    public bool input;
 
     public virtual void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
@@ -33,19 +32,11 @@ public class MeleeWeapon : MonoBehaviour{
         playerStats.strength -= attackDamage;
     }
 
-    void Update(){
-        if ((input)){
-            if (!attackOnCooldown){
-                Attack();
-            }
-        }
-    }
-
     public void SetEntityStats(EntityStats playerStats){
         this.playerStats = playerStats;
     }
 
-    protected virtual void Attack(){
+    public virtual void Attack(){
         SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -54,8 +45,11 @@ public class MeleeWeapon : MonoBehaviour{
             damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Normal);
 
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+
+ 
         }
 
+        Debug.Log("hit");
         StartCoroutine(AttackCooldown());
     }
 

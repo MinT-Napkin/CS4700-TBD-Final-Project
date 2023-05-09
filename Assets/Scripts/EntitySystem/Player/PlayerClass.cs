@@ -170,9 +170,32 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
 
+    public void AttackEvent()
+    {
+        meleeWeapon.Attack();
+    }
+
+    public void SetMeleeAttackPointUpEvent()
+    {
+        meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
+    }
+
+    public void SetMeleeAttackPointDownEvent()
+    {
+        meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
+    }
+
+    public void SetMeleeAttackPointSideEvent()
+    {
+        if (GetComponent<SpriteRenderer>().flipX)
+            meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
+        else
+            meleeWeapon.attackPoint.localPosition = new Vector2(-1.05f, 0);
+    }
+
+
     //Debug doomblades gizmo
     void OnDrawGizmos(){
-        Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
     }

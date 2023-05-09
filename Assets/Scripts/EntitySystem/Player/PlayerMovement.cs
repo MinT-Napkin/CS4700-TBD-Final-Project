@@ -179,7 +179,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (meleeInput)
         {
-            StartCoroutine(Melee());
+            if(!playerClass.meleeWeapon.attackOnCooldown)
+                StartCoroutine(Melee());
         }
 
         if (dashInput)
