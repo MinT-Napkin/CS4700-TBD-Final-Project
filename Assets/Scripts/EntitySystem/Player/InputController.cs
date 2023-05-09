@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour{
     public PlayerClass playerClass;
-    public bool inputEnabled = true;
-    public bool dashEnabled = true;
+    public bool inputEnabled;
+    public bool dashEnabled;
 
     void Awake(){
         playerClass = GetComponent<PlayerClass>();
+        inputEnabled = true;
+        dashEnabled = true;
     }
 
     void Update(){
         if (inputEnabled){
+            Debug.Log("InputController: Input Enabled");
             playerClass.GetComponent<PlayerMovement>().movement.x = Input.GetAxisRaw("Horizontal");
             playerClass.GetComponent<PlayerMovement>().movement.y = Input.GetAxisRaw("Vertical");
             playerClass.GetComponent<PlayerMovement>().run = Input.GetKey("left shift");
@@ -28,6 +31,11 @@ public class InputController : MonoBehaviour{
             playerClass.lightningBolt.input = Input.GetKeyDown("3");
             playerClass.shield.input = Input.GetKeyDown("2");
             playerClass.doomblades.input = Input.GetKeyDown("4");
+        }
+        else
+        {
+            playerClass.GetComponent<PlayerMovement>().movement = Vector3.zero;
+            playerClass.GetComponent<PlayerMovement>().run = false;
         }
     }
 

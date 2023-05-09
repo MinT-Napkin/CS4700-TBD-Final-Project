@@ -21,7 +21,8 @@ public class AbilityUI : MonoBehaviour
 
     public virtual void Update()
     {
-        ability();
+        if (playerClass.GetComponent<InputController>().inputEnabled)
+            ability();
     }
 
     public void setCooldown(float c)

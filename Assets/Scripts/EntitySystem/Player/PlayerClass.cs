@@ -134,7 +134,8 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown(";")){
-            GetComponent<InputController>().inputEnabled = false;
+            Debug.Log("input disabled");
+            GetComponent<InputController>().EnableInput(false);
         }
         if (Input.GetKeyDown("=")){
         }
