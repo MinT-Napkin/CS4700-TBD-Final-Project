@@ -103,10 +103,12 @@ public class PlayerClass : Entity, InteractInterface{
 
         //Interaction input
         if (Input.GetKeyDown("e")){
+            SoundManager.instance.PlaySound(SoundManager.instance.pickUpSound);
             InteractWithTarget(this);
         }
 
         if (Input.GetKeyDown("u")){ 
+            SoundManager.instance.PlaySound(SoundManager.instance.upgradeSound);
             flamethrower.Upgrade();
             shield.Upgrade();
             lightningBolt.Upgrade();
@@ -140,6 +142,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("g")){
+            SoundManager.instance.PlaySound(SoundManager.instance.levelUpSound);
             LevelUp();
         }
     }
