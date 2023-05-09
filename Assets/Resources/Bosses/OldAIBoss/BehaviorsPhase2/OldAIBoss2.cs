@@ -41,17 +41,17 @@ public class OldAIBoss2 : Boss
     public override void RotateEvent()
     {
         base.RotateEvent();
-        attackPoint.localPosition = new Vector2(-0.0900000036f,-0.0430000015f);
+        attackPoint.localPosition = new Vector2(-0.1f, -0.008f);
     }
 
     public override void SetAttackPointDownEvent()
     {
-        attackPoint.localPosition = new Vector2(0.00100000005f,-0.129999995f);
+        attackPoint.localPosition = new Vector2(-0.019f,-0.075f);
     }
 
     public override void SetAttackPointUpEvent()
     {
-        attackPoint.localPosition = new Vector2(0f,0.116999999f);
+        attackPoint.localPosition = new Vector2(-0.028f,0.112f);
     }
 
     public override void MeleeAttackEvent()
@@ -60,7 +60,17 @@ public class OldAIBoss2 : Boss
         if (targetHit != null)
         {
             //Apply damage
-            Debug.Log(targetHit.gameObject.name + " phase 1 hit!");
+            Debug.Log(targetHit.gameObject.name + " phase 2 hit!");
+        }
+    }
+
+    public void AOEAttackEvent()
+    {
+        Collider2D targetHit = Physics2D.OverlapCircle(AOEAttackPoint.position, AOEAttackRange, targetLayer);
+        if (targetHit != null)
+        {
+            //Apply damage
+            Debug.Log(targetHit.gameObject.name + " AOE hit!");
         }
     }
 
@@ -71,10 +81,12 @@ public class OldAIBoss2 : Boss
             if (other.collider.gameObject.tag == "Player")
             {
                 //damage player
+                //Very short stun
                 Debug.Log("Player hit with dash!");
             }
-            animator.SetTrigger("EndDash");
         }
+        EmergencyStopDashEvent();
+        animator.SetTrigger("EndDash");
     }
 
     void OnDrawGizmos()
@@ -112,5 +124,10 @@ public class OldAIBoss2 : Boss
         dashOnCooldown = true;
         yield return new WaitForSeconds(dashCooldown);
         dashOnCooldown = false;
+    }
+
+    public void EmergencyStopDashEvent()
+    {
+        rb2d.velocity = Vector3.zero;
     }
 }

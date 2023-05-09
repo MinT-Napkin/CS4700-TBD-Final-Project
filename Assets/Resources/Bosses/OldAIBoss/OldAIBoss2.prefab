@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042033782926762582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.022, y: -0.015, z: -0.033733625}
+  m_LocalPosition: {x: -0.022, y: -0.015, z: 0}
   m_LocalScale: {x: 0.044121612, y: 0.044121612, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4698763726878503286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.008, z: 0.022618074}
+  m_LocalPosition: {x: -0.019, y: -0.075, z: 0}
   m_LocalScale: {x: 0.07181233, y: 0.07181233, z: 0.07181}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -249,7 +249,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
   initiateRange: 18.29
-  meleeAttackRange: 4.52
+  meleeAttackRange: 5.03
   attackPoint: {fileID: 1975731736313407932}
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
@@ -257,9 +257,9 @@ MonoBehaviour:
   attackCooldown: 0.5
   attackOnCooldown: 0
   AOEAttackPoint: {fileID: 991122943380574124}
-  AOEAttackRange: 5.76
+  AOEAttackRange: 6.06
   initiateDashRange1: 35.8
-  initiateDashRange2: 20.57
+  initiateDashRange2: 16.6
   dashSpeed: 40
   maxDashDistance: 40
   dashCooldown: 7

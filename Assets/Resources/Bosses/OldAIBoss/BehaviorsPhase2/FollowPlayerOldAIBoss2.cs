@@ -19,14 +19,21 @@ public class FollowPlayerOldAIBoss2 : StateMachineBehaviour
         {
             if (!boss.attackOnCooldown)
             {
-                switch ((int)Random.Range(0, 2))
+                if ((animator.GetCurrentAnimatorStateInfo(0).IsName("MoveLeftRight1")))
                 {
-                    case 0:
-                        animator.SetTrigger("SingleAttack");
-                        break;
-                    case 1:
-                        animator.SetTrigger("Combo");
-                        break;
+                    switch ((int)Random.Range(0, 2))
+                    {
+                        case 0:
+                            animator.SetTrigger("SingleAttack");
+                            break;
+                        case 1:
+                            animator.SetTrigger("Combo");
+                            break;
+                    }
+                }
+                else
+                {
+                    animator.SetTrigger("SingleAttack");
                 }
             }
             boss.AttackCooldown();

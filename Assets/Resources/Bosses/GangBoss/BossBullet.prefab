@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7389902464139100483}
   - component: {fileID: -39641895814928634}
   - component: {fileID: 1825107801304649474}
+  - component: {fileID: 942133397586753317}
   m_Layer: 0
   m_Name: BossBullet
   m_TagString: EnemyBullet
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351952394935277389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.96477, y: 3.3211, z: 0}
-  m_LocalScale: {x: 0.6459689, y: 1.5422509, z: 0.6459689}
+  m_LocalPosition: {x: 77.107, y: 2.3735, z: 0}
+  m_LocalScale: {x: 8.282345, y: 7.190581, z: 3.0117614}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.5747342, g: 0.049928807, b: 0.9622642, a: 1}
+  m_Sprite: {fileID: 767207333, guid: 8a2e581849211a84bb42576a4d092c0d, type: 3}
+  m_Color: {r: 0.9811321, g: 0.45598873, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.05, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 0}
   direction: {x: 0, y: 0}
-  bulletSpeed: 0
-  bulletRange: 0
+  bulletSpeed: 20
+  bulletRange: 16.81
 --- !u!50 &-39641895814928634
 Rigidbody2D:
   serializedVersion: 4
@@ -137,6 +138,27 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012401315, y: 0.104029514}
-  m_Size: {x: 1.2231476, y: 1.0692278}
+  m_Offset: {x: 0, y: -0.0032608984}
+  m_Size: {x: 0.11170275, y: 0.33736327}
   m_Direction: 0
+--- !u!95 &942133397586753317
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5351952394935277389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b5775e08f9749bf44bea4a9ff95d2bb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

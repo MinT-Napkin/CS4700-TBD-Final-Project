@@ -18,7 +18,7 @@ public class FollowPlayerOldAIBoss : StateMachineBehaviour
         {
             if (!boss.attackOnCooldown)
             {
-                if ((animator.GetCurrentAnimatorStateInfo(0).IsName("MoveLeftRight1")) || (animator.GetCurrentAnimatorStateInfo(0).IsName("MoveLeftRight2")))
+                if ((animator.GetCurrentAnimatorStateInfo(0).IsName("MoveLeftRight1")))
                 {
                     switch ((int)Random.Range(0, 3))
                     {
