@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class StatusEffectBurning : StatusEffectParent{
     public override void ApplyEffect(){
-        base.ApplyEffect();
+        entity.entityStats.strength *= 0.8f;
+        entity.entityStats.specialAttack *= 0.8f;
     }
 
     public override void ClearEffect(){
+        entity.entityStats.strength /= 0.8f;
+        entity.entityStats.specialAttack /= 0.8f;
+
         base.ClearEffect();
     }
 
@@ -17,7 +21,5 @@ public class StatusEffectBurning : StatusEffectParent{
         DamageEvent damageEvent = new DamageEvent(1.2f, damageType, entity, entity, DamageCategory.Normal);
 
         entity.TakeDamage(damageEvent);
-
-        Debug.Log("Player took burn damage");
     }
 }
