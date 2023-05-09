@@ -3,8 +3,7 @@ using System.Collections.Generic;
 //using UnityEngine.UI;
 using UnityEngine;
 
-public class MeleeWeapon : MonoBehaviour
-{
+public class MeleeWeapon : MonoBehaviour{
     public Transform attackPoint;
     public float attackDamage = 10.0f;
     public float attackRange = 0.5f;
@@ -55,6 +54,7 @@ public class MeleeWeapon : MonoBehaviour
 
     void Attack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)

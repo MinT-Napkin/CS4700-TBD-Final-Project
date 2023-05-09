@@ -43,6 +43,7 @@ public class Flamethrower : SpecialAttack{
     }
 
     public override void Attack(){
+        SoundManager.instance.PlaySound(SoundManager.instance.flamethrowerSound);
         StartCoroutine(Activate());
         base.Attack();
     }

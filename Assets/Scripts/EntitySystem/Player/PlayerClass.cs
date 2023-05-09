@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerClass : Entity, InteractInterface{
     //For HP
@@ -27,8 +28,6 @@ public class PlayerClass : Entity, InteractInterface{
 
     LayerMask interactableLayer;
     float interactionRange = 2.0f;
-
-
 
     public override void Awake(){
         base.Awake();
@@ -64,6 +63,8 @@ public class PlayerClass : Entity, InteractInterface{
 
         //Testing doomblades
         doomblades = gameObject.AddComponent<Doomblades>();
+
+        isPlayerControlled = true;
     }
 
     public virtual void InteractWithTarget(Entity entity){
@@ -127,7 +128,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("k")){
-            DamageTypeParent damageType = new DamageTypeParent();
+            DamageTypePhysical damageType = new DamageTypePhysical();
 
             DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
 
@@ -137,7 +138,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
-            DamageTypeParent damageType = new DamageTypeParent();
+            DamageTypePhysical damageType = new DamageTypePhysical();
 
             DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
 
@@ -147,9 +148,17 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("f")){
-            CSV csv = new CSV(textAsset);
+            StatusEffectBurning burn = new StatusEffectBurning(this, 5.0f);
 
-            csv.ReadEntityStats(this);
+            Debug.Log(burn.duration + " " + burn.tickSpeed);
+        }
+
+        if (Input.GetKeyDown(";")){
+            GetComponent<InputController>().inputEnabled = false;
+        }
+        if (Input.GetKeyDown("="))
+        {
+            Debug.Log(debuffList.Count);
         }
 
         if (Input.GetKeyDown("g")){

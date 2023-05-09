@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 break;
             //Dash
             case State.Dashing:
+                SoundManager.instance.PlaySound(SoundManager.instance.dashSound);
                 rb2d.velocity = movement * playerClass.entityStats.dashDistance * 2f;
                 break;
         }
@@ -97,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckMovement()
     {
-        Debug.Log($"{saveInputs}");
+        //Debug.Log($"{saveInputs}");
         if (movement.x < 0)
         {
             sprite.flipX = false;
@@ -219,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isMovingSide", sideMovement);
         animator.SetBool("isShoot", isShooting);
         animator.SetBool("isMelee", isMelee);
-        animator.SetBool("isDash", isDashing);
+        //animator.SetBool("isDash", isDashing);
     }
 
 

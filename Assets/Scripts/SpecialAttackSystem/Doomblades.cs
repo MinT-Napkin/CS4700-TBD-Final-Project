@@ -26,6 +26,7 @@ public class Doomblades : SpecialAttack{
     }
 
     public override void Attack(){
+        SoundManager.instance.PlaySound(SoundManager.instance.doomBladesSound);
         StartCoroutine(Activate());
         base.Attack();
     }
