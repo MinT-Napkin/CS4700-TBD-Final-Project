@@ -8,6 +8,8 @@ TagManager:
   - bullet
   - Enemy Respawner
   - EnemyBullet
+  - MusicPlayer
+  - Boss
   layers:
   - Default
   - TransparentFX

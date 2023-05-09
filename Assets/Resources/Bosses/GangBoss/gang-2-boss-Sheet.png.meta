@@ -1,0 +1,2807 @@
+fileFormatVersion: 2
+guid: 567095f264a3209438045f573496aa98
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1065
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2001d865fc5f940945f0580cf39ca6
+      internalID: 2019466980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1065
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c014dee75328837489a40818ca84eacd
+      internalID: 354288389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 1065
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fd61b60333f7447a318a0ef6ad2735
+      internalID: 1655127600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1065
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c4d690ab3ed14468d1b482e058b027
+      internalID: -1842322093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 994
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9ef930f6248d54c882f3313b2f4cc9
+      internalID: 1981921430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 994
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed49a329c42e2cb4d91c068c7fd15a4a
+      internalID: 713132516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 994
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77d03258b0ae494498c1c8d1bb63189
+      internalID: -639977445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 994
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa26cdd4614c3d94eb5883c484a9be6d
+      internalID: 1302232474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 923
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84eda12a01a069469323129b7e695e2
+      internalID: -1678046704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 923
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a3923888ad22c4ba3b327d32e7c3ab
+      internalID: -440492911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 923
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17edbd2e05412f48972e1b5a89b179b
+      internalID: 1020384814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 923
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7ae9f4920abb243a5d30ff47115a76
+      internalID: -1064936701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3d4bc9358b53a4dabe85a134dc3cb6
+      internalID: -161353637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 852
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ebc6c753fc8cb46908153e4b555ae4
+      internalID: -1099625821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 852
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6661e49a67602404e8d61b4e5fcd61e2
+      internalID: -1652263797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 852
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc05926c063ee843bebc8be2ec87f19
+      internalID: 208575577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2704ffc5dbbe66b428507e27f7a64739
+      internalID: -11592310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78304bcc373f7734cb43fbcf26648e31
+      internalID: 265648710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6f6c18ed79da449a305b7c248fd348
+      internalID: -311006097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb62a2e371a1c847a9420ccc8c65c70
+      internalID: -60123918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c417b6eef7629934480202ac280e94b0
+      internalID: -1968412827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8878951345926c4ea9bf3b138cba321
+      internalID: -1186024742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88372ae2f85dea64cb21906d68e8300e
+      internalID: -1703599779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50627261ef789fd4f8d3a29db2120260
+      internalID: -1656923609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70540baa2c09c6143ba6384665c89d1d
+      internalID: -1022175832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db57ded298abd5b48b89b20ae1a87817
+      internalID: -2007563050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa4858800d2d9f4ab0b5782ef4f0903
+      internalID: -944094936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 781
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c245b2ab2c4bf45a6403bb120d9da2
+      internalID: 2107420126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 710
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e76358d398c8324683a7758caeeb6bb
+      internalID: 1727436976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 710
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac09c305f497949a265da17182e8d3
+      internalID: 1233626751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 710
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c07eadf79d77142878eef8cb1c3122
+      internalID: 551912170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 710
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b3376e24a9236419015eda7ad2ae0c
+      internalID: 459655142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 710
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12b0d4a7c6205042b930fa0c3b48139
+      internalID: -940469435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e06ca4dd5d8a9447bb36a8d586799e3
+      internalID: 786148950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cff032cc4eed3442867c6d76a857350
+      internalID: 880102836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a930743ac35debf488455263bec4eb72
+      internalID: -10921235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee95d1f44f64c64ebb4756f26ded0ce
+      internalID: -1099967540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3220c7d7ff2f1eb4781cbf0bab0f22de
+      internalID: 1163659113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e796d854959acb4c9d7d3d05a195936
+      internalID: -853854134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ac99716ea073e4482fcf8e384a350d
+      internalID: -874400442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d3642636e309c4ab8c0bb87392c00b
+      internalID: 75836533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff36b8913be82044b10e1498c19aac8
+      internalID: -92687048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c4e392945833847ac333dc67914d3a
+      internalID: 1554918705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ba2e5ad31078647aff70977dd0058d
+      internalID: 2122299979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 639
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d6a6c079b592643ba7392650ebf019
+      internalID: 1910858041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818459e3f7d7b2046b3f98a12c9810d2
+      internalID: 549706891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 568
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f7a0dfd1b73b5478aecda7ef645529
+      internalID: -1301367962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 568
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea175792312c80a479c5571614fd6dea
+      internalID: 1224866911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 568
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c71f4fbc822754c92dcd9b3e7e602f
+      internalID: 657931363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 568
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311e1449b764fda42a61e0a4eb0355e0
+      internalID: -1902262120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6104b05ca497fdc43b8d770c2d41821f
+      internalID: -2139328295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2a9c1aef3978f42ac895879cefabdc
+      internalID: 1967107187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffe369e9e6b86048a6fadff4e65e4b9
+      internalID: 732928982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05943f8d2dbed2439b031b80a548ca4
+      internalID: -1347094949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8d0b47f6b06ba4985aea6c550d7ffa
+      internalID: -940593354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc75a13ac09d98347b2bb6a3ee243fa5
+      internalID: -412438902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bad1ef034b6134c955862965494832
+      internalID: 1137808339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9874f1c455b044dae2c7fb9955f895
+      internalID: -799797523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e07cfc9e9873845960e1933699a699
+      internalID: 1338251606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae2d4d8ef6b0fa40bb981d15d859d61
+      internalID: -2140438879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c058f17302790e5429c2b15f506962a8
+      internalID: 857357187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 497
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58426c11963995e49aed80a7400918c7
+      internalID: 1489930921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a8746aa246f5d4a9510fd2411dafb9
+      internalID: -504302456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 426
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b497af85f41b06498322ce7977aa65d
+      internalID: -1531880324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 426
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899e05109abd7ec42a9abcaaa1f4b301
+      internalID: 340087913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 426
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a5243d3a070ae4eac0bdad5f942ba1
+      internalID: -299110548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 426
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0f6e11f1ca8bd4caeaa251b4be1550
+      internalID: 699190059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b6e682c1ad29545b3e4354b8a7e56c
+      internalID: 793178655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0522018a66eee69479ca8166ace58459
+      internalID: -1162223073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323b2268650b3b546b39ef9abb95f29a
+      internalID: -1908271660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eaa9f7a44d0b0e4aa545204e86e9396
+      internalID: -1283285722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee6c548156b4424c811f000582ff57a
+      internalID: 458366724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdb64efc8d9c66428cf4699ef3c5def
+      internalID: 2013203434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018e3b2dd6ec3f24f8374f416038b5b2
+      internalID: 1796592536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f8a75af4d2b2048914e2f0d2c1e58f
+      internalID: -675430017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5a714a664baeb4c9dda736015e5838
+      internalID: -232028108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf705ed5e54ce24fa97710a202239ee
+      internalID: 1670464672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 355
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7310c6564f04d74baa780c9ebbf0583
+      internalID: 872526513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81523654b94f85a45aae17a67a2df757
+      internalID: 906166621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 284
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c46404a5da51d479163a26b1fc2f00
+      internalID: -1923927158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 284
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10a6e9aaa76f4048aa733815c1c8c9a
+      internalID: 1479265973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 284
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ad456a190feb848b0dd8668cffcfc3
+      internalID: 497947373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 284
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bd6857bef996e458dd9b58899f8da3
+      internalID: 1170845360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174d54d7dfe5fc04a8632b46e078afec
+      internalID: 211542476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77464d832d8fc884faf35f27b16b9c86
+      internalID: 1061016249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ec85fe4ce929549b2a86c476d8f39b
+      internalID: -202614785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7733ac526808dc74796779b2de26c916
+      internalID: -79204021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8becbe866e879c4c831245fc567081a
+      internalID: 1959173461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb9e857b436a664190acd539cf2a8f2
+      internalID: 2045831321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7138c8205f5ba9c4798e1be29594cf44
+      internalID: 114176196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997c00b276043d644a60152a4cef7eb7
+      internalID: -1646576062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4f7d503e24b8749800388cce987155
+      internalID: 1669146196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546e71ccc5c6f3f4ab5c0222c43b08b9
+      internalID: 43322475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7655b51de3af9b6438e0f46c3a58b4a0
+      internalID: -1570769031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e405f2a5ef56c4a8730d88afba746d
+      internalID: 2097537236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaddaa0c58454340bbb17ab66537ef8
+      internalID: -615229924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7322b74b7ae16ee4c840a796a4824a2f
+      internalID: -1315501062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc1749f177f20b49b5ddc7dddee9284
+      internalID: -314955145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b229819b35bf346997137130528765
+      internalID: 1455069096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 213
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f099b5a57e2fc41b8bc353ccbcd2b8
+      internalID: -512722379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5c6738e7a08fe4daead193cdb6dfa5
+      internalID: -1232670646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 142
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83773f52e22348419d57f8ccb77617c
+      internalID: 2077447172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 142
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d3e84f115b0ad468b2a92441f87097
+      internalID: -2028258582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 142
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05673a133835ad94493e213e03baf533
+      internalID: -35564617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e4226de124fd844a09748c13914d95
+      internalID: -1811698305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 71
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a6b9c588998e347a31036a843eec01
+      internalID: -991720891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 71
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9a4c8fa1a0adf4294293a5d809e3b2
+      internalID: -1547482412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 71
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f9946df8e7b94e861ad4318a9012f
+      internalID: 168840605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615987cc724c53f4185e09e114f52107
+      internalID: -612601643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f11bbaa82c773d4fa4ef5a30e1b4de4
+      internalID: -1314772557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84034f2fc5d8e3a4d8b5d60348b36cb7
+      internalID: -60561455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5134662f2011046b027125656c7dd8
+      internalID: -1389567918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af67348e32ff65440bdc08155d41ed08
+      internalID: 1797467356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673af5aa2a0595e4bb8d9aa86f3d88fc
+      internalID: 1355756893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0792677b13db76a43a8360a56ac06b4e
+      internalID: -611927952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1815014cbe1264e842b4a030f8584e
+      internalID: -487247013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808c12d04960a1f4384f5d65c2f7f31c
+      internalID: -894406225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02371c63680a53f4d906cb2fa02970b8
+      internalID: -1522074019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0615dd07e556ba42aedece13f60786f
+      internalID: 497858961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c51bb37d157144cb83e5c8a49957bc
+      internalID: 576747666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12610e8ed6c64c74a9782359fe226f36
+      internalID: -1980746755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gang-2-boss-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 0
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cff26fa28d372459f0101d6edcfd43
+      internalID: 333348696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gang-2-boss-Sheet_0: 2019466980
+      gang-2-boss-Sheet_1: 354288389
+      gang-2-boss-Sheet_10: 1020384814
+      gang-2-boss-Sheet_100: -1232670646
+      gang-2-boss-Sheet_101: 2077447172
+      gang-2-boss-Sheet_102: -2028258582
+      gang-2-boss-Sheet_103: -35564617
+      gang-2-boss-Sheet_104: -1811698305
+      gang-2-boss-Sheet_105: -991720891
+      gang-2-boss-Sheet_106: -1547482412
+      gang-2-boss-Sheet_107: 168840605
+      gang-2-boss-Sheet_108: -612601643
+      gang-2-boss-Sheet_109: -1314772557
+      gang-2-boss-Sheet_11: -1064936701
+      gang-2-boss-Sheet_110: -60561455
+      gang-2-boss-Sheet_111: -1389567918
+      gang-2-boss-Sheet_112: 1797467356
+      gang-2-boss-Sheet_113: 1355756893
+      gang-2-boss-Sheet_114: -611927952
+      gang-2-boss-Sheet_115: -487247013
+      gang-2-boss-Sheet_116: -894406225
+      gang-2-boss-Sheet_117: -1522074019
+      gang-2-boss-Sheet_118: 497858961
+      gang-2-boss-Sheet_119: 576747666
+      gang-2-boss-Sheet_12: -161353637
+      gang-2-boss-Sheet_120: -1980746755
+      gang-2-boss-Sheet_121: 333348696
+      gang-2-boss-Sheet_13: -1099625821
+      gang-2-boss-Sheet_14: -1652263797
+      gang-2-boss-Sheet_15: 208575577
+      gang-2-boss-Sheet_16: -11592310
+      gang-2-boss-Sheet_17: 265648710
+      gang-2-boss-Sheet_18: -311006097
+      gang-2-boss-Sheet_19: -60123918
+      gang-2-boss-Sheet_2: 1655127600
+      gang-2-boss-Sheet_20: -1968412827
+      gang-2-boss-Sheet_21: -1186024742
+      gang-2-boss-Sheet_22: -1703599779
+      gang-2-boss-Sheet_23: -1656923609
+      gang-2-boss-Sheet_24: -1022175832
+      gang-2-boss-Sheet_25: -2007563050
+      gang-2-boss-Sheet_26: -944094936
+      gang-2-boss-Sheet_27: 2107420126
+      gang-2-boss-Sheet_28: 1727436976
+      gang-2-boss-Sheet_29: 1233626751
+      gang-2-boss-Sheet_3: -1842322093
+      gang-2-boss-Sheet_30: 551912170
+      gang-2-boss-Sheet_31: 459655142
+      gang-2-boss-Sheet_32: -940469435
+      gang-2-boss-Sheet_33: 786148950
+      gang-2-boss-Sheet_34: 880102836
+      gang-2-boss-Sheet_35: -10921235
+      gang-2-boss-Sheet_36: -1099967540
+      gang-2-boss-Sheet_37: 1163659113
+      gang-2-boss-Sheet_38: -853854134
+      gang-2-boss-Sheet_39: -874400442
+      gang-2-boss-Sheet_4: 1981921430
+      gang-2-boss-Sheet_40: 75836533
+      gang-2-boss-Sheet_41: -92687048
+      gang-2-boss-Sheet_42: 1554918705
+      gang-2-boss-Sheet_43: 2122299979
+      gang-2-boss-Sheet_44: 1910858041
+      gang-2-boss-Sheet_45: 549706891
+      gang-2-boss-Sheet_46: -1301367962
+      gang-2-boss-Sheet_47: 1224866911
+      gang-2-boss-Sheet_48: 657931363
+      gang-2-boss-Sheet_49: -1902262120
+      gang-2-boss-Sheet_5: 713132516
+      gang-2-boss-Sheet_50: -2139328295
+      gang-2-boss-Sheet_51: 1967107187
+      gang-2-boss-Sheet_52: 732928982
+      gang-2-boss-Sheet_53: -1347094949
+      gang-2-boss-Sheet_54: -940593354
+      gang-2-boss-Sheet_55: -412438902
+      gang-2-boss-Sheet_56: 1137808339
+      gang-2-boss-Sheet_57: -799797523
+      gang-2-boss-Sheet_58: 1338251606
+      gang-2-boss-Sheet_59: -2140438879
+      gang-2-boss-Sheet_6: -639977445
+      gang-2-boss-Sheet_60: 857357187
+      gang-2-boss-Sheet_61: 1489930921
+      gang-2-boss-Sheet_62: -504302456
+      gang-2-boss-Sheet_63: -1531880324
+      gang-2-boss-Sheet_64: 340087913
+      gang-2-boss-Sheet_65: -299110548
+      gang-2-boss-Sheet_66: 699190059
+      gang-2-boss-Sheet_67: 793178655
+      gang-2-boss-Sheet_68: -1162223073
+      gang-2-boss-Sheet_69: -1908271660
+      gang-2-boss-Sheet_7: 1302232474
+      gang-2-boss-Sheet_70: -1283285722
+      gang-2-boss-Sheet_71: 458366724
+      gang-2-boss-Sheet_72: 2013203434
+      gang-2-boss-Sheet_73: 1796592536
+      gang-2-boss-Sheet_74: -675430017
+      gang-2-boss-Sheet_75: -232028108
+      gang-2-boss-Sheet_76: 1670464672
+      gang-2-boss-Sheet_77: 872526513
+      gang-2-boss-Sheet_78: 906166621
+      gang-2-boss-Sheet_79: -1923927158
+      gang-2-boss-Sheet_8: -1678046704
+      gang-2-boss-Sheet_80: 1479265973
+      gang-2-boss-Sheet_81: 497947373
+      gang-2-boss-Sheet_82: 1170845360
+      gang-2-boss-Sheet_83: 211542476
+      gang-2-boss-Sheet_84: 1061016249
+      gang-2-boss-Sheet_85: -202614785
+      gang-2-boss-Sheet_86: -79204021
+      gang-2-boss-Sheet_87: 1959173461
+      gang-2-boss-Sheet_88: 2045831321
+      gang-2-boss-Sheet_89: 114176196
+      gang-2-boss-Sheet_9: -440492911
+      gang-2-boss-Sheet_90: -1646576062
+      gang-2-boss-Sheet_91: 1669146196
+      gang-2-boss-Sheet_92: 43322475
+      gang-2-boss-Sheet_93: -1570769031
+      gang-2-boss-Sheet_94: 2097537236
+      gang-2-boss-Sheet_95: -615229924
+      gang-2-boss-Sheet_96: -1315501062
+      gang-2-boss-Sheet_97: -314955145
+      gang-2-boss-Sheet_98: 1455069096
+      gang-2-boss-Sheet_99: -512722379
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

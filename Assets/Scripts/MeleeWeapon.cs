@@ -45,12 +45,11 @@ public class MeleeWeapon : MonoBehaviour{
     void Attack(){
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies){
-            StartCoroutine(DebugEnemyHitColor(enemy)); //Debug - to check if enemy is hit
+        foreach (Collider2D enemy in hitEnemies){ 
 
-            damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>());
+            damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Entity>());
 
-            enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+            enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
         }
         StartCoroutine(AttackCooldown());
     }
@@ -63,11 +62,5 @@ public class MeleeWeapon : MonoBehaviour{
         attackOnCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;
-    }
-
-    IEnumerator DebugEnemyHitColor(Collider2D enemy){
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-        yield return new WaitForSeconds(0.5f);
-        enemy.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }
