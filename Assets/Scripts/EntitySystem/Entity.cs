@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour{
+    public List<StatusEffectParent> debuffList;
     public EntityStats entityStats;
     public Inventory inventory;
+    public bool isPlayerControlled;
 
     public virtual void Awake(){
+        debuffList = new List<StatusEffectParent>();
         entityStats = new EntityStats();
         inventory = gameObject.AddComponent<Inventory>();
     }

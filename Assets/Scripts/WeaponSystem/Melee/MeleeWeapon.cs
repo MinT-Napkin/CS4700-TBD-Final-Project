@@ -3,8 +3,7 @@ using System.Collections.Generic;
 //using UnityEngine.UI;
 using UnityEngine;
 
-public class MeleeWeapon : MonoBehaviour
-{
+public class MeleeWeapon : MonoBehaviour{
     public Transform attackPoint;
     public float attackDamage = 10.0f;
     public float attackRange = 0.5f;

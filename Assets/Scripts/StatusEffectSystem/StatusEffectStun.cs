@@ -2,37 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusEffectStun : StatusEffectParent{
-    public StatusEffectStun(float duration){
-        this.duration = duration;
+public class StatusEffectStun : StatusEffectParent
+{
+    //private InputController inputController;
+    public StatusEffectStun(float duration) : base(duration){
+        ticking = false;
     }
 
-    public override void Awake(){
-        base.Awake();
-        duration = 1.0f;
-    }
-
-    // Start is called before the first frame update
-    void Start(){
-        ApplyEffect();
+    public StatusEffectStun(Entity entity, float duration) : base(entity, duration){
+        ticking = false;
     }
 
     public override void ApplyEffect(){
-        //Suspend player control
-        TickEffect();
+        base.ApplyEffect();
+
+        if (entity.isPlayerControlled)
+        {
+            //inputController = entity.GetComponent<InputController>();
+            //inputController.enable
+            entity.GetComponent<InputController>().inputEnabled = false;
+        }
+        else{
+        }
+
+        Debug.Log("Player is Stunned");
     }
 
     public override void ClearEffect(){
-        //Return player control
+        entity.GetComponent<InputController>().inputEnabled = true;
+
+        Debug.Log("Player is no longer Stunned");
+
         base.ClearEffect();
-    }
-
-    public override IEnumerator TickEffect(){
-        return base.TickEffect();
-    }
-
-    // Update is called once per frame
-    void Update(){
-        
     }
 }

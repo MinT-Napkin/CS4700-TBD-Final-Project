@@ -2,27 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputController : MonoBehaviour
-{
+public class InputController : MonoBehaviour{
     public PlayerClass playerClass;
     public bool inputEnabled = true;
     public bool dashEnabled = true;
 
-    void Awake()
-    {
+    void Awake(){
         playerClass = GetComponent<PlayerClass>();
     }
 
-    void Update()
-    {
-        if (inputEnabled)
-        {
+    void Update(){
+        if (inputEnabled){
             playerClass.GetComponent<PlayerMovement>().movement.x = Input.GetAxisRaw("Horizontal");
             playerClass.GetComponent<PlayerMovement>().movement.y = Input.GetAxisRaw("Vertical");
             playerClass.GetComponent<PlayerMovement>().run = Input.GetKey("left shift");
 
-            if (dashEnabled)
-            {
+            if (dashEnabled){
                 playerClass.GetComponent<PlayerMovement>().dash = Input.GetKeyDown("space");
             }
 
@@ -36,13 +31,11 @@ public class InputController : MonoBehaviour
         }
     }
 
-    public void EnableInput(bool enable)
-    {
+    public void EnableInput(bool enable){
         inputEnabled = enable;
     }
 
-    public void EnableDash(bool enable)
-    {
+    public void EnableDash(bool enable){
         dashEnabled = enable;
     }
 }
