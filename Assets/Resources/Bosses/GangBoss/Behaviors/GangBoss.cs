@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GangBoss : Boss
 {
+    public GameObject bossObstacle;
     public GameObject bulletPrefab;
     public BossBullet bulletData;
     public float bulletSpeed;
@@ -40,7 +41,6 @@ public class GangBoss : Boss
         bulletData.bulletRange = rangedAttackRange;
         bulletData.bulletSpeed = this.bulletSpeed;
         phase = 1;
-
         flamethrowerHorizontalEventController = flamethrowerHorizontalSpritePoint.gameObject.GetComponent<FlamethrowerHorizontalEventController>();
     }
 
@@ -66,6 +66,12 @@ public class GangBoss : Boss
     protected override void OnEntityDeath()
     {
         base.OnEntityDeath();
+    }
+
+    public override void AfterDeathAnimation()
+    {
+        bossObstacle.GetComponent<BossObstacle>().despawnBossObstacle();
+        base.AfterDeathAnimation();
     }
     
     public override void RotateEvent()

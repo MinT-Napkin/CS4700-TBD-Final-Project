@@ -5,11 +5,6 @@ using UnityEngine;
 public class BossObstacle : MonoBehaviour
 {
     public GameObject bossObstacle;
-
-    void Start() {
-        bossObstacle.SetActive(false);
-    }
-
     public void spawnBossObstacle(){
         bossObstacle.SetActive(true);
     }
