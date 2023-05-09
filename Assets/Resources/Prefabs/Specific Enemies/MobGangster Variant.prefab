@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -26,6 +30,14 @@ PrefabInstance:
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -84,6 +96,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_PrefabInstance: {fileID: 2574456574421449451}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &343032827118278767
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6265437003230694985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93c0963ad2da21f4caf4ff221fdb6217, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1009219606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,10 +132,13 @@ MonoBehaviour:
   entityStats:
     attackSpeed: 10
     criticalDamage: 10
+    criticalHitRate: 10
+    currentExperiencePoints: 0
     currentHealth: 10
     dashDistance: 10
     defense: 10
-    criticalHitRate: 10
+    level: 0
+    maxExperiencePoints: 0
     maxHealth: 10
     normalizedHealth: 10
     runSpeed: 10
@@ -110,15 +146,22 @@ MonoBehaviour:
     specialDefense: 10
     strength: 10
     walkSpeed: 8
+  inventory: {fileID: 0}
+  isPlayerControlled: 0
+  textAsset: {fileID: 0}
   droppedItems:
   - item: {fileID: 0}
     dropRate: 0
+    maxDropCount: 0
   - item: {fileID: 0}
     dropRate: 0
+    maxDropCount: 0
   - item: {fileID: 0}
     dropRate: 0
+    maxDropCount: 0
   - item: {fileID: 0}
     dropRate: 0
+    maxDropCount: 0
   healthbar: {fileID: 0}
   name: MobGangster
   enemyRespawner: {fileID: 0}

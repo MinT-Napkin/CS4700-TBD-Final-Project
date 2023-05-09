@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : Enemy
-{
+public class EnemyMelee : Enemy{
     public float meleeAttackRange;
     public float meleeDetectionRange;
     public float meleeAttackCooldown;
     public bool meleeAttackOnCooldown = false;
 
-    public override void Awake()
-    {
+    public override void Awake(){
         base.Awake();
         aiPath.endReachedDistance = meleeAttackRange;
     }

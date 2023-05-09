@@ -23764,6 +23764,71 @@ MonoBehaviour:
   keyInput: 3
   cooldown: 0
   playerClass: {fileID: 0}
+--- !u!1001 &1462300637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5401984328322260396, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265437003230694985, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_Name
+      value: MobGangster Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939299034428860820, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939299034428860820, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
 --- !u!1 &1623266262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4016896958620303786, guid: fd709ddc779b08749899699466805c69, type: 3}

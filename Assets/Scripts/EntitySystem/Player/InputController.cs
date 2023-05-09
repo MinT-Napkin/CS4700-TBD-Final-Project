@@ -15,7 +15,6 @@ public class InputController : MonoBehaviour{
 
     void Update(){
         if (inputEnabled){
-            Debug.Log("InputController: Input Enabled");
             playerClass.GetComponent<PlayerMovement>().movement.x = Input.GetAxisRaw("Horizontal");
             playerClass.GetComponent<PlayerMovement>().movement.y = Input.GetAxisRaw("Vertical");
             playerClass.GetComponent<PlayerMovement>().run = Input.GetKey("left shift");
