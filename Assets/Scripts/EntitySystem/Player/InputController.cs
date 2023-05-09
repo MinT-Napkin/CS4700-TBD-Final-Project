@@ -21,7 +21,7 @@ public class InputController : MonoBehaviour{
             playerClass.GetComponent<PlayerMovement>().run = Input.GetKey("left shift");
 
             if (dashEnabled){
-                playerClass.GetComponent<PlayerMovement>().dash = Input.GetKeyDown("space");
+                playerClass.GetComponent<PlayerMovement>().dashInput = Input.GetKeyDown("space");
             }
 
             playerClass.meleeWeapon.input = Input.GetKeyDown(playerClass.meleeWeapon.inputKey);

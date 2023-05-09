@@ -139,6 +139,11 @@ public class PlayerClass : Entity, InteractInterface{
         if (Input.GetKeyDown("g")){
             LevelUp();
         }
+
+        if (Input.GetKeyDown(";"))
+        {
+            GetComponent<InputController>().EnableInput(false);
+        }
     }
 
     protected override void DamageHealth(float finalDamage){
