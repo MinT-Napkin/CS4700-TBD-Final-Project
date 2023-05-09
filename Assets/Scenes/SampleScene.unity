@@ -22423,6 +22423,7 @@ GameObject:
   - component: {fileID: 916498041}
   - component: {fileID: 916498042}
   - component: {fileID: 916498043}
+  - component: {fileID: 916498044}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -22576,6 +22577,7 @@ MonoBehaviour:
     strength: 10
     walkSpeed: 10
   inventory: {fileID: 0}
+  isPlayerControlled: 0
   healthBar: {fileID: 293619903}
   canvas: {fileID: 1850465017}
   meleeAttackPoint: {fileID: 655592873}
@@ -22650,6 +22652,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &916498044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916498028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2fcc03d09e567469444b8e96ec2739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 916498040}
+  healthBar: {fileID: 293619903}
 --- !u!1 &956283435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6574206181520022049, guid: c14e9d2e622d8bc4ca56b673f0d8e5ea, type: 3}
