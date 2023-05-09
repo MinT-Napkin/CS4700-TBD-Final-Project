@@ -4983,6 +4983,67 @@ MonoBehaviour:
   keyInput: 1
   cooldown: 0
   playerClass: {fileID: 0}
+--- !u!1001 &647959904
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6979493820638764385, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_Name
+      value: Music Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764387, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.6537976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6643116
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08358496
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979493820638764388, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51b173a1fa7709c4c8d8553980ff05f8, type: 3}
 --- !u!1 &655592872
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,7 +5068,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655592872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5050,7 +5111,10 @@ MonoBehaviour:
   flamethrowerSound: {fileID: 8300000, guid: fc89ba593a4630042854bab4f53bfef7, type: 3}
   shieldSound: {fileID: 8300000, guid: 35ca5fe16784d074cbf4b67f03f6e299, type: 3}
   lightningBoltSound: {fileID: 8300000, guid: 1f56538e8c446c9459ac914d3e966764, type: 3}
-  doomBladesSound: {fileID: 8300000, guid: 1ff1f7fd589235440a1113c8196e09b9, type: 3}
+  doomBladesSound: {fileID: 8300000, guid: d9502a3ac16d83c4b8898089ecad7c43, type: 3}
+  upgradeSound: {fileID: 8300000, guid: f3ace80de0623cb4bada46f110d05c3b, type: 3}
+  pickUpSound: {fileID: 8300000, guid: e5a4040c52e86a74d90f80d14759633d, type: 3}
+  levelUpSound: {fileID: 8300000, guid: 12a7bcf26ca62de47b3a1624fb7b7491, type: 3}
 --- !u!82 &663348391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5063,7 +5127,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.178
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22493,7 +22557,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -667385681, guid: 22c6a48e1a5b51e4880ae65f1a65bf95, type: 3}
+  m_Sprite: {fileID: -526326205, guid: 84c52818d7e04bd40827c2e27c0a0a8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22578,6 +22642,7 @@ MonoBehaviour:
     walkSpeed: 10
   inventory: {fileID: 0}
   isPlayerControlled: 0
+  textAsset: {fileID: 4900000, guid: ebaf0f868f7e8364091309a8e722d584, type: 3}
   healthBar: {fileID: 293619903}
   canvas: {fileID: 1850465017}
   meleeAttackPoint: {fileID: 655592873}
@@ -22585,7 +22650,6 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   rangedAttackPoint: {fileID: 1071973577}
   rangedWeapon: {fileID: 0}
-  textAsset: {fileID: 4900000, guid: ebaf0f868f7e8364091309a8e722d584, type: 3}
   color: {r: 0, g: 0, b: 0, a: 0}
   specialAttacks: []
   flamethrower: {fileID: 0}
@@ -22628,9 +22692,12 @@ MonoBehaviour:
   dash: 0
   isShooting: 0
   isMelee: 0
-  isDashing: 0
+  isDash: 0
   animLock: 0
   saveInputs: 1
+  rangedInput: 0
+  meleeInput: 0
+  dashInput: 0
 --- !u!95 &916498043
 Animator:
   serializedVersion: 5
@@ -22664,8 +22731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2fcc03d09e567469444b8e96ec2739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 916498040}
-  healthBar: {fileID: 293619903}
 --- !u!1 &956283435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6574206181520022049, guid: c14e9d2e622d8bc4ca56b673f0d8e5ea, type: 3}
@@ -22728,7 +22793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071973576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalPosition: {x: -0.139, y: -0.579, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

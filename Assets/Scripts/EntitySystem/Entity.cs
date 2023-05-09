@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class Entity : MonoBehaviour{
-    public List<StatusEffectParent> debuffList;
     public EntityStats entityStats;
     public Inventory inventory;
     public bool isPlayerControlled;
+    public UnityEngine.TextAsset textAsset;
 
     public virtual void Awake(){
-        debuffList = new List<StatusEffectParent>();
         entityStats = new EntityStats();
         inventory = gameObject.AddComponent<Inventory>();
     }
@@ -45,6 +45,14 @@ public class Entity : MonoBehaviour{
         else {
             entityStats.normalizedHealth = (entityStats.currentHealth / entityStats.maxHealth);
         }
+    }
+
+    public virtual void LevelUp() {
+        CSV csv = new CSV(textAsset);
+
+        entityStats.level++;
+
+        csv.ReadEntityStats(this);
     }
 
     protected virtual void OnEntityDeath(){

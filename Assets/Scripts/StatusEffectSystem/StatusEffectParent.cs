@@ -3,77 +3,52 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 
-public class StatusEffectParent{
-    public float duration;
-    public Entity entity;
-    protected System.Timers.Timer lifetimeTimer;
-    public float tickSpeed;
-    public bool ticking;
-    protected System.Timers.Timer tickTimer;
+public class StatusEffectParent : MonoBehaviour{
+    protected float duration;
+    protected Entity entity;
+    protected bool ticking;
+    protected float tickSpeed;
 
-    public StatusEffectParent(){
-    }
-
-    public StatusEffectParent(float duration){
-        this.duration = duration;
-
-        SetLifetimeTimer();
-
-        ApplyEffect();
-    }
-
-    public StatusEffectParent(Entity entity, float duration){
+    public virtual void Constructor(Entity entity, float duration){
         this.entity = entity;
         this.duration = duration;
 
-        entity.debuffList.Add(this);
+        ticking = false;
+        tickSpeed = 0.0f;
 
-        Debug.Log("Debuff added");
+        StartCoroutine(StatusEffectLifetime());
+    }
 
-        SetLifetimeTimer();
+    public virtual void Constructor(Entity entity, float duration, bool ticking, float tickSpeed) {
+        this.entity = entity;
+        this.duration = duration;
+        this.ticking = ticking;
+        this.tickSpeed = tickSpeed;
+
+        StartCoroutine(StatusEffectLifetime());
 
         if (ticking){
-            SetTickTimer();
+            InvokeRepeating("TickEffect", tickSpeed, tickSpeed);
         }
-
-        ApplyEffect();
-    }
-
-    public virtual void SetLifetimeTimer(){
-        lifetimeTimer = new System.Timers.Timer(duration * 1000);
-        lifetimeTimer.Elapsed += OnLifetimeTimerCompleted;
-        lifetimeTimer.AutoReset = false;
-    }
-
-    public virtual void SetTickTimer(){
-        tickTimer = new System.Timers.Timer(tickSpeed * 1000);
-        tickTimer.Elapsed += TickEffect;
-        tickTimer.AutoReset = true;
     }
 
     public virtual void ApplyEffect(){
-        lifetimeTimer.Enabled = true;
-
-        if (ticking){
-            SetTickTimer();
-        }
     }
 
     public virtual void ClearEffect(){
-        lifetimeTimer.Stop();
-        tickTimer.Stop();
-        lifetimeTimer.Dispose();
-        tickTimer.Dispose();
+        Debug.Log("Debuff removed");
 
-        Debug.Log("Buff removed");
-
-        entity.debuffList.Remove(this);
+        Destroy(this);
     }
 
-    protected virtual void OnLifetimeTimerCompleted(System.Object source, ElapsedEventArgs e){
+    protected virtual IEnumerator StatusEffectLifetime(){
+        ApplyEffect();
+
+        yield return new WaitForSeconds(duration);
+
         ClearEffect();
     }
 
-    public virtual void TickEffect(System.Object source, ElapsedEventArgs e){
+    protected virtual void TickEffect(){
     }
 }

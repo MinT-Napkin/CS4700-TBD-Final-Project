@@ -13,7 +13,6 @@ public class PlayerClass : Entity, InteractInterface{
     public PlayerMovement playerMovement;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
-    public TextAsset textAsset;
 
     public Color color;
     
@@ -67,13 +66,6 @@ public class PlayerClass : Entity, InteractInterface{
         isPlayerControlled = true;
     }
 
-    public virtual void InteractWithTarget(Entity entity){
-        foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)){
-            Debug.Log("Interacting with " + interactable.name);
-            interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
@@ -90,12 +82,6 @@ public class PlayerClass : Entity, InteractInterface{
 
     void CheckTargets(){
 
-    }
-
-    protected override void DamageHealth(float finalDamage){
-        base.DamageHealth(finalDamage);
-
-        healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
     // Start is called before the first frame update
@@ -117,10 +103,12 @@ public class PlayerClass : Entity, InteractInterface{
 
         //Interaction input
         if (Input.GetKeyDown("e")){
+            SoundManager.instance.PlaySound(SoundManager.instance.pickUpSound);
             InteractWithTarget(this);
         }
 
         if (Input.GetKeyDown("u")){ 
+            SoundManager.instance.PlaySound(SoundManager.instance.upgradeSound);
             flamethrower.Upgrade();
             shield.Upgrade();
             lightningBolt.Upgrade();
@@ -138,7 +126,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
-            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageTypeHealing damageType = new DamageTypeHealing();
 
             DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
 
@@ -147,29 +135,83 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown("f")){
-            StatusEffectBurning burn = new StatusEffectBurning(this, 5.0f);
-
-            Debug.Log(burn.duration + " " + burn.tickSpeed);
-        }
-
-        if (Input.GetKeyDown(";")){
-            GetComponent<InputController>().inputEnabled = false;
-        }
-        if (Input.GetKeyDown("="))
-        {
-            Debug.Log(debuffList.Count);
+        if (Input.GetKeyDown("=")){
         }
 
         if (Input.GetKeyDown("g")){
-            entityStats.level++;
+            SoundManager.instance.PlaySound(SoundManager.instance.levelUpSound);
+            LevelUp();
+        }
+
+        if (Input.GetKeyDown(";"))
+        {
+            GetComponent<InputController>().EnableInput(false);
+        }
+    }
+
+    protected override void DamageHealth(float finalDamage){
+        base.DamageHealth(finalDamage);
+
+        healthBar.setCurrentHealth(entityStats.normalizedHealth);
+    }
+
+    public virtual void InteractWithTarget(Entity entity) {
+        foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)) {
+            Debug.Log("Interacting with " + interactable.name);
+            interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
+        }
+    }
+
+    public override void LevelUp(){
+        meleeWeapon.Unequip();
+
+        base.LevelUp();
+
+        healthBar.setCurrentHealth(entityStats.currentHealth);
+
+        meleeWeapon.Equip();
+    }
+
+
+    public void AttackEvent()
+    {
+        meleeWeapon.Attack();
+    }
+
+    public void RangedAttackEvent()
+    {
+        rangedWeapon.Attack();
+    }
+
+    public void SetMeleeAttackPointUpEvent()
+    {
+        meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
+        rangedWeapon.attackPoint.localPosition = new Vector2(0.109f, 0.357f);
+    }
+
+    public void SetMeleeAttackPointDownEvent()
+    {
+        meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
+        rangedWeapon.attackPoint.localPosition = new Vector2(-0.139f, -0.579f);
+    }
+
+    public void SetMeleeAttackPointSideEvent()
+    {
+        if (GetComponent<SpriteRenderer>().flipX)
+        {
+            meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
+            rangedWeapon.attackPoint.localPosition = new Vector2(0.557f, -0.194f);
+        }
+        else
+        {
+            meleeWeapon.attackPoint.localPosition = new Vector2(-1.05f, 0);
+            rangedWeapon.attackPoint.localPosition = new Vector2(-0.557f, -0.194f);
         }
     }
 
 
     //Debug doomblades gizmo
     void OnDrawGizmos(){
-        Gizmos.DrawWireSphere(meleeAttackPoint.position, 2.5f);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
     }

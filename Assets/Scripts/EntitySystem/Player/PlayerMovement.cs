@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public bool dash;
     public bool isShooting;
     public bool isMelee;
-    public bool isDashing;
+    public bool isDash;
     public bool animLock = false;
     public SaveInputs saveInputs = SaveInputs.Down;
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case State.Normal:
-                if (dash)
+                if (dashInput)
                 {
                     state = State.Dashing;
                 }
@@ -160,31 +160,36 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
-        isDashing = true;
+        isDash = true;
         animLock = true;
         yield return new WaitForSeconds(0.5f);
-        isDashing = false;
+        isDash = false;
         animLock = false;
     }
 
+    public bool rangedInput = false;
+    public bool meleeInput = false;
+    public bool dashInput = false;
     void UpdateAnimation()
     {
-        if (Input.GetKeyDown("c"))
+        if (rangedInput)
         {
-            StartCoroutine(Shoot());
+            if(!playerClass.rangedWeapon.attackOnCooldown)
+                StartCoroutine(Shoot());
         }
 
-        if (Input.GetKeyDown("x"))
+        if (meleeInput)
         {
-            StartCoroutine(Melee());
+            if(!playerClass.meleeWeapon.attackOnCooldown)
+                StartCoroutine(Melee());
         }
 
-        if (Input.GetKeyDown("space"))
+        if (dashInput)
         {
             StartCoroutine(Dash());
         }
 
-        if (!sideMovement && !upMovement && !downMovement && !isShooting && !isMelee && !isDashing)
+        if (!sideMovement && !upMovement && !downMovement && !isShooting && !isMelee && !isDash)
         {
             switch (saveInputs)
             {
@@ -220,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isMovingSide", sideMovement);
         animator.SetBool("isShoot", isShooting);
         animator.SetBool("isMelee", isMelee);
-        //animator.SetBool("isDash", isDashing);
+        animator.SetBool("isDash", isDash);
     }
 
 

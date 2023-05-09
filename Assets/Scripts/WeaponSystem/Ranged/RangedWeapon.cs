@@ -6,7 +6,7 @@ public class RangedWeapon : MonoBehaviour
 {
     public Transform attackPoint;
     public float attackCooldown = 1;
-    bool attackOnCooldown = false;
+    public bool attackOnCooldown = false;
     public GameObject bulletPrefab;
     public string description;
     new public string name;
@@ -14,38 +14,44 @@ public class RangedWeapon : MonoBehaviour
     public string inputKey;
     public bool input;
 
-    public virtual void Awake()
-    {
+    public virtual void Awake(){
         inputKey = "c";
     }
 
-    void Update()
-    {
-        if (input)
-        {
-            if (!attackOnCooldown)
+    void Update(){
+        if (input){
+            if (!attackOnCooldown){
                 Attack();
+            }
         }
     }
 
-    public void SetPrefab(GameObject bulletPrefab)
-    {
+    public void SetPrefab(GameObject bulletPrefab){
         this.bulletPrefab = bulletPrefab;
     }
 
-    public void SetEntityStats(EntityStats playerStats)
-    {
+    public void SetEntityStats(EntityStats playerStats){
         this.playerStats = playerStats;
     }
 
-    void Attack(){
+    public virtual void Equip() {
+        playerStats.attackSpeed *= attackCooldown;
+        //bulletPrefab.GetComponent<BulletController>().bulletDamage;
+        //playerStats.strength += attackDamage;
+    }
+
+    public virtual void Unequip() {
+        playerStats.attackSpeed /= attackCooldown;
+        //playerStats.strength -= attackDamage;
+    }
+
+    public void Attack(){
         SoundManager.instance.PlaySound(SoundManager.instance.rangeSound);
         Instantiate(bulletPrefab, attackPoint.position, attackPoint.rotation);
         StartCoroutine(AttackCooldown());
     }
 
-    IEnumerator AttackCooldown()
-    {
+    IEnumerator AttackCooldown(){
         attackOnCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;

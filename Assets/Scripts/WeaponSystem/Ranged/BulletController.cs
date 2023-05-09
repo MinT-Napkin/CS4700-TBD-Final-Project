@@ -12,24 +12,37 @@ public class BulletController : MonoBehaviour
 
     public Animator playerAnimator;
     Vector2 direction;
+    SpriteRenderer sprite;
 
     void Awake()
     {
         playerAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         distanceTraveled = 0;
+        sprite = GetComponent<SpriteRenderer>();
 
         if ((playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Side_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Side_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Side")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Side")))
         {
             if (playerAnimator.gameObject.GetComponent<SpriteRenderer>().flipX)
+            {
                 direction = transform.right;
+            }
             else
+            {
                 direction = -transform.right;
+                sprite.flipX = true;
+            }
         }
         else if ((playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Up_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Up_Shoot")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle_Up")) || (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Up")))
+        {    
             direction = transform.up;
+            transform.eulerAngles = new Vector3(0, 0, 90);
+        }
         else
+        {
             direction = -transform.up;
+            transform.eulerAngles = new Vector3(0, 0, -90);
+        }
     }
 
     void Start()
