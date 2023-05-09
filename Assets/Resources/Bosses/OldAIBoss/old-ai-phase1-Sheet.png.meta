@@ -1,0 +1,2389 @@
+fileFormatVersion: 2
+guid: 23bab8b0aaf6861488144c46ade80446
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e8600c8cd2bff4ba56ea5f1650bb60
+      internalID: -1837090580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aff4e3885139f48b65f2dec1c6a65f
+      internalID: 1150373547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fabd38a1c021b4eb98aefce88023d5
+      internalID: -599425410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7a5c43c01b22941b1cd0294dc4f2dd
+      internalID: -1357511136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6545c2f304768134a87588d3725c6465
+      internalID: 262278331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241a85e4e5b5b4144957fa7279567073
+      internalID: -233508169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a42877f0c56b146910a4c10fbc9e02
+      internalID: 1451175087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5ac4ee715b3774e8b3621eab8c9e8e
+      internalID: -422780697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de569daf61064f46a3e2dc71f66eb66
+      internalID: 736949336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cad36ee886c53d429e1461ceb283c6c
+      internalID: -2052744200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fa9698a9ed2834a9e16bca63f5bba4
+      internalID: -442048864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db468f7ffd744364fa0c83fc5ff2fb3d
+      internalID: -471215784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d60f7d3e60d0c844bf2bf8fa014e0af
+      internalID: 709819797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4affcb2d161454f8ad187e21d53eb7
+      internalID: -1526708195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e624aa8424e8c44f9d21116a6f18095
+      internalID: -1916273080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653968b01096d074ab7629e9b511b599
+      internalID: 2900238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26da39b3b2de37c41a0e617197184dd3
+      internalID: -1077522955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9f6c6083c8c1c4e87918ff5e81b05a
+      internalID: -1503691769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cae9ad2c74606c438afc91fb4f7829e
+      internalID: -1261887469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498021631a4bbd04ca5b68fb4fd5487c
+      internalID: 1321333021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1891d161d9126144810e135596549e6
+      internalID: 175146988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2398a8b85422ed44b82b0f92d64f5716
+      internalID: -1497907835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ee9614736f5db4d89647d280be2013
+      internalID: 682474032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebcd51f01d71be541ad5a10de935417a
+      internalID: -649165124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d84a2893ae86846a8ccd5317a5a986
+      internalID: 80174783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c8715899b50414681aa637241838dc
+      internalID: 564629365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85588bd3eca0f534c9c31ee534a1961e
+      internalID: 1480461945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709c6234a37924a42b43edc623523073
+      internalID: 1196656225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9beb885636fb919439b4a80f5471c106
+      internalID: -1375664516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e3cf5cf574be245ac45b433168479b
+      internalID: 996097307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888c8da45cb2b2f4a9fe3287307b1035
+      internalID: 2127077044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4156d2255a90b74eb40bd58c921b6e4
+      internalID: -49015200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96b44f7350836641aa70a67e0dd5e03
+      internalID: -595963714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92f05adaab1ebf4890b444d0635593e
+      internalID: 568328963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5707cceec6731841ab8aaf7fbc37d2b
+      internalID: -1958878691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6a8e2199417a74690bf18c965c7d33
+      internalID: 1029195984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d71bec80f87344db6c3d7c83f0d8bc
+      internalID: 1612194399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b39d82ca5c543b4898efb9871b03e9e
+      internalID: -769900047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e266dfddcca9494e958fb559c323f21
+      internalID: 95123212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d8235e7c35fe140859f8107bc41a12
+      internalID: -1453974516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81f12c29348f0d488d8a465a30d35f4
+      internalID: -1238835663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6f471b1d5d72446be50bd776ed6fc1
+      internalID: -914036481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bd56ea9fb6bf44b864f315c426c816
+      internalID: 125923402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b96d44362ecffc4f84688836724d84e
+      internalID: -1570530371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1714c4f73f6b47499025534e3ee5871
+      internalID: 1037621335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea8cf32e071acc499393c3b5811b2ea
+      internalID: 1870328589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5367ab5a4e8e834fad127bbb8f22321
+      internalID: 1305363693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9399754f3da6141995f8cdf02beb92
+      internalID: -1624162813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cb4acc5cad7ea4792fcf16bb662edd
+      internalID: -571564103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821a48f5d4e45c84bbc891f76b7f8bdc
+      internalID: 1115625412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d97a78d6e06de2459a8d64536db10fb
+      internalID: 1605504522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd35233d60d3714fab9dd534543e470
+      internalID: -1885085459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a89f8a22244ad41a6ac835e7db57b0
+      internalID: -790109507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4f83459beeaf345b9ede3cf8bed603
+      internalID: -630131090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2506f05b58a8f7f43a3453f54c6fa300
+      internalID: -1296792060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf985fb83cb64a4d827d14e5e961b56
+      internalID: 866985615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a598e66668baf4b8ecbcdde242cf00
+      internalID: -185873822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc246d581161d5b47a06563228f6e5e4
+      internalID: 96512367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace3a8b5a355b754a99827ec4d824df0
+      internalID: -169913778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3feb59c8be21a147bbdf238073f6043
+      internalID: -1530015097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f2b4f85892cab4fb862c9fb59bfb44
+      internalID: 28682925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5c2f7330759ac4d83140284d84437e
+      internalID: -1858173043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa283d13b1804347ba7d522e1cde32e
+      internalID: 1911143730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b3dc41e98244c4a8e6b74d7b8a1216
+      internalID: 968594476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7627e260b07933e439bcf1646696eb79
+      internalID: 2145541089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67b243c1f09afc43b7c9f1190cbc3bd
+      internalID: -1499776200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6937a36a223dc094a8fb653f44104cab
+      internalID: 996550666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a981004553e8e041a450b8df7b66962
+      internalID: -1126714222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650a0c12142dbfb448c23bcb004b233b
+      internalID: 1041604907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec16405976ed274989edc581621d538
+      internalID: 2078546273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cb5663739e1994a957c3e54c322c6b
+      internalID: 193764829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b63aad98f5b36498ce2270483acab0
+      internalID: 1221340628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcea48ea70bd2048a824a1aae513f01
+      internalID: -1364009530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c2ac85f7277e34e95868608d051fdd
+      internalID: 481040862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabd6c554c4aa9546ae301b6800ec9e2
+      internalID: 2105491374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8623e6b768ddd74abf2e900b7699a0e
+      internalID: 314585764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb704787a8061e148a5005c5c5fe3bca
+      internalID: -280987595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8704f01d05fbfed41accd96de681e3aa
+      internalID: -1249738341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30667d36bee0c747a58b845116092fa
+      internalID: 1644425792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107d1a5509c6f844dbcd3cb33d7b1b7d
+      internalID: 734998183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3e7ae54b3b9a349a0b97a13354af02
+      internalID: 1238722360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b493915316856434887021f4909a2c92
+      internalID: -357456305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6336a05a51ac50043a5f35931c634f24
+      internalID: -464182307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01a7210e483f8a429dce8ad1c6c463c
+      internalID: 1663648835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc4e737231e99746bc9846c3b7669ec
+      internalID: 610994506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187025d81681fe84989c4c1668f805a3
+      internalID: -1534258825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6c368e7553b4a4483e69b32268a9b7
+      internalID: 1323498320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f528ce6e26df397429b2bc2af5c6e635
+      internalID: -855461764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1e8ce3f345ab8479e65a4820c32a2a
+      internalID: 407326632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbffc758227b0848bc9b89eb3071dfc
+      internalID: -1638645139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221a2356f785c9241aedcdb1565373a2
+      internalID: -890344251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2cbbebb4e51a4458944d3133ce8706
+      internalID: 399091254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5843b0b1e2f7c63409b49853f4ac46c8
+      internalID: -918564392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d05a20b4d7567a40ac5ba4c9127dd9c
+      internalID: -181857298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89520d2ccfbcda143933170401d534fb
+      internalID: 1905929259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c1bc7efcebfac4e97640ffefb7eaa4
+      internalID: -639083425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9044a81d79800d944b0b641446ba5f31
+      internalID: 662417298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fad5859071c834da11563db389dd13
+      internalID: 1109997983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2200ec238a47ea8438bf3fb79148b2f8
+      internalID: 262883020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdd1746d1898714a801784d4ce18ee2
+      internalID: -302193625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de07147646b81bf46bc17e4181337e74
+      internalID: -140757077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c95a0c93729254598bcd05b73abf49
+      internalID: -322867088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-phase1-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e00040a7824ca4488fa9a7234e8e2a5
+      internalID: -1293680659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      old-ai-phase1-Sheet_0: -1837090580
+      old-ai-phase1-Sheet_1: 1150373547
+      old-ai-phase1-Sheet_10: -442048864
+      old-ai-phase1-Sheet_100: -140757077
+      old-ai-phase1-Sheet_101: -322867088
+      old-ai-phase1-Sheet_102: -1293680659
+      old-ai-phase1-Sheet_11: -471215784
+      old-ai-phase1-Sheet_12: 709819797
+      old-ai-phase1-Sheet_13: -1526708195
+      old-ai-phase1-Sheet_14: -1916273080
+      old-ai-phase1-Sheet_15: 2900238
+      old-ai-phase1-Sheet_16: -1077522955
+      old-ai-phase1-Sheet_17: -1503691769
+      old-ai-phase1-Sheet_18: -1261887469
+      old-ai-phase1-Sheet_19: 1321333021
+      old-ai-phase1-Sheet_2: -599425410
+      old-ai-phase1-Sheet_20: 175146988
+      old-ai-phase1-Sheet_21: -1497907835
+      old-ai-phase1-Sheet_22: 682474032
+      old-ai-phase1-Sheet_23: -649165124
+      old-ai-phase1-Sheet_24: 80174783
+      old-ai-phase1-Sheet_25: 564629365
+      old-ai-phase1-Sheet_26: 1480461945
+      old-ai-phase1-Sheet_27: 1196656225
+      old-ai-phase1-Sheet_28: -1375664516
+      old-ai-phase1-Sheet_29: 996097307
+      old-ai-phase1-Sheet_3: -1357511136
+      old-ai-phase1-Sheet_30: 2127077044
+      old-ai-phase1-Sheet_31: -49015200
+      old-ai-phase1-Sheet_32: -595963714
+      old-ai-phase1-Sheet_33: 568328963
+      old-ai-phase1-Sheet_34: -1958878691
+      old-ai-phase1-Sheet_35: 1029195984
+      old-ai-phase1-Sheet_36: 1612194399
+      old-ai-phase1-Sheet_37: -769900047
+      old-ai-phase1-Sheet_38: 95123212
+      old-ai-phase1-Sheet_39: -1453974516
+      old-ai-phase1-Sheet_4: 262278331
+      old-ai-phase1-Sheet_40: -1238835663
+      old-ai-phase1-Sheet_41: -914036481
+      old-ai-phase1-Sheet_42: 125923402
+      old-ai-phase1-Sheet_43: -1570530371
+      old-ai-phase1-Sheet_44: 1037621335
+      old-ai-phase1-Sheet_45: 1870328589
+      old-ai-phase1-Sheet_46: 1305363693
+      old-ai-phase1-Sheet_47: -1624162813
+      old-ai-phase1-Sheet_48: -571564103
+      old-ai-phase1-Sheet_49: 1115625412
+      old-ai-phase1-Sheet_5: -233508169
+      old-ai-phase1-Sheet_50: 1605504522
+      old-ai-phase1-Sheet_51: -1885085459
+      old-ai-phase1-Sheet_52: -790109507
+      old-ai-phase1-Sheet_53: -630131090
+      old-ai-phase1-Sheet_54: -1296792060
+      old-ai-phase1-Sheet_55: 866985615
+      old-ai-phase1-Sheet_56: -185873822
+      old-ai-phase1-Sheet_57: 96512367
+      old-ai-phase1-Sheet_58: -169913778
+      old-ai-phase1-Sheet_59: -1530015097
+      old-ai-phase1-Sheet_6: 1451175087
+      old-ai-phase1-Sheet_60: 28682925
+      old-ai-phase1-Sheet_61: -1858173043
+      old-ai-phase1-Sheet_62: 1911143730
+      old-ai-phase1-Sheet_63: 968594476
+      old-ai-phase1-Sheet_64: 2145541089
+      old-ai-phase1-Sheet_65: -1499776200
+      old-ai-phase1-Sheet_66: 996550666
+      old-ai-phase1-Sheet_67: -1126714222
+      old-ai-phase1-Sheet_68: 1041604907
+      old-ai-phase1-Sheet_69: 2078546273
+      old-ai-phase1-Sheet_7: -422780697
+      old-ai-phase1-Sheet_70: 193764829
+      old-ai-phase1-Sheet_71: 1221340628
+      old-ai-phase1-Sheet_72: -1364009530
+      old-ai-phase1-Sheet_73: 481040862
+      old-ai-phase1-Sheet_74: 2105491374
+      old-ai-phase1-Sheet_75: 314585764
+      old-ai-phase1-Sheet_76: -280987595
+      old-ai-phase1-Sheet_77: -1249738341
+      old-ai-phase1-Sheet_78: 1644425792
+      old-ai-phase1-Sheet_79: 734998183
+      old-ai-phase1-Sheet_8: 736949336
+      old-ai-phase1-Sheet_80: 1238722360
+      old-ai-phase1-Sheet_81: -357456305
+      old-ai-phase1-Sheet_82: -464182307
+      old-ai-phase1-Sheet_83: 1663648835
+      old-ai-phase1-Sheet_84: 610994506
+      old-ai-phase1-Sheet_85: -1534258825
+      old-ai-phase1-Sheet_86: 1323498320
+      old-ai-phase1-Sheet_87: -855461764
+      old-ai-phase1-Sheet_88: 407326632
+      old-ai-phase1-Sheet_89: -1638645139
+      old-ai-phase1-Sheet_9: -2052744200
+      old-ai-phase1-Sheet_90: -890344251
+      old-ai-phase1-Sheet_91: 399091254
+      old-ai-phase1-Sheet_92: -918564392
+      old-ai-phase1-Sheet_93: -181857298
+      old-ai-phase1-Sheet_94: 1905929259
+      old-ai-phase1-Sheet_95: -639083425
+      old-ai-phase1-Sheet_96: 662417298
+      old-ai-phase1-Sheet_97: 1109997983
+      old-ai-phase1-Sheet_98: 262883020
+      old-ai-phase1-Sheet_99: -302193625
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

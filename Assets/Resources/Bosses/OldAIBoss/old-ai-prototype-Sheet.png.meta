@@ -1,0 +1,3467 @@
+fileFormatVersion: 2
+guid: bedece8ce9ec23041991364592172b20
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1914
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62dd220e2c39b904f9265bd548d434ae
+      internalID: -1173764285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1914
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002e2637925d4c44c99c290afc556d4c
+      internalID: 632072506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1914
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6c0028a153df6409a32426cc31f535
+      internalID: 940617543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1914
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77f89f868791f94abe3646e3495cd19
+      internalID: 1797801691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7d1ebb5d821414998845fb6fe2477d
+      internalID: -953753548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1856
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43d28c4ac7cccd408ca00c84474a7df
+      internalID: -200636072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1856
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d665a303be1dec41abf72ae4f0e60e6
+      internalID: 1549582304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1856
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5727dcdee31d54b8bc107a4918b00b
+      internalID: 1489772146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1798
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cc59e2b026ef14b99803966d2523c7
+      internalID: 1924718431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1798
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8d7f1d36417e94ebcce64713b196ab
+      internalID: 959084080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1798
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ed80ecbada4c84a9186386814235d0
+      internalID: -980871458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1798
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea51fd985651ce4b9c03f60c40c4933
+      internalID: -355634874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1740
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d9202d3c148354494b32a8172c5378
+      internalID: -1252330752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1740
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbeb8438b7380a44ada389d4cd65d0d
+      internalID: 1780501722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1740
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe8e590d7736da41b322b4d6dd4c4db
+      internalID: -439554505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1740
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6dc26d8b3077af4aa4189e4380ada93
+      internalID: -703939872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e2b9f1a18137a4aa7f88a84356045e
+      internalID: 1370613265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a06c94d9a3cd84390f9ff84dce5576
+      internalID: -715791883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0405990ee319bed43a6376ea3035ea73
+      internalID: 1466831746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180adde532962344cb8a9ea7457d1b86
+      internalID: -999824970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be7f2c758cc13d46aac122add4de58b
+      internalID: -1883635763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae42e5128e57c0048ad8bb02d4ed71a2
+      internalID: 1113630319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e75756faeb3a440a23a8156794f28f
+      internalID: -1955882701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a525f41a403ab8246b5eee1a6f223334
+      internalID: -1603442690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969bb079e78377f4381711b4834bf1d1
+      internalID: -181090428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1682
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bb002b42f4e854f8f1c7a7a14918c6
+      internalID: -759806485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1624
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c683db99aff4d42982a7670873ba49
+      internalID: 653448469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1624
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1971a8914587c49bbb3962ed8a628d
+      internalID: 1740621281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1624
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f07b158301faa64cbf3a4319b0b6938
+      internalID: 1722010091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e574cc250bfb8fd429d6379da63baf06
+      internalID: -705145834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090c56824f2a03748aaef294a86e21d0
+      internalID: 1548925254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8999a418dd0693459c215da4b489e8a
+      internalID: -690676519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb564a581ec2074885b5bf70b547efe
+      internalID: 2016078655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1112f1d14bf524c884e32b0ff2120d
+      internalID: -923300727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc8ff15ef420de469ab0cc767fb3a9c
+      internalID: 550256945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcee3f5d01410849bf6f13f88297da0
+      internalID: -1088097667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c52b67cb3b594640a8c98b902b5b333
+      internalID: -399130692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d726381a53ade4ea23166a1cd2656f
+      internalID: 1707952420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1566
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e609ed6cb001a64469a471f9da3e507f
+      internalID: 1259922958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1508
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57275be5ab2447c439d7c7128c28800b
+      internalID: 1788077668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1508
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f15917c68b4854babdde4604a4ad89
+      internalID: -87958822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1508
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9960295e99d40c24f91927acde6aaf77
+      internalID: 318327162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3b23e1b310b224cb0070e0395dde38
+      internalID: 2098422809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a429c29937a29b4ba5be0ee3ff22e11
+      internalID: 834790757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60dd99140ffec747b7ec244b2382f3e
+      internalID: -1614940883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3904a56cb3ac17a4bb5b24bf711e75c2
+      internalID: 935582508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e704fb101c319384383b5f8d75ca9263
+      internalID: -121599153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d58705a0d67e64f82f517e1799d15f
+      internalID: 1390830769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc350939785bea46acc36a96d9d8487
+      internalID: 1419857930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acd57f07de3ef147942b01f04ac0769
+      internalID: 1009726933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6430955a455507f45b571e2a0f673870
+      internalID: -590519029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1450
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee6463e9f534f45a6849c219722954
+      internalID: -1266784664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb943608b9963fd4b8d8f1eee737613e
+      internalID: 2088251117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1392
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a10325b735cdd44b994b514a54780c8
+      internalID: 128535862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1392
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7964a80ac8dd0f4f85820d612146553
+      internalID: 729601991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1334
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bc16c92a97f524783a435b9a7c85ec
+      internalID: 2091879141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1334
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4d2e7844ffb214da78ac5fe5d48160
+      internalID: 1554854575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1334
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac6d0edcd95a4247827c3e8c2f48839
+      internalID: -509196064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1276
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cd9bbde53b4cc4c8b683ba8aa57ece
+      internalID: -1269687174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1276
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e440e1afecabf74c912b051058869ec
+      internalID: -508512846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1276
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d3fa2b18cca8a4c997b0972e1fa116
+      internalID: -1943464862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1218
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d283ac642fc1bd24d87a552372dc1dda
+      internalID: -1965017235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1218
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d0bc0f1ec135444b292582777ace64
+      internalID: 122774880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1218
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6b51db1865fa34eb53f9e0ee50d7ac
+      internalID: 1025946672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1160
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b628cbaac8175c4f947ab3b2905a3b1
+      internalID: 1097879707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1160
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c4ffb863d37ce458733aaaf5d7a1e6
+      internalID: -1544526145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1160
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d138a734cc6573d4fb2fa88f837cec20
+      internalID: 735251982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1102
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e51347e45cad34db8674f3aa45aaac
+      internalID: -1228126770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1102
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6021c71eff05e4a81820c6ecf4e6bf
+      internalID: -1631652440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1102
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41845c9a5fa203548bfffcfd5be456e3
+      internalID: -1978541452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459ce9f8ccda8ab439cfc948ac1ddbf7
+      internalID: -1705253003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240c8606c04f67b49811589ded72d4ec
+      internalID: -493267787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1044
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d4aea94061f7c46b8606bb96a63dcb
+      internalID: 346078222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0445ffcaaa3a343802061477304e1e
+      internalID: -963316648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800c1bb9677988b4f86d48627da0b94e
+      internalID: 1177576994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 986
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d076e969d635a4d9b57d9a7f23fb1c
+      internalID: -33579203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d48f28b960056b4686296a514da40cb
+      internalID: 522998312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ab00c4e4e5a8d48a7f7b3b78f19cbc
+      internalID: 2081419365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 928
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a80c49dda772e54cb6153029f59c24f
+      internalID: -301051795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e0f36efbecc7a4cb811eeaf1ca866b
+      internalID: 1121745115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5a0a6e3ba8e9d408059ab3aa45443c
+      internalID: -1871610841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 870
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b687207d535acf4d922acd428abf119
+      internalID: -780348847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed165d989eff62b47912760cd08bc96f
+      internalID: 1475191401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f7a5f98b8838b479d2e34b6f58e7df
+      internalID: 804951124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 812
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d016e20c9c239344886cedb1b0174e6d
+      internalID: 1658026691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7186320a510150e40ae0b964201b4502
+      internalID: 2130168140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e636fe399ca2e948a346813ba292ce8
+      internalID: 727132059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 754
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658cc231c5cf71248aee3aa2988267de
+      internalID: -672849277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260fd6c3dcf04ae49bbb7daedf3fb3aa
+      internalID: -443844937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346244c1b13056c4ebd633a349a71bd4
+      internalID: -1213898914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 696
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b613e52f4c8a29428d9e1950c322393
+      internalID: -930908215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca7561ba38429e45b6c5a1aa062207f
+      internalID: -325732664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370a16121f68cbb4a842b356932c3cc6
+      internalID: -529724243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 638
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b3699c5a2af064ba6fb1b5f169959c
+      internalID: 1749074499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64452daf9b0a16b438ea9d3dffca6641
+      internalID: 1385261527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f726187b0b878a04386eeb79d4f1ec56
+      internalID: -1685025447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 580
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d663668066d8f7749bbe0310d6d3995c
+      internalID: -1550273857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc2e2f982e26024ea57b6b28d16e44c
+      internalID: 1158927481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa806fe26b4fc6549970ce6b8991a445
+      internalID: -1742896671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 522
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79da720455b8046439fdc99ccf4bd772
+      internalID: 1631509261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4eede32101e8442b7998688409b1b4
+      internalID: 1509248592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da182198856d9242b1959a0767aa5a7
+      internalID: -1640485221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 464
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4bec6e216136a4b89ce603bbe72a54
+      internalID: 1844022158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43f314c53828874fa0277e5352caf5b
+      internalID: -79384178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46a21be02e3c5746a9f11af3844d638
+      internalID: -1276536338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 406
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf7432434559254598d9b69a5283bff
+      internalID: 754176286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00513e6a7e3c06244b54fed1aa20b748
+      internalID: 1683237993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2048dd54076c89489d5282e9f29e018
+      internalID: -1757679175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 348
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30990bb0f613e024996002cff9c71647
+      internalID: 729532130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3553d2639fcff154b99b3b5bd45c0017
+      internalID: 583132228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f13509e6ac938d439ca27409d34ea75
+      internalID: 1248047866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 290
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3861622740c45e043becb1ce3240a194
+      internalID: 2751303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dd224bfbc477044a86faab3148b7e7
+      internalID: 675413340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63fb6233ecc64047b737375c1623cea
+      internalID: 396815890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 232
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a22517eb1cd33e49909282a53076df1
+      internalID: 1948107024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfe8454774188c43b28ea7bbe756e68
+      internalID: -83093877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edad0291417748e4eaf442bd23c627a2
+      internalID: -1439663226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 174
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf683d188e932d1419cc43e5ec5626cc
+      internalID: -6262916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a7bb7c3e35a914c9ed9736ff88e700
+      internalID: -456668601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b01626ac0cff754a8ad68577d353371
+      internalID: -1631331037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 116
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b952e5ed656bfcc4c838ccfce4725b23
+      internalID: -995512853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d46b78e5c132c54a8c114ba86ca06c4
+      internalID: 921299831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fb089514b937f49a70dfcda7b25c11
+      internalID: 102742642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 58
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e376fb353adc74f9dc8136a6ff00a5
+      internalID: -1768149200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b79162f63adeab4a8d5160f4e901dda
+      internalID: 156211961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbb351c2ed342947bc76a255cd43d13
+      internalID: -218465996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e899332b35399074b8d2c61182396356
+      internalID: 708133642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938f699557828ad4986c4b9fab75966a
+      internalID: -1277673537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde61f84ac410cf41b8b8418f260abaf
+      internalID: -1277012676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3d7c5ae3d6ec24497b0bae440c6fb8
+      internalID: 417987457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4265e188347ec46499646952c57b24c7
+      internalID: -1622611626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae625855a52c314f982f2e588f6f916
+      internalID: -259497702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b176217e5ea5ec49b5432ad7dfbfc05
+      internalID: 1867442642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd3d69ee9de8ec44acc71fd73c2c9cc
+      internalID: 1644851393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38494dd7c66b3b64991532ca8c0cd8be
+      internalID: 130462486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee7a4375dbca24498e6b2319af37f9c
+      internalID: -455958494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bf989c695d6b149b67aa8caa29eff6
+      internalID: -1930301922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e33bdff7019481438705eef7125c666
+      internalID: -2076379390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_138
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe5927ce59a9945b88c0042e180a7b
+      internalID: 990577086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_139
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd795bde71f0aa4449d8c72e53a17ff7
+      internalID: -1011713702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_140
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee14273fabb5254cb2a93360ea555f2
+      internalID: -1210549704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_141
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caff80f26178e6f46b8634b121bf52a1
+      internalID: -470759658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_142
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cbd86f4cdd6074fb3d54af337d92a1
+      internalID: -929250390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_143
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc1f204386c8b141a0efc5e2d7a8333
+      internalID: 767035963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_144
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bceac86c0644964cb02f7520dd9ea6f
+      internalID: -1581946892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_145
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b6e5977a91d434bba48124659b3730
+      internalID: 40928539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_146
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2437be598be3bd84ca514791e698e4d2
+      internalID: 36442800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_147
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4594359a53acea44cbc3341c2b3b855a
+      internalID: -501850177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_148
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea9d3258ddd76f4fa6de0db393024c1
+      internalID: -1248957885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_149
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623b142bbb4c3274f9baa2088bd3e7fd
+      internalID: -555575730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_150
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe9797fbeee4944eb0373bf6e95f1f7
+      internalID: 555828904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old-ai-prototype-Sheet_151
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 0
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60007d21ccdf3304e81d6d262b735151
+      internalID: 770890934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      old-ai-prototype-Sheet_0: -1173764285
+      old-ai-prototype-Sheet_1: 632072506
+      old-ai-prototype-Sheet_10: -980871458
+      old-ai-prototype-Sheet_100: 1509248592
+      old-ai-prototype-Sheet_101: -1640485221
+      old-ai-prototype-Sheet_102: 1844022158
+      old-ai-prototype-Sheet_103: -79384178
+      old-ai-prototype-Sheet_104: -1276536338
+      old-ai-prototype-Sheet_105: 754176286
+      old-ai-prototype-Sheet_106: 1683237993
+      old-ai-prototype-Sheet_107: -1757679175
+      old-ai-prototype-Sheet_108: 729532130
+      old-ai-prototype-Sheet_109: 583132228
+      old-ai-prototype-Sheet_11: -355634874
+      old-ai-prototype-Sheet_110: 1248047866
+      old-ai-prototype-Sheet_111: 2751303
+      old-ai-prototype-Sheet_112: 675413340
+      old-ai-prototype-Sheet_113: 396815890
+      old-ai-prototype-Sheet_114: 1948107024
+      old-ai-prototype-Sheet_115: -83093877
+      old-ai-prototype-Sheet_116: -1439663226
+      old-ai-prototype-Sheet_117: -6262916
+      old-ai-prototype-Sheet_118: -456668601
+      old-ai-prototype-Sheet_119: -1631331037
+      old-ai-prototype-Sheet_12: -1252330752
+      old-ai-prototype-Sheet_120: -995512853
+      old-ai-prototype-Sheet_121: 921299831
+      old-ai-prototype-Sheet_122: 102742642
+      old-ai-prototype-Sheet_123: -1768149200
+      old-ai-prototype-Sheet_124: 156211961
+      old-ai-prototype-Sheet_125: -218465996
+      old-ai-prototype-Sheet_126: 708133642
+      old-ai-prototype-Sheet_127: -1277673537
+      old-ai-prototype-Sheet_128: -1277012676
+      old-ai-prototype-Sheet_129: 417987457
+      old-ai-prototype-Sheet_13: 1780501722
+      old-ai-prototype-Sheet_130: -1622611626
+      old-ai-prototype-Sheet_131: -259497702
+      old-ai-prototype-Sheet_132: 1867442642
+      old-ai-prototype-Sheet_133: 1644851393
+      old-ai-prototype-Sheet_134: 130462486
+      old-ai-prototype-Sheet_135: -455958494
+      old-ai-prototype-Sheet_136: -1930301922
+      old-ai-prototype-Sheet_137: -2076379390
+      old-ai-prototype-Sheet_138: 990577086
+      old-ai-prototype-Sheet_139: -1011713702
+      old-ai-prototype-Sheet_14: -439554505
+      old-ai-prototype-Sheet_140: -1210549704
+      old-ai-prototype-Sheet_141: -470759658
+      old-ai-prototype-Sheet_142: -929250390
+      old-ai-prototype-Sheet_143: 767035963
+      old-ai-prototype-Sheet_144: -1581946892
+      old-ai-prototype-Sheet_145: 40928539
+      old-ai-prototype-Sheet_146: 36442800
+      old-ai-prototype-Sheet_147: -501850177
+      old-ai-prototype-Sheet_148: -1248957885
+      old-ai-prototype-Sheet_149: -555575730
+      old-ai-prototype-Sheet_15: -703939872
+      old-ai-prototype-Sheet_150: 555828904
+      old-ai-prototype-Sheet_151: 770890934
+      old-ai-prototype-Sheet_16: 1370613265
+      old-ai-prototype-Sheet_17: -715791883
+      old-ai-prototype-Sheet_18: 1466831746
+      old-ai-prototype-Sheet_19: -999824970
+      old-ai-prototype-Sheet_2: 940617543
+      old-ai-prototype-Sheet_20: -1883635763
+      old-ai-prototype-Sheet_21: 1113630319
+      old-ai-prototype-Sheet_22: -1955882701
+      old-ai-prototype-Sheet_23: -1603442690
+      old-ai-prototype-Sheet_24: -181090428
+      old-ai-prototype-Sheet_25: -759806485
+      old-ai-prototype-Sheet_26: 653448469
+      old-ai-prototype-Sheet_27: 1740621281
+      old-ai-prototype-Sheet_28: 1722010091
+      old-ai-prototype-Sheet_29: -705145834
+      old-ai-prototype-Sheet_3: 1797801691
+      old-ai-prototype-Sheet_30: 1548925254
+      old-ai-prototype-Sheet_31: -690676519
+      old-ai-prototype-Sheet_32: 2016078655
+      old-ai-prototype-Sheet_33: -923300727
+      old-ai-prototype-Sheet_34: 550256945
+      old-ai-prototype-Sheet_35: -1088097667
+      old-ai-prototype-Sheet_36: -399130692
+      old-ai-prototype-Sheet_37: 1707952420
+      old-ai-prototype-Sheet_38: 1259922958
+      old-ai-prototype-Sheet_39: 1788077668
+      old-ai-prototype-Sheet_4: -953753548
+      old-ai-prototype-Sheet_40: -87958822
+      old-ai-prototype-Sheet_41: 318327162
+      old-ai-prototype-Sheet_42: 2098422809
+      old-ai-prototype-Sheet_43: 834790757
+      old-ai-prototype-Sheet_44: -1614940883
+      old-ai-prototype-Sheet_45: 935582508
+      old-ai-prototype-Sheet_46: -121599153
+      old-ai-prototype-Sheet_47: 1390830769
+      old-ai-prototype-Sheet_48: 1419857930
+      old-ai-prototype-Sheet_49: 1009726933
+      old-ai-prototype-Sheet_5: -200636072
+      old-ai-prototype-Sheet_50: -590519029
+      old-ai-prototype-Sheet_51: -1266784664
+      old-ai-prototype-Sheet_52: 2088251117
+      old-ai-prototype-Sheet_53: 128535862
+      old-ai-prototype-Sheet_54: 729601991
+      old-ai-prototype-Sheet_55: 2091879141
+      old-ai-prototype-Sheet_56: 1554854575
+      old-ai-prototype-Sheet_57: -509196064
+      old-ai-prototype-Sheet_58: -1269687174
+      old-ai-prototype-Sheet_59: -508512846
+      old-ai-prototype-Sheet_6: 1549582304
+      old-ai-prototype-Sheet_60: -1943464862
+      old-ai-prototype-Sheet_61: -1965017235
+      old-ai-prototype-Sheet_62: 122774880
+      old-ai-prototype-Sheet_63: 1025946672
+      old-ai-prototype-Sheet_64: 1097879707
+      old-ai-prototype-Sheet_65: -1544526145
+      old-ai-prototype-Sheet_66: 735251982
+      old-ai-prototype-Sheet_67: -1228126770
+      old-ai-prototype-Sheet_68: -1631652440
+      old-ai-prototype-Sheet_69: -1978541452
+      old-ai-prototype-Sheet_7: 1489772146
+      old-ai-prototype-Sheet_70: -1705253003
+      old-ai-prototype-Sheet_71: -493267787
+      old-ai-prototype-Sheet_72: 346078222
+      old-ai-prototype-Sheet_73: -963316648
+      old-ai-prototype-Sheet_74: 1177576994
+      old-ai-prototype-Sheet_75: -33579203
+      old-ai-prototype-Sheet_76: 522998312
+      old-ai-prototype-Sheet_77: 2081419365
+      old-ai-prototype-Sheet_78: -301051795
+      old-ai-prototype-Sheet_79: 1121745115
+      old-ai-prototype-Sheet_8: 1924718431
+      old-ai-prototype-Sheet_80: -1871610841
+      old-ai-prototype-Sheet_81: -780348847
+      old-ai-prototype-Sheet_82: 1475191401
+      old-ai-prototype-Sheet_83: 804951124
+      old-ai-prototype-Sheet_84: 1658026691
+      old-ai-prototype-Sheet_85: 2130168140
+      old-ai-prototype-Sheet_86: 727132059
+      old-ai-prototype-Sheet_87: -672849277
+      old-ai-prototype-Sheet_88: -443844937
+      old-ai-prototype-Sheet_89: -1213898914
+      old-ai-prototype-Sheet_9: 959084080
+      old-ai-prototype-Sheet_90: -930908215
+      old-ai-prototype-Sheet_91: -325732664
+      old-ai-prototype-Sheet_92: -529724243
+      old-ai-prototype-Sheet_93: 1749074499
+      old-ai-prototype-Sheet_94: 1385261527
+      old-ai-prototype-Sheet_95: -1685025447
+      old-ai-prototype-Sheet_96: -1550273857
+      old-ai-prototype-Sheet_97: 1158927481
+      old-ai-prototype-Sheet_98: -1742896671
+      old-ai-prototype-Sheet_99: 1631509261
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
