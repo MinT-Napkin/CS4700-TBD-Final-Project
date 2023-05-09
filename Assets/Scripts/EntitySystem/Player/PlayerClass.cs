@@ -13,7 +13,6 @@ public class PlayerClass : Entity, InteractInterface{
     public PlayerMovement playerMovement;
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
-    public TextAsset textAsset;
 
     public Color color;
     
@@ -67,13 +66,6 @@ public class PlayerClass : Entity, InteractInterface{
         isPlayerControlled = true;
     }
 
-    public virtual void InteractWithTarget(Entity entity){
-        foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)){
-            Debug.Log("Interacting with " + interactable.name);
-            interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
@@ -90,12 +82,6 @@ public class PlayerClass : Entity, InteractInterface{
 
     void CheckTargets(){
 
-    }
-
-    protected override void DamageHealth(float finalDamage){
-        base.DamageHealth(finalDamage);
-
-        healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
     // Start is called before the first frame update
@@ -138,18 +124,13 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
-            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageTypeHealing damageType = new DamageTypeHealing();
 
             DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 
             Debug.Log(entityStats.currentHealth);
-        }
-
-        if (Input.GetKeyDown("f")){
-            StatusEffectPoison burn = gameObject.AddComponent<StatusEffectPoison>();
-            burn.Constructor(this, 5.0f, true, 0.5f);
         }
 
         if (Input.GetKeyDown(";")){
@@ -159,8 +140,31 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("g")){
-            entityStats.level++;
+            LevelUp();
         }
+    }
+
+    protected override void DamageHealth(float finalDamage){
+        base.DamageHealth(finalDamage);
+
+        healthBar.setCurrentHealth(entityStats.normalizedHealth);
+    }
+
+    public virtual void InteractWithTarget(Entity entity) {
+        foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)) {
+            Debug.Log("Interacting with " + interactable.name);
+            interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
+        }
+    }
+
+    public override void LevelUp(){
+        meleeWeapon.Unequip();
+
+        base.LevelUp();
+
+        healthBar.setCurrentHealth(entityStats.currentHealth);
+
+        meleeWeapon.Equip();
     }
 
 
