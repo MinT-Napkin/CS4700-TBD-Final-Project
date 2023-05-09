@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip shieldSound;
     public AudioClip lightningBoltSound;
     public AudioClip doomBladesSound;
+    public AudioClip healSound;
 
     //items and inventory
     public AudioClip upgradeSound;

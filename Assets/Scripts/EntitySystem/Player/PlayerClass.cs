@@ -126,6 +126,7 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
+            SoundManager.instance.PlaySound(SoundManager.instance.healSound);
             DamageTypeHealing damageType = new DamageTypeHealing();
 
             DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
