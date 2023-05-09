@@ -8,6 +8,8 @@ public class PlayerClass : Entity, InteractInterface{
     public HealthBarUI healthBar;
     public Canvas canvas;
 
+    public GameObject gangBossResetPrefab;
+
     public Transform meleeAttackPoint;
     public MeleeWeapon meleeWeapon;
     public PlayerMovement playerMovement;
@@ -66,6 +68,15 @@ public class PlayerClass : Entity, InteractInterface{
         isPlayerControlled = true;
     }
 
+    protected override void OnEntityDeath()
+    {
+        transform.position = new Vector3(5.77f, -4.33f, 0f);
+        entityStats.normalizedHealth = 1;
+        entityStats.currentHealth = entityStats.maxHealth;
+        healthBar.setCurrentHealth(entityStats.currentHealth);
+        MusicPlayer.PlayClip(0);
+    }
+
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
@@ -87,6 +98,10 @@ public class PlayerClass : Entity, InteractInterface{
     protected override void Start(){
         base.Start();
 
+        csv.ReadEntityStats(this);
+
+        this.entityStats.currentHealth = this.entityStats.maxHealth; //debugging
+        
         healthBar.setCurrentHealth(entityStats.currentHealth);
     }
 
@@ -123,10 +138,10 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
-            SoundManager.instance.PlaySound(SoundManager.instance.healSound);
-            DamageTypeHealing damageType = new DamageTypeHealing();
+            //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
+            DamageTypePhysical damageType = new DamageTypePhysical();
 
-            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
+            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 
