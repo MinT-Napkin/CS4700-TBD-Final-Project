@@ -17,62 +17,53 @@ public class MeleeWeapon : MonoBehaviour{
     public string inputKey;
     public bool input;
 
-    public virtual void Awake()
-    {
+    public virtual void Awake(){
         enemyLayers = LayerMask.GetMask("Enemy");
         //playerStats = attackPoint.parent.gameObject.GetComponent<PlayerClass>().playerStats;
         inputKey = "x";
     }
 
-    public virtual void Equip()
-    {
+    public virtual void Equip(){
         playerStats.attackSpeed *= attackCooldown;
         playerStats.strength += attackDamage;
     }
 
-    public virtual void Unequip()
-    {
+    public virtual void Unequip(){
         playerStats.attackSpeed /= attackCooldown;
         playerStats.strength -= attackDamage;
     }
 
-    void Update()
-    {
-        if ((input))
-        {
-            if (!attackOnCooldown)
-            {
+    void Update(){
+        if ((input)){
+            if (!attackOnCooldown){
                 Attack();
             }
         }
     }
 
-    public void SetEntityStats(EntityStats playerStats)
-    {
+    public void SetEntityStats(EntityStats playerStats){
         this.playerStats = playerStats;
     }
 
-    void Attack()
-    {
+    protected virtual void Attack(){
         SoundManager.instance.PlaySound(SoundManager.instance.meleeSound);
         DamageEvent damageEvent;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
-        {
+
+        foreach (Collider2D enemy in hitEnemies){
             damageEvent = new DamageEvent(1.0f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Normal);
 
             enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
         }
+
         StartCoroutine(AttackCooldown());
     }
 
-    void OnDrawGizmosSelected()
-    {
+    void OnDrawGizmosSelected(){
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    IEnumerator AttackCooldown()
-    {
+    protected IEnumerator AttackCooldown(){
         attackOnCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         attackOnCooldown = false;
