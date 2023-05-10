@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 942133397586753317}
   m_Layer: 0
   m_Name: BossBullet
-  m_TagString: EnemyBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   boss: {fileID: 0}
   direction: {x: 0, y: 0}
   bulletSpeed: 20
-  bulletRange: 16.81
+  bulletRange: 16.97
 --- !u!50 &-39641895814928634
 Rigidbody2D:
   serializedVersion: 4

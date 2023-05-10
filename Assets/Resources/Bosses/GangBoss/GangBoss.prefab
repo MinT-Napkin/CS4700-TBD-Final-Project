@@ -720,7 +720,7 @@ MonoBehaviour:
   distance: 0
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
-  initiateRange: 7
+  initiateRange: 6.07
   meleeAttackRange: 3
   attackPoint: {fileID: 2918484912657221580}
   rangedAttackPoint: {fileID: 8221046337659758111}
