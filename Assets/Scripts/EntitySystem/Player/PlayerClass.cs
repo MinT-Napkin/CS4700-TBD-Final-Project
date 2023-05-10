@@ -70,12 +70,7 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     protected override void OnEntityDeath(){
-        //SoundManager.instance.PlaySound(SoundManager.instance.deathSound);
-        // transform.position = new Vector3(5.77f, -4.33f, 0f);
-        // entityStats.normalizedHealth = 1.0f;
-        // entityStats.currentHealth = entityStats.maxHealth;
-        // healthBar.setCurrentHealth(entityStats.normalizedHealth);
-        // MusicPlayer.PlayClip(0);
+        SoundManager.instance.PlaySound(SoundManager.instance.deathSound);
         SceneManager.LoadScene("GameOver");
     }
 
@@ -132,7 +127,7 @@ public class PlayerClass : Entity, InteractInterface{
             //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
             DamageTypePhysical damageType = new DamageTypePhysical();
 
-            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
+            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 

@@ -51,17 +51,12 @@ public class Enemy : Entity{
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    protected override void Start(){
-        base.Start();
-
-        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
-    }
-
     public virtual void Update(){
         direction = target.position - transform.position;
         direction.Normalize();
         distance = Vector2.Distance(target.position, transform.position);
         RotateEnemy();
+        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
     }
 
     protected override void OnEntityDeath(){
