@@ -32,7 +32,7 @@ public class GangBoss : Boss
         //Add more here
         base.Awake();
         //Stats for testing
-        entityStats.walkSpeed = 2f;
+        entityStats.walkSpeed = 2.5f;
         entityStats.maxHealth = 100f;
         entityStats.currentHealth = 100f;
         entityStats.normalizedHealth = 1f;

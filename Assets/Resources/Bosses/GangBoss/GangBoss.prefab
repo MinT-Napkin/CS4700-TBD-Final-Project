@@ -720,8 +720,8 @@ MonoBehaviour:
   distance: 0
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
-  initiateRange: 10
-  meleeAttackRange: 3.69
+  initiateRange: 6.07
+  meleeAttackRange: 3
   attackPoint: {fileID: 2918484912657221580}
   rangedAttackPoint: {fileID: 8221046337659758111}
   animator: {fileID: 0}
@@ -733,7 +733,7 @@ MonoBehaviour:
   phase: 0
   rangedAttackCooldown: 3
   rangedAttackOnCooldown: 0
-  rangedAttackRange: 16.81
+  rangedAttackRange: 16.97
   flamethrowerEnabled: 0
   flamethrowerHorizontalSpritePoint: {fileID: 7722090946432230582}
   flamethrowerHorizontalAttackPoint: {fileID: 2826246865570293986}
