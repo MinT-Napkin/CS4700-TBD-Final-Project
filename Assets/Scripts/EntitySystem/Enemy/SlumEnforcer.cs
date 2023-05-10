@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class SlumEnforcer : EnemyMelee
 {
+
+    protected override void Start(){
+        base.Start();
+    }
+    
     public override void MeleeAttack()
     {
-        SoundManager.instance.PlaySound(SoundManager.instance.SEMeleeSound);
         bool isAttacking = true;
 
         /*
@@ -19,12 +23,25 @@ public class SlumEnforcer : EnemyMelee
         base.MeleeAttack();
         aiPath.maxSpeed = 0f;
         freezeRotation = true;
+    }
+
+    public void MeleeAttackEvent()
+    {
+        SoundManager.instance.PlaySound(SoundManager.instance.SEMeleeSound);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
-            Debug.Log(targetHit.gameObject.name + " hit by SlumEnforcer!");
+        {
+            DamageTypeLightning damageType = new DamageTypeLightning();
+            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+        }
+        bool isAttacking = false;
+        animator.SetBool("isAttacking", isAttacking);
+    }
+
+    public void OnMeleeAttackEndEvent()
+    {
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
-        isAttacking = false;
-        animator.SetBool("isAttacking", isAttacking);
     }
 }
