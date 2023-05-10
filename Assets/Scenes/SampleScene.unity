@@ -22724,6 +22724,7 @@ MonoBehaviour:
   lightningBolt: {fileID: 0}
   doomblades: {fileID: 0}
   bulletPrefab: {fileID: 4219357201388976843, guid: 58a5d82ae5f49fc48b2ae2f2ffc6decf, type: 3}
+  inventoryPanel: {fileID: 1510723146}
 --- !u!114 &916498041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23893,6 +23894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 999f109fa9ead4145abf3eb7e8138514, type: 3}
+--- !u!1 &1510723146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5136326025304197091, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+  m_PrefabInstance: {fileID: 5136326023391869414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623266262 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4016896958620303786, guid: fd709ddc779b08749899699466805c69, type: 3}
@@ -24402,6 +24408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850465018}
     m_Modifications:
+    - target: {fileID: 5136326023244027539, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5136326023244027541, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24514,9 +24524,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 5136326025304197102, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263797582872424320, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 916498028}
     - target: {fileID: 8263797582872424320, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
       propertyPath: slotPrefab
       value: 
       objectReference: {fileID: 4234949305988861226, guid: ee7013e756e9d9e43b3d7ae1690393b7, type: 3}
+    - target: {fileID: 8263797582872424320, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+      propertyPath: panelPrefab
+      value: 
+      objectReference: {fileID: 1510723146}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}

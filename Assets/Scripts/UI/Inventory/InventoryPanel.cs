@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryPanel : MonoBehaviour{
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
-    public PlayerClass player;
+    public GameObject panelPrefab;
+    public GameObject player;
     public GameObject slotPrefab;
 
     void ClearInventory(){
@@ -15,16 +17,31 @@ public class InventoryPanel : MonoBehaviour{
         new List<InventorySlot>(24);
     }
 
-    void ConstructPanel(){
-       KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
+    public void ConstructPanel(){
+       KeyValuePair<ItemParent, int>[] itemClasses = player.GetComponent<PlayerClass>().inventory.GetInventory();
+
+        panelPrefab.GetComponent<Image>().enabled = true;
 
         for (int i = 0; i < inventorySlots.Capacity; i++){
             CreateInventorySlot();
         }
 
-        for (int i = 0; i < itemClasses.Length; i++){
-            //[i].ConstructSlot(itemClasses.GetKey(i))
+        for (int i = 0; i < itemClasses.Length; i++) {
+            if (itemClasses[i].Key != null){
+                inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
+                inventorySlots[i].SetPlayer(player.GetComponent<PlayerClass>());
+            }
         }
+    }
+
+    public void DestructPanel(){
+        /*foreach(InventorySlot slot in inventorySlots){
+            Destroy(slot.gameObject);
+        }*/
+
+        ClearInventory();
+
+        panelPrefab.GetComponent<Image>().enabled = false;
     }
 
     void CreateInventorySlot(){

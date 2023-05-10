@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine.UI;
 
 public class PlayerClass : Entity, InteractInterface{
     //For HP
@@ -29,6 +31,8 @@ public class PlayerClass : Entity, InteractInterface{
 
     LayerMask interactableLayer;
     float interactionRange = 2.0f;
+
+    public GameObject inventoryPanel;
 
     public override void Awake(){
         base.Awake();
@@ -66,6 +70,8 @@ public class PlayerClass : Entity, InteractInterface{
         doomblades = gameObject.AddComponent<Doomblades>();
 
         isPlayerControlled = true;
+
+        inventoryPanel.GetComponent<Image>().enabled = false;
     }
 
     protected override void OnEntityDeath(){
@@ -142,16 +148,17 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown("=")){
+        if (Input.GetKeyDown("y")){
+            if (inventoryPanel.GetComponent<Image>().enabled){
+                inventoryPanel.GetComponent<InventoryPanel>().DestructPanel();
+            }
+            else{
+                inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel();
+            }
         }
 
         if (Input.GetKeyDown("g")){
             LevelUp();
-        }
-
-        if (Input.GetKeyDown(";"))
-        {
-            GetComponent<InputController>().EnableInput(false);
         }
     }
 
