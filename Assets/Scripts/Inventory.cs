@@ -5,21 +5,19 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour{
 
-    private SortedDictionary<ItemParent, int> inventory = new SortedDictionary<ItemParent, int>();
+    private SortedList<ItemParent, int> inventory = new SortedList<ItemParent, int>();
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
     }
 
-    public ItemParent GetTest(){
-        return inventory.Keys.First<ItemParent>();
+    public SortedList<ItemParent, int> GetInventory(){
+        return inventory;
     }
 
     public void AddToInventory(ItemParent itemAdded, int quantity){
