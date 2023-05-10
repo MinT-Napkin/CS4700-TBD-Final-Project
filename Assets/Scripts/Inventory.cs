@@ -13,11 +13,10 @@ public class Inventory : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        
     }
 
-    public SortedList<ItemParent, int> GetInventory(){
-        return inventory;
+    public KeyValuePair<ItemParent, int>[] GetInventory(){
+        return null;//inventory;
     }
 
     public void AddToInventory(ItemParent itemAdded, int quantity){
