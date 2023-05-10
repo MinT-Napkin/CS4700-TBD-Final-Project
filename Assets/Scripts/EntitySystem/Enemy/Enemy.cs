@@ -157,14 +157,5 @@ public class Enemy : Entity{
 
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "bullet")
-        {
-            Debug.Log(gameObject.name + " hit with player bullet!");
-            Destroy(other.gameObject);
-        }
-    }
-
 
 }

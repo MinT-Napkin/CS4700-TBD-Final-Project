@@ -91,14 +91,4 @@ public class Boss : Entity
     public void ResetInvincible(){
         GetComponent<Collider2D>().enabled = true;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "bullet")
-        {
-            //fix this
-            DamageHealth(10f);
-            Destroy(other.gameObject);
-        }
-    }
 }

@@ -21,6 +21,9 @@ public class Entity : MonoBehaviour{
 
         DamageTypeHealing damageType = new DamageTypeHealing();
         DamageEvent damageEvent = new DamageEvent(-100.0f, damageType, this, this, false);
+
+        entityStats.currentHealth = entityStats.maxHealth;
+        entityStats.normalizedHealth = 1;
     }
 
     // Update is called once per frame
