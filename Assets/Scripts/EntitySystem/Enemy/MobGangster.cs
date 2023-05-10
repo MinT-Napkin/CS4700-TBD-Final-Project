@@ -27,7 +27,7 @@ public class MobGangster : EnemyMelee{
         if (targetHit != null)
         {
             DamageTypePhysical damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(0.33f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
         }
         bool isAttacking = false;
