@@ -41,12 +41,6 @@ public class GangBoss : Boss
     public override void Update()
     {
         base.Update();
-        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
-        {
-            animator.SetTrigger("PhaseTransition");
-            phase = 2;
-            //Boost entityStats
-        }
 
         if (flamethrowerEnabled)
         {
@@ -55,6 +49,17 @@ public class GangBoss : Boss
         }
 
         Debug.Log(flamethrowerHorizontalAttackPoint.rotation);
+    }
+
+    protected override void DamageHealth(float finalDamage)
+    {
+        base.DamageHealth(finalDamage);
+        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
+        {
+            animator.SetTrigger("PhaseTransition");
+            phase = 2;
+            //Boost entityStats
+        }
     }
 
     protected override void OnEntityDeath()

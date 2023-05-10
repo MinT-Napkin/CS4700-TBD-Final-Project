@@ -69,23 +69,17 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     protected override void OnEntityDeath(){
-        transform.position = new Vector3(5.77f, -4.33f, 0f);
-        entityStats.normalizedHealth = 1.0f;
-        entityStats.currentHealth = entityStats.maxHealth;
-        healthBar.setCurrentHealth(entityStats.normalizedHealth);
-        MusicPlayer.PlayClip(0);
+        // transform.position = new Vector3(5.77f, -4.33f, 0f);
+        // entityStats.normalizedHealth = 1.0f;
+        // entityStats.currentHealth = entityStats.maxHealth;
+        // healthBar.setCurrentHealth(entityStats.normalizedHealth);
+        // MusicPlayer.PlayClip(0);
     }
 
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
             Debug.Log("Press E to interact.");
-        }
-
-        if (other.gameObject.tag == "EnemyBullet")
-        {
-            Debug.Log("Player hit by enemy bullet!");
-            Destroy(other.gameObject);
         }
     }
 
