@@ -18,13 +18,22 @@ public class MobGangster : EnemyMelee{
         base.MeleeAttack();
         aiPath.maxSpeed = 0f;
         freezeRotation = true;
+    }
+
+    public void MeleeAttackEvent()
+    {
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
             Debug.Log(targetHit.gameObject.name + " hit by MobGangster!");
+        bool isAttacking = false;
+        animator.SetBool("isAttacking", isAttacking);
+    }
+
+    public void OnMeleeAttackEndEvent()
+    {
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
-        isAttacking = false;
-        animator.SetBool("isAttacking", isAttacking);
-
     }
 }
+
+

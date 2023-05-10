@@ -8,16 +8,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.239
+      objectReference: {fileID: 0}
+    - target: {fileID: 160135672489982469, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.91
+      value: -0.006
       objectReference: {fileID: 0}
     - target: {fileID: 2856902760494846897, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3914555268697765346, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Radius
+      value: 0.41864645
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914555268697765346, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1486805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 210497075, guid: 2dee2cdfb6bbb3e4f8dee3ab95e96d8c, type: 3}
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -85,6 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7995001873931185715, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+    - {fileID: 3914555268697765346, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
 --- !u!4 &2414672768825884910 stripped
 Transform:
@@ -96,6 +117,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_PrefabInstance: {fileID: 2574456574421449451}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &3011511574849079263
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6265437003230694985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010304928, y: 0.00035182637}
+  m_Size: {x: 0.38827357, y: 0.75930536}
+  m_Direction: 0
 --- !u!95 &343032827118278767
 Animator:
   serializedVersion: 5
@@ -177,7 +214,8 @@ MonoBehaviour:
   distance: 0
   direction: {x: 0, y: 0}
   animator: {fileID: 0}
-  meleeAttackRange: 1.55
-  meleeDetectionRange: 2.3
-  meleeAttackCooldown: 0
+  spriteRenderer: {fileID: 0}
+  meleeAttackRange: 1.25
+  meleeDetectionRange: 1.25
+  meleeAttackCooldown: 2
   meleeAttackOnCooldown: 0

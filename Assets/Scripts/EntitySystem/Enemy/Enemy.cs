@@ -108,7 +108,8 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
-            }
+                attackPoint.localPosition = new Vector2(0,-0.153999999f);
+            }   
             else if (direction.y > 0.5f){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
                 Debug.Log("up");
@@ -122,6 +123,7 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
+                attackPoint.localPosition = new Vector2(0,0.258f);
             }
             else if (direction.x < 0) {
                 //transform.eulerAngles = new Vector3(0f, 0f, 90f);
@@ -136,6 +138,7 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
+                attackPoint.localPosition = new Vector2(-0.239f, -.006f);
             }
             else if (direction.x > 0){
                 //transform.eulerAngles = new Vector3(0f, 0f, -90f);
@@ -150,6 +153,8 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingLeft", isFacingLeft);
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = true;
+
+                attackPoint.localPosition = new Vector2(0.239f, -0.006f);
             }
         }
         
