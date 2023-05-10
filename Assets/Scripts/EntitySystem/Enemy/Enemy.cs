@@ -32,6 +32,8 @@ public class Enemy : Entity{
 
     public Animator animator;
 
+    public SpriteRenderer spriteRenderer;
+
     public override void Awake(){
         healthbar = transform.GetChild(1).gameObject.GetComponent<EnemyHealthbar>();
         healthbar.offset = Vector3.up;
@@ -46,6 +48,7 @@ public class Enemy : Entity{
         respawnPosition = gameObject.transform.position;
         respawnRotation = gameObject.transform.rotation;
         animator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     protected override void Start(){
@@ -58,6 +61,7 @@ public class Enemy : Entity{
         direction = target.position - transform.position;
         direction.Normalize();
         distance = Vector2.Distance(target.position, transform.position);
+        RotateEnemy();
     }
 
     protected override void OnEntityDeath(){
@@ -93,33 +97,64 @@ public class Enemy : Entity{
         if (!freezeRotation){
             if (direction.y < -0.5f){
                 //transform.eulerAngles = new Vector3(0f, 0f, 180f);
-                //Debug.Log("down");
-                isFacingUp = true;
-                isFacingDown = false;
+                Debug.Log("down");
+                isFacingUp = false;
+                isFacingDown = true;
+                isFacingLeft = false;
+                isFacingRight = false;
                 animator.SetBool("isFacingUp", isFacingUp);
+                animator.SetBool("isFacingDown", isFacingDown);
+                animator.SetBool("isFacingLeft", isFacingLeft);
+                animator.SetBool("isFacingRight", isFacingRight);
+                spriteRenderer.flipX = false;
+
             }
             else if (direction.y > 0.5f){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
-                //Debug.Log("up");
-                isFacingDown = true;
-                isFacingUp = false;
+                Debug.Log("up");
+                isFacingDown = false;
+                isFacingUp = true;
+                isFacingLeft = false;
+                isFacingRight = false;
+                animator.SetBool("isFacingUp", isFacingUp);
                 animator.SetBool("isFacingDown", isFacingDown);
+                animator.SetBool("isFacingLeft", isFacingLeft);
+                animator.SetBool("isFacingRight", isFacingRight);
+                spriteRenderer.flipX = false;
+
             }
             else if (direction.x < 0) {
                 //transform.eulerAngles = new Vector3(0f, 0f, 90f);
-                //Debug.Log("left");
+                Debug.Log("left");
                 isFacingLeft = true;
                 isFacingRight = false;
+                isFacingUp = false;
+                isFacingDown = false;
+                animator.SetBool("isFacingUp", isFacingUp);
+                animator.SetBool("isFacingDown", isFacingDown);
                 animator.SetBool("isFacingLeft", isFacingLeft);
+                animator.SetBool("isFacingRight", isFacingRight);
+                spriteRenderer.flipX = false;
+
             }
             else if (direction.x > 0){
                 //transform.eulerAngles = new Vector3(0f, 0f, -90f);
-                //Debug.Log("right");
+                Debug.Log("right");
                 isFacingRight = true;
                 isFacingLeft = false;
+                isFacingUp = false;
+                isFacingDown = false;
+
+                animator.SetBool("isFacingUp", isFacingUp);
+                animator.SetBool("isFacingDown", isFacingDown);
+                animator.SetBool("isFacingLeft", isFacingLeft);
                 animator.SetBool("isFacingRight", isFacingRight);
+                spriteRenderer.flipX = true;
             }
         }
+        
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D other)
