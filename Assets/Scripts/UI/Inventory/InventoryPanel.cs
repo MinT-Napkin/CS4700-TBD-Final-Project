@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryPanel : MonoBehaviour {
+public class InventoryPanel : MonoBehaviour{
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
     public PlayerClass player;
     public GameObject slotPrefab;
 
-    void ClearInventory() {
+    void ClearInventory(){
         foreach (Transform transform in transform) {
             Destroy(transform.gameObject);
         }
@@ -16,7 +16,7 @@ public class InventoryPanel : MonoBehaviour {
         new List<InventorySlot>(24);
     }
 
-    public void ConstructPanel() {
+    public void ConstructPanel(){
         KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
 
         gameObject.GetComponent<Image>().enabled = true;
@@ -25,7 +25,7 @@ public class InventoryPanel : MonoBehaviour {
             CreateInventorySlot();
         }
 
-        for (int i = 0; i < itemClasses.Length; i++) {
+        for (int i = 0; i < itemClasses.Length; i++){
             if (itemClasses[i].Key != null) {
                 inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
                 inventorySlots[i].SetPlayer(player);
@@ -33,7 +33,7 @@ public class InventoryPanel : MonoBehaviour {
         }
     }
 
-    public void DestructPanel() {
+    public void DestructPanel(){
         /*foreach(InventorySlot slot in inventorySlots){
             Destroy(slot.gameObject);
         }*/
@@ -43,7 +43,7 @@ public class InventoryPanel : MonoBehaviour {
         gameObject.GetComponent<Image>().enabled = false;
     }
 
-    void CreateInventorySlot() {
+    void CreateInventorySlot(){
         GameObject slot = Instantiate(slotPrefab);
 
         slot.transform.SetParent(transform, false);
