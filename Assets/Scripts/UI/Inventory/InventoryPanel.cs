@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InventoryPanel : MonoBehaviour {
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
-    public GameObject panelPrefab;
     public PlayerClass player;
     public GameObject slotPrefab;
 
@@ -20,7 +19,7 @@ public class InventoryPanel : MonoBehaviour {
     public void ConstructPanel() {
         KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
 
-        panelPrefab.GetComponent<Image>().enabled = true;
+        gameObject.GetComponent<Image>().enabled = true;
 
         for (int i = 0; i < inventorySlots.Capacity; i++) {
             CreateInventorySlot();
@@ -41,7 +40,7 @@ public class InventoryPanel : MonoBehaviour {
 
         ClearInventory();
 
-        panelPrefab.GetComponent<Image>().enabled = false;
+        gameObject.GetComponent<Image>().enabled = false;
     }
 
     void CreateInventorySlot() {

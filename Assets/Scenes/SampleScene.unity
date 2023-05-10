@@ -24407,6 +24407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory
       objectReference: {fileID: 0}
+    - target: {fileID: 5136326025304197102, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8263797582872424320, guid: 6d7e1b67db706874e87dfa61059a98b8, type: 3}
       propertyPath: slotPrefab
       value: 
