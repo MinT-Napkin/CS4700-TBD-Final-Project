@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine.SceneManagement;
 
 public class PlayerClass : Entity, InteractInterface{
     //For HP
@@ -74,6 +75,7 @@ public class PlayerClass : Entity, InteractInterface{
         // entityStats.currentHealth = entityStats.maxHealth;
         // healthBar.setCurrentHealth(entityStats.normalizedHealth);
         // MusicPlayer.PlayClip(0);
+        SceneManager.LoadScene("GameOver");
     }
 
     void OnTriggerEnter2D(Collider2D other){
