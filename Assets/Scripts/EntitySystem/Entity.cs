@@ -52,7 +52,8 @@ public class Entity : MonoBehaviour{
         }
     }
 
-    public virtual void LevelUp() {
+    public virtual void LevelUp(){
+        SoundManager.instance.PlaySound(SoundManager.instance.levelUpSound);
         CSV csv = new CSV(textAsset);
 
         entityStats.level++;

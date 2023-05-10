@@ -97,10 +97,6 @@ public class PlayerClass : Entity, InteractInterface{
     // Start is called before the first frame update
     protected override void Start(){
         base.Start();
-
-        csv.ReadEntityStats(this);
-
-        this.entityStats.currentHealth = this.entityStats.maxHealth; //debugging
         
         healthBar.setCurrentHealth(entityStats.currentHealth);
     }
@@ -141,7 +137,7 @@ public class PlayerClass : Entity, InteractInterface{
             //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
             DamageTypePhysical damageType = new DamageTypePhysical();
 
-            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
+            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 
@@ -152,7 +148,6 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("g")){
-            SoundManager.instance.PlaySound(SoundManager.instance.levelUpSound);
             LevelUp();
         }
 
