@@ -52,6 +52,7 @@ public class BodyTransportRobot : EnemyMelee
 
     public override void MeleeAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.BTRMeleeSound);
         base.MeleeAttack();
         StartCoroutine(DemonstrateAttack());
     }

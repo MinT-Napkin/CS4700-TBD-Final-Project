@@ -24,12 +24,14 @@ public class FailedExperimentalSubject : EnemyMeleeAndRanged
 
     public override void MeleeAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.FESMeleeSound);
         StartCoroutine(DemonstrateMeleeAttack());
         base.MeleeAttack();
     }
 
     public override void RangedAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.FESRangeSound);
         StartCoroutine(DemonstrateRangedAttack());
         base.RangedAttack();
     }

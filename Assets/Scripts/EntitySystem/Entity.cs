@@ -19,10 +19,8 @@ public class Entity : MonoBehaviour{
 
         csv.ReadEntityStats(this);
 
-        DamageTypeHealing damageType = new DamageTypeHealing();
-        DamageEvent damageEvent = new DamageEvent(100.0f, damageType, this, this, false);
-
-        TakeDamage(damageEvent);
+        entityStats.currentHealth = entityStats.maxHealth;
+        entityStats.normalizedHealth = 1;
     }
 
     // Update is called once per frame

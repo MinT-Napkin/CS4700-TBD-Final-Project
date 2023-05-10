@@ -28,5 +28,6 @@ public class Initiate : StateMachineBehaviour
         MusicPlayer.PlayClip(1);
         animator.ResetTrigger("MoveDown");
         boss.bossObstacle.GetComponent<BossObstacle>().spawnBossObstacle();
+        boss.gameObject.GetComponent<Collider2D>().enabled = true;
     }
 }

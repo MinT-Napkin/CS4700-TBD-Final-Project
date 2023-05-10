@@ -29,13 +29,7 @@ public class GangBoss : Boss
 
     public override void Awake()
     {
-        //Add more here
         base.Awake();
-        //Stats for testing
-        entityStats.walkSpeed = 2.5f;
-        entityStats.maxHealth = 100f;
-        entityStats.currentHealth = 100f;
-        entityStats.normalizedHealth = 1f;
         bulletData = bulletPrefab.GetComponent<BossBullet>();
         bulletData.boss = this as Boss;
         bulletData.bulletRange = rangedAttackRange;
@@ -47,12 +41,6 @@ public class GangBoss : Boss
     public override void Update()
     {
         base.Update();
-        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
-        {
-            animator.SetTrigger("PhaseTransition");
-            phase = 2;
-            //Boost entityStats
-        }
 
         if (flamethrowerEnabled)
         {
@@ -63,8 +51,20 @@ public class GangBoss : Boss
         Debug.Log(flamethrowerHorizontalAttackPoint.rotation);
     }
 
+    protected override void DamageHealth(float finalDamage)
+    {
+        base.DamageHealth(finalDamage);
+        if ((entityStats.normalizedHealth <= 0.5f) && (phase < 2))
+        {
+            animator.SetTrigger("PhaseTransition");
+            phase = 2;
+            //Boost entityStats
+        }
+    }
+
     protected override void OnEntityDeath()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossDeathSound);
         base.OnEntityDeath();
     }
 
@@ -92,6 +92,7 @@ public class GangBoss : Boss
 
     public override void MeleeAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossMeleeSound);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
@@ -104,12 +105,14 @@ public class GangBoss : Boss
 
     public override void RangedAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossRangeSound);
         Instantiate(bulletPrefab, rangedAttackPoint.position, rangedAttackPoint.rotation);
         StartCoroutine(RangedAttackCooldown());
     }
 
     public void FlamethrowerEventLeft()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -120,6 +123,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventRight()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -130,6 +134,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventUp()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -140,6 +145,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventDown()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn

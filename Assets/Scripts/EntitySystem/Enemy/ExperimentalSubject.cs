@@ -16,12 +16,14 @@ public class ExperimentalSubject : EnemyMeleeAndRanged
 
     public override void MeleeAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.ESMeleeSound);
         StartCoroutine(DemonstrateMeleeAttack());
         base.MeleeAttack();
     }
 
     public override void RangedAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.ESRangeSound);
         StartCoroutine(DemonstrateRangedAttack());
         base.RangedAttack();
     }

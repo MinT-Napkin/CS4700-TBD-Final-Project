@@ -35,6 +35,7 @@ public class OldAIBoss : Boss
 
     public override void MeleeAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.oldAIBossMeleeSound);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
@@ -45,6 +46,7 @@ public class OldAIBoss : Boss
 
     protected override void OnEntityDeath()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.oldAIBossDeathSound);
         base.OnEntityDeath();
         MusicPlayer.PlayClip(3);
     }

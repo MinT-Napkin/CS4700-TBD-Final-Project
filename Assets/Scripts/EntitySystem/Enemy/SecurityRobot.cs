@@ -12,6 +12,7 @@ public class SecurityRobot : EnemyMelee
         Security robot is an upgraded version of the slum enforcer. Moves slightly faster and has a slightly higher chase range. Its attacks apply stun.
         Balacning: Adjust entityStats later
         */
+        SoundManager.instance.PlaySound(SoundManager.instance.SRMeleeSound);
         base.MeleeAttack();
         aiPath.maxSpeed = 0f;
         freezeRotation = true;

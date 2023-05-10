@@ -51,20 +51,16 @@ public class Enemy : Entity{
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    protected override void Start(){
-        base.Start();
-
-        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
-    }
-
     public virtual void Update(){
         direction = target.position - transform.position;
         direction.Normalize();
         distance = Vector2.Distance(target.position, transform.position);
         RotateEnemy();
+        healthbar.SetHealth(entityStats.currentHealth, entityStats.maxHealth);
     }
 
     protected override void OnEntityDeath(){
+        SoundManager.instance.PlaySound(SoundManager.instance.enemyDeathSound);
         enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
         DropItems();
         Destroy(gameObject);
@@ -108,7 +104,8 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
-            }
+                attackPoint.localPosition = new Vector2(0,-0.153999999f);
+            }   
             else if (direction.y > 0.5f){
                 transform.eulerAngles = new Vector3(0f, 0f, 0f);
                 Debug.Log("up");
@@ -122,6 +119,7 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
+                attackPoint.localPosition = new Vector2(0,0.258f);
             }
             else if (direction.x < 0) {
                 //transform.eulerAngles = new Vector3(0f, 0f, 90f);
@@ -136,6 +134,7 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = false;
 
+                attackPoint.localPosition = new Vector2(-0.239f, -.006f);
             }
             else if (direction.x > 0){
                 //transform.eulerAngles = new Vector3(0f, 0f, -90f);
@@ -150,20 +149,13 @@ public class Enemy : Entity{
                 animator.SetBool("isFacingLeft", isFacingLeft);
                 animator.SetBool("isFacingRight", isFacingRight);
                 spriteRenderer.flipX = true;
+
+                attackPoint.localPosition = new Vector2(0.239f, -0.006f);
             }
         }
         
 
 
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "bullet")
-        {
-            Debug.Log(gameObject.name + " hit with player bullet!");
-            Destroy(other.gameObject);
-        }
     }
 
 

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventTrigger;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerClass : Entity, InteractInterface{
     //For HP
@@ -31,6 +32,8 @@ public class PlayerClass : Entity, InteractInterface{
 
     LayerMask interactableLayer;
     float interactionRange = 2.0f;
+
+    public AudioClip healSound;
 
     public GameObject inventoryPanel;
 
@@ -75,23 +78,14 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     protected override void OnEntityDeath(){
-        transform.position = new Vector3(5.77f, -4.33f, 0f);
-        entityStats.normalizedHealth = 1.0f;
-        entityStats.currentHealth = entityStats.maxHealth;
-        healthBar.setCurrentHealth(entityStats.normalizedHealth);
-        MusicPlayer.PlayClip(0);
+        SoundManager.instance.PlaySound(SoundManager.instance.deathSound);
+        SceneManager.LoadScene("GameOver");
     }
 
     void OnTriggerEnter2D(Collider2D other){
         Debug.Log("triggered");
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable")){
             Debug.Log("Press E to interact.");
-        }
-
-        if (other.gameObject.tag == "EnemyBullet")
-        {
-            Debug.Log("Player hit by enemy bullet!");
-            Destroy(other.gameObject);
         }
     }
 
@@ -138,10 +132,10 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("l")){
-            //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
+            SoundManager.instance.PlaySound(SoundManager.instance.healSound);
             DamageTypePhysical damageType = new DamageTypePhysical();
 
-            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
+            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 

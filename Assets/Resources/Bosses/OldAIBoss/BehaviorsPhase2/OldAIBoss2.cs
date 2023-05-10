@@ -56,6 +56,7 @@ public class OldAIBoss2 : Boss
 
     public override void MeleeAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.oldAIBossMeleeSound);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
@@ -66,6 +67,7 @@ public class OldAIBoss2 : Boss
 
     public void AOEAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.oldAIBossAOESound);
         Collider2D targetHit = Physics2D.OverlapCircle(AOEAttackPoint.position, AOEAttackRange, targetLayer);
         if (targetHit != null)
         {
@@ -76,6 +78,7 @@ public class OldAIBoss2 : Boss
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.oldAIBossDashSound);
         if (dashCollisionEnabled)
         {
             if (other.collider.gameObject.tag == "Player")
