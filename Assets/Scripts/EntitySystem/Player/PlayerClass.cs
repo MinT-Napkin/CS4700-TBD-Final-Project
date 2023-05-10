@@ -105,7 +105,6 @@ public class PlayerClass : Entity, InteractInterface{
         CheckTargets();
 
         if (Input.GetKeyDown("9")){
-            inventory.GetTest().Use(this);
         }
 
         //Interaction input
