@@ -27,6 +27,8 @@ public class GangBoss : Boss
 
     public Transform activeFlamethrowerSpritePoint;
 
+    public StatusEffectBurn burnStatus;
+
     public override void Awake()
     {
         base.Awake();
@@ -36,6 +38,7 @@ public class GangBoss : Boss
         bulletData.bulletSpeed = this.bulletSpeed;
         phase = 1;
         flamethrowerHorizontalEventController = flamethrowerHorizontalSpritePoint.gameObject.GetComponent<FlamethrowerHorizontalEventController>();
+        burnStatus = gameObject.AddComponent<StatusEffectBurn>();
     }
 
     public override void Update()
@@ -97,9 +100,17 @@ public class GangBoss : Boss
         if (targetHit != null)
         {
             if (phase == 1)
-                Debug.Log("Phase 1 hit"); //Damage
+            {
+                DamageTypePhysical damageType = new DamageTypePhysical();
+                DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+                targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            }
             else    
-                Debug.Log("Phase 2 hit"); //Damage + burn status
+            {
+                DamageTypeFire damageType = new DamageTypeFire();
+                DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            }
         }
     }
 
@@ -113,10 +124,13 @@ public class GangBoss : Boss
     public void FlamethrowerEventLeft()
     {
         SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
-        if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
+        Collider2D targetHit = Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider;
+        if (targetHit != null)
         {
-            //Apply damage and burn
-            Debug.Log("Burned!");
+            DamageTypeFire damageType = new DamageTypeFire();
+            DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
         }
         flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
     }
@@ -124,10 +138,13 @@ public class GangBoss : Boss
     public void FlamethrowerEventRight()
     {
         SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
-        if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
+        Collider2D targetHit = Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider;
+        if (targetHit != null)
         {
-            //Apply damage and burn
-            Debug.Log("Burned!");
+            DamageTypeFire damageType = new DamageTypeFire();
+            DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
         }
         flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, -2.9545f));
     }
@@ -135,10 +152,13 @@ public class GangBoss : Boss
     public void FlamethrowerEventUp()
     {
         SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
-        if (Physics2D.Raycast(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
+        Collider2D targetHit = Physics2D.Raycast(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider;
+        if (targetHit != null)
         {
-            //Apply damage and burn
-            Debug.Log("Burned!");
+            DamageTypeFire damageType = new DamageTypeFire();
+            DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
         }
         flamethrowerUpAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
     }
@@ -146,10 +166,13 @@ public class GangBoss : Boss
     public void FlamethrowerEventDown()
     {
         SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
-        if (Physics2D.Raycast(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
+        Collider2D targetHit = Physics2D.Raycast(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider;
+        if (targetHit != null)
         {
-            //Apply damage and burn
-            Debug.Log("Burned!");
+            DamageTypeFire damageType = new DamageTypeFire();
+            DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
         }
         flamethrowerDownAttackPoint.Rotate(new Vector3(0, 0, 2.8260f));
     }
