@@ -16,15 +16,15 @@ public class InventoryPanel : MonoBehaviour{
     }
 
     void ConstructPanel(){
-        //SortedDictionary<ItemParent, int> itemClasses = player.inventory.GetInventory();
+       KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
 
         for (int i = 0; i < inventorySlots.Capacity; i++){
             CreateInventorySlot();
         }
 
-        //for (int i = 0; i < itemClasses.Count; i++){
-            //inventorySlots[i].ConstructSlot(itemClasses.GetKey(i))
-        //}
+        for (int i = 0; i < itemClasses.Length; i++){
+            //[i].ConstructSlot(itemClasses.GetKey(i))
+        }
     }
 
     void CreateInventorySlot(){
