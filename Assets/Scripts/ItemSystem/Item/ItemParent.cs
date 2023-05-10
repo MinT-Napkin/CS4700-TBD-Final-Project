@@ -9,6 +9,7 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     public CircleCollider2D circleCollider;
     public Entity entity;
     public PlayerClass player;
+    public Sprite sprite;
 
     public virtual void Awake(){
         gameObject.layer = LayerMask.NameToLayer("Interactable");

@@ -68,12 +68,11 @@ public class PlayerClass : Entity, InteractInterface{
         isPlayerControlled = true;
     }
 
-    protected override void OnEntityDeath()
-    {
+    protected override void OnEntityDeath(){
         transform.position = new Vector3(5.77f, -4.33f, 0f);
-        entityStats.normalizedHealth = 1;
+        entityStats.normalizedHealth = 1.0f;
         entityStats.currentHealth = entityStats.maxHealth;
-        healthBar.setCurrentHealth(entityStats.currentHealth);
+        healthBar.setCurrentHealth(entityStats.normalizedHealth);
         MusicPlayer.PlayClip(0);
     }
 
@@ -106,7 +105,6 @@ public class PlayerClass : Entity, InteractInterface{
         CheckTargets();
 
         if (Input.GetKeyDown("9")){
-            inventory.GetTest().Use(this);
         }
 
         //Interaction input
