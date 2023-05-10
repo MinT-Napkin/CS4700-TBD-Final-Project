@@ -25,7 +25,11 @@ public class MobGangster : EnemyMelee{
     {
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
-            Debug.Log(targetHit.gameObject.name + " hit by MobGangster!");
+        {
+            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(entityStats.strength / 3, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+        }
         bool isAttacking = false;
         animator.SetBool("isAttacking", isAttacking);
     }
