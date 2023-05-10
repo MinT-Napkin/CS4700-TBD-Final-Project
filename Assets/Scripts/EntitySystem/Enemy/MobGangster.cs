@@ -7,6 +7,7 @@ public class MobGangster : EnemyMelee{
         base.Start();
     }
     public override void MeleeAttack(){
+        SoundManager.instance.PlaySound(SoundManager.instance.MGMeleeSound);
         bool isAttacking = true;
         /*
         For animations:

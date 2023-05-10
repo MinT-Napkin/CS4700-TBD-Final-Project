@@ -6,6 +6,7 @@ public class SlumEnforcer : EnemyMelee
 {
     public override void MeleeAttack()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.SEMeleeSound);
         bool isAttacking = true;
 
         /*

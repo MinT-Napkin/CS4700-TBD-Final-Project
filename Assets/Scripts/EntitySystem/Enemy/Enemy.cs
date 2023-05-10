@@ -65,6 +65,7 @@ public class Enemy : Entity{
     }
 
     protected override void OnEntityDeath(){
+        SoundManager.instance.PlaySound(SoundManager.instance.enemyDeathSound);
         enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
         DropItems();
         Destroy(gameObject);

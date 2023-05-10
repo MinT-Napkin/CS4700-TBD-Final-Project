@@ -3,7 +3,40 @@ guid: 58cd19f178e98f742ba8ba7b97178480
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dashSound: {fileID: 8300000, guid: bcdcaa242a98a104b8cc331bb75e361c, type: 3}
+  - meleeSound: {fileID: 8300000, guid: 1924588e1a095a44285f26ce0ae737e5, type: 3}
+  - rangeSound: {fileID: 8300000, guid: 56ed244044f74ec449a673fb9b20ff59, type: 3}
+  - flamethrowerSound: {fileID: 8300000, guid: fc89ba593a4630042854bab4f53bfef7, type: 3}
+  - shieldSound: {fileID: 8300000, guid: 35ca5fe16784d074cbf4b67f03f6e299, type: 3}
+  - lightningBoltSound: {fileID: 8300000, guid: 1f56538e8c446c9459ac914d3e966764, type: 3}
+  - doomBladesSound: {fileID: 8300000, guid: 4655b6d12f4cc65458c966f5a1b6fd30, type: 3}
+  - healSound: {fileID: 8300000, guid: b0f6e64a7be81bf42a89599c48cff10c, type: 3}
+  - deathSound: {fileID: 8300000, guid: 0de32a3c290a943408d898b30ac7eb73, type: 3}
+  - upgradeSound: {fileID: 8300000, guid: f3ace80de0623cb4bada46f110d05c3b, type: 3}
+  - pickUpSound: {fileID: 8300000, guid: e5a4040c52e86a74d90f80d14759633d, type: 3}
+  - levelUpSound: {fileID: 8300000, guid: 12a7bcf26ca62de47b3a1624fb7b7491, type: 3}
+  - enemyDeathSound: {fileID: 8300000, guid: 6dd65b48ff4ed7e4993f810e8459437f, type: 3}
+  - BTRMeleeSound: {fileID: 8300000, guid: a8b7ece5051f9814ebf8f2680d0e795e, type: 3}
+  - CGRangeSound: {fileID: 8300000, guid: c16e5c0c70b8aea49b149595d5fd8cc2, type: 3}
+  - CSMeleeSound: {fileID: 8300000, guid: 83574272359aec04c825f67127687437, type: 3}
+  - ESMeleeSound: {fileID: 8300000, guid: b4a6d1746de0641499168fd22d894e46, type: 3}
+  - ESRangeSound: {fileID: 8300000, guid: 1267bfc916c1c0d4584193252f659c67, type: 3}
+  - FESMeleeSound: {fileID: 8300000, guid: b4a6d1746de0641499168fd22d894e46, type: 3}
+  - FESRangeSound: {fileID: 8300000, guid: 1267bfc916c1c0d4584193252f659c67, type: 3}
+  - MGMeleeSound: {fileID: 8300000, guid: 30c475dbd499a9647a69d646d6fd6095, type: 3}
+  - PRMeleeSound: {fileID: 8300000, guid: 08e6d94bf2a9a8c42ab9dcd620f9ba6a, type: 3}
+  - PRRangeSound: {fileID: 8300000, guid: 014e4b142f046b247b7de6b907e69c2e, type: 3}
+  - SRMeleeSound: {fileID: 8300000, guid: a16d4f18d74409840997118a60532a6e, type: 3}
+  - SEMeleeSound: {fileID: 8300000, guid: a16d4f18d74409840997118a60532a6e, type: 3}
+  - gangBossDeathSound: {fileID: 8300000, guid: 9e6380bdb22630c4cbf4013bc5a7ad43, type: 3}
+  - gangBossRangeSound: {fileID: 8300000, guid: 811e88f422790e945a996b948fec350f, type: 3}
+  - gangBossMeleeSound: {fileID: 8300000, guid: c51e6bffb9fbfb5409cc0c602676d322, type: 3}
+  - gangBossFlameSound: {fileID: 8300000, guid: ce989354894cfab4c8c17aa5dc793f88, type: 3}
+  - oldAIBossDeathSound: {fileID: 8300000, guid: e733d4ec22e624043bd88e99360df6d2, type: 3}
+  - oldAIBossMeleeSound: {instanceID: 0}
+  - oldAIBossAOESound: {fileID: 8300000, guid: 256fd674b9784964388088d4a062fe70, type: 3}
+  - oldAIBossDashSound: {fileID: 8300000, guid: 914ca14e3eb8c55468622f28c608941a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -64,6 +64,7 @@ public class GangBoss : Boss
 
     protected override void OnEntityDeath()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossDeathSound);
         base.OnEntityDeath();
     }
 
@@ -91,6 +92,7 @@ public class GangBoss : Boss
 
     public override void MeleeAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossMeleeSound);
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
@@ -103,12 +105,14 @@ public class GangBoss : Boss
 
     public override void RangedAttackEvent()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossRangeSound);
         Instantiate(bulletPrefab, rangedAttackPoint.position, rangedAttackPoint.rotation);
         StartCoroutine(RangedAttackCooldown());
     }
 
     public void FlamethrowerEventLeft()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -119,6 +123,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventRight()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerHorizontalAttackPoint.position, -flamethrowerHorizontalAttackPoint.right, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -129,6 +134,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventUp()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerUpAttackPoint.position, flamethrowerUpAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
@@ -139,6 +145,7 @@ public class GangBoss : Boss
 
     public void FlamethrowerEventDown()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
         if (Physics2D.Raycast(flamethrowerDownAttackPoint.position, -flamethrowerDownAttackPoint.up, flamethrowerRange * 2f, targetLayer).collider != null)
         {
             //Apply damage and burn
