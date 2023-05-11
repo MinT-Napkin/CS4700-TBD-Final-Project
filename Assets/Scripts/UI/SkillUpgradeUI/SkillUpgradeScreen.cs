@@ -6,7 +6,7 @@ using TMPro;
 
 public class SkillUpgradeScreen : MonoBehaviour
 {    
-    public GameObject player;
+    private GameObject player;
     public GameObject screen;
 
     public static int flamethrowerUpgrade = 1;
@@ -36,6 +36,7 @@ public class SkillUpgradeScreen : MonoBehaviour
     private bool screenOpen;
 
     private void Start() {
+        player = GameObject.Find("Player");
         flamethrower = player.GetComponent<Flamethrower>();
         lightning = player.GetComponent<LightningBolt>();
         shield = player.GetComponent<Shield>();
