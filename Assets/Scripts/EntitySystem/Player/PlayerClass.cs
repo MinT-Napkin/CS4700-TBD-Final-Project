@@ -166,12 +166,9 @@ public class PlayerClass : Entity, InteractInterface{
             LevelUp();
         }
 
-        //entityStats
-        if (entityStats.currentExperiencePoints >= 50)
-        {
-            entityStats.currentExperiencePoints -= 50;
-            LevelUp();
-            //SkullUpgradeScreen.increaseSkillPoints(5);
+<
+        if (Input.GetKeyDown("m")) {
+            GainExperiencePoints(500);
         }
     }
 

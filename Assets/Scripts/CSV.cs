@@ -12,7 +12,6 @@ public class CSV{
 
     public void ReadEntityStats(Entity entity){
         string[] data = text.text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
-
         int tableSize = data.Length / 13;
 
         for (int i = 0; i < (tableSize - 1); i++){
@@ -33,6 +32,17 @@ public class CSV{
 
                 break;
             }
+        }
+    }
+
+    public void SetEntityLevel(Entity entity, int level){
+        if (level <= 30){
+            entity.entityStats.level = level;
+
+            ReadEntityStats(entity);
+        }
+        else{
+            Debug.Log("Entity level too high");
         }
     }
 

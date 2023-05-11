@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 public class Entity : MonoBehaviour{
+    public int droppedExperiencePoints;
     public EntityStats entityStats;
     public Inventory inventory;
     public bool isPlayerControlled;
@@ -59,10 +60,33 @@ public class Entity : MonoBehaviour{
         entityStats.level++;
 
         csv.ReadEntityStats(this);
+
+        entityStats.currentExperiencePoints = 0;
+    }
+
+    public virtual void GainExperiencePoints(int experiencePoints) {
+        int overflowExperience = 0;
+
+        entityStats.currentExperiencePoints += experiencePoints;
+
+        if (entityStats.currentExperiencePoints >= entityStats.maxExperiencePoints){
+            if ((entityStats.currentExperiencePoints - entityStats.maxExperiencePoints) > 0){
+                overflowExperience = (entityStats.currentExperiencePoints - entityStats.maxExperiencePoints);
+            }
+
+            LevelUp();
+
+            if (overflowExperience > 0){
+                GainExperiencePoints(overflowExperience);
+            }
+        }
     }
 
     protected virtual void OnEntityDeath(){
         //death animation or whatever happens onbeng defeated
+        if (!isPlayerControlled){
+            GainExperiencePoints(droppedExperiencePoints);
+        }
     }
 
     public void TakeDamage(DamageEvent damageEvent) {
