@@ -184,6 +184,7 @@ public class PlayerClass : Entity, InteractInterface{
         meleeWeapon.Equip();
 
         //Set Skill point increase here
+        SkillUpgradeScreen.increaseSkillPoints(5);
     }
 
 
