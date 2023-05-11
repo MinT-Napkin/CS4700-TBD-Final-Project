@@ -18,6 +18,8 @@ public class PlayerClass : Entity, InteractInterface{
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
 
+    public Transform flamethrowerAttackPoint;
+
     public Color color;
     
     //Testing special attacks
@@ -192,12 +194,22 @@ public class PlayerClass : Entity, InteractInterface{
     {
         meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(0.109f, 0.357f);
+        if (flamethrower.upgradeLevel < 2)
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Up;
+        else
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Up;
+        flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, -90);
     }
 
     public void SetMeleeAttackPointDownEvent()
     {
         meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(-0.139f, -0.579f);
+        if (flamethrower.upgradeLevel < 2)
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Down;
+        else
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Down;
+        flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 90);
     }
 
     public void SetMeleeAttackPointSideEvent()
@@ -206,11 +218,21 @@ public class PlayerClass : Entity, InteractInterface{
         {
             meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
             rangedWeapon.attackPoint.localPosition = new Vector2(0.557f, -0.194f);
+            if (flamethrower.upgradeLevel < 2)
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Right;
+            else
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Right;
+            flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 180);
         }
         else
         {
             meleeWeapon.attackPoint.localPosition = new Vector2(-1.05f, 0);
             rangedWeapon.attackPoint.localPosition = new Vector2(-0.557f, -0.194f);
+            if (flamethrower.upgradeLevel < 2)
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Left;
+            else
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Left;
+            flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 
