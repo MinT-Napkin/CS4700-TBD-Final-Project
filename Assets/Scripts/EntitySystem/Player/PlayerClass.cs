@@ -95,7 +95,6 @@ public class PlayerClass : Entity, InteractInterface{
         healthBar.setCurrentHealth(entityStats.currentHealth);
 
         inventoryPanel.GetComponent<Image>().enabled = false;
-        inventoryPanel.GetComponent<InventoryPanel>().player = this;
     }
 
     // Update is called once per frame
@@ -141,11 +140,11 @@ public class PlayerClass : Entity, InteractInterface{
         }
 
         if (Input.GetKeyDown("y")){
-            if (inventoryPanel.GetComponent<Image>().enabled) {
+            if (inventoryPanel.GetComponent<Image>().enabled){
                 inventoryPanel.GetComponent<InventoryPanel>().DestructPanel();
             }
             else {
-                inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel();
+                inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel(this);
             }
         }
 
@@ -160,9 +159,9 @@ public class PlayerClass : Entity, InteractInterface{
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
-    public virtual void InteractWithTarget(Entity entity) {
+    public void InteractWithTarget(Entity entity) {
         foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)) {
-            Debug.Log("Interacting with " + interactable.name);
+            Debug.Log("From the Player Class: " + GetInstanceID() + " is interacting with " + interactable.gameObject.GetComponent<ItemParent>().name);
             interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
         }
     }
