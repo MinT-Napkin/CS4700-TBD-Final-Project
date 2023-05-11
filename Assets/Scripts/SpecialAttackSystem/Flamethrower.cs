@@ -50,7 +50,8 @@ public class Flamethrower : SpecialAttack{
 
     public override void Upgrade(){
         upgradeLevel += 1;
-
+        attackDamage *= 1.33f;
+        attackCooldown -= 1.5f;
         if (upgradeLevel == 2){
             attackPoint.localScale = new Vector3(6.66726303f,6.66726303f,6.66726303f);
         }

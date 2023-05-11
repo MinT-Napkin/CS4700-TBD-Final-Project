@@ -19,6 +19,7 @@ public class PlayerClass : Entity, InteractInterface{
     public RangedWeapon rangedWeapon;
 
     public Transform flamethrowerAttackPoint;
+    public Transform lightningBoltAttackPoint;
 
     public Color color;
     
@@ -199,6 +200,8 @@ public class PlayerClass : Entity, InteractInterface{
         else
             flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Up;
         flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, -90);
+        lightningBoltAttackPoint.localPosition = new Vector2(-0.0599999987f,4.42999983f);
+        lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, -90);
     }
 
     public void SetMeleeAttackPointDownEvent()
@@ -210,6 +213,8 @@ public class PlayerClass : Entity, InteractInterface{
         else
             flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Down;
         flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 90);
+        lightningBoltAttackPoint.localPosition = new Vector2(-0.0599999987f,-4.73999977f);
+        lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0 , 90);
     }
 
     public void SetMeleeAttackPointSideEvent()
@@ -223,6 +228,8 @@ public class PlayerClass : Entity, InteractInterface{
             else
                 flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Right;
             flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 180);
+            lightningBoltAttackPoint.localPosition = new Vector2(4.92999983f,-0.430000007f);
+            lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, 180);
         }
         else
         {
@@ -233,9 +240,10 @@ public class PlayerClass : Entity, InteractInterface{
             else
                 flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Left;
             flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 0);
+            lightningBoltAttackPoint.localPosition = new Vector2(-4.71999979f,-0.430000007f);
+            lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, 0);
         }
     }
-
 
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
