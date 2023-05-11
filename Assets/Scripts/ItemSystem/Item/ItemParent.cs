@@ -7,13 +7,11 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     new public string name;
     public ItemCategories category;
     public CircleCollider2D circleCollider;
-    public Entity entity;
-    public PlayerClass player;
     public Sprite sprite;
+    public TextSystemUI textSystem;
 
     public virtual void Awake(){
         gameObject.layer = LayerMask.NameToLayer("Interactable");
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerClass>();
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.isTrigger = true;
     }
@@ -34,13 +32,22 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     }
 
     public virtual void InteractWithTarget(Entity entity){
-        this.entity = entity;
         entity.inventory.AddToInventory(this, 1);
-        Debug.Log(name + " added to inventory.");
+
+        Debug.Log("From the Item: " + name + " added to inventory of " + entity.GetInstanceID());
+
+        textSystem.enableText();
+
+        textSystem.setTextIn(name + " added to inventory.");
+
         Destroy(gameObject);
     }
 
-    public virtual void Use(Entity entity)
-    {
+    public virtual void Use(Entity entity){
+    }
+
+    IEnumerator WaitForSec(){
+        yield return new WaitForSeconds(2);
+        textSystem.disableText();
     }
 }

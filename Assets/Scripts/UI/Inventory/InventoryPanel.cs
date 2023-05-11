@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InventoryPanel : MonoBehaviour{
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
-    public PlayerClass player;
     public GameObject slotPrefab;
 
     void ClearInventory(){
@@ -16,17 +15,18 @@ public class InventoryPanel : MonoBehaviour{
         inventorySlots = new List<InventorySlot>(24);
     }
 
-    public void ConstructPanel(){
-        List<KeyValuePair<ItemParent, int>> itemClasses = player.inventory.GetInventory();
-
+    public void ConstructPanel(PlayerClass player){
+        List<KeyValuePair<ItemParent, int>> inventoryList = new List<KeyValuePair<ItemParent, int>>(player.inventory.GetInventory());
+        Debug.Log("From the Inventory Panel UI: Item at index 0: " + inventoryList[0].Key + " in inventory of " + player.GetInstanceID());
         gameObject.GetComponent<Image>().enabled = true;
 
         for (int i = 0; i < 24; i++){
             CreateInventorySlot();
         }
-
-        for (int i = 0; i < itemClasses.Capacity; i++){
-            inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
+        Debug.Log("Count: " + inventoryList.Count + " Capacity " + inventoryList.Capacity);
+        for (int i = 0; i < inventoryList.Count; i++){
+            Debug.Log("From the Inventory Panel UI: Index: " + i + " stores item " + inventoryList[i].Key + " of quantity " + inventoryList[i].Value);
+            inventorySlots[i].ConstructSlot(inventoryList[i].Key, inventoryList[i].Value);
         }
     }
 
