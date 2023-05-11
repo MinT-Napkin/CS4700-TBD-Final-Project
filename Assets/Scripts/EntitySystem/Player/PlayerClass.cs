@@ -18,8 +18,12 @@ public class PlayerClass : Entity, InteractInterface{
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
 
+    //For special attacks
     public Transform flamethrowerAttackPoint;
     public Transform lightningBoltAttackPoint;
+    public GameObject shieldPoint;
+    public Sprite activeShieldSprite;
+    public Sprite nonActiveShieldSprite;
 
     public Color color;
     
@@ -158,7 +162,14 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     protected override void DamageHealth(float finalDamage){
-        base.DamageHealth(finalDamage);
+        if (!shield.shieldActive)
+            base.DamageHealth(finalDamage);
+        else
+        {
+            base.DamageHealth(0);
+            if (shield.upgradeLevel < 3)
+                shield.Deactivate();
+        }
 
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
@@ -243,6 +254,11 @@ public class PlayerClass : Entity, InteractInterface{
             lightningBoltAttackPoint.localPosition = new Vector2(-4.71999979f,-0.430000007f);
             lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, 0);
         }
+    }
+
+    public void ShieldHeal()
+    {
+        DamageHealth(-entityStats.maxHealth * 0.25f);
     }
 
     void OnDrawGizmosSelected(){
