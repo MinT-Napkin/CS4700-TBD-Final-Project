@@ -27,5 +27,6 @@ public class InitiateOldAIBoss : StateMachineBehaviour
     {
         MusicPlayer.PlayClip(2);
         animator.ResetTrigger("MoveDown");
+        boss.bossObstacle.GetComponent<BossObstacle>().spawnBossObstacle();
     }
 }

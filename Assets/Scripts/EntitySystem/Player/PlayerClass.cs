@@ -18,6 +18,11 @@ public class PlayerClass : Entity, InteractInterface{
     public Transform rangedAttackPoint;
     public RangedWeapon rangedWeapon;
 
+    //For special attacks
+    public Transform flamethrowerAttackPoint;
+    public Transform lightningBoltAttackPoint;
+    public GameObject shieldPoint;
+
     public Color color;
     
     //Testing special attacks
@@ -71,8 +76,9 @@ public class PlayerClass : Entity, InteractInterface{
 
         isPlayerControlled = true;
 
-        inventoryPanel.GetComponent<Image>().enabled = false;
-        inventoryPanel.GetComponent<InventoryPanel>().player = this;
+        // inventoryPanel.GetComponent<Image>().enabled = false;
+        // inventoryPanel.GetComponent<InventoryPanel>().player = this;
+        healthBar = GameObject.FindWithTag("PlayerHealthbar").GetComponent<HealthBarUI>();
     }
 
     protected override void OnEntityDeath(){
@@ -96,11 +102,18 @@ public class PlayerClass : Entity, InteractInterface{
         base.Start();
         
         healthBar.setCurrentHealth(entityStats.currentHealth);
+
+        inventoryPanel.GetComponent<Image>().enabled = false;
     }
 
     // Update is called once per frame
     void Update(){
         CheckTargets();
+
+        if (Input.GetKeyDown("/"))
+        {
+            gameObject.AddComponent<StatusEffectBurn>().Constructor(this, 5f, true, 0.5f);
+        }
 
         if (Input.GetKeyDown("9")){
         }
@@ -140,12 +153,12 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown("y")) {
-            if (inventoryPanel.GetComponent<Image>().enabled) {
+        if (Input.GetKeyDown("y")){
+            if (inventoryPanel.GetComponent<Image>().enabled){
                 inventoryPanel.GetComponent<InventoryPanel>().DestructPanel();
             }
             else {
-                inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel();
+                inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel(this);
             }
         }
 
@@ -155,14 +168,21 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
     protected override void DamageHealth(float finalDamage){
-        base.DamageHealth(finalDamage);
+        if (!shield.shieldActive)
+            base.DamageHealth(finalDamage);
+        else
+        {
+            base.DamageHealth(0);
+            if (shield.upgradeLevel < 3)
+                shield.Deactivate();
+        }
 
         healthBar.setCurrentHealth(entityStats.normalizedHealth);
     }
 
-    public virtual void InteractWithTarget(Entity entity) {
+    public void InteractWithTarget(Entity entity) {
         foreach (Collider2D interactable in Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer)) {
-            Debug.Log("Interacting with " + interactable.name);
+            Debug.Log("From the Player Class: " + GetInstanceID() + " is interacting with " + interactable.gameObject.GetComponent<ItemParent>().name);
             interactable.GetComponent<InteractInterface>().InteractWithTarget(entity);
         }
     }
@@ -178,46 +198,75 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
 
-    public void AttackEvent()
-    {
+    public void AttackEvent(){
         meleeWeapon.Attack();
     }
 
-    public void RangedAttackEvent()
-    {
+    public void RangedAttackEvent(){
         rangedWeapon.Attack();
     }
 
-    public void SetMeleeAttackPointUpEvent()
-    {
+    public void SetMeleeAttackPointUpEvent(){
         meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(0.109f, 0.357f);
+        if (flamethrower.upgradeLevel < 2)
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Up;
+        else
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Up;
+        flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, -90);
+        lightningBoltAttackPoint.localPosition = new Vector2(-0.0599999987f,4.42999983f);
+        lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, -90);
     }
 
-    public void SetMeleeAttackPointDownEvent()
-    {
+    public void SetMeleeAttackPointDownEvent(){
         meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(-0.139f, -0.579f);
+        if (flamethrower.upgradeLevel < 2)
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Down;
+        else
+            flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Down;
+        flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 90);
+        lightningBoltAttackPoint.localPosition = new Vector2(-0.0599999987f,-4.73999977f);
+        lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0 , 90);
     }
 
-    public void SetMeleeAttackPointSideEvent()
-    {
-        if (GetComponent<SpriteRenderer>().flipX)
-        {
+    public void SetMeleeAttackPointSideEvent(){
+        if (GetComponent<SpriteRenderer>().flipX){
             meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
             rangedWeapon.attackPoint.localPosition = new Vector2(0.557f, -0.194f);
+            if (flamethrower.upgradeLevel < 2)
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Right;
+            else
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Right;
+            flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 180);
+            lightningBoltAttackPoint.localPosition = new Vector2(4.92999983f,-0.430000007f);
+            lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, 180);
         }
         else
         {
             meleeWeapon.attackPoint.localPosition = new Vector2(-1.05f, 0);
             rangedWeapon.attackPoint.localPosition = new Vector2(-0.557f, -0.194f);
+            if (flamethrower.upgradeLevel < 2)
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade1Left;
+            else
+                flamethrowerAttackPoint.localPosition = flamethrower.upgrade2Left;
+            flamethrowerAttackPoint.eulerAngles = new Vector3(0, 0, 0);
+            lightningBoltAttackPoint.localPosition = new Vector2(-4.71999979f,-0.430000007f);
+            lightningBoltAttackPoint.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 
+    public void ShieldHeal()
+    {
+        DamageHealth(-entityStats.maxHealth * 0.25f);
+    }
 
-    //Debug doomblades gizmo
-    void OnDrawGizmos(){
+    void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
+
+        //doomblades debug
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, 2f);
     }
 }

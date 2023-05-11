@@ -5,31 +5,28 @@ using UnityEngine.UI;
 
 public class InventoryPanel : MonoBehaviour{
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
-    public PlayerClass player;
     public GameObject slotPrefab;
 
     void ClearInventory(){
-        foreach (Transform transform in transform) {
+        foreach (Transform transform in transform){
             Destroy(transform.gameObject);
         }
 
-        new List<InventorySlot>(24);
+        inventorySlots = new List<InventorySlot>(24);
     }
 
-    public void ConstructPanel(){
-        KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
-
+    public void ConstructPanel(PlayerClass player){
+        List<KeyValuePair<ItemParent, int>> inventoryList = new List<KeyValuePair<ItemParent, int>>(player.inventory.GetInventory());
+        Debug.Log("From the Inventory Panel UI: Item at index 0: " + inventoryList[0].Key + " in inventory of " + player.GetInstanceID());
         gameObject.GetComponent<Image>().enabled = true;
 
-        for (int i = 0; i < inventorySlots.Capacity; i++) {
+        for (int i = 0; i < 24; i++){
             CreateInventorySlot();
         }
-
-        for (int i = 0; i < itemClasses.Length; i++){
-            if (itemClasses[i].Key != null) {
-                inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
-                inventorySlots[i].SetPlayer(player);
-            }
+        Debug.Log("Count: " + inventoryList.Count + " Capacity " + inventoryList.Capacity);
+        for (int i = 0; i < inventoryList.Count; i++){
+            Debug.Log("From the Inventory Panel UI: Index: " + i + " stores item " + inventoryList[i].Key + " of quantity " + inventoryList[i].Value);
+            inventorySlots[i].ConstructSlot(inventoryList[i].Key, inventoryList[i].Value);
         }
     }
 
@@ -44,9 +41,7 @@ public class InventoryPanel : MonoBehaviour{
     }
 
     void CreateInventorySlot(){
-        GameObject slot = Instantiate(slotPrefab);
-
-        slot.transform.SetParent(transform, false);
+        GameObject slot = Instantiate<GameObject>(slotPrefab, transform);
 
         InventorySlot slotComponent = slot.GetComponent<InventorySlot>();
         slotComponent.ClearSlot();

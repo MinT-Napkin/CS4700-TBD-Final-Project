@@ -39,6 +39,11 @@ public class MobGangster : EnemyMelee{
         aiPath.maxSpeed = entityStats.walkSpeed;
         freezeRotation = false;
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, 2f);
+    }
 }
 
 

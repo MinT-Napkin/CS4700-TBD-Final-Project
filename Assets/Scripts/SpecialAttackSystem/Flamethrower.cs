@@ -9,17 +9,33 @@ public class Flamethrower : SpecialAttack{
     List<Collider2D> hitEnemies;
 
     InputController inputController;
+    Animator animator;
+
+    //Level 1 attack point positions
+    public Vector2 upgrade1Left = new Vector2(-1.91799998f,-0.104999997f);
+    public Vector2 upgrade1Right = new Vector2(1.73599994f,-0.377000004f);
+    public Vector2 upgrade1Up = new Vector2(0.0149999997f,1.36099994f);
+    public Vector2 upgrade1Down = new Vector2(-0.180000007f,-2.06999993f);
+
+    //Level 2 attack point positions
+    public Vector2 upgrade2Left = new Vector2(-3.04999989f, -0.159999996f);
+    public Vector2 upgrade2Right = new Vector2(3.1400001f, -0.159999996f);
+    public Vector2 upgrade2Up = new Vector2(0.100000001f, 2.67000008f);
+    public Vector2 upgrade2Down = new Vector2(-0.180000007f, -3.28999996f);
 
 
     public override void Awake(){
         base.Awake();
         name = "Flamethrower";
-        damageType = new DamageTypePhysical();
+        damageType = new DamageTypeFire();
         description = "Primitive flamethrower built by one who dominated the slums";
-        attackDamage = 1.0f;
+        attackDamage = .2f;
         flamethrowerDuration = 3.0f;
         attackCooldown = 5.0f + flamethrowerDuration;
+        attackPoint = gameObject.GetComponent<PlayerClass>().flamethrowerAttackPoint;
         flamethrowerCollider = attackPoint.GetComponent<PolygonCollider2D>();
+        //set animator
+        animator = attackPoint.gameObject.GetComponent<Animator>();
         contactFilter = new ContactFilter2D();
         contactFilter.SetLayerMask(enemyLayers);
         hitEnemies = new List<Collider2D>();
@@ -29,16 +45,15 @@ public class Flamethrower : SpecialAttack{
         inputController = gameObject.GetComponent<InputController>();
 
         //Adjust attack damage, duration, and cooldown based on upgrade level here
+    
     }
 
     public override void Upgrade(){
         upgradeLevel += 1;
-
+        attackDamage *= 1.33f;
+        attackCooldown -= 1.5f;
         if (upgradeLevel == 2){
-            Vector2 upgrade2Point1 = new Vector2(flamethrowerCollider.points[0].x -= 1, flamethrowerCollider.points[0].y += 1);
-            Vector2 upgrade2Point2 = new Vector2(flamethrowerCollider.points[1].x += 1, flamethrowerCollider.points[1].y += 1);
-            Vector2[] upgradeLevel2Points = {upgrade2Point1, upgrade2Point2, flamethrowerCollider.points[2]};
-            flamethrowerCollider.SetPath(0, upgradeLevel2Points);
+            attackPoint.localScale = new Vector3(6.66726303f,6.66726303f,6.66726303f);
         }
     }
 
@@ -57,6 +72,9 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
+        inputController.EnableDash(false);
+        animator.SetTrigger("Flamethrower");
+        animator.ResetTrigger("EndFlamethrower");
         for (int i = 0; i < flamethrowerDuration * 2; i++){
             flamethrowerCollider.OverlapCollider(contactFilter, hitEnemies);
 
@@ -66,6 +84,7 @@ public class Flamethrower : SpecialAttack{
                 
                 //Apply burn status effect
                 enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                gameObject.AddComponent<StatusEffectBurn>().Constructor(enemy.gameObject.GetComponent<Entity>(), 2f, true, 0.5f);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }
@@ -74,24 +93,26 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
+        inputController.EnableDash(true);
+        animator.SetTrigger("EndFlamethrower");
+        animator.ResetTrigger("Flamethrower");
 
         //Testing final upgrade
         if (upgradeLevel >= 3){
-            yield return new WaitForSeconds(1f); //wait for explosion
+             //wait for explosion
 
             foreach (GameObject enemy in toExplode){
-                foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 3f, enemyLayers)){
-                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                GameObject explosionPrefab = (GameObject)Resources.Load("Prefabs/Flamethrower Explosion/Explosion");
+                enemy.GetComponent<SpriteRenderer>().color = Color.red;
+                yield return new WaitForSeconds(2f);
+                Instantiate(explosionPrefab, enemy.transform.position, enemy.transform.rotation);
+                foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 2f, enemyLayers)){
+                    damageEvent = new DamageEvent(attackDamage * 2, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
                     element.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                enemy.GetComponent<SpriteRenderer>().color = Color.white;
                 }
             }
         }
         hitEnemies.Clear();
-    }
-
-    IEnumerator DebugColorCoroutine(GameObject enemy, Color color){
-        enemy.GetComponent<SpriteRenderer>().color = color;
-        yield return new WaitForSeconds(2f);
-        enemy.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }

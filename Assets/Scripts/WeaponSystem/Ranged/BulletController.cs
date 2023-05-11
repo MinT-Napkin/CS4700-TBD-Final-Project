@@ -63,7 +63,9 @@ public class BulletController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {   
-            //Damage
+            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(1f, damageType, GameObject.FindWithTag("Player").GetComponent<Entity>(), other.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            other.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
             Destroy(gameObject);
         }
     }

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour {
     public Image icon;
     public TextMeshProUGUI itemQuantity;
-    public PlayerClass player;
 
     public void ClearSlot() {
         icon.enabled = false;
@@ -20,10 +19,6 @@ public class InventorySlot : MonoBehaviour {
 
         icon.sprite = item.sprite;
         itemQuantity.text = quantity.ToString();
-    }
-
-    public void SetPlayer(PlayerClass player) {
-        this.player = player;
     }
 
     // Start is called before the first frame update
