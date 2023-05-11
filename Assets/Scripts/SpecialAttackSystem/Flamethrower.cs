@@ -57,6 +57,7 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = true;
         playerStats.walkSpeed /= 2f;
         playerStats.runSpeed /= 2f;
+        inputController.EnableDash(false);
         for (int i = 0; i < flamethrowerDuration * 2; i++){
             flamethrowerCollider.OverlapCollider(contactFilter, hitEnemies);
 
@@ -74,6 +75,7 @@ public class Flamethrower : SpecialAttack{
         flamethrowerCollider.enabled = false;
         playerStats.walkSpeed *= 2f;
         playerStats.runSpeed *= 2f;
+        inputController.EnableDash(true);
 
         //Testing final upgrade
         if (upgradeLevel >= 3){

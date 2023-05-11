@@ -71,8 +71,8 @@ public class PlayerClass : Entity, InteractInterface{
 
         isPlayerControlled = true;
 
-        inventoryPanel.GetComponent<Image>().enabled = false;
-        inventoryPanel.GetComponent<InventoryPanel>().player = this;
+        // inventoryPanel.GetComponent<Image>().enabled = false;
+        // inventoryPanel.GetComponent<InventoryPanel>().player = this;
     }
 
     protected override void OnEntityDeath(){
