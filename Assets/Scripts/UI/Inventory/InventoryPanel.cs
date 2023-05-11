@@ -21,13 +21,12 @@ public class InventoryPanel : MonoBehaviour{
 
         gameObject.GetComponent<Image>().enabled = true;
 
-        for (int i = 0; i < inventorySlots.Capacity; i++) {
+        for (int i = 0; i < 24; i++){
             CreateInventorySlot();
         }
 
-        for (int i = 0; i < itemClasses.Capacity; i++){  
-                inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
-                inventorySlots[i].SetPlayer(player);
+        for (int i = 0; i < itemClasses.Capacity; i++){
+            inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
         }
     }
 
@@ -42,9 +41,7 @@ public class InventoryPanel : MonoBehaviour{
     }
 
     void CreateInventorySlot(){
-        GameObject slot = Instantiate(slotPrefab);
-
-        slot.transform.SetParent(transform, false);
+        GameObject slot = Instantiate<GameObject>(slotPrefab, transform);
 
         InventorySlot slotComponent = slot.GetComponent<InventorySlot>();
         slotComponent.ClearSlot();
