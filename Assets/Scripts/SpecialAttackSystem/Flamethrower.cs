@@ -18,7 +18,7 @@ public class Flamethrower : SpecialAttack{
     public Vector2 upgrade1Down = new Vector2(-0.180000007f,-2.06999993f);
 
     //Level 2 attack point positions
-    public Vector2 upgrade2Left = new Vector2(-3.61999989f, -0.159999996f);
+    public Vector2 upgrade2Left = new Vector2(-3.04999989f, -0.159999996f);
     public Vector2 upgrade2Right = new Vector2(3.1400001f, -0.159999996f);
     public Vector2 upgrade2Up = new Vector2(0.100000001f, 2.67000008f);
     public Vector2 upgrade2Down = new Vector2(-0.180000007f, -3.28999996f);
@@ -97,21 +97,20 @@ public class Flamethrower : SpecialAttack{
 
         //Testing final upgrade
         if (upgradeLevel >= 3){
-            yield return new WaitForSeconds(1f); //wait for explosion
+             //wait for explosion
 
             foreach (GameObject enemy in toExplode){
-                foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 3f, enemyLayers)){
-                    damageEvent = new DamageEvent(attackDamage * 3, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                GameObject explosionPrefab = (GameObject)Resources.Load("Inguz Media Studio/Free 2D Impact FX/Prefabs/Impact02");
+                enemy.GetComponent<SpriteRenderer>().color = Color.red;
+                yield return new WaitForSeconds(2f);
+                Instantiate(explosionPrefab, enemy.transform.position, enemy.transform.rotation);
+                foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 2f, enemyLayers)){
+                    damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
                     element.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                enemy.GetComponent<SpriteRenderer>().color = Color.white;
                 }
             }
         }
         hitEnemies.Clear();
-    }
-
-    IEnumerator DebugColorCoroutine(GameObject enemy, Color color){
-        enemy.GetComponent<SpriteRenderer>().color = color;
-        yield return new WaitForSeconds(2f);
-        enemy.GetComponent<SpriteRenderer>().color = Color.red;
     }
 }
