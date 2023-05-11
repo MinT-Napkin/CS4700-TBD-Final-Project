@@ -17,19 +17,17 @@ public class InventoryPanel : MonoBehaviour{
     }
 
     public void ConstructPanel(){
-        KeyValuePair<ItemParent, int>[] itemClasses = player.inventory.GetInventory();
+        List<KeyValuePair<ItemParent, int>> itemClasses = player.inventory.GetInventory();
 
         gameObject.GetComponent<Image>().enabled = true;
 
-        for (int i = 0; i < 5/*inventorySlots.Capacity*/; i++) {
+        for (int i = 0; i < inventorySlots.Capacity; i++) {
             CreateInventorySlot();
         }
 
-        for (int i = 0; i < 5/*itemClasses.Length*/; i++){
-            if (itemClasses[i].Key != null) {
+        for (int i = 0; i < itemClasses.Capacity; i++){  
                 inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
                 inventorySlots[i].SetPlayer(player);
-            }
         }
     }
 

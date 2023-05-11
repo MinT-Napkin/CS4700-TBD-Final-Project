@@ -70,9 +70,6 @@ public class PlayerClass : Entity, InteractInterface{
         doomblades = gameObject.AddComponent<Doomblades>();
 
         isPlayerControlled = true;
-
-        inventoryPanel.GetComponent<Image>().enabled = false;
-        inventoryPanel.GetComponent<InventoryPanel>().player = this;
     }
 
     protected override void OnEntityDeath(){
@@ -96,6 +93,9 @@ public class PlayerClass : Entity, InteractInterface{
         base.Start();
         
         healthBar.setCurrentHealth(entityStats.currentHealth);
+
+        inventoryPanel.GetComponent<Image>().enabled = false;
+        inventoryPanel.GetComponent<InventoryPanel>().player = this;
     }
 
     // Update is called once per frame

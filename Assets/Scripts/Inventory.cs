@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-    private KeyValuePair<ItemParent, int>[] inventory = new KeyValuePair<ItemParent, int>[30];
+    private List<KeyValuePair<ItemParent, int>> inventory = new List<KeyValuePair<ItemParent, int>>();
     // Start is called before the first frame update
     void Start() {
 
@@ -15,28 +15,23 @@ public class Inventory : MonoBehaviour {
     void Update() {
     }
 
-    public KeyValuePair<ItemParent, int>[] GetInventory() {
+    public List<KeyValuePair<ItemParent, int>> GetInventory() {
         return inventory;
     }
 
     public void AddToInventory(ItemParent itemAdded, int quantity) {
-        int index = 0;
         bool keyExists = false;
 
-        for (int i = 0; i < inventory.Length; i++) {
+        for (int i = 0; i < inventory.Capacity; i++) {
             if (inventory[i].Key == itemAdded) {
                 keyExists = true;
 
                 inventory[i] = new KeyValuePair<ItemParent, int>(itemAdded, (inventory[i].Value + quantity));
             }
-
-            if (inventory[i].Key != null) {
-                index++;
-            }
         }
 
-        if (!keyExists) {
-            inventory[index] = new KeyValuePair<ItemParent, int>(itemAdded, quantity);
+        if (!keyExists){
+            inventory.Add(new KeyValuePair<ItemParent, int>(itemAdded, quantity));
         }
 
         /*if (inventory.ContainsKey(itemAdded)){
@@ -48,20 +43,20 @@ public class Inventory : MonoBehaviour {
     }
 
     public void RemoveFromInventory(ItemParent itemRemoved, int quantity) {
-        for (int i = 0; i < inventory.Length; i++) {
+        for (int i = 0; i < inventory.Capacity; i++) {
             if (inventory[i].Key == itemRemoved) {
                 if (inventory[i].Value >= quantity) {
-                    inventory[i] = new KeyValuePair<ItemParent, int>(itemRemoved, (inventory[i].Value + quantity));
+                    inventory[i] = new KeyValuePair<ItemParent, int>(itemRemoved, (inventory[i].Value - quantity));
 
                     if (inventory[i].Value == 0) {
-                        inventory[i] = new KeyValuePair<ItemParent, int>(null, -1);
+                        inventory.RemoveAt(i);
                     }
                 }
                 else {
                     Debug.Log("Invalid Operation. Not enough " + itemRemoved.name + " in inventory");
                 }
 
-                inventory[i] = new KeyValuePair<ItemParent, int>(itemRemoved, (inventory[i].Value + quantity));
+                //inventory[i] = new KeyValuePair<ItemParent, int>(itemRemoved, (inventory[i].Value + quantity));
             }
         }
 
