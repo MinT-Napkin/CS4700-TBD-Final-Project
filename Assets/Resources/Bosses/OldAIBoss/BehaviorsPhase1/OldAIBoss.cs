@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OldAIBoss : Boss
 {
+    public GameObject bossObstacle;
     public GameObject phase2Prefab;
     public float attackCooldown;
     public bool attackOnCooldown = false;

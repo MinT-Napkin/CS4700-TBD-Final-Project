@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OldAIBoss2 : Boss
 {
+    public GameObject bossObstacle;
     public float attackCooldown;
     public bool attackOnCooldown = false;
     public Transform AOEAttackPoint;
@@ -26,6 +27,7 @@ public class OldAIBoss2 : Boss
         entityStats.maxHealth = 50f;
         entityStats.normalizedHealth = 1f;
         healthbar.gameObject.SetActive(true);
+        bossObstacle = GameObject.FindWithTag("BossObstacle");
     }
 
     public override void Update()
@@ -132,5 +134,11 @@ public class OldAIBoss2 : Boss
     public void EmergencyStopDashEvent()
     {
         rb2d.velocity = Vector3.zero;
+    }
+
+    public override void AfterDeathAnimation()
+    {
+        base.AfterDeathAnimation();
+        bossObstacle.GetComponent<BossObstacle>().despawnBossObstacle();
     }
 }
