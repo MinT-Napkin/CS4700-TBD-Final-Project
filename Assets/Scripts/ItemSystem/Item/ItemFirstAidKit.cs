@@ -15,7 +15,7 @@ public class ItemFirstAidKit : ItemParent{
         DamageEvent damageEvent;
         DamageTypeHealing damageType = new DamageTypeHealing();
 
-        damageEvent = new DamageEvent(10.0f, damageType, entity, entity, false);
+        damageEvent = new DamageEvent(-10.0f, damageType, entity, entity, false);
 
         entity.TakeDamage(damageEvent);
 

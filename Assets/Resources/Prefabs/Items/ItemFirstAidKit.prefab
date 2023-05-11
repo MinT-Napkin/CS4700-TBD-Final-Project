@@ -101,7 +101,5 @@ MonoBehaviour:
   name: 
   category: 0
   circleCollider: {fileID: 0}
-  entity: {fileID: 0}
-  player: {fileID: 0}
   sprite: {fileID: 0}
-  textSystem: {fileID: 0}
+  textSystem: {fileID: 8606097397840402814, guid: 02de1bd85ae62244b8edaef0c53bebca, type: 3}

@@ -19,15 +19,14 @@ public class TextSystemUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (textUI.GetComponent<TextMeshProUGUI>().enabled)
+        /*if (textUI.GetComponent<TextMeshProUGUI>().enabled)
         {
             StartCoroutine("WaitForSeconds");
-        }
+        }*/
     }
 
-    IEnumerator WaitForSeconds()
-    {
-        yield return new WaitForSeconds(5);
+    IEnumerator WaitForSeconds(){
+        yield return new WaitForSeconds(2);
         disableText();
     }
 
@@ -46,6 +45,7 @@ public class TextSystemUI : MonoBehaviour
     public void enableText()
     {
         textUI.GetComponent<TextMeshProUGUI>().enabled = true;
+        StartCoroutine("WaitForSeconds");
     }
 
 }
