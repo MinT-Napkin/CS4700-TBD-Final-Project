@@ -100,12 +100,12 @@ public class Flamethrower : SpecialAttack{
              //wait for explosion
 
             foreach (GameObject enemy in toExplode){
-                GameObject explosionPrefab = (GameObject)Resources.Load("Inguz Media Studio/Free 2D Impact FX/Prefabs/Impact02");
+                GameObject explosionPrefab = (GameObject)Resources.Load("Prefabs/Flamethrower Explosion/Explosion");
                 enemy.GetComponent<SpriteRenderer>().color = Color.red;
                 yield return new WaitForSeconds(2f);
                 Instantiate(explosionPrefab, enemy.transform.position, enemy.transform.rotation);
                 foreach (Collider2D element in Physics2D.OverlapCircleAll(enemy.gameObject.transform.position, 2f, enemyLayers)){
-                    damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                    damageEvent = new DamageEvent(attackDamage * 2, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), element.gameObject.GetComponent<Entity>(), DamageCategory.Special);
                     element.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
                 enemy.GetComponent<SpriteRenderer>().color = Color.white;
                 }
