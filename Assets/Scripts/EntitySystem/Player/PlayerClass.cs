@@ -215,8 +215,7 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
 
-    //Debug doomblades gizmo
-    void OnDrawGizmos(){
+    void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
     }
