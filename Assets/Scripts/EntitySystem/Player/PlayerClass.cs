@@ -165,11 +165,6 @@ public class PlayerClass : Entity, InteractInterface{
         if (Input.GetKeyDown("g")){
             LevelUp();
         }
-
-<
-        if (Input.GetKeyDown("m")) {
-            GainExperiencePoints(500);
-        }
     }
 
     protected override void DamageHealth(float finalDamage){
@@ -200,6 +195,8 @@ public class PlayerClass : Entity, InteractInterface{
         healthBar.setCurrentHealth(entityStats.currentHealth);
 
         meleeWeapon.Equip();
+
+        //Set Skill point increase here
     }
 
 
