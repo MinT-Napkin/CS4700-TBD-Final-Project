@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff1efe02194f94eae81dda98f675e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  droppedExperiencePoints: 0
   entityStats:
     attackSpeed: 0
     criticalDamage: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
     walkSpeed: 2
   inventory: {fileID: 0}
   isPlayerControlled: 0
-  textAsset: {fileID: 0}
+  textAsset: {fileID: 4900000, guid: 8a171fc20f9e3174e96c3eb43f06c8b4, type: 3}
   droppedItems: []
   healthbar: {fileID: 0}
   name: CyborgGangster

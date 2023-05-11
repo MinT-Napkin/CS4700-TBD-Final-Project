@@ -9,21 +9,21 @@ public class OldAIBoss : Boss
     EntityStats phase2Stats;
     public float attackCooldown;
     public bool attackOnCooldown = false;
-    public override void Awake()
-    {
-        base.Awake();
-        //Test entity stats
-        entityStats.walkSpeed = 2.5f;
-        entityStats.currentHealth = 80f;
-        entityStats.maxHealth = 80f;
-        entityStats.normalizedHealth = 1f;
-        entityStats.strength = 3f;
-        entityStats.criticalDamage = 1.1f;
-        entityStats.criticalHitRate = 5;
-        entityStats.level = 0;
-        entityStats.defense = 10f;
-        entityStats.specialDefense = 20f;
-    }
+    // public override void Awake()
+    // {
+    //     base.Awake();
+    //     //Test entity stats
+    //     entityStats.walkSpeed = 2.5f;
+    //     entityStats.currentHealth = 80f;
+    //     entityStats.maxHealth = 80f;
+    //     entityStats.normalizedHealth = 1f;
+    //     entityStats.strength = 3f;
+    //     entityStats.criticalDamage = 1.1f;
+    //     entityStats.criticalHitRate = 5;
+    //     entityStats.level = 0;
+    //     entityStats.defense = 10f;
+    //     entityStats.specialDefense = 20f;
+    // }
 
     public override void RotateEvent()
     {
@@ -48,7 +48,7 @@ public class OldAIBoss : Boss
         if (targetHit != null)
         {
             DamageTypeParent damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(entityStats.strength * 0.5f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            DamageEvent damageEvent = new DamageEvent(entityStats.strength * 0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
             targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
