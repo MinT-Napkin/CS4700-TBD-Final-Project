@@ -165,6 +165,14 @@ public class PlayerClass : Entity, InteractInterface{
         if (Input.GetKeyDown("g")){
             LevelUp();
         }
+
+        //entityStats
+        if (entityStats.currentExperiencePoints >= 50)
+        {
+            entityStats.currentExperiencePoints -= 50;
+            LevelUp();
+            //SkullUpgradeScreen.increaseSkillPoints(5);
+        }
     }
 
     protected override void DamageHealth(float finalDamage){
