@@ -169,7 +169,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   rangedAttackRange: 8.75
-  rangedAttackCooldown: 0
+  rangedAttackCooldown: 3
   fleeRange: 6.88
   fleeSpeedMultiplier: 7
   rangedAttackOnCooldown: 0

@@ -35,7 +35,9 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //Damage
+            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(0.8f, damageType, enemy, other.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            other.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
             Destroy(gameObject);
         }
     }
