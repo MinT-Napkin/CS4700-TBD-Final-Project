@@ -37,7 +37,7 @@ public class PlayerClass : Entity, InteractInterface{
     LayerMask interactableLayer;
     float interactionRange = 2.0f;
 
-    public GameObject inventoryPanel;
+    //public GameObject inventoryPanel;
 
     public override void Awake(){
         base.Awake();
@@ -77,6 +77,7 @@ public class PlayerClass : Entity, InteractInterface{
         isPlayerControlled = true;
 
         //inventoryPanel.GetComponent<Image>().enabled = false;
+        healthBar = GameObject.FindWithTag("PlayerHealthbar").GetComponent<HealthBarUI>();
     }
 
     protected override void OnEntityDeath(){
@@ -101,7 +102,7 @@ public class PlayerClass : Entity, InteractInterface{
         
         healthBar.setCurrentHealth(entityStats.currentHealth);
 
-        inventoryPanel.GetComponent<Image>().enabled = false;
+        //inventoryPanel.GetComponent<Image>().enabled = false;
     }
 
     // Update is called once per frame
@@ -140,14 +141,14 @@ public class PlayerClass : Entity, InteractInterface{
             }
         }
 
-        if (Input.GetKeyDown("y")){
+        /*if (Input.GetKeyDown("y")){
             if (inventoryPanel.GetComponent<Image>().enabled){
                 inventoryPanel.GetComponent<InventoryPanel>().DestructPanel();
             }
             else {
                 inventoryPanel.GetComponent<InventoryPanel>().ConstructPanel(this);
             }
-        }
+        }*/
 
         if (Input.GetKeyDown("g")){
             LevelUp();
