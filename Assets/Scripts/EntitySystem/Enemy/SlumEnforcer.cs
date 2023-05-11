@@ -32,7 +32,7 @@ public class SlumEnforcer : EnemyMelee
         if (targetHit != null)
         {
             DamageTypeLightning damageType = new DamageTypeLightning();
-            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            DamageEvent damageEvent = new DamageEvent(1.5f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
         }
         bool isAttacking = false;
