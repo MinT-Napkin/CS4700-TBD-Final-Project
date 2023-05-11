@@ -18,6 +18,7 @@ public class EnemyRanged : Enemy
         savedWalkSpeed = entityStats.walkSpeed;
         rb2d = gameObject.AddComponent<Rigidbody2D>();
         rb2d.gravityScale = 0f;
+        rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     public override void Update()
