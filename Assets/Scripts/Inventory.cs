@@ -22,17 +22,20 @@ public class Inventory : MonoBehaviour{
     public void AddToInventory(ItemParent itemAdded, int quantity){
         bool keyExists = false;
 
-        Debug.Log(inventory.Count);
+        //Debug.Log(inventory.Count);
+
         for (int i = 0; i < inventory.Count; i++){
-            Debug.Log(inventory[i]);
+
+            //Debug.Log("for loop index : " + i + " " + inventory[i]);
+
             if (inventory[i].Key.GetType() == itemAdded.GetType()){
                 keyExists = true;
+
+                //Debug.Log("inventory[i].key.GetType() : " + inventory[i].Key.GetType() + " " + itemAdded.GetType());
 
                 inventory[i] = new KeyValuePair<ItemParent, int>(itemAdded, (inventory[i].Value + quantity));
             }
         }
-
-        Debug.Log("keyExists = " + keyExists + ". This means the item did not previously exist in the inventory");
 
         if (!keyExists){
             inventory.Add(new KeyValuePair<ItemParent, int>(itemAdded, quantity));

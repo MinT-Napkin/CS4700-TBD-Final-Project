@@ -34,20 +34,11 @@ public class ItemParent : MonoBehaviour, InteractInterface{
     public virtual void InteractWithTarget(Entity entity){
         entity.inventory.AddToInventory(this, 1);
 
-        Debug.Log("From the Item: " + name + " added to inventory of " + entity.GetInstanceID());
-
-        textSystem.enableText();
-
-        textSystem.setTextIn(name + " added to inventory.");
+        //Debug.Log("From the Item: " + name + " added to inventory of " + entity.GetInstanceID());
 
         Destroy(gameObject);
     }
 
     public virtual void Use(Entity entity){
-    }
-
-    IEnumerator WaitForSec(){
-        yield return new WaitForSeconds(2);
-        textSystem.disableText();
     }
 }

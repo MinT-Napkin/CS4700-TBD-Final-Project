@@ -131,25 +131,14 @@ public class PlayerClass : Entity, InteractInterface{
             doomblades.Upgrade();
         }
 
-        if (Input.GetKeyDown("k")){
-            DamageTypePhysical damageType = new DamageTypePhysical();
-
-            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
-
-            TakeDamage(damageEvent);
-
-            Debug.Log(entityStats.currentHealth);
-        }
-
-        if (Input.GetKeyDown("l")){
-            //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
-            DamageTypeHealing damageType = new DamageTypeHealing();
-
-            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
-
-            TakeDamage(damageEvent);
-
-            Debug.Log(entityStats.currentHealth);
+        if (Input.GetKeyDown("q")){
+            if (inventory.GetInventory().Count > 0){
+                inventory.GetInventory()[0].Key.Use(this);
+                Debug.Log("Used");
+            }
+            else {
+                Debug.Log("No item");
+            }
         }
 
         if (Input.GetKeyDown("y")){
