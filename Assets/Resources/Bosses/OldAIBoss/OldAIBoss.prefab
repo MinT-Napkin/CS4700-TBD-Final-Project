@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a211bd539585f62449e3f26f2538ca73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  droppedExperiencePoints: 0
   entityStats:
     attackSpeed: 0
     criticalDamage: 0
@@ -574,7 +575,7 @@ MonoBehaviour:
     walkSpeed: 0
   inventory: {fileID: 0}
   isPlayerControlled: 0
-  textAsset: {fileID: 4900000, guid: 10a555768f588114d9526c64acc29c0e, type: 3}
+  textAsset: {fileID: 4900000, guid: 821deda62ffe8364f880c6b28a87227e, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0

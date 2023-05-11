@@ -21,16 +21,6 @@ public class OldAIBoss2 : Boss
     public override void Awake()
     {
         base.Awake();
-        entityStats.walkSpeed = 2.5f;
-        entityStats.currentHealth = 80f;
-        entityStats.maxHealth = 80f;
-        entityStats.normalizedHealth = 1f;
-        entityStats.strength = 3f;
-        entityStats.criticalDamage = 1.1f;
-        entityStats.criticalHitRate = 5;
-        entityStats.level = 0;
-        entityStats.defense = 10f;
-        entityStats.specialDefense = 20f;
         LevelUp();
         healthbar.gameObject.SetActive(true);
         bossObstacle = GameObject.FindWithTag("BossObstacle");
@@ -69,7 +59,7 @@ public class OldAIBoss2 : Boss
         if (targetHit != null)
         {
             DamageTypeParent damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            DamageEvent damageEvent = new DamageEvent(0.1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
             targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
@@ -81,7 +71,7 @@ public class OldAIBoss2 : Boss
         if (targetHit != null)
         {
             DamageTypeParent damageType = new DamageTypePhysical();
-            DamageEvent damageEvent = new DamageEvent(entityStats.strength * 0.5f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            DamageEvent damageEvent = new DamageEvent(0.1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
             targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
@@ -94,7 +84,7 @@ public class OldAIBoss2 : Boss
             if (other.collider.gameObject.tag == "Player")
             {
                 DamageTypeParent damageType = new DamageTypePhysical();
-                DamageEvent damageEvent = new DamageEvent(entityStats.strength * 2f, damageType, this, other.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+                DamageEvent damageEvent = new DamageEvent(0.8f, damageType, this, other.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
                 other.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
                 gameObject.AddComponent<StatusEffectStun>().Constructor(other.gameObject.GetComponent<Entity>(), 1f);
             }
