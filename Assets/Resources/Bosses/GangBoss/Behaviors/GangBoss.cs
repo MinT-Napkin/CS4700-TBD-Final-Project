@@ -27,8 +27,6 @@ public class GangBoss : Boss
 
     public Transform activeFlamethrowerSpritePoint;
 
-    public StatusEffectBurn burnStatus;
-
     public override void Awake()
     {
         base.Awake();
@@ -38,7 +36,6 @@ public class GangBoss : Boss
         bulletData.bulletSpeed = this.bulletSpeed;
         phase = 1;
         flamethrowerHorizontalEventController = flamethrowerHorizontalSpritePoint.gameObject.GetComponent<FlamethrowerHorizontalEventController>();
-        burnStatus = gameObject.AddComponent<StatusEffectBurn>();
     }
 
     public override void Update()
@@ -121,6 +118,11 @@ public class GangBoss : Boss
         StartCoroutine(RangedAttackCooldown());
     }
 
+    void ApplyBurnStatus(Entity targetBurned)
+    {
+        gameObject.AddComponent<StatusEffectBurn>().Constructor(targetBurned, 2f, true, 1f);
+    }
+
     public void FlamethrowerEventLeft()
     {
         SoundManager.instance.PlaySound(SoundManager.instance.gangBossFlameSound);
@@ -130,7 +132,7 @@ public class GangBoss : Boss
             DamageTypeFire damageType = new DamageTypeFire();
             DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
+            ApplyBurnStatus(targetHit.gameObject.GetComponent<Entity>());
         }
         flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
     }
@@ -144,7 +146,7 @@ public class GangBoss : Boss
             DamageTypeFire damageType = new DamageTypeFire();
             DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
+            ApplyBurnStatus(targetHit.gameObject.GetComponent<Entity>());
         }
         flamethrowerHorizontalAttackPoint.Rotate(new Vector3(0, 0, -2.9545f));
     }
@@ -158,7 +160,7 @@ public class GangBoss : Boss
             DamageTypeFire damageType = new DamageTypeFire();
             DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
+            ApplyBurnStatus(targetHit.gameObject.GetComponent<Entity>());
         }
         flamethrowerUpAttackPoint.Rotate(new Vector3(0, 0, 2.9545f));
     }
@@ -172,7 +174,7 @@ public class GangBoss : Boss
             DamageTypeFire damageType = new DamageTypeFire();
             DamageEvent damageEvent = new DamageEvent(0.2f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Special);
             targetHit.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            burnStatus.Constructor(targetHit.gameObject.GetComponent<Entity>(), 2f);
+            ApplyBurnStatus(targetHit.gameObject.GetComponent<Entity>());
         }
         flamethrowerDownAttackPoint.Rotate(new Vector3(0, 0, 2.8260f));
     }

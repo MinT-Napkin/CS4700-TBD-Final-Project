@@ -63,6 +63,7 @@ public class Enemy : Entity{
         SoundManager.instance.PlaySound(SoundManager.instance.enemyDeathSound);
         enemyRespawner.Respawn((GameObject)Resources.Load("prefabs/specific enemies/" + name + " Variant"), respawnPosition, respawnRotation, respawnTime);
         DropItems();
+        target.gameObject.GetComponent<Entity>().entityStats.currentExperiencePoints += 10;
         Destroy(gameObject);
     }
 

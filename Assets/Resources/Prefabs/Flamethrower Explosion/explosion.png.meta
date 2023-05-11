@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: e5aeaab080b18d24e91363b6093faf6e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d36652814cc1a488c062128db4ddc1
+      internalID: 1594937389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44082ba425e5b794e9500bb3fae1fd85
+      internalID: -1411337441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6092e50366e82bf40a060925838d3f45
+      internalID: -964934992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b1225e3f697254bbfee51064a18fd1
+      internalID: -1351088466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66397bc80e75c44baf83a883889bdda
+      internalID: -1410995456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 229.33334
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b71df99f29ace44a296bb275f36250
+      internalID: -954202510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053844b1339f950429071d7800c980d5
+      internalID: -76661167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449716966555130479b72586be08723c
+      internalID: 474926370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caec96e52399c644c8f026c80ffc84db
+      internalID: 984365442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c4a23823831cc44ad09d89fb72462d
+      internalID: 1434302236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac2960edd9bf4c49add1a1d49297e55
+      internalID: 1814475637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 115.333336
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03069d2122c26714b8d6674c453507fc
+      internalID: -1113568519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6cdfa8eea28c445b21c049590502ee
+      internalID: 713672664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfb2166559505d4791b50fe4b9dbe33
+      internalID: 1052282352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecb29cf22ff7f642ac31e912ea47028
+      internalID: -1236483249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d732435fb119614fadcf95d4b45cef1
+      internalID: 1610574958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c059980356bbb3442997990911306fea
+      internalID: -879754790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1.3333359
+        width: 121
+        height: 114.666664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5027ffb7e1e82d748834b9efaeb85970
+      internalID: 824228853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_0: 1594937389
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_1: -1411337441
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_10: 1814475637
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_11: -1113568519
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_12: 713672664
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_13: 1052282352
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_14: -1236483249
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_15: 1610574958
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_16: -879754790
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_17: 824228853
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_2: -964934992
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_3: -1351088466
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_4: -1410995456
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_5: -954202510
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_6: -76661167
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_7: 474926370
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_8: 984365442
+      pixel-fire-animation-red-hot-flame-burning-effect-border-fiery-explosion-vector-illustration-set-pixelated-bit-game-flames-218588589-removebg-preview_9: 1434302236
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

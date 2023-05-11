@@ -92,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 4703510953228802886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 77.426994, y: 0.69869506, z: 0}
-  m_LocalScale: {x: 22.66463, y: 22.66463, z: 1}
+  m_LocalScale: {x: 11.79682, y: 11.79682, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1337803931513936260}
@@ -141,7 +141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1173764285, guid: bedece8ce9ec23041991364592172b20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -241,6 +241,8 @@ MonoBehaviour:
     strength: 0
     walkSpeed: 0
   inventory: {fileID: 0}
+  isPlayerControlled: 0
+  textAsset: {fileID: 4900000, guid: 10a555768f588114d9526c64acc29c0e, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -249,19 +251,20 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rb2d: {fileID: 0}
   initiateRange: 18.29
-  meleeAttackRange: 5.03
+  meleeAttackRange: 2.74
   attackPoint: {fileID: 1975731736313407932}
   rangedAttackPoint: {fileID: 0}
   animator: {fileID: 0}
   healthbar: {fileID: 2971519140139009894}
+  bossObstacle: {fileID: 0}
   attackCooldown: 0.5
   attackOnCooldown: 0
   AOEAttackPoint: {fileID: 991122943380574124}
-  AOEAttackRange: 6.06
+  AOEAttackRange: 3.16
   initiateDashRange1: 35.8
-  initiateDashRange2: 16.6
-  dashSpeed: 40
-  maxDashDistance: 40
+  initiateDashRange2: 12.04
+  dashSpeed: 35
+  maxDashDistance: 35
   dashCooldown: 7
   dashCollisionEnabled: 0
   dashOnCooldown: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OldAIBoss2 : Boss
 {
+    public GameObject bossObstacle;
     public float attackCooldown;
     public bool attackOnCooldown = false;
     public Transform AOEAttackPoint;
@@ -20,12 +21,19 @@ public class OldAIBoss2 : Boss
     public override void Awake()
     {
         base.Awake();
-        //Test entity stats
-        entityStats.walkSpeed = 2f;
-        entityStats.currentHealth = 50f;
-        entityStats.maxHealth = 50f;
+        entityStats.walkSpeed = 2.5f;
+        entityStats.currentHealth = 80f;
+        entityStats.maxHealth = 80f;
         entityStats.normalizedHealth = 1f;
+        entityStats.strength = 3f;
+        entityStats.criticalDamage = 1.1f;
+        entityStats.criticalHitRate = 5;
+        entityStats.level = 0;
+        entityStats.defense = 10f;
+        entityStats.specialDefense = 20f;
+        LevelUp();
         healthbar.gameObject.SetActive(true);
+        bossObstacle = GameObject.FindWithTag("BossObstacle");
     }
 
     public override void Update()
@@ -60,8 +68,9 @@ public class OldAIBoss2 : Boss
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
-            //Apply damage
-            Debug.Log(targetHit.gameObject.name + " phase 2 hit!");
+            DamageTypeParent damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(1f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
 
@@ -71,8 +80,9 @@ public class OldAIBoss2 : Boss
         Collider2D targetHit = Physics2D.OverlapCircle(AOEAttackPoint.position, AOEAttackRange, targetLayer);
         if (targetHit != null)
         {
-            //Apply damage
-            Debug.Log(targetHit.gameObject.name + " AOE hit!");
+            DamageTypeParent damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(entityStats.strength * 0.5f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
 
@@ -83,9 +93,10 @@ public class OldAIBoss2 : Boss
         {
             if (other.collider.gameObject.tag == "Player")
             {
-                //damage player
-                //Very short stun
-                Debug.Log("Player hit with dash!");
+                DamageTypeParent damageType = new DamageTypePhysical();
+                DamageEvent damageEvent = new DamageEvent(entityStats.strength * 2f, damageType, this, other.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+                other.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                gameObject.AddComponent<StatusEffectStun>().Constructor(other.gameObject.GetComponent<Entity>(), 1f);
             }
         }
         EmergencyStopDashEvent();
@@ -132,5 +143,11 @@ public class OldAIBoss2 : Boss
     public void EmergencyStopDashEvent()
     {
         rb2d.velocity = Vector3.zero;
+    }
+
+    public override void AfterDeathAnimation()
+    {
+        base.AfterDeathAnimation();
+        bossObstacle.GetComponent<BossObstacle>().despawnBossObstacle();
     }
 }

@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1042231859, guid: 247f2c07cbdfa9e4cb4498927a6fb14f, type: 3}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -18,6 +22,10 @@ PrefabInstance:
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -30,6 +38,14 @@ PrefabInstance:
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +98,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8451289884243031202, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
   m_PrefabInstance: {fileID: 5437982860345888396}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &-9206181349588272454
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4485193557803285038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66ac86823f63e9e49857f2e2fa024a6f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1735783030039193254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,10 +134,13 @@ MonoBehaviour:
   entityStats:
     attackSpeed: 0
     criticalDamage: 0
+    criticalHitRate: 0
+    currentExperiencePoints: 0
     currentHealth: 20
     dashDistance: 0
     defense: 0
-    criticalHitRate: 0
+    level: 0
+    maxExperiencePoints: 0
     maxHealth: 20
     normalizedHealth: 0
     runSpeed: 0
@@ -108,6 +148,10 @@ MonoBehaviour:
     specialDefense: 0
     strength: 0
     walkSpeed: 2
+  inventory: {fileID: 0}
+  isPlayerControlled: 0
+  textAsset: {fileID: 0}
+  droppedItems: []
   healthbar: {fileID: 0}
   name: CyborgGangster
   enemyRespawner: {fileID: 0}
@@ -122,8 +166,10 @@ MonoBehaviour:
   chaseRange: 11.7
   distance: 0
   direction: {x: 0, y: 0}
+  animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   rangedAttackRange: 8.75
-  rangedAttackCooldown: 0
+  rangedAttackCooldown: 3
   fleeRange: 6.88
   fleeSpeedMultiplier: 7
   rangedAttackOnCooldown: 0

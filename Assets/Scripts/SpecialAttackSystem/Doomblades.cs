@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Doomblades : SpecialAttack{
     public float doombladesRange;
+    Animator animator;
 
     public override void Awake(){
         base.Awake();
+        animator = gameObject.GetComponent<Animator>();
         name = "Doomblades";
         damageType = new DamageTypePhysical();
         description = "A set of four giant blades designed with brutal slaughter in mind. Removed from the arm of an old military AI prototype robot.";
-        attackDamage = 5.0f;
+        attackDamage = 2.0f;
         attackCooldown = 5.0f;
-        doombladesRange = 2.5f;
+        doombladesRange = 2f;
         attackPoint = gameObject.GetComponent<PlayerClass>().meleeAttackPoint;
         //Here, check player data and adjust upgrade level appropriately
         upgradeLevel = 1;
@@ -22,7 +24,7 @@ public class Doomblades : SpecialAttack{
 
     public override void Upgrade(){
         upgradeLevel += 1;
-        Debug.Log("Doomblades upgrade level: " + upgradeLevel);
+        attackCooldown -= 0.5f;
     }
 
     public override void Attack(){
@@ -34,21 +36,23 @@ public class Doomblades : SpecialAttack{
     IEnumerator Activate(){
         DamageEvent damageEvent;
         bool enemyKilled = false;
-        yield return new WaitForSeconds(0.8f);
+
+        animator.SetBool("Doomblades", true);
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, doombladesRange, enemyLayers);
-
         foreach (Collider2D enemy in hitEnemies){
-            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Enemy>(), DamageCategory.Special);
+            damageEvent = new DamageEvent(attackDamage, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.gameObject.GetComponent<Entity>(), DamageCategory.Special);
 
-            enemy.gameObject.GetComponent<Enemy>().TakeDamage(damageEvent);
+            enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
             //Check if an enemy was killed here
-            enemyKilled = true; //for debugging
+            if (enemy.gameObject.GetComponent<Entity>().entityStats.normalizedHealth <= 0)
+                enemyKilled = true;
         }
-
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("Doomblades", false);
         if (upgradeLevel > 1){
             if (enemyKilled){
                 yield return new WaitForSeconds(0.5f); //for color debugging
-                if (upgradeLevel > 2) { attackDamage *= 1.4f; }
+                if (upgradeLevel > 2) { attackDamage *= 1.1f; }
                 StartCoroutine(Activate());
             }
         }
