@@ -78,6 +78,7 @@ public class PlayerClass : Entity, InteractInterface{
 
         // inventoryPanel.GetComponent<Image>().enabled = false;
         // inventoryPanel.GetComponent<InventoryPanel>().player = this;
+        healthBar = GameObject.FindWithTag("PlayerHealthbar").GetComponent<HealthBarUI>();
     }
 
     protected override void OnEntityDeath(){

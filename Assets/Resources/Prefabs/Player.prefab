@@ -439,6 +439,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   isPlayerControlled: 0
   textAsset: {fileID: 4900000, guid: ebaf0f868f7e8364091309a8e722d584, type: 3}
+  healthbarObject: {fileID: 0}
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
   gangBossResetPrefab: {fileID: 0}
