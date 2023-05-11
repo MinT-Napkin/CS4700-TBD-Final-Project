@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6602880867701853933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.855, y: -15.48, z: 0}
+  m_LocalPosition: {x: 108.07, y: -15.744, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -450,8 +450,6 @@ MonoBehaviour:
   flamethrowerAttackPoint: {fileID: 7800990760369146379}
   lightningBoltAttackPoint: {fileID: 1147085623708618734}
   shieldPoint: {fileID: 1311701466882945969}
-  activeShieldSprite: {fileID: 1390417577, guid: 41e5bb644d4aefa4eb9d7b5d3c1779ac, type: 3}
-  nonActiveShieldSprite: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   specialAttacks: []
   flamethrower: {fileID: 0}

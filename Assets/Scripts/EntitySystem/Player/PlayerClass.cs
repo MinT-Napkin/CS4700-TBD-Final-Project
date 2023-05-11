@@ -22,8 +22,6 @@ public class PlayerClass : Entity, InteractInterface{
     public Transform flamethrowerAttackPoint;
     public Transform lightningBoltAttackPoint;
     public GameObject shieldPoint;
-    public Sprite activeShieldSprite;
-    public Sprite nonActiveShieldSprite;
 
     public Color color;
     
@@ -264,5 +262,9 @@ public class PlayerClass : Entity, InteractInterface{
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
+
+        //doomblades debug
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, 2f);
     }
 }
