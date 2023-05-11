@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: -1262085588, guid: 8f04e15c0f864b24d882335dcfda264e, type: 3}
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -170,6 +170,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   meleeAttackRange: 2.04
-  meleeDetectionRange: 3.95
+  meleeDetectionRange: 2.04
   meleeAttackCooldown: 0
   meleeAttackOnCooldown: 0
