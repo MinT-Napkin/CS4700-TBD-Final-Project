@@ -25,10 +25,6 @@ public class LightningBolt : SpecialAttack
     public override void Upgrade()
     {
         upgradeLevel += 1;
-        attackDamage *= 1.33f;
-        attackCooldown -= 1.5f;
-        if (upgradeLevel <= 3)
-            attackDamage *= 1.5f;
     }
 
     public override void Attack()
@@ -40,36 +36,41 @@ public class LightningBolt : SpecialAttack
 
     IEnumerator Activate()
     {
-        animator.SetTrigger("LightningBolt");
-        animator.ResetTrigger("EndLightningBolt");
-  
-        RaycastHit2D[] hitEnemies1 = new List<RaycastHit2D>().ToArray();
-        RaycastHit2D[] hitEnemies2 = new List<RaycastHit2D>().ToArray();
-        hitEnemies1 = Physics2D.RaycastAll(attackPoint.position, -attackPoint.right, lightningBoltRange / 2, enemyLayers);
-        hitEnemies2 = Physics2D.RaycastAll(attackPoint.position, attackPoint.right, lightningBoltRange / 2, enemyLayers);
-        foreach (RaycastHit2D enemy in hitEnemies1)
+        for (int i = 0; i < upgradeLevel; i++)
         {
-            DamageTypeParent damageType = new DamageTypeLightning();
-            DamageEvent damageEvent = new DamageEvent(attackDamage * 0.2f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.collider.gameObject.GetComponent<Entity>(), DamageCategory.Special);
-            enemy.collider.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            if (upgradeLevel > 2)
+            animator.SetTrigger("LightningBolt");
+            animator.ResetTrigger("EndLightningBolt");
+    
+            RaycastHit2D[] hitEnemies1 = new List<RaycastHit2D>().ToArray();
+            RaycastHit2D[] hitEnemies2 = new List<RaycastHit2D>().ToArray();
+            hitEnemies1 = Physics2D.RaycastAll(attackPoint.position, -attackPoint.right, lightningBoltRange / 2, enemyLayers);
+            hitEnemies2 = Physics2D.RaycastAll(attackPoint.position, attackPoint.right, lightningBoltRange / 2, enemyLayers);
+            foreach (RaycastHit2D enemy in hitEnemies1)
             {
-               //apply stun
+                DamageTypeParent damageType = new DamageTypeLightning();
+                DamageEvent damageEvent = new DamageEvent(attackDamage * 0.2f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.collider.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                enemy.collider.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                if (upgradeLevel > 2)
+                {
+                //apply stun
+                }
             }
-        }
-        foreach (RaycastHit2D enemy in hitEnemies2)
-        {
-            DamageTypeParent damageType = new DamageTypeLightning();
-            DamageEvent damageEvent = new DamageEvent(attackDamage * 0.2f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.collider.gameObject.GetComponent<Entity>(), DamageCategory.Special);
-            enemy.collider.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
-            if (upgradeLevel > 2)
+            foreach (RaycastHit2D enemy in hitEnemies2)
             {
-               //apply stun
+                DamageTypeParent damageType = new DamageTypeLightning();
+                DamageEvent damageEvent = new DamageEvent(attackDamage * 0.2f, damageType, attackPoint.parent.gameObject.GetComponent<PlayerClass>(), enemy.collider.gameObject.GetComponent<Entity>(), DamageCategory.Special);
+                enemy.collider.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                if (upgradeLevel > 2)
+                {
+                //apply stun
+                }
             }
-        }
 
-        yield return new WaitForSeconds(0.5f);
-        animator.SetTrigger("EndLightningBolt");
-        animator.ResetTrigger("LightningBolt");
+            yield return new WaitForSeconds(0.5f);
+            animator.SetTrigger("EndLightningBolt");
+            animator.ResetTrigger("LightningBolt");
+
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
