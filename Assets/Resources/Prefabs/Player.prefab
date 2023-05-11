@@ -348,7 +348,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -667385681, guid: 22c6a48e1a5b51e4880ae65f1a65bf95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -439,7 +439,6 @@ MonoBehaviour:
   inventory: {fileID: 0}
   isPlayerControlled: 0
   textAsset: {fileID: 4900000, guid: ebaf0f868f7e8364091309a8e722d584, type: 3}
-  healthbarObject: {fileID: 0}
   healthBar: {fileID: 0}
   canvas: {fileID: 0}
   gangBossResetPrefab: {fileID: 0}
