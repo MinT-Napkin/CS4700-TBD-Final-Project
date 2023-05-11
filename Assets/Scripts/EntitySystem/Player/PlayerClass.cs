@@ -76,8 +76,7 @@ public class PlayerClass : Entity, InteractInterface{
 
         isPlayerControlled = true;
 
-        // inventoryPanel.GetComponent<Image>().enabled = false;
-        // inventoryPanel.GetComponent<InventoryPanel>().player = this;
+        inventoryPanel.GetComponent<Image>().enabled = false;
         healthBar = GameObject.FindWithTag("PlayerHealthbar").GetComponent<HealthBarUI>();
     }
 
@@ -144,9 +143,9 @@ public class PlayerClass : Entity, InteractInterface{
 
         if (Input.GetKeyDown("l")){
             //SoundManager.instance.PlaySound(SoundManager.instance.healSound);
-            DamageTypePhysical damageType = new DamageTypePhysical();
+            DamageTypeHealing damageType = new DamageTypeHealing();
 
-            DamageEvent damageEvent = new DamageEvent(10.0f, damageType, this, this, false);
+            DamageEvent damageEvent = new DamageEvent(-10.0f, damageType, this, this, false);
 
             TakeDamage(damageEvent);
 

@@ -6,8 +6,8 @@ public class DamageEvent{
     public DamageEvent(){
     }
 
-    public DamageEvent(float baseDamage, DamageTypeParent damageType, Entity damageCauser, Entity damagedEntity, DamageCategory damageCategory){
-        this.baseDamage = baseDamage;
+    public DamageEvent(float damageRatio, DamageTypeParent damageType, Entity damageCauser, Entity damagedEntity, DamageCategory damageCategory){
+        this.damageRatio = damageRatio;
         this.damageType = damageType;
         this.damageCategory = damageCategory;
         this.damageCauser = damageCauser;
@@ -16,8 +16,8 @@ public class DamageEvent{
         mitigable = true;
     }
 
-    public DamageEvent(float baseDamage, DamageTypeParent damageType, Entity damageCauser, Entity damagedEntity, bool mitigable) {
-        this.baseDamage = baseDamage;
+    public DamageEvent(float damageRatio, DamageTypeParent damageType, Entity damageCauser, Entity damagedEntity, bool mitigable) {
+        this.damageRatio = damageRatio;
         this.damageType = damageType;
         this.damageCauser = damageCauser;
         this.damagedEntity = damagedEntity;
@@ -28,10 +28,10 @@ public class DamageEvent{
         float finalDamage;
 
         if (mitigable){
-            finalDamage = damageType.ApplyDamage(baseDamage, damageCauser, damagedEntity, damageCategory);
+            finalDamage = damageType.ApplyDamage(damageRatio, damageCauser, damagedEntity, damageCategory);
         }
         else{
-            finalDamage = damageType.ApplyUnmitigableDamage(baseDamage);
+            finalDamage = damageType.ApplyUnmitigableDamage(damageRatio);
         }
 
         return finalDamage;
@@ -42,7 +42,7 @@ public class DamageEvent{
         return DamageColor.GetColor(damageType);
     }
 
-    private float baseDamage;
+    private float damageRatio;
     private DamageTypeParent damageType;
     private DamageCategory damageCategory;
     private Entity damageCauser;
