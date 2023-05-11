@@ -140,7 +140,7 @@ public class PlayerClass : Entity, InteractInterface{
             Debug.Log(entityStats.currentHealth);
         }
 
-        if (Input.GetKeyDown("y")) {
+        if (Input.GetKeyDown("y")){
             if (inventoryPanel.GetComponent<Image>().enabled) {
                 inventoryPanel.GetComponent<InventoryPanel>().DestructPanel();
             }
@@ -178,32 +178,26 @@ public class PlayerClass : Entity, InteractInterface{
     }
 
 
-    public void AttackEvent()
-    {
+    public void AttackEvent(){
         meleeWeapon.Attack();
     }
 
-    public void RangedAttackEvent()
-    {
+    public void RangedAttackEvent(){
         rangedWeapon.Attack();
     }
 
-    public void SetMeleeAttackPointUpEvent()
-    {
+    public void SetMeleeAttackPointUpEvent(){
         meleeWeapon.attackPoint.localPosition = new Vector2(0, 1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(0.109f, 0.357f);
     }
 
-    public void SetMeleeAttackPointDownEvent()
-    {
+    public void SetMeleeAttackPointDownEvent(){
         meleeWeapon.attackPoint.localPosition = new Vector2(0, -1.05f);
         rangedWeapon.attackPoint.localPosition = new Vector2(-0.139f, -0.579f);
     }
 
-    public void SetMeleeAttackPointSideEvent()
-    {
-        if (GetComponent<SpriteRenderer>().flipX)
-        {
+    public void SetMeleeAttackPointSideEvent(){
+        if (GetComponent<SpriteRenderer>().flipX){
             meleeWeapon.attackPoint.localPosition = new Vector2(1.05f, 0);
             rangedWeapon.attackPoint.localPosition = new Vector2(0.557f, -0.194f);
         }
