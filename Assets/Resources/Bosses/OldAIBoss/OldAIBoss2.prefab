@@ -242,7 +242,7 @@ MonoBehaviour:
     walkSpeed: 0
   inventory: {fileID: 0}
   isPlayerControlled: 0
-  textAsset: {fileID: 0}
+  textAsset: {fileID: 4900000, guid: 10a555768f588114d9526c64acc29c0e, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
   AOEAttackPoint: {fileID: 991122943380574124}
   AOEAttackRange: 3.16
   initiateDashRange1: 35.8
-  initiateDashRange2: 16.6
+  initiateDashRange2: 12.04
   dashSpeed: 35
   maxDashDistance: 35
   dashCooldown: 7

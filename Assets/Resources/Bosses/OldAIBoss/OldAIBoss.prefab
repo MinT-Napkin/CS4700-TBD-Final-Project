@@ -574,7 +574,7 @@ MonoBehaviour:
     walkSpeed: 0
   inventory: {fileID: 0}
   isPlayerControlled: 0
-  textAsset: {fileID: 0}
+  textAsset: {fileID: 4900000, guid: 10a555768f588114d9526c64acc29c0e, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 0

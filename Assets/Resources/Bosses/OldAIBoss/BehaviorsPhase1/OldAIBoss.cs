@@ -6,16 +6,23 @@ public class OldAIBoss : Boss
 {
     public GameObject bossObstacle;
     public GameObject phase2Prefab;
+    EntityStats phase2Stats;
     public float attackCooldown;
     public bool attackOnCooldown = false;
     public override void Awake()
     {
         base.Awake();
         //Test entity stats
-        entityStats.walkSpeed = 2f;
-        entityStats.currentHealth = 50f;
-        entityStats.maxHealth = 50f;
+        entityStats.walkSpeed = 2.5f;
+        entityStats.currentHealth = 80f;
+        entityStats.maxHealth = 80f;
         entityStats.normalizedHealth = 1f;
+        entityStats.strength = 3f;
+        entityStats.criticalDamage = 1.1f;
+        entityStats.criticalHitRate = 5;
+        entityStats.level = 0;
+        entityStats.defense = 10f;
+        entityStats.specialDefense = 20f;
     }
 
     public override void RotateEvent()
@@ -40,8 +47,9 @@ public class OldAIBoss : Boss
         Collider2D targetHit = Physics2D.OverlapCircle(attackPoint.position, meleeAttackRange, targetLayer);
         if (targetHit != null)
         {
-            //Apply damage
-            Debug.Log(targetHit.gameObject.name + " phase 1 hit!");
+            DamageTypeParent damageType = new DamageTypePhysical();
+            DamageEvent damageEvent = new DamageEvent(entityStats.strength * 0.5f, damageType, this, targetHit.gameObject.GetComponent<Entity>(), DamageCategory.Normal);
+            targetHit.GetComponent<Entity>().TakeDamage(damageEvent);
         }
     }
 

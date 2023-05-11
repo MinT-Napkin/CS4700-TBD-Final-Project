@@ -29,7 +29,7 @@ public class Flamethrower : SpecialAttack{
         name = "Flamethrower";
         damageType = new DamageTypeFire();
         description = "Primitive flamethrower built by one who dominated the slums";
-        attackDamage = 1.0f;
+        attackDamage = .2f;
         flamethrowerDuration = 3.0f;
         attackCooldown = 5.0f + flamethrowerDuration;
         attackPoint = gameObject.GetComponent<PlayerClass>().flamethrowerAttackPoint;
