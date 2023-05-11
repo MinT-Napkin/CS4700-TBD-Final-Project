@@ -7,9 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3914555268697765346, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1262085588, guid: 8f04e15c0f864b24d882335dcfda264e, type: 3}
     - target: {fileID: 6809868827954471304, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6896290316787176319, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -25,15 +33,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7587996638521534279, guid: 841cfb2df19a5054d80e3221189317c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -160,7 +168,8 @@ MonoBehaviour:
   distance: 0
   direction: {x: 0, y: 0}
   animator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   meleeAttackRange: 2.04
-  meleeDetectionRange: 3.95
+  meleeDetectionRange: 2.04
   meleeAttackCooldown: 0
   meleeAttackOnCooldown: 0
