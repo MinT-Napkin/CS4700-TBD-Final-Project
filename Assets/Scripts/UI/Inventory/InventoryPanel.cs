@@ -9,11 +9,11 @@ public class InventoryPanel : MonoBehaviour{
     public GameObject slotPrefab;
 
     void ClearInventory(){
-        foreach (Transform transform in transform) {
+        foreach (Transform transform in transform){
             Destroy(transform.gameObject);
         }
 
-        new List<InventorySlot>(24);
+        inventorySlots = new List<InventorySlot>(24);
     }
 
     public void ConstructPanel(){
@@ -21,11 +21,11 @@ public class InventoryPanel : MonoBehaviour{
 
         gameObject.GetComponent<Image>().enabled = true;
 
-        for (int i = 0; i < inventorySlots.Capacity; i++) {
+        for (int i = 0; i < 5/*inventorySlots.Capacity*/; i++) {
             CreateInventorySlot();
         }
 
-        for (int i = 0; i < itemClasses.Length; i++){
+        for (int i = 0; i < 5/*itemClasses.Length*/; i++){
             if (itemClasses[i].Key != null) {
                 inventorySlots[i].ConstructSlot(itemClasses[i].Key, itemClasses[i].Value);
                 inventorySlots[i].SetPlayer(player);
