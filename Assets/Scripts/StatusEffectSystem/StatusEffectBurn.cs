@@ -18,7 +18,7 @@ public class StatusEffectBurn : StatusEffectParent{
 
     protected override void TickEffect(){
         DamageTypeFire damageType = new DamageTypeFire();
-        DamageEvent damageEvent = new DamageEvent(1.2f, damageType, entity, entity, DamageCategory.Normal);
+        DamageEvent damageEvent = new DamageEvent(0.1f, damageType, entity, entity, DamageCategory.Normal);
 
         entity.TakeDamage(damageEvent);
     }

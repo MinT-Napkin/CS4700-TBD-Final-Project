@@ -84,6 +84,7 @@ public class Flamethrower : SpecialAttack{
                 
                 //Apply burn status effect
                 enemy.gameObject.GetComponent<Entity>().TakeDamage(damageEvent);
+                gameObject.AddComponent<StatusEffectBurn>().Constructor(enemy.gameObject.GetComponent<Entity>(), 2f, true, 0.5f);
                 //Final upgrade
                 toExplode.Add(enemy.gameObject);
             }

@@ -110,6 +110,11 @@ public class PlayerClass : Entity, InteractInterface{
     void Update(){
         CheckTargets();
 
+        if (Input.GetKeyDown("/"))
+        {
+            gameObject.AddComponent<StatusEffectBurn>().Constructor(this, 5f, true, 0.5f);
+        }
+
         if (Input.GetKeyDown("9")){
         }
 
